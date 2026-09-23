@@ -1,55 +1,76 @@
-# CalorieOut 🍽️🇨🇦
+# CalorieOut
 
-Eat out smarter in Canada. Browse calories & macros for restaurant menus, build
-custom bowls/burritos/subs with live nutrition totals, set a meal goal, get
-smart lower-calorie swaps, search every menu at once, and compare items side by
-side.
+A web application for browsing calorie and nutrition information for restaurants
+across Canada. It covers both fixed-menu items and build-your-own meals (bowls,
+burritos, subs, pitas), with live nutrition totals, goal-based filtering, and
+side-by-side comparison.
 
-## Run it
+## Features
+
+- Menu browser spanning 50+ restaurants, grouped by type (fast food, coffee &
+  bakery, build-your-own, and sit-down).
+- Interactive meal builder that totals calories and macros as options are
+  selected.
+- Per-meal goals: set a calorie ceiling and protein floor to highlight items
+  that fit.
+- Lower-calorie swap suggestions within the meal builder.
+- Global search with calorie, protein, and dietary filters.
+- Compare view for up to four items at a time.
+
+## Tech stack
+
+React 18, TypeScript, Vite, and Tailwind CSS. The app is entirely client-side
+and requires no backend.
+
+## Getting started
+
+Requirements: Node.js 20 or later.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open the URL Vite prints (default http://localhost:5173).
-
-Other scripts:
+Create a production build:
 
 ```bash
-npm run build     # type-check + production build into dist/
-npm run preview   # preview the production build
+npm run build
+npm run preview
 ```
 
-## How it works
+## Deployment
 
-- **Two menu types.** Fixed items (e.g. a Big Mac) carry one nutrition profile.
-  "Builder" items (Bar Burrito, Subway, Freshii, Mucho Burrito, Pita Pit) are
-  assembled from option groups and the nutrition sums live as you tap.
-- **Smart features.** Per-meal goal (max calories / min protein) highlights or
-  flags items; builders suggest lower-calorie swaps; global search filters by
-  calories, protein and diet tags; compare pins up to 4 items in a table.
+The repository includes a GitHub Actions workflow
+(`.github/workflows/deploy.yml`) that builds the application and publishes it to
+GitHub Pages on every push to `main`. To enable it, set
+**Settings → Pages → Source** to **GitHub Actions**.
 
-## Data & accuracy
+## Data and accuracy
 
-All numbers are **approximate** and compiled per restaurant in `src/data/`.
+Nutrition data lives in `src/data`, one file per restaurant. Each restaurant is
+tagged with a data source:
 
-- `dataSource: 'official'` — figures from the chain's published Canadian
-  nutrition guide.
-- `dataSource: 'estimated'` — the spot publishes no nutrition data, so items are
-  modelled from typical recipes for the dish type. These are **clearly flagged**
-  in the UI ("~ Estimate" badge and a banner) and are ballpark guidance only.
+- **official** — figures published by the restaurant.
+- **estimated** — modelled from typical recipes for restaurants that do not
+  publish nutrition information. These are labelled in the interface and should
+  be treated as approximate.
 
-Always verify with the restaurant before relying on a number.
+All values are approximate and may vary by location and preparation. Verify with
+the restaurant before relying on them.
 
-## Add or fix a restaurant
+## Project structure
 
-1. Create `src/data/<name>.ts` exporting a `Restaurant` (copy an existing file
-   as a template — `mcdonalds.ts` for a fixed menu, `barburrito.ts` for a
-   builder).
-2. Import and add it to the `restaurants` array in `src/data/index.ts`.
-3. Set `dataSource: 'estimated'` if the figures aren't officially published.
+```
+src/
+  data/        restaurant and menu data
+  components/  reusable UI components
+  views/       top-level screens
+  lib/         nutrition calculations, search, and swap logic
+  hooks/       local state helpers
+```
 
-## Stack
+## Contributing
 
-React 18 · TypeScript · Vite 6 · Tailwind CSS v4. Fully client-side — no backend.
+To add or correct a restaurant, create or edit its file in `src/data`, then add
+it to the list in `src/data/index.ts`. Use `official` as the data source only
+when the figures come from the restaurant's published nutrition information.
