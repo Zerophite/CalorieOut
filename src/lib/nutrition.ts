@@ -2,6 +2,8 @@ import {
   type BuilderGroup,
   type BuilderItem,
   type BuilderOption,
+  type FixedItem,
+  type IngredientComponent,
   type MenuItem,
   type Nutrition,
   ZERO_NUTRITION,
@@ -9,6 +11,45 @@ import {
 
 /** A map of groupId -> set of selected optionIds for a builder in progress. */
 export type BuilderSelection = Record<string, string[]>
+
+/** A map of componentId -> whether it is currently included. */
+export type ComponentSelection = Record<string, boolean>
+
+/** Is a component included to start with? (default-on unless marked otherwise). */
+export function isComponentDefaultOn(c: IngredientComponent): boolean {
+  return c.default !== false
+}
+
+/** The initial on/off state for a customizable item's ingredients. */
+export function defaultComponentSelection(
+  components: IngredientComponent[],
+): ComponentSelection {
+  const sel: ComponentSelection = {}
+  for (const c of components) sel[c.id] = isComponentDefaultOn(c)
+  return sel
+}
+
+/** Sum the nutrition of the currently-included ingredients. */
+export function totalForComponents(
+  components: IngredientComponent[],
+  selection: ComponentSelection,
+): Nutrition {
+  return components.reduce(
+    (acc, c) => (selection[c.id] ? addNutrition(acc, c.nutrition) : acc),
+    ZERO_NUTRITION,
+  )
+}
+
+/** Whether a fixed item exposes an editable ingredient breakdown. */
+export function isCustomizable(
+  item: MenuItem,
+): item is FixedItem & { components: IngredientComponent[] } {
+  return (
+    item.kind === 'fixed' &&
+    Array.isArray(item.components) &&
+    item.components.length > 0
+  )
+}
 
 /** Add two nutrition objects field by field. */
 export function addNutrition(a: Nutrition, b: Nutrition): Nutrition {

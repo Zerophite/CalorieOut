@@ -9,7 +9,17 @@ export const burgerking: Restaurant = {
   segment: 'Fast Food',
   dataSource: 'official',
   items: [
-    { id: 'bk-whopper', name: 'Whopper', kind: 'fixed', category: 'Burgers', serving: '1 burger', nutrition: { calories: 670, protein: 28, carbs: 51, fat: 40, sodium: 980 } },
+    {
+      id: 'bk-whopper', name: 'Whopper', kind: 'fixed', category: 'Burgers', serving: '1 burger',
+      nutrition: { calories: 670, protein: 28, carbs: 51, fat: 40, sodium: 980 },
+      components: [
+        { id: 'bun', name: 'Sesame bun', removable: false, nutrition: { calories: 270, protein: 9, carbs: 45, fat: 5, sodium: 460 } },
+        { id: 'beef', name: 'Flame-grilled beef patty', removable: false, nutrition: { calories: 240, protein: 17, carbs: 0, fat: 20, sodium: 220 } },
+        { id: 'mayo', name: 'Mayo', nutrition: { calories: 110, protein: 0, carbs: 1, fat: 12, sodium: 90 } },
+        { id: 'ketchup', name: 'Ketchup', nutrition: { calories: 20, protein: 0, carbs: 5, fat: 0, sodium: 130 } },
+        { id: 'veg', name: 'Lettuce, tomato, onion, pickle', nutrition: { calories: 30, protein: 2, carbs: 0, fat: 3, sodium: 80 } },
+      ],
+    },
     { id: 'bk-whopper-jr', name: 'Whopper Jr.', kind: 'fixed', category: 'Burgers', serving: '1 burger', nutrition: { calories: 310, protein: 13, carbs: 27, fat: 18, sodium: 500 } },
     { id: 'bk-bacon-king', name: 'Bacon King', kind: 'fixed', category: 'Burgers', serving: '1 burger', nutrition: { calories: 1150, protein: 61, carbs: 49, fat: 79, sodium: 2150 } },
     { id: 'bk-impossible', name: 'Impossible Whopper', kind: 'fixed', category: 'Burgers', serving: '1 burger', tags: ['vegetarian'], nutrition: { calories: 630, protein: 25, carbs: 58, fat: 34, sodium: 1080 } },

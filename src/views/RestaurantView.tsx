@@ -16,6 +16,7 @@ interface Props {
     item: MenuItem,
     nutrition: Nutrition,
   ) => void
+  addToDay: (restaurant: Restaurant, item: MenuItem, nutrition: Nutrition) => void
 }
 
 export function RestaurantView({
@@ -25,6 +26,7 @@ export function RestaurantView({
   onOpenItem,
   isInCompare,
   toggleCompare,
+  addToDay,
 }: Props) {
   const categories = useMemo(() => {
     const seen: string[] = []
@@ -90,6 +92,7 @@ export function RestaurantView({
               onToggleCompare={(nutrition) =>
                 toggleCompare(restaurant, item, nutrition)
               }
+              onAddToDay={(nutrition) => addToDay(restaurant, item, nutrition)}
             />
           )
         })}

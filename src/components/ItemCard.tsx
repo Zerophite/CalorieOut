@@ -1,8 +1,15 @@
+import { useState } from 'react'
 import { type MenuItem, type Nutrition, type Restaurant } from '../types'
-import { baseNutrition, formatNumber, minimalNutrition } from '../lib/nutrition'
+import {
+  baseNutrition,
+  formatNumber,
+  isCustomizable,
+  minimalNutrition,
+} from '../lib/nutrition'
 import { type Goal } from '../hooks/useGoal'
 import { MacroBar } from './MacroBar'
 import { EstimateBadge, GoalFitBadge, TagChip, evaluateGoal } from './ui'
+import { IconCheck, IconCompare, IconPlus, IconSliders } from './icons'
 
 interface Props {
   restaurant: Restaurant
@@ -13,6 +20,7 @@ interface Props {
   showRestaurant?: boolean
   compareActive?: boolean
   onToggleCompare?: (nutrition: Nutrition) => void
+  onAddToDay?: (nutrition: Nutrition) => void
 }
 
 export function ItemCard({
@@ -23,12 +31,19 @@ export function ItemCard({
   showRestaurant,
   compareActive,
   onToggleCompare,
+  onAddToDay,
 }: Props) {
   const isBuilder = item.kind === 'builder'
-  const nutrition = isBuilder
-    ? minimalNutrition(item)
-    : baseNutrition(item)
+  const customizable = isCustomizable(item)
+  const nutrition = isBuilder ? minimalNutrition(item) : baseNutrition(item)
   const fit = evaluateGoal(nutrition, goal)
+  const [dayAdded, setDayAdded] = useState(false)
+
+  function quickAddDay() {
+    onAddToDay?.(baseNutrition(item as Extract<MenuItem, { kind: 'fixed' }>))
+    setDayAdded(true)
+    setTimeout(() => setDayAdded(false), 1400)
+  }
 
   return (
     <div className="flex flex-col rounded-2xl border border-app bg-surface p-4 transition-shadow hover:shadow-md">
@@ -41,9 +56,7 @@ export function ItemCard({
                 {restaurant.dataSource === 'estimated' && <EstimateBadge />}
               </div>
             )}
-            <h3 className="font-semibold leading-tight text-body">
-              {item.name}
-            </h3>
+            <h3 className="font-semibold leading-tight text-body">{item.name}</h3>
             {item.kind === 'fixed' && item.serving && (
               <div className="mt-0.5 text-xs text-muted">{item.serving}</div>
             )}
@@ -73,9 +86,14 @@ export function ItemCard({
           <span>F {formatNumber(nutrition.fat)}g</span>
         </div>
 
-        {(fit !== 'off' || (item.tags && item.tags.length > 0)) && (
+        {(fit !== 'off' || customizable || (item.tags && item.tags.length > 0)) && (
           <div className="mt-3 flex flex-wrap items-center gap-1.5">
             <GoalFitBadge fit={fit} />
+            {customizable && (
+              <span className="inline-flex items-center gap-1 rounded-full bg-[var(--brand)]/15 px-2 py-0.5 text-xs font-semibold text-[var(--color-brand-dark)] dark:text-emerald-400">
+                <IconSliders size={12} /> Customizable
+              </span>
+            )}
             {item.tags?.map((t) => (
               <TagChip key={t} tag={t} />
             ))}
@@ -88,20 +106,37 @@ export function ItemCard({
           onClick={onOpen}
           className="flex-1 rounded-xl bg-[var(--brand)] px-3 py-2 text-sm font-semibold text-white hover:bg-[var(--color-brand-dark)]"
         >
-          {isBuilder ? 'Customize' : 'Details'}
+          {isBuilder || customizable ? 'Customize' : 'Details'}
         </button>
+        {!isBuilder && onAddToDay && (
+          <button
+            onClick={quickAddDay}
+            className={
+              'flex items-center gap-1 rounded-xl border px-3 py-2 text-sm font-semibold transition-colors ' +
+              (dayAdded
+                ? 'border-transparent bg-emerald-500/15 text-emerald-600 dark:text-emerald-400'
+                : 'border-app bg-surface text-muted hover:bg-surface-2')
+            }
+            title="Add to my day"
+            aria-label="Add to my day"
+          >
+            {dayAdded ? <IconCheck size={16} /> : <IconPlus size={16} />}
+            <span className="hidden sm:inline">Day</span>
+          </button>
+        )}
         {!isBuilder && onToggleCompare && (
           <button
             onClick={() => onToggleCompare(nutrition)}
             className={
-              'rounded-xl border px-3 py-2 text-sm font-semibold ' +
+              'flex items-center rounded-xl border px-3 py-2 text-sm font-semibold ' +
               (compareActive
                 ? 'border-transparent bg-surface-2 text-body'
                 : 'border-app bg-surface text-muted hover:bg-surface-2')
             }
             title="Add to compare"
+            aria-label="Add to compare"
           >
-            {compareActive ? '✓ Compare' : '+ Compare'}
+            {compareActive ? <IconCheck size={16} /> : <IconCompare size={16} />}
           </button>
         )}
       </div>

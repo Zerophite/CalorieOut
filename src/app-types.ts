@@ -7,6 +7,7 @@ export type View =
   | { name: 'item'; restaurantId: string; itemId: string }
   | { name: 'search' }
   | { name: 'compare' }
+  | { name: 'day' }
 
 /** A snapshot pinned to the compare tray. Builders store the built total. */
 export interface CompareEntry {

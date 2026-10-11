@@ -8,7 +8,17 @@ export const wendys: Restaurant = {
   accent: '#b91c1c',
   segment: 'Fast Food',
   items: [
-    { id: 'wd-dave', name: "Dave's Single", kind: 'fixed', category: 'Burgers', serving: '1 burger', nutrition: { calories: 570, protein: 30, carbs: 39, fat: 34, sodium: 1120 } },
+    {
+      id: 'wd-dave', name: "Dave's Single", kind: 'fixed', category: 'Burgers', serving: '1 burger',
+      nutrition: { calories: 570, protein: 30, carbs: 39, fat: 34, sodium: 1120 },
+      components: [
+        { id: 'bun', name: 'Bun', removable: false, nutrition: { calories: 230, protein: 8, carbs: 38, fat: 4, sodium: 450 } },
+        { id: 'beef', name: 'Quarter-pound beef patty', removable: false, nutrition: { calories: 200, protein: 18, carbs: 0, fat: 16, sodium: 250 } },
+        { id: 'cheese', name: 'Cheese', nutrition: { calories: 50, protein: 2, carbs: 1, fat: 4, sodium: 230 } },
+        { id: 'sauce', name: 'Mayo & ketchup', nutrition: { calories: 60, protein: 0, carbs: 0, fat: 9, sodium: 120 } },
+        { id: 'veg', name: 'Lettuce, tomato, onion, pickle', nutrition: { calories: 30, protein: 2, carbs: 0, fat: 1, sodium: 70 } },
+      ],
+    },
     { id: 'wd-baconator', name: 'Baconator', kind: 'fixed', category: 'Burgers', serving: '1 burger', nutrition: { calories: 950, protein: 59, carbs: 39, fat: 62, sodium: 1810 } },
     { id: 'wd-jr-cheese', name: 'Jr. Cheeseburger', kind: 'fixed', category: 'Burgers', serving: '1 burger', nutrition: { calories: 290, protein: 15, carbs: 26, fat: 14, sodium: 690 } },
     { id: 'wd-spicy-chicken', name: 'Spicy Chicken Sandwich', kind: 'fixed', category: 'Chicken', serving: '1 sandwich', tags: ['spicy'], nutrition: { calories: 500, protein: 29, carbs: 48, fat: 21, sodium: 1140 } },

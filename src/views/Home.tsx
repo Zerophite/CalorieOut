@@ -1,11 +1,32 @@
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
 import { restaurants, SEGMENTS } from '../data'
 import { type Restaurant } from '../types'
+import { formatNumber } from '../lib/nutrition'
 import { BrandTile, Chip, EstimateBadge } from '../components/ui'
+import {
+  IconBowl,
+  IconBurger,
+  IconChevron,
+  IconCoffee,
+  IconFlame,
+  IconSearch,
+  IconSliders,
+  IconUtensils,
+} from '../components/icons'
 
 interface Props {
   onOpenRestaurant: (id: string) => void
   onOpenSearch: () => void
+  onOpenDay: () => void
+  dayCalories: number
+  dayGoal: number | null
+}
+
+const SEGMENT_ICON: Record<string, ReactNode> = {
+  'Fast Food': <IconBurger size={15} />,
+  'Coffee & Bakery': <IconCoffee size={15} />,
+  'Build-Your-Own': <IconBowl size={15} />,
+  'Sit-Down': <IconUtensils size={15} />,
 }
 
 function RestaurantCard({
@@ -15,55 +36,101 @@ function RestaurantCard({
   restaurant: Restaurant
   onOpen: () => void
 }) {
-  const builderCount = restaurant.items.filter(
-    (i) => i.kind === 'builder',
-  ).length
+  const builderCount = restaurant.items.filter((i) => i.kind === 'builder').length
+  const customizable = restaurant.items.some(
+    (i) => i.kind === 'fixed' && i.components && i.components.length > 0,
+  )
   return (
     <button
       onClick={onOpen}
-      className="flex items-center gap-4 rounded-2xl border border-app bg-surface p-4 text-left transition-shadow hover:shadow-md"
+      className="group flex items-center gap-4 rounded-2xl border border-app bg-surface p-4 text-left transition-shadow hover:shadow-md"
     >
       <BrandTile name={restaurant.name} accent={restaurant.accent} size="lg" />
-      <div className="min-w-0">
+      <div className="min-w-0 flex-1">
         <div className="flex items-center gap-2">
           <h3 className="font-bold text-body">{restaurant.name}</h3>
           {restaurant.dataSource === 'estimated' && <EstimateBadge />}
         </div>
         <p className="truncate text-sm text-muted">{restaurant.cuisine}</p>
-        <p className="mt-1 text-xs text-muted">
+        <p className="mt-1 flex items-center gap-1 text-xs text-muted">
           {restaurant.items.length} items
-          {builderCount > 0 && ' · custom builder'}
+          {(builderCount > 0 || customizable) && (
+            <>
+              {' · '}
+              <IconSliders size={11} /> customizable
+            </>
+          )}
         </p>
       </div>
+      <IconChevron
+        size={18}
+        className="shrink-0 text-muted opacity-0 transition-opacity group-hover:opacity-100"
+      />
     </button>
   )
 }
 
-export function Home({ onOpenRestaurant, onOpenSearch }: Props) {
+export function Home({
+  onOpenRestaurant,
+  onOpenSearch,
+  onOpenDay,
+  dayCalories,
+  dayGoal,
+}: Props) {
   const [segment, setSegment] = useState<string | null>(null)
   const shown = segment
     ? restaurants.filter((r) => r.segment === segment)
     : restaurants
 
+  const remaining = dayGoal !== null ? dayGoal - dayCalories : null
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-6">
       {/* Hero */}
-      <header className="mb-6">
+      <header className="mb-5">
         <h1 className="text-3xl font-black tracking-tight text-body sm:text-4xl">
-          Eat out smarter 🇨🇦
+          Eat out smarter across Canada
         </h1>
         <p className="mt-1 max-w-2xl text-muted">
-          Calories and macros for Canadian restaurants — browse menus, build
-          custom bowls and burritos, and find what fits your goal.
+          Calories and macros for Canadian restaurants — browse menus, build and
+          customize meals, and track your day as you go.
         </p>
       </header>
+
+      {/* Today summary */}
+      {dayCalories > 0 && (
+        <button
+          onClick={onOpenDay}
+          className="mb-4 flex w-full items-center gap-3 rounded-2xl border border-app bg-surface p-4 text-left hover:bg-surface-2"
+        >
+          <span
+            className="flex h-10 w-10 items-center justify-center rounded-xl text-white"
+            style={{ background: 'var(--brand)' }}
+          >
+            <IconFlame size={20} />
+          </span>
+          <div className="flex-1">
+            <div className="font-bold text-body">
+              {formatNumber(dayCalories)} cal logged today
+            </div>
+            <div className="text-sm text-muted">
+              {remaining !== null
+                ? remaining >= 0
+                  ? `${formatNumber(remaining)} cal left of your ${formatNumber(dayGoal!)} goal`
+                  : `${formatNumber(Math.abs(remaining))} cal over your goal`
+                : 'Tap to see your day'}
+            </div>
+          </div>
+          <IconChevron size={18} className="text-muted" />
+        </button>
+      )}
 
       {/* Search entry */}
       <button
         onClick={onOpenSearch}
         className="mb-6 flex w-full items-center gap-3 rounded-2xl border border-app bg-surface px-4 py-3 text-left text-muted hover:bg-surface-2"
       >
-        <span className="text-lg">🔍</span>
+        <IconSearch size={18} />
         <span>Search all items — “chicken under 500 cal”, “high protein”…</span>
       </button>
 
@@ -73,12 +140,11 @@ export function Home({ onOpenRestaurant, onOpenSearch }: Props) {
           All
         </Chip>
         {SEGMENTS.map((s) => (
-          <Chip
-            key={s}
-            active={segment === s}
-            onClick={() => setSegment(s)}
-          >
-            {s}
+          <Chip key={s} active={segment === s} onClick={() => setSegment(s)}>
+            <span className="inline-flex items-center gap-1.5">
+              {SEGMENT_ICON[s]}
+              {s}
+            </span>
           </Chip>
         ))}
       </div>

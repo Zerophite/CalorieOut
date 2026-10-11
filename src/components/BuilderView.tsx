@@ -10,17 +10,20 @@ import { suggestSwaps } from '../lib/swaps'
 import { type Goal } from '../hooks/useGoal'
 import { NutritionFacts } from './NutritionFacts'
 import { GoalFitBadge, TagChip, evaluateGoal } from './ui'
+import { IconCheck, IconPlus } from './icons'
 
 interface Props {
   item: BuilderItem
   goal: Goal
   onAddToCompare: (nutrition: Nutrition, detail: string) => void
+  onAddToDay: (nutrition: Nutrition, detail: string) => void
 }
 
-export function BuilderView({ item, goal, onAddToCompare }: Props) {
+export function BuilderView({ item, goal, onAddToCompare, onAddToDay }: Props) {
   const [selection, setSelection] = useState<BuilderSelection>(() =>
     defaultSelection(item),
   )
+  const [added, setAdded] = useState(false)
 
   const total = useMemo(
     () => totalForSelection(item, selection),
@@ -65,6 +68,12 @@ export function BuilderView({ item, goal, onAddToCompare }: Props) {
     .flatMap((g) => (selection[g.id] ?? []).map((id) => g.options.find((o) => o.id === id)?.name))
     .filter(Boolean)
     .join(', ')
+
+  function handleAddToDay() {
+    onAddToDay(total, detailLabel)
+    setAdded(true)
+    setTimeout(() => setAdded(false), 1600)
+  }
 
   return (
     <div className="grid gap-6 lg:grid-cols-[1fr_340px]">
@@ -173,7 +182,7 @@ export function BuilderView({ item, goal, onAddToCompare }: Props) {
       </div>
 
       {/* Live total — sticky on desktop, fixed bottom bar on mobile */}
-      <div className="lg:sticky lg:top-4 lg:self-start">
+      <div className="lg:sticky lg:top-20 lg:self-start">
         <div className="hidden lg:block">
           <div className="mb-3 flex items-center justify-between">
             <span className="text-sm font-semibold text-muted">
@@ -183,10 +192,17 @@ export function BuilderView({ item, goal, onAddToCompare }: Props) {
           </div>
           <NutritionFacts nutrition={total} showDailyHints />
           <button
-            onClick={() => onAddToCompare(total, detailLabel)}
-            className="mt-3 w-full rounded-xl border border-app bg-surface px-3 py-2.5 text-sm font-semibold text-body hover:bg-surface-2"
+            onClick={handleAddToDay}
+            className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl bg-[var(--brand)] px-3 py-2.5 text-sm font-semibold text-white hover:bg-[var(--color-brand-dark)]"
           >
-            + Add this build to compare
+            {added ? <IconCheck size={16} /> : <IconPlus size={16} />}
+            {added ? 'Added to your day' : 'Add this build to my day'}
+          </button>
+          <button
+            onClick={() => onAddToCompare(total, detailLabel)}
+            className="mt-2 w-full rounded-xl border border-app bg-surface px-3 py-2.5 text-sm font-semibold text-body hover:bg-surface-2"
+          >
+            Add to compare
           </button>
         </div>
       </div>
@@ -206,12 +222,21 @@ export function BuilderView({ item, goal, onAddToCompare }: Props) {
           </div>
           <GoalFitBadge fit={fit} />
         </div>
-        <button
-          onClick={() => onAddToCompare(total, detailLabel)}
-          className="w-full rounded-xl bg-[var(--brand)] px-3 py-2.5 text-sm font-semibold text-white"
-        >
-          Add build to compare
-        </button>
+        <div className="flex gap-2">
+          <button
+            onClick={handleAddToDay}
+            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[var(--brand)] px-3 py-2.5 text-sm font-semibold text-white"
+          >
+            {added ? <IconCheck size={16} /> : <IconPlus size={16} />}
+            {added ? 'Added' : 'Add to my day'}
+          </button>
+          <button
+            onClick={() => onAddToCompare(total, detailLabel)}
+            className="rounded-xl border border-app bg-surface px-3 py-2.5 text-sm font-semibold text-body"
+          >
+            Compare
+          </button>
+        </div>
       </div>
     </div>
   )

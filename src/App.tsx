@@ -4,11 +4,21 @@ import { type MenuItem, type Nutrition, type Restaurant } from './types'
 import { type CompareEntry, type View } from './app-types'
 import { useGoal } from './hooks/useGoal'
 import { useLocalStorage } from './hooks/useLocalStorage'
+import { useDayLog } from './hooks/useDayLog'
+import { formatNumber } from './lib/nutrition'
 import { Home } from './views/Home'
 import { RestaurantView } from './views/RestaurantView'
 import { ItemView } from './views/ItemView'
 import { SearchView } from './views/SearchView'
 import { CompareView } from './views/CompareView'
+import { DayView } from './views/DayView'
+import {
+  IconBack,
+  IconCompare,
+  IconDay,
+  IconFlame,
+  IconSearch,
+} from './components/icons'
 
 export default function App() {
   const [history, setHistory] = useState<View[]>([{ name: 'home' }])
@@ -18,6 +28,8 @@ export default function App() {
     'calorieout:compare',
     [],
   )
+  const { day, total: dayTotal, addMeal, removeMeal, clearDay, setCalorieGoal } =
+    useDayLog()
 
   const navigate = useCallback((next: View) => {
     setHistory((h) => [...h, next])
@@ -46,13 +58,13 @@ export default function App() {
       nutrition: Nutrition,
       detail?: string,
     ) => {
-      // Builders get a unique key per build so several builds can coexist.
+      // Builders / customized items get a unique key so variants can coexist.
       const key =
-        item.kind === 'builder'
+        item.kind === 'builder' || detail
           ? `${restaurant.id}:${item.id}:${Date.now()}`
           : `${restaurant.id}:${item.id}`
       setCompare((prev) => {
-        if (item.kind === 'fixed' && prev.some((e) => e.key === key)) {
+        if (item.kind === 'fixed' && !detail && prev.some((e) => e.key === key)) {
           return prev.filter((e) => e.key !== key)
         }
         const entry: CompareEntry = {
@@ -74,6 +86,24 @@ export default function App() {
     [setCompare],
   )
 
+  const addToDay = useCallback(
+    (
+      restaurant: Restaurant,
+      item: MenuItem,
+      nutrition: Nutrition,
+      detail?: string,
+    ) => {
+      addMeal({
+        restaurantName: restaurant.name,
+        restaurantAccent: restaurant.accent,
+        itemName: item.name,
+        detail: detail || (item.kind === 'fixed' ? item.serving : undefined),
+        nutrition,
+      })
+    },
+    [addMeal],
+  )
+
   const restaurant =
     view.name === 'restaurant' || view.name === 'item'
       ? getRestaurant(view.restaurantId)
@@ -91,7 +121,10 @@ export default function App() {
         onHome={goHome}
         onSearch={() => navigate({ name: 'search' })}
         onCompare={() => navigate({ name: 'compare' })}
+        onDay={() => navigate({ name: 'day' })}
         compareCount={compare.length}
+        dayCalories={dayTotal.calories}
+        dayCount={day.meals.length}
       />
 
       <main>
@@ -101,6 +134,9 @@ export default function App() {
               navigate({ name: 'restaurant', restaurantId: id })
             }
             onOpenSearch={() => navigate({ name: 'search' })}
+            onOpenDay={() => navigate({ name: 'day' })}
+            dayCalories={dayTotal.calories}
+            dayGoal={day.calorieGoal}
           />
         )}
 
@@ -119,6 +155,7 @@ export default function App() {
               }
               isInCompare={isInCompare}
               toggleCompare={toggleCompare}
+              addToDay={addToDay}
             />
           ) : (
             <NotFound onHome={goHome} />
@@ -132,6 +169,7 @@ export default function App() {
               goal={goal}
               isInCompare={isInCompare}
               toggleCompare={toggleCompare}
+              addToDay={addToDay}
             />
           ) : (
             <NotFound onHome={goHome} />
@@ -145,6 +183,7 @@ export default function App() {
             }
             isInCompare={isInCompare}
             toggleCompare={toggleCompare}
+            addToDay={addToDay}
           />
         )}
 
@@ -156,8 +195,46 @@ export default function App() {
             onBrowse={goHome}
           />
         )}
+
+        {view.name === 'day' && (
+          <DayView
+            day={day}
+            total={dayTotal}
+            onRemove={removeMeal}
+            onClear={clearDay}
+            onSetGoal={setCalorieGoal}
+            onBrowse={goHome}
+          />
+        )}
       </main>
     </div>
+  )
+}
+
+function HeaderButton({
+  onClick,
+  icon,
+  label,
+  badge,
+}: {
+  onClick: () => void
+  icon: React.ReactNode
+  label: string
+  badge?: number
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className="relative flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-body hover:bg-surface-2"
+    >
+      {icon}
+      <span className="hidden text-sm font-medium sm:inline">{label}</span>
+      {badge !== undefined && badge > 0 && (
+        <span className="absolute -right-1 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-[var(--brand)] px-1 text-[10px] font-bold text-white">
+          {badge}
+        </span>
+      )}
+    </button>
   )
 }
 
@@ -167,56 +244,72 @@ function Header({
   onHome,
   onSearch,
   onCompare,
+  onDay,
   compareCount,
+  dayCalories,
+  dayCount,
 }: {
   canGoBack: boolean
   onBack: () => void
   onHome: () => void
   onSearch: () => void
   onCompare: () => void
+  onDay: () => void
   compareCount: number
+  dayCalories: number
+  dayCount: number
 }) {
   return (
-    <header className="sticky top-0 z-30 border-b border-app bg-surface/80 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center gap-2 px-4 py-3">
-        {canGoBack ? (
+    <header className="sticky top-0 z-30 border-b border-app bg-surface/85 backdrop-blur">
+      <div className="mx-auto flex max-w-5xl items-center gap-1 px-3 py-2.5 sm:px-4">
+        {canGoBack && (
           <button
             onClick={onBack}
-            className="rounded-lg px-2 py-1.5 text-body hover:bg-surface-2"
+            className="flex items-center gap-1 rounded-lg px-2 py-1.5 text-body hover:bg-surface-2"
             aria-label="Back"
           >
-            ← Back
+            <IconBack size={18} />
           </button>
-        ) : null}
+        )}
         <button
           onClick={onHome}
           className="mr-auto flex items-center gap-2 font-black text-body"
         >
           <span
-            className="flex h-7 w-7 items-center justify-center rounded-lg text-white"
+            className="flex h-8 w-8 items-center justify-center rounded-xl text-white"
             style={{ background: 'var(--brand)' }}
           >
-            🍽️
+            <IconFlame size={18} />
           </span>
-          CalorieOut
+          <span className="text-lg tracking-tight">CalorieOut</span>
         </button>
+
+        {/* Day total pill */}
         <button
-          onClick={onSearch}
-          className="rounded-lg px-3 py-1.5 text-body hover:bg-surface-2"
+          onClick={onDay}
+          className="mr-1 flex items-center gap-1.5 rounded-full border border-app bg-surface-2 px-2.5 py-1 text-sm font-semibold text-body hover:bg-surface"
+          title="My Day"
         >
-          🔍<span className="ml-1 hidden sm:inline">Search</span>
+          <IconFlame size={15} />
+          {formatNumber(dayCalories)}
+          <span className="hidden text-xs font-normal text-muted sm:inline">
+            cal today
+          </span>
         </button>
-        <button
+
+        <HeaderButton onClick={onSearch} icon={<IconSearch size={18} />} label="Search" />
+        <HeaderButton
           onClick={onCompare}
-          className="relative rounded-lg px-3 py-1.5 text-body hover:bg-surface-2"
-        >
-          ⚖️<span className="ml-1 hidden sm:inline">Compare</span>
-          {compareCount > 0 && (
-            <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-[var(--brand)] px-1 text-xs font-bold text-white">
-              {compareCount}
-            </span>
-          )}
-        </button>
+          icon={<IconCompare size={18} />}
+          label="Compare"
+          badge={compareCount}
+        />
+        <HeaderButton
+          onClick={onDay}
+          icon={<IconDay size={18} />}
+          label="My Day"
+          badge={dayCount}
+        />
       </div>
     </header>
   )

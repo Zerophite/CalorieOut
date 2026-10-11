@@ -92,12 +92,33 @@ interface MenuItemBase {
   tags?: DietTag[]
 }
 
+/**
+ * A single ingredient within a fixed item's breakdown (e.g. "Bun", "Cheese").
+ * Lets the user remove ingredients they don't want, or add optional extras,
+ * and have the total recalculate.
+ */
+export interface IngredientComponent {
+  id: string
+  name: string
+  nutrition: Nutrition
+  /** Included in the item by default (true) vs an optional add-on (false). */
+  default?: boolean
+  /** Whether the user can toggle it off/on. Core items can be locked (false). */
+  removable?: boolean
+}
+
 /** A fixed item with a single known nutrition profile. */
 export interface FixedItem extends MenuItemBase {
   kind: 'fixed'
   nutrition: Nutrition
   /** Serving description, e.g. "1 sandwich" or "medium (400 mL)". */
   serving?: string
+  /**
+   * Optional ingredient breakdown. When present, the item becomes
+   * customizable: removing/adding components recalculates the total.
+   * Default-on components should sum to `nutrition`.
+   */
+  components?: IngredientComponent[]
 }
 
 /** A build-your-own item assembled from option groups. */

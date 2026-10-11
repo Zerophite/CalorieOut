@@ -9,7 +9,16 @@ export const marybrowns: Restaurant = {
   segment: 'Fast Food',
   dataSource: 'official',
   items: [
-    { id: 'mb-big-mary', name: 'Big Mary Sandwich', kind: 'fixed', category: 'Sandwiches', serving: '1 sandwich', tags: ['high-protein'], nutrition: { calories: 620, protein: 34, carbs: 52, fat: 30, sodium: 1350 } },
+    {
+      id: 'mb-big-mary', name: 'Big Mary Sandwich', kind: 'fixed', category: 'Sandwiches', serving: '1 sandwich', tags: ['high-protein'],
+      nutrition: { calories: 620, protein: 34, carbs: 52, fat: 30, sodium: 1350 },
+      components: [
+        { id: 'bun', name: 'Bun', removable: false, nutrition: { calories: 250, protein: 8, carbs: 36, fat: 5, sodium: 500 } },
+        { id: 'chicken', name: 'Fried chicken fillet', removable: false, nutrition: { calories: 290, protein: 24, carbs: 14, fat: 17, sodium: 620 } },
+        { id: 'sauce', name: 'Mary sauce', nutrition: { calories: 50, protein: 0, carbs: 2, fat: 6, sodium: 120 } },
+        { id: 'lettuce', name: 'Lettuce', nutrition: { calories: 30, protein: 2, carbs: 0, fat: 2, sodium: 110 } },
+      ],
+    },
     { id: 'mb-breast', name: 'Chicken Breast', kind: 'fixed', category: 'Chicken', serving: '1 piece', tags: ['high-protein'], nutrition: { calories: 360, protein: 35, carbs: 15, fat: 18, sodium: 900 } },
     { id: 'mb-tenders-3', name: 'Chicken Tenders (3 pc)', kind: 'fixed', category: 'Chicken', serving: '3 pieces', tags: ['high-protein'], nutrition: { calories: 380, protein: 32, carbs: 22, fat: 18, sodium: 1100 } },
     { id: 'mb-taters', name: 'Famous Taters', kind: 'fixed', category: 'Sides', serving: 'regular', tags: ['vegetarian'], nutrition: { calories: 320, protein: 4, carbs: 40, fat: 16, sodium: 640 } },

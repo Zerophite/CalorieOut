@@ -19,6 +19,7 @@ interface Props {
     item: MenuItem,
     nutrition: Nutrition,
   ) => void
+  addToDay: (restaurant: Restaurant, item: MenuItem, nutrition: Nutrition) => void
 }
 
 const CAL_PRESETS = [400, 500, 700]
@@ -29,6 +30,7 @@ export function SearchView({
   onOpenItem,
   isInCompare,
   toggleCompare,
+  addToDay,
 }: Props) {
   const index = useMemo(() => buildIndex(restaurants), [])
   const [filters, setFilters] = useState<SearchFilters>({ query: '' })
@@ -119,6 +121,7 @@ export function SearchView({
               onToggleCompare={(nutrition) =>
                 toggleCompare(restaurant, item, nutrition)
               }
+              onAddToDay={(nutrition) => addToDay(restaurant, item, nutrition)}
             />
           )
         })}

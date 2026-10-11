@@ -1,20 +1,23 @@
 import { type ReactNode } from 'react'
 import { type DietTag, type Nutrition } from '../types'
 import { type Goal } from '../hooks/useGoal'
+import { IconDumbbell, IconFlame, IconLeaf } from './icons'
 
-const TAG_LABELS: Record<DietTag, string> = {
-  vegetarian: '🥗 Vegetarian',
-  vegan: '🌱 Vegan',
-  'high-protein': '💪 High protein',
-  'low-carb': '🥑 Low carb',
-  'gluten-free-option': '🌾 GF option',
-  spicy: '🌶️ Spicy',
+const TAG_META: Record<DietTag, { label: string; icon?: ReactNode }> = {
+  vegetarian: { label: 'Vegetarian', icon: <IconLeaf size={12} /> },
+  vegan: { label: 'Vegan', icon: <IconLeaf size={12} /> },
+  'high-protein': { label: 'High protein', icon: <IconDumbbell size={12} /> },
+  'low-carb': { label: 'Low carb' },
+  'gluten-free-option': { label: 'GF option' },
+  spicy: { label: 'Spicy', icon: <IconFlame size={12} /> },
 }
 
 export function TagChip({ tag }: { tag: DietTag }) {
+  const meta = TAG_META[tag]
   return (
-    <span className="rounded-full bg-surface-2 px-2 py-0.5 text-xs text-muted">
-      {TAG_LABELS[tag]}
+    <span className="inline-flex items-center gap-1 rounded-full bg-surface-2 px-2 py-0.5 text-xs text-muted">
+      {meta.icon}
+      {meta.label}
     </span>
   )
 }
