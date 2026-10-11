@@ -1,4 +1,5 @@
 import { type Restaurant } from '../types'
+import { buildComponents, REF } from './components'
 
 // Approximate values from Tim Hortons Canada nutrition information.
 export const timhortons: Restaurant = {
@@ -15,10 +16,45 @@ export const timhortons: Restaurant = {
     { id: 'th-frenchvanilla', name: 'French Vanilla', kind: 'fixed', category: 'Coffee', serving: 'medium', tags: ['vegetarian'], nutrition: { calories: 240, protein: 3, carbs: 40, fat: 8, sodium: 250, sugar: 33 } },
     { id: 'th-boston', name: 'Boston Cream Donut', kind: 'fixed', category: 'Bakery', serving: '1 donut', tags: ['vegetarian'], nutrition: { calories: 250, protein: 4, carbs: 36, fat: 10, sodium: 250, sugar: 16 } },
     { id: 'th-timbit', name: 'Chocolate Glazed Timbit', kind: 'fixed', category: 'Bakery', serving: '1 Timbit', tags: ['vegetarian'], nutrition: { calories: 70, protein: 1, carbs: 10, fat: 3, sodium: 90, sugar: 5 } },
-    { id: 'th-bagel', name: 'Plain Bagel with Cream Cheese', kind: 'fixed', category: 'Bakery', serving: '1 bagel', tags: ['vegetarian'], nutrition: { calories: 400, protein: 12, carbs: 62, fat: 11, sodium: 640 } },
-    { id: 'th-farmers', name: "Farmer's Wrap (Sausage)", kind: 'fixed', category: 'Breakfast', serving: '1 wrap', nutrition: { calories: 480, protein: 19, carbs: 39, fat: 27, sodium: 990 } },
-    { id: 'th-belt', name: 'Bacon, Egg & Cheese Biscuit', kind: 'fixed', category: 'Breakfast', serving: '1 biscuit', nutrition: { calories: 450, protein: 16, carbs: 34, fat: 28, sodium: 1080 } },
+    {
+      id: 'th-bagel', name: 'Plain Bagel with Cream Cheese', kind: 'fixed', category: 'Bakery', serving: '1 bagel', tags: ['vegetarian'],
+      nutrition: { calories: 400, protein: 12, carbs: 62, fat: 11, sodium: 640 },
+      components: buildComponents({ calories: 400, protein: 12, carbs: 62, fat: 11, sodium: 640 }, [
+        { id: 'bagel', name: 'Plain bagel', core: true },
+        { id: 'cc', name: 'Cream cheese', n: { calories: 120, protein: 2, carbs: 7, fat: 10, sodium: 190 } },
+      ]),
+    },
+    {
+      id: 'th-farmers', name: "Farmer's Wrap (Sausage)", kind: 'fixed', category: 'Breakfast', serving: '1 wrap',
+      nutrition: { calories: 480, protein: 19, carbs: 39, fat: 27, sodium: 990 },
+      components: buildComponents({ calories: 480, protein: 19, carbs: 39, fat: 27, sodium: 990 }, [
+        { id: 'wrap', name: 'Tortilla wrap', n: { calories: 230, protein: 7, carbs: 38, fat: 6, sodium: 520 }, removable: false },
+        { id: 'sausage', name: 'Sausage', core: true },
+        { id: 'egg', name: 'Egg', n: REF.eggFried },
+        { id: 'cheese', name: 'Cheese', n: REF.cheeseSlice },
+      ]),
+    },
+    {
+      id: 'th-belt', name: 'Bacon, Egg & Cheese Biscuit', kind: 'fixed', category: 'Breakfast', serving: '1 biscuit',
+      nutrition: { calories: 450, protein: 16, carbs: 34, fat: 28, sodium: 1080 },
+      components: buildComponents({ calories: 450, protein: 16, carbs: 34, fat: 28, sodium: 1080 }, [
+        { id: 'biscuit', name: 'Biscuit', n: REF.biscuit, removable: false },
+        { id: 'egg', name: 'Egg', core: true },
+        { id: 'bacon', name: 'Bacon', n: REF.bacon2 },
+        { id: 'cheese', name: 'Cheese', n: REF.cheeseSlice },
+      ]),
+    },
     { id: 'th-chili', name: 'Chili', kind: 'fixed', category: 'Mains', serving: 'regular', tags: ['high-protein'], nutrition: { calories: 300, protein: 22, carbs: 28, fat: 11, sodium: 1050, fiber: 6 } },
-    { id: 'th-turkeybacon-club', name: 'Turkey Bacon Club (Craveables)', kind: 'fixed', category: 'Sandwiches', serving: '1 sandwich', nutrition: { calories: 470, protein: 27, carbs: 47, fat: 19, sodium: 1240 } },
+    {
+      id: 'th-turkeybacon-club', name: 'Turkey Bacon Club (Craveables)', kind: 'fixed', category: 'Sandwiches', serving: '1 sandwich',
+      nutrition: { calories: 470, protein: 27, carbs: 47, fat: 19, sodium: 1240 },
+      components: buildComponents({ calories: 470, protein: 27, carbs: 47, fat: 19, sodium: 1240 }, [
+        { id: 'bread', name: 'Ciabatta bun', n: { calories: 220, protein: 8, carbs: 42, fat: 3, sodium: 430 }, removable: false },
+        { id: 'turkey', name: 'Turkey', core: true },
+        { id: 'bacon', name: 'Bacon', n: REF.bacon2 },
+        { id: 'veg', name: 'Lettuce & tomato', n: { calories: 15, protein: 0, carbs: 3, fat: 0, sodium: 10 } },
+        { id: 'sauce', name: 'Chipotle sauce', n: { calories: 60, protein: 0, carbs: 1, fat: 6, sodium: 120 } },
+      ]),
+    },
   ],
 }

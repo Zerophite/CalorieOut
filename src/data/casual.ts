@@ -1,4 +1,5 @@
 import { type MenuItem, type Restaurant } from '../types'
+import { buildComponents, REF } from './components'
 
 // ESTIMATED values for independent casual spots that publish no nutrition data.
 // Modelled from typical recipes for each dish; ballpark guidance only.
@@ -23,8 +24,23 @@ export const casualSpots: Restaurant[] = [
     // Burgers here are summed from their published patty + bun + cheese components.
     dataSource: 'official',
     items: [
-      { id: 'tw-cheeseburger', name: 'Cheeseburger (4oz beef + white bun + cheddar)', kind: 'fixed', category: 'Burgers', serving: '1 burger', tags: ['high-protein'], nutrition: { calories: 522, protein: 35, carbs: 39, fat: 24, sodium: 980 } },
-      { id: 'tw-chicken', name: 'Grilled Chicken Burger (breast + white bun)', kind: 'fixed', category: 'Chicken', serving: '1 burger', tags: ['high-protein'], nutrition: { calories: 405, protein: 42, carbs: 41, fat: 7, sodium: 836 } },
+      {
+        id: 'tw-cheeseburger', name: 'Cheeseburger', kind: 'fixed', category: 'Burgers', serving: '1 burger', tags: ['high-protein'],
+        nutrition: { calories: 522, protein: 35, carbs: 39, fat: 24, sodium: 980 },
+        components: [
+          { id: 'bun', name: 'White bun', removable: false, nutrition: { calories: 224, protein: 6, carbs: 38, fat: 4, sodium: 416 } },
+          { id: 'beef', name: '4oz beef patty', removable: false, nutrition: { calories: 185, protein: 22, carbs: 1, fat: 11, sodium: 337 } },
+          { id: 'cheese', name: 'Cheddar', nutrition: { calories: 113, protein: 7, carbs: 0, fat: 9, sodium: 227 } },
+        ],
+      },
+      {
+        id: 'tw-chicken', name: 'Grilled Chicken Burger', kind: 'fixed', category: 'Chicken', serving: '1 burger', tags: ['high-protein'],
+        nutrition: { calories: 405, protein: 42, carbs: 41, fat: 7, sodium: 836 },
+        components: [
+          { id: 'bun', name: 'White bun', removable: false, nutrition: { calories: 224, protein: 6, carbs: 38, fat: 4, sodium: 416 } },
+          { id: 'chicken', name: 'Grilled chicken breast', removable: false, nutrition: { calories: 181, protein: 36, carbs: 3, fat: 3, sodium: 420 } },
+        ],
+      },
       { id: 'tw-cobbfather', name: 'The Cobbfather Salad', kind: 'fixed', category: 'Salads', serving: '1 salad', tags: ['high-protein'], nutrition: { calories: 770, protein: 50, carbs: 13, fat: 54, sodium: 1484, fiber: 5 } },
       { id: 'tw-romaine', name: 'Romaine Calm & Carry On Salad', kind: 'fixed', category: 'Salads', serving: '1 salad', tags: ['vegan', 'low-carb'], nutrition: { calories: 75, protein: 4, carbs: 15, fat: 1, sodium: 38, fiber: 7 } },
       { id: 'tw-fries', name: 'Fresh Cut Fries', kind: 'fixed', category: 'Sides', serving: '1 order', tags: ['vegetarian', 'vegan'], nutrition: { calories: 620, protein: 9, carbs: 80, fat: 31, sodium: 221, fiber: 8 } },
@@ -66,7 +82,16 @@ export const casualSpots: Restaurant[] = [
     items: [
       { id: 'hh-1pc', name: '1 pc Halibut & Chips', kind: 'fixed', category: 'Mains', serving: '1 piece + fries', nutrition: { calories: 780, protein: 32, carbs: 70, fat: 42, sodium: 1300 } },
       { id: 'hh-2pc', name: '2 pc Halibut & Chips', kind: 'fixed', category: 'Mains', serving: '2 pieces + fries', tags: ['high-protein'], nutrition: { calories: 1080, protein: 48, carbs: 84, fat: 60, sodium: 1700 } },
-      { id: 'hh-fishburger', name: 'Fish Burger', kind: 'fixed', category: 'Sandwiches', serving: '1 burger', nutrition: { calories: 560, protein: 24, carbs: 52, fat: 28, sodium: 950 } },
+      {
+        id: 'hh-fishburger', name: 'Fish Burger', kind: 'fixed', category: 'Sandwiches', serving: '1 burger',
+        nutrition: { calories: 560, protein: 24, carbs: 52, fat: 28, sodium: 950 },
+        components: buildComponents({ calories: 560, protein: 24, carbs: 52, fat: 28, sodium: 950 }, [
+          { id: 'bun', name: 'Bun', n: REF.bunMedium, removable: false },
+          { id: 'fish', name: 'Battered fish fillet', core: true },
+          { id: 'tartar', name: 'Tartar sauce', n: { calories: 90, protein: 0, carbs: 2, fat: 9, sodium: 150 } },
+          { id: 'lettuce', name: 'Lettuce', n: REF.lettuce },
+        ]),
+      },
       { id: 'hh-coleslaw', name: 'Coleslaw', kind: 'fixed', category: 'Sides', serving: 'regular', tags: ['vegetarian'], nutrition: { calories: 180, protein: 1, carbs: 16, fat: 12, sodium: 200 } },
     ],
   },
@@ -78,8 +103,26 @@ export const casualSpots: Restaurant[] = [
     segment: 'Fast Food',
     dataSource: 'estimated',
     items: [
-      { id: 'rd-smoked-meat', name: 'Smoked Meat Sandwich', kind: 'fixed', category: 'Sandwiches', serving: '1 sandwich', tags: ['high-protein'], nutrition: { calories: 560, protein: 38, carbs: 42, fat: 26, sodium: 1900 } },
-      { id: 'rd-reuben', name: 'Reuben', kind: 'fixed', category: 'Sandwiches', serving: '1 sandwich', nutrition: { calories: 720, protein: 40, carbs: 46, fat: 40, sodium: 2100 } },
+      {
+        id: 'rd-smoked-meat', name: 'Smoked Meat Sandwich', kind: 'fixed', category: 'Sandwiches', serving: '1 sandwich', tags: ['high-protein'],
+        nutrition: { calories: 560, protein: 38, carbs: 42, fat: 26, sodium: 1900 },
+        components: buildComponents({ calories: 560, protein: 38, carbs: 42, fat: 26, sodium: 1900 }, [
+          { id: 'bread', name: 'Rye bread', n: { calories: 200, protein: 8, carbs: 38, fat: 2, sodium: 500 }, removable: false },
+          { id: 'meat', name: 'Smoked meat', core: true },
+          { id: 'mustard', name: 'Mustard', n: { calories: 10, protein: 0, carbs: 1, fat: 0, sodium: 160 } },
+        ]),
+      },
+      {
+        id: 'rd-reuben', name: 'Reuben', kind: 'fixed', category: 'Sandwiches', serving: '1 sandwich',
+        nutrition: { calories: 720, protein: 40, carbs: 46, fat: 40, sodium: 2100 },
+        components: buildComponents({ calories: 720, protein: 40, carbs: 46, fat: 40, sodium: 2100 }, [
+          { id: 'bread', name: 'Rye bread', n: { calories: 200, protein: 8, carbs: 38, fat: 2, sodium: 500 }, removable: false },
+          { id: 'meat', name: 'Corned beef', core: true },
+          { id: 'cheese', name: 'Swiss cheese', n: { calories: 80, protein: 5, carbs: 1, fat: 7, sodium: 250 } },
+          { id: 'kraut', name: 'Sauerkraut', n: { calories: 20, protein: 1, carbs: 4, fat: 0, sodium: 300 } },
+          { id: 'dressing', name: 'Russian dressing', n: { calories: 90, protein: 0, carbs: 3, fat: 9, sodium: 200 } },
+        ]),
+      },
       { id: 'rd-poutine', name: 'Smoked Meat Poutine', kind: 'fixed', category: 'Sides', serving: 'regular', nutrition: { calories: 980, protein: 34, carbs: 74, fat: 58, sodium: 2400 } },
     ],
   },
@@ -119,7 +162,16 @@ export const casualSpots: Restaurant[] = [
     dataSource: 'estimated',
     items: [
       { id: 'br-mac', name: 'Vegan Mac & Cheese', kind: 'fixed', category: 'Mains', serving: '1 bowl', tags: ['vegan'], nutrition: { calories: 620, protein: 20, carbs: 78, fat: 26, sodium: 980 } },
-      { id: 'br-burger', name: 'Plant-Based Burger', kind: 'fixed', category: 'Burgers', serving: '1 burger', tags: ['vegan'], nutrition: { calories: 680, protein: 26, carbs: 60, fat: 36, sodium: 1100 } },
+      {
+        id: 'br-burger', name: 'Plant-Based Burger', kind: 'fixed', category: 'Burgers', serving: '1 burger', tags: ['vegan'],
+        nutrition: { calories: 680, protein: 26, carbs: 60, fat: 36, sodium: 1100 },
+        components: buildComponents({ calories: 680, protein: 26, carbs: 60, fat: 36, sodium: 1100 }, [
+          { id: 'bun', name: 'Bun', n: REF.bunMedium, removable: false },
+          { id: 'patty', name: 'Plant-based patty', core: true },
+          { id: 'sauce', name: 'Vegan aioli', n: { calories: 90, protein: 0, carbs: 4, fat: 9, sodium: 160 } },
+          { id: 'veg', name: 'Lettuce, tomato, onion', n: REF.vegBurger },
+        ]),
+      },
       { id: 'br-buddha', name: 'Buddha Bowl', kind: 'fixed', category: 'Bowls & Burritos', serving: '1 bowl', tags: ['vegan', 'high-protein'], nutrition: { calories: 540, protein: 20, carbs: 70, fat: 20, sodium: 720, fiber: 12 } },
     ],
   },
@@ -158,11 +210,56 @@ export const casualSpots: Restaurant[] = [
     // Official figures from Tahini's published Nutritional Values guide (Sept 2025).
     dataSource: 'official',
     items: [
-      { id: 'th-chicken-wrap', name: 'Chicken Shawarma Wrap (Original)', kind: 'fixed', category: 'Wraps', serving: '350 g', tags: ['high-protein'], nutrition: { calories: 729, protein: 31, carbs: 82, fat: 30, sodium: 891, fiber: 4, sugar: 6 } },
-      { id: 'th-beef-wrap', name: 'Beef Shawarma Wrap', kind: 'fixed', category: 'Wraps', serving: '338 g', tags: ['high-protein'], nutrition: { calories: 859, protein: 43, carbs: 92, fat: 33, sodium: 1198, fiber: 10, sugar: 3 } },
-      { id: 'th-chicken-bowl', name: 'Chicken & Rice Bowl', kind: 'fixed', category: 'Bowls & Burritos', serving: '443 g', tags: ['high-protein'], nutrition: { calories: 617, protein: 27, carbs: 51, fat: 32, sodium: 1502, fiber: 3 } },
-      { id: 'th-beef-bowl', name: 'Beef Shawarma Bowl', kind: 'fixed', category: 'Bowls & Burritos', serving: '603 g', tags: ['high-protein'], nutrition: { calories: 990, protein: 45, carbs: 98, fat: 48, sodium: 2749, fiber: 14 } },
-      { id: 'th-falafel-wrap', name: 'Falafel Wrap', kind: 'fixed', category: 'Wraps', serving: '355 g', tags: ['vegan'], nutrition: { calories: 541, protein: 18, carbs: 98, fat: 12, sodium: 1824, fiber: 11 } },
+      {
+        id: 'th-chicken-wrap', name: 'Chicken Shawarma Wrap (Original)', kind: 'fixed', category: 'Wraps', serving: '350 g', tags: ['high-protein'],
+        nutrition: { calories: 729, protein: 31, carbs: 82, fat: 30, sodium: 891 },
+        components: buildComponents({ calories: 729, protein: 31, carbs: 82, fat: 30, sodium: 891 }, [
+          { id: 'pita', name: 'Pita wrap', n: REF.pita, removable: false },
+          { id: 'chicken', name: 'Chicken shawarma', core: true },
+          { id: 'garlic', name: 'Garlic sauce', n: REF.garlicSauce },
+          { id: 'veg', name: 'Pickles & veg', n: REF.vegShawarma },
+        ]),
+      },
+      {
+        id: 'th-beef-wrap', name: 'Beef Shawarma Wrap', kind: 'fixed', category: 'Wraps', serving: '338 g', tags: ['high-protein'],
+        nutrition: { calories: 859, protein: 43, carbs: 92, fat: 33, sodium: 1198 },
+        components: buildComponents({ calories: 859, protein: 43, carbs: 92, fat: 33, sodium: 1198 }, [
+          { id: 'pita', name: 'Pita wrap', n: REF.pita, removable: false },
+          { id: 'beef', name: 'Beef shawarma', core: true },
+          { id: 'garlic', name: 'Garlic sauce', n: REF.garlicSauce },
+          { id: 'veg', name: 'Pickles & veg', n: REF.vegShawarma },
+        ]),
+      },
+      {
+        id: 'th-chicken-bowl', name: 'Chicken & Rice Bowl', kind: 'fixed', category: 'Bowls & Burritos', serving: '443 g', tags: ['high-protein'],
+        nutrition: { calories: 617, protein: 27, carbs: 51, fat: 32, sodium: 1502 },
+        components: buildComponents({ calories: 617, protein: 27, carbs: 51, fat: 32, sodium: 1502 }, [
+          { id: 'rice', name: 'Rice', n: REF.riceCup, removable: false },
+          { id: 'chicken', name: 'Chicken shawarma', core: true },
+          { id: 'garlic', name: 'Garlic sauce', n: REF.garlicSauce },
+          { id: 'salad', name: 'Salad', n: REF.vegShawarma },
+        ]),
+      },
+      {
+        id: 'th-beef-bowl', name: 'Beef Shawarma Bowl', kind: 'fixed', category: 'Bowls & Burritos', serving: '603 g', tags: ['high-protein'],
+        nutrition: { calories: 990, protein: 45, carbs: 98, fat: 48, sodium: 2749 },
+        components: buildComponents({ calories: 990, protein: 45, carbs: 98, fat: 48, sodium: 2749 }, [
+          { id: 'rice', name: 'Rice', n: REF.riceCup, removable: false },
+          { id: 'beef', name: 'Beef shawarma', core: true },
+          { id: 'garlic', name: 'Garlic sauce', n: REF.garlicSauce },
+          { id: 'salad', name: 'Salad', n: REF.vegShawarma },
+        ]),
+      },
+      {
+        id: 'th-falafel-wrap', name: 'Falafel Wrap', kind: 'fixed', category: 'Wraps', serving: '355 g', tags: ['vegan'],
+        nutrition: { calories: 541, protein: 18, carbs: 98, fat: 12, sodium: 1824, fiber: 11 },
+        components: buildComponents({ calories: 541, protein: 18, carbs: 98, fat: 12, sodium: 1824 }, [
+          { id: 'pita', name: 'Pita wrap', n: REF.pita, removable: false },
+          { id: 'falafel', name: 'Falafel', core: true },
+          { id: 'tahini', name: 'Tahini sauce', n: REF.garlicSauce },
+          { id: 'veg', name: 'Pickles & veg', n: REF.vegShawarma },
+        ]),
+      },
       { id: 'th-fries', name: 'Fries (Large)', kind: 'fixed', category: 'Sides', serving: '350 g', tags: ['vegetarian', 'vegan'], nutrition: { calories: 412, protein: 6, carbs: 68, fat: 12, sodium: 897 } },
     ],
   },
@@ -174,8 +271,29 @@ export const casualSpots: Restaurant[] = [
     segment: 'Fast Food',
     dataSource: 'estimated',
     items: [
-      { id: 'mo-burrito', name: 'Chicken Burrito', kind: 'fixed', category: 'Bowls & Burritos', serving: '1 burrito', tags: ['high-protein'], nutrition: { calories: 830, protein: 44, carbs: 92, fat: 30, sodium: 1800 } },
-      { id: 'mo-bowl', name: 'Burrito Bowl', kind: 'fixed', category: 'Bowls & Burritos', serving: '1 bowl', tags: ['high-protein'], nutrition: { calories: 620, protein: 40, carbs: 62, fat: 22, sodium: 1500 } },
+      {
+        id: 'mo-burrito', name: 'Chicken Burrito', kind: 'fixed', category: 'Bowls & Burritos', serving: '1 burrito', tags: ['high-protein'],
+        nutrition: { calories: 830, protein: 44, carbs: 92, fat: 30, sodium: 1800 },
+        components: buildComponents({ calories: 830, protein: 44, carbs: 92, fat: 30, sodium: 1800 }, [
+          { id: 'tortilla', name: 'Flour tortilla', n: REF.tortillaLarge, removable: false },
+          { id: 'chicken', name: 'Chicken', core: true },
+          { id: 'rice', name: 'Rice', n: { calories: 210, protein: 4, carbs: 45, fat: 2, sodium: 5 } },
+          { id: 'beans', name: 'Beans', n: { calories: 110, protein: 7, carbs: 19, fat: 1, sodium: 330 } },
+          { id: 'cheese', name: 'Cheese', n: REF.cheeseShred },
+          { id: 'salsa', name: 'Salsa', n: { calories: 20, protein: 1, carbs: 4, fat: 0, sodium: 160 } },
+        ]),
+      },
+      {
+        id: 'mo-bowl', name: 'Burrito Bowl', kind: 'fixed', category: 'Bowls & Burritos', serving: '1 bowl', tags: ['high-protein'],
+        nutrition: { calories: 620, protein: 40, carbs: 62, fat: 22, sodium: 1500 },
+        components: buildComponents({ calories: 620, protein: 40, carbs: 62, fat: 22, sodium: 1500 }, [
+          { id: 'rice', name: 'Rice', n: REF.riceCup, removable: false },
+          { id: 'chicken', name: 'Chicken', core: true },
+          { id: 'beans', name: 'Beans', n: { calories: 110, protein: 7, carbs: 19, fat: 1, sodium: 330 } },
+          { id: 'cheese', name: 'Cheese', n: REF.cheeseShred },
+          { id: 'salsa', name: 'Salsa', n: { calories: 20, protein: 1, carbs: 4, fat: 0, sodium: 160 } },
+        ]),
+      },
       { id: 'mo-nachos', name: 'Loaded Nachos', kind: 'fixed', category: 'Sides', serving: '1 order', nutrition: { calories: 980, protein: 34, carbs: 84, fat: 54, sodium: 1900 } },
     ],
   },
