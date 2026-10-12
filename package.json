@@ -27,7 +27,11 @@
     "menus:osmows": "node scripts/menus/fetch-osmows.cjs && node scripts/menus/run.cjs gen-osmows.ts",
     "menus:subway": "node scripts/menus/fetch-subway.cjs && node scripts/menus/run.cjs gen-subway.ts",
     "menus:pitapit": "node scripts/menus/fetch-pitapit.cjs && node scripts/menus/run.cjs gen-pitapit.ts",
-    "menus:muchoburrito": "node scripts/menus/fetch-muchoburrito.cjs && node scripts/menus/run.cjs gen-muchoburrito.ts"
+    "menus:muchoburrito": "node scripts/menus/fetch-muchoburrito.cjs && node scripts/menus/run.cjs gen-muchoburrito.ts",
+    "menus:tahinis": "node scripts/menus/run.cjs gen-tahinis.ts",
+    "menus:works": "node scripts/menus/fetch-works.cjs && node scripts/menus/run.cjs gen-works.ts",
+    "menus:swisschalet": "node scripts/menus/run.cjs gen-swisschalet.ts",
+    "menus:bostonpizza": "node scripts/menus/fetch-bostonpizza.cjs && node scripts/menus/run.cjs gen-bostonpizza.ts"
   },
   "dependencies": {
     "react": "^18.3.1",

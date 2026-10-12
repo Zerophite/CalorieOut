@@ -1,0 +1,194 @@
+STARTERS	Chalet Chicken Soup	353	170	3	1160	20	16
+STARTERS	House Garden Salad (no dressing)	123	20	0.1	15	5	1
+STARTERS	Caesar Salad	174	370	30	820	16	11
+STARTERS	Caesar Salad (no bacon)	160	310	25	560	15	5
+STARTERS	Cheese Perogies	290	630	32	1290	79	13
+STARTERS	Chicken Spring Rolls	228	560	21	850	66	26
+STARTERS	Garlic Cheese Loaf	233	210	12	390	19	8
+STARTERS	Chicken Poutine with Gravy	578	730	41	2030	53	37
+STARTERS	Chicken Poutine with Chalet Sauce	595	720	41	2120	52	37
+STARTERS	Loaded Perogies	363	770	40	1790	83	20
+STARTERS	Four Cheese Spinach Dip	413	930	45	1790	99	32
+STARTERS	Chicken Broccoli & Cheddar Soup Bowl	386	250	11	1450	22	18
+ROTISSERIE CHICKEN	Quarter Chicken Dinner - Dark	368	620	33	1440	32	51
+ROTISSERIE CHICKEN	Quarter Chicken Dinner - White Meat	388	540	19	1450	32	63
+ROTISSERIE CHICKEN	Double Leg Dinner	537	1050	61	1830	32	98
+ROTISSERIE CHICKEN	Half Chicken Dinner	558	970	47	1840	32	109
+BBQ RIBS	Third Rack BBQ Back Ribs	301	630	36	1210	41	37
+BBQ RIBS	Half Rack BBQ Back Ribs	348	740	43	1410	44	45
+BBQ RIBS	Full Rack BBQ Back Ribs	581	1260	77	2350	56	85
+BBQ RIBS	Chicken & Third Rack Combo - Dark Meat	611	1100	65	2340	47	84
+BBQ RIBS	Chicken & Third Rack Combo - White Meat)	632	1020	51	2350	47	95
+BBQ RIBS	Chicken & Half Rack Ribs - Dark Meat	658	1200	71	2550	49	92
+BBQ RIBS	Chicken & Half Rack - White Meat	678	1120	58	2550	49	103
+BBQ RIBS	5 Wings & Third Rack Combo	483	1070	70	1900	46	65
+BBQ RIBS	5 Wings & Half Rack Combo	529	1180	76	2100	49	73
+WINGS & TENDERS	Wings 15 pieces	545	1300	100	2050	15	85
+WINGS & TENDERS	Wings 10 pieces	363	870	67	1370	10	57
+WINGS & TENDERS	Wings Dinner - 12 Pieces	436	1040	80	1640	12	68
+WINGS & TENDERS	Wings Dinner - 8 pieces	291	700	53	1090	8	45
+WINGS & TENDERS	Crispy Chicken Tenders - 5 pieces	293	740	44	1980	45	39
+HANDHELDS	Rotisserie Chicken Club Wrap	339	720	35	1440	53	50
+HANDHELDS	Rotisserie Chicken Club Wrap - White Meat	339	680	31	1380	53	49
+HANDHELDS	Rotisserie Chicken on a Bun - Dark Meat	230	500	15	780	37	55
+HANDHELDS	Rotisserie Chicken on a Bun - White Meat	230	430	8	670	37	54
+HANDHELDS	Hot Rotisserie Chicken Sandwich - Dark Meat	423	610	14	1700	60	58
+HANDHELDS	Hot Rotisserie Chicken Sandwich - White Meat	423	540	7	1590	60	58
+HANDHELDS	Bacon Cheeseburger	320	680	39	1470	46	38
+HANDHELDS	Classic Hamburger	282	530	27	1090	45	27
+HANDHELDS	Veggie Burger	264	480	21	1080	49	26
+HANDHELDS	Chicken BLT - Dark Meat	335	660	28	1300	42	61
+HANDHELDS	Chicken BLT - White Meat	335	600	21	1190	42	61
+HANDHELDS	Crispy Chicken Sandwich	271	660	36	1550	57	28
+HANDHELDS	Chicken Caesar Wrap - Rotisserie Chicken Dark Meat	343	880	54	1720	53	47
+HANDHELDS	Chicken Caesar Wrap - Rotisserie Chicken White Meat	343	840	50	1660	53	47
+HANDHELDS	Chicken Caesar Wrap - Crispy Chicken	375	1010	66	2300	71	36
+BOWLS & MORE	Chicken Pot Pie	454	650	34	1600	54	29
+BOWLS & MORE	Hearty Vegetable Pot Pie	443	630	36	1490	64	9
+BOWLS & MORE	Chicken Quesadilla	469	890	46	2000	60	61
+BOWLS & MORE	Caesar Salad with Rotisserie Chicken	522	990	64	1970	32	74
+BOWLS & MORE	Caesar Salad with Crispy Chicken	527	1200	87	2860	59	46
+BOWLS & MORE	Caesar Salad	352	750	60	1680	32	22
+BOWLS & MORE	Greek Salad with Rotisserie Chicken	739	1040	80	2070	18	66
+BOWLS & MORE	Greek Salad with Crispy Chicken	745	1240	103	2960	45	37
+BOWLS & MORE	Greek Salad	569	800	76	1770	18	14
+BOWLS & MORE	Fiesta Salad with Rotisserie Chicken	708	970	60	2030	42	72
+BOWLS & MORE	Fiesta Salad with Crispy Chicken	714	1180	83	2920	69	44
+BOWLS & MORE	Fiesta Salad	538	730	56	1740	42	21
+BOWLS & MORE	Chicken Stir Fry Bowl	837	1080	36	4260	142	50
+BOWLS & MORE	Vegetable Stir Fry Bowl	723	900	31	4030	142	16
+KIDS	Cheezy Chalet Burger	146	410	27	870	24	20
+KIDS	Kids Cheezy Pizza	226	550	14	1020	78	24
+KIDS	1/4 Chicken - Dark Meat	169	430	28	390	0	47
+KIDS	1/4 Chicken - White Meat	190	350	14	400	0	58
+KIDS	Kids Mac & Cheese	255	510	35	1000	27	23
+KIDS	Chicken Tenderz & Dip	160	430	24	840	38	18
+KIDS	Cheesy Pizza (Select Locations)	200	480	20	880	48	20
+KIDS	Mean Greens (no dressing)	123	20	0.1	15	5	1
+KIDS	Kids Caesar Pleaser (with bacon)	174	370	30	820	16	11
+KIDS	Caesar Pleaser (no bacon)	160	310	25	560	15	5
+KIDS	Trees & Carrots	170	50	0.5	70	11	3
+KIDS	Potato Mash-Up (no Gravy)	227	230	7	850	36	4
+KIDS	Frenchie Fries	311	280	15	940	34	4
+KIDS	Crispy Fries with Chalet Dipping Sauce	311	360	21	1640	42	3
+KIDS	Vanilla Ice Cream	78	60	2	25	9	1
+KIDS	Chocolate Ice Cream	76	80	4	35	10	1
+KIDS	Kids Donuts - 3 pc	46	190	12	240	18	2
+KIDS	Caramel Sauce Topping	20	70	1	65	15	0.2
+KIDS	Chocolate Fudge Topping	20	70	1	40	14	1
+KIDS	Cookies & Creme Topping	7	35	1.5	25	5	0.3
+KIDS	Toffee Topping	7	40	2.5	25	4	0.1
+KIDS	Mott's® Applesauce	112	50	0	0	13	0.2
+KIDS	M&M's® Fun Size Milk Chocolate Candies	13	60	2.5	10	9	1
+KIDS	Peach Punch	189	140	0	20	35	0.1
+KIDS	Rocket Power Drink	204	160	0	40	39	0.1
+KIDS	Shirley Temple	191	120	0	45	32	0.1
+DESSERTS	Lemon Meringue Pie	157	440	17	290	68	3
+DESSERTS	Coconut Cream Pie	157	550	35	240	55	5
+DESSERTS	Apple Pie with Ice Cream	255	530	24	260	76	4
+DESSERTS	Apple Pie	178	480	22	240	67	4
+DESSERTS	Molten Chocolate Cake & Ice Cream	256	660	30	480	91	8
+DESSERTS	Mini Donuts	241	930	44	1040	128	8
+DESSERTS	Strawberry Cheesecake	216	670	38	570	71	10
+DESSERTS	Toffee Cheesecake	234	820	45	750	93	11
+DESSERTS	Cookies & Creme Cheesecake	240	820	44	730	96	12
+SIDES	Fresh-Cut Fries with Chalet Dipping Sauce	368	370	20	950	43	5
+SIDES	Crispy Fries with Chalet Dipping Sauce	368	470	28	1870	54	4
+SIDES	Mashed Potatoes - No Gravy	227	230	7	850	36	4
+SIDES	Oven-Baked Potato	321	390	10	90	71	9
+SIDES	Creamy Coleslaw	170	190	13	520	17	2
+SIDES	Market Vegetables	170	50	0.5	70	11	3
+SIDES	Chalet Chicken Soup Bowl	353	180	4	1170	20	16
+SIDES	House Garden Salad (no dressing)	123	20	0.1	15	5	1
+SIDES	Caesar Salad (with bacon)	174	370	30	820	16	11
+SIDES	Caesar Salad (no bacon)	160	310	25	560	15	5
+SIDES	Classic Poutine	522	630	38	1900	53	20
+SIDES	Chalet Poutine	538	620	37	1980	52	20
+SIDES	Loaded Oven Baked Potato	391	530	19	790	76	16
+SIDES	Mac N Cheese	261	530	35	1000	31	24
+SIDES	Onion Rings (NFLD)	288	730	47	1840	71	8
+SIDES	Market Vegetables with Cheese Sauce	227	120	5	530	15	5
+SIDES	Loaded Fries	334	510	32	750	45	13
+SIDES	Loaded Mashed Potatoes	334	400	20	1590	43	13
+SIDES	Chicken Broccoli & Cheddar Soup Bowl	386	250	11	1450	22	18
+FAMILY & PARTY PAKS	Classic Family PAK	1371	2290	104	5020	121	227
+FAMILY & PARTY PAKS	Chicken & Back Ribs Family PAK	1752	2990	147	6560	157	269
+FAMILY & PARTY PAKS	Chicken & Wings Family PAK	1443	2470	117	5300	123	239
+FAMILY & PARTY PAKS	Deluxe Family Pak (exludes choice of Appetizer)	1612	3240	148	6060	249	236
+FAMILY & PARTY PAKS	BBQ Back Ribs & 10 Wings Party PAK	540	1210	81	2150	26	91
+FAMILY & PARTY PAKS	BBQ Back Ribs & 20 Wings Party PAK Deluxe	612	1380	95	2420	28	103
+FAMILY & PARTY PAKS	Loaded Baked Potato Soup with Rotisserie Chicken - Family Size	1089	910	38	3720	101	48
+FAMILY & PARTY PAKS	Chalet Chicken Soup - Family Size	949	510	12	3240	59	43
+ADD-ONS & SAUCES	Cajun Sour Cream	60	100	9	260	4	1
+ADD-ONS & SAUCES	Garlic Mesquite Mayo	59	130	13	550	4	0.3
+ADD-ONS & SAUCES	Chalet Sauce - 4 oz	141	30	1	740	6	0.4
+ADD-ONS & SAUCES	Chalet Dipping Sauce - 12 oz	422	90	2.5	2220	17	1
+ADD-ONS & SAUCES	Homestyle Gravy - 4 fl oz	118	45	1.5	630	7	1
+ADD-ONS & SAUCES	Homestyle Gravy - 12 fl oz	355	140	4	1880	22	3
+ADD-ONS & SAUCES	Plum Sauce	30	60	0	90	14	0.1
+ADD-ONS & SAUCES	Chalet Mayo	57	160	14	1030	8	0.5
+ADD-ONS & SAUCES	Mayo	10	25	2.5	90	1	0
+ADD-ONS & SAUCES	Sour Cream with Chives	43	70	6	35	3	2
+ADD-ONS & SAUCES	Caesar Dressing	41	210	22	340	1	1
+ADD-ONS & SAUCES	Chalet House Dressing	47	210	19	580	10	0.2
+ADD-ONS & SAUCES	Calorie-Wise Zesty Italian Dressing	47	20	1	490	2	0.1
+ADD-ONS & SAUCES	Calorie Wise Ranch Dressing	47	90	6	410	9	0.3
+ADD-ONS & SAUCES	Balsamic Dressing	46	120	11	320	5	0.2
+ADD-ONS & SAUCES	Smoky BBQ Rib Sauce - 4 oz	138	210	0.4	1030	49	1
+ADD-ONS & SAUCES	White Dinner Roll	53	130	1	270	26	4
+ADD-ONS & SAUCES	Swiss Cheese Slice	15	60	4	35	0	5
+ADD-ONS & SAUCES	Cheddar Cheese Slice	21	80	7	150	0	5
+ADD-ONS & SAUCES	Bacon Strips	17	70	4.5	240	0	6
+ADD-ONS & SAUCES	Wing Sauce - Mild	69	120	2.5	670	25	1
+ADD-ONS & SAUCES	Wing Sauce - Medium	67	100	4	1100	16	0.4
+ADD-ONS & SAUCES	Wing Sauce - Hot	64	80	5	1030	10	1
+ADD-ONS & SAUCES	Sweet & Spicy Thai Sauce	74	170	0.2	940	45	0.2
+ADD-ONS & SAUCES	Honey Garlic Sauce	72	130	0	360	33	0.5
+ADD-ONS & SAUCES	Honey Buffalo Sauce	59	100	1.5	620	21	0.4
+ADD-ONS & SAUCES	Chalet BBQ Sauce	56	40	0.3	340	9	0.3
+ADD-ONS & SAUCES	Add 2 Spring Rolls	84	230	11	350	19	13
+ADD-ONS & SAUCES	Sweet Thai Chicken Glaze (Dark Meat)	93	230	0.3	1180	56	0.3
+ADD-ONS & SAUCES	Sweet Thai Chicken Glaze (White Meat)	104	250	0.3	1320	62	0.3
+ADD-ONS & SAUCES	Sweet Thai Chicken Glaze (Double Leg)	111	270	0.4	1410	67	0.4
+ADD-ONS & SAUCES	Sweet Thai Chicken Glaze (Half Chicken)	122	300	0.4	1550	73	0.4
+ADD-ONS & SAUCES	Sweet Thai Chicken Glaze (Whole Chicken)	393	960	1.5	4980	236	1
+ADD-ONS & SAUCES	Honey Garlic Glaze (dark meat)	91	170	0	450	41	1
+ADD-ONS & SAUCES	Honey Garlic Glaze (white meat)	101	190	0	510	46	1
+ADD-ONS & SAUCES	Honey Garlic Glaze (double leg)	109	200	0	540	49	1
+ADD-ONS & SAUCES	Honey Garlic Glaze (half chicken)	120	220	0	600	54	1
+ADD-ONS & SAUCES	Honey Garlic Glaze (whole chicken)	384	700	0.1	1920	173	3
+ADD-ONS & SAUCES	Buffalo Glaze - Dark Meat	84	130	5	1380	20	0.5
+ADD-ONS & SAUCES	Buffalo Glaze - White Meat	94	150	6	1550	22	1
+ADD-ONS & SAUCES	Buffalo Glaze - Double Leg	100	150	6	1660	24	1
+ADD-ONS & SAUCES	Buffalo Glaze - Half Chicken	110	170	7	1820	26	1
+ADD-ONS & SAUCES	Buffalo Glaze - Whole Chicken	354	530	21	5850	84	2
+ADD-ONS & SAUCES	Smoky BBQ Glaze -Dark Meat	87	120	0.3	640	30	1
+ADD-ONS & SAUCES	Smoky BBQ Glaze - White Meat	97	140	0.3	720	34	1
+ADD-ONS & SAUCES	Smoky BBQ Glaze -Double Leg	104	150	0.3	770	36	1
+ADD-ONS & SAUCES	Smoky BBQ Glaze -Half Chicken	114	160	0.3	850	40	1
+ADD-ONS & SAUCES	Smoky BBQ Glaze -Whole Chicken	367	530	1	2730	129	4
+ADD-ONS & SAUCES	Add 2 oz Cheese Sauce	57	60	4	280	4	3
+ADD-ONS & SAUCES	Make it Loaded	107	190	13	570	7	10
+ADD-ONS & SAUCES	Add Bacon Bits	14	60	4.5	260	1	5
+ADD-ONS & SAUCES	Add Buffalo Chicken Tender	77	180	10	800	16	6
+ADD-ONS & SAUCES	Add Pulled BBQ Ribs	91	170	8	480	15	10
+ADD-ONS & SAUCES	Southwest Ranch Dressing	43	170	17	360	3	1
+ADD-ONS & SAUCES	Creamy Greek Dressing	43	280	30	230	1	1
+ADD-ONS & SAUCES	Apple Butter Mesquite BBQ Sauce  (3rd Rack & Half Rack)	35	70	0.1	150	16	0.2
+ADD-ONS & SAUCES	Apple Butter Mesquite BBQ Sauce (Full Rack)	71	130	0.2	300	32	0.4
+THANKSGIVING FEAST 2026	Thanksgiving Feast - Quarter Chicken	492	810	38	1870	66	55
+THANKSGIVING FEAST 2026	Thanksgiving Feast - Quarter Chicken White Meat	513	730	24	1870	66	66
+THANKSGIVING FEAST 2026	Thanksgiving Feast - Double Leg	661	1240	65	2260	66	102
+THANKSGIVING FEAST 2026	Thanksgiving Feast - Half Chicken	684	1170	51	2270	66	113
+THANKSGIVING FEAST 2026	Thanksgiving Third Rack	564	930	52	2580	83	35
+THANKSGIVING FEAST 2026	Thanksgiving Half Rack	609	1050	61	2810	86	42
+THANKSGIVING FEAST 2026	Thanksgiving Chicken & Third Rack Combo	733	1380	79	2970	83	82
+THANKSGIVING FEAST 2026	Thanksgiving Chicken & Third Rack Combo - White Meat	754	1300	66	2980	83	94
+THANKSGIVING FEAST 2026	Thanksgiving Chicken & Half Rack Combo	779	1500	89	3200	86	89
+THANKSGIVING FEAST 2026	Thanksgiving Chicken & Half Rack Combo - White Meat	799	1420	75	3210	86	100
+THANKSGIVING FEAST 2026	Thanksgiving Family Feast	1849	3060	122	6730	257	242
+THANKSGIVING FEAST 2026	Make it a Thanksgiving Feast (excludes choice of pie)	127	190	4.5	430	34	4
+THANKSGIVING FEAST 2026	Pumpkin Pie	161	390	15	530	59	5
+THANKSGIVING FEAST 2026	Thanksgiving Feast - Add Stuffing	85	130	4.5	420	20	4
+THANKSGIVING FEAST 2026	Thanksgiving Feast - Add Cranberry Sauce	35	50	0	5	12	0.1
+THANKSGIVING FEAST 2026	Chicken Broccoli & Cheddar Soup - Family Size	1031	690	30	3930	64	46

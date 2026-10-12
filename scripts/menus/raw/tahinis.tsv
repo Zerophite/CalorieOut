@@ -1,0 +1,99 @@
+# Tahini's nutritional values (Canada, August 2026), transcribed from the table
+# image in tahinis.com/wp-content/uploads/2026/08/Allergen-and-Nutritional-Chart2026.pdf.
+# Columns: kind (part = topping / sauce / portion, item = menu item), name,
+# serving g, calories, fat, carbs, protein, sodium.
+part	Garlic Sauce	40	200	23	1	1	125
+part	Hummus	40	50	4	3	2	270
+part	Mixed Cabbage	30	60	4	2	0	75
+part	Tzatziki Sauce	30	120	10	3	5	140
+part	Spicy Garlic Sauce	20	100	11	0	0	65
+part	Tahini Sauce	30	45	0	0	2	35
+part	Habanero Sauce (Medium)	15	110	13	1	0	75
+part	Habanero Sauce (Hot)	30	220	25	1	1	150
+part	Pomegranate Molasses	5	18	0	5	0	56
+part	Lettuce	30	1	0	0	0	0
+part	Tomatoes	20	0	0	0	0	0
+part	Onions	20	0	0	0	0	0
+part	Pickles	20	0	0	0	0	0
+part	Turnips	25	0	0	1	0	3
+part	Pineapples	30	7	0	2	0	1
+part	Parsley	3	0	0	0	0	1
+part	Fried Onions	10	40	3	7	1	10
+part	Feta Cheese	10	20	2	0	1	75
+part	Pita Chips	20	60	5	4	1	25
+item	Garlic Dip	200	1360	150	5	4	840
+item	Hummus Dip	200	540	34	15	18	2720
+item	Chicken Tenders (3 pcs)	156	430	24	1	51	190
+item	Chipotle Mango Fries (Regular)	225	206	6	34	3	449
+item	Chipotle Mango Fries (Large)	350	412	12	68	6	897
+item	Beef Samosas (3 pcs)	300	500	10	90	20	1700
+item	Veggie Samosas (3 pcs)	295	450	3	93	12	1200
+item	Half Dozen Falafels (6 pcs)	270	300	12	38	15	2320
+item	Dozen Falafels (12 pcs)	540	600	23	76	30	4640
+item	Fattoush Salad	150	50	0	12	2	75
+item	Chicken Shawarma Wrap - Original (Regular)	350	729	30	82	31	891
+item	Chicken Shawarma Wrap - Original (Extreme)	460	1033	45	115	38	1208
+item	Chicken Shawarma Wrap - Old School (Regular)	375	729	30	83	31	894
+item	Chicken Shawarma Wrap - Old School (Extreme)	283	1033	45	116	38	1211
+item	Chicken Shawarma Wrap - Authentic (Regular)	300	824	45	82	29	941
+item	Chicken Shawarma Wrap - Authentic (Extreme)	470	888	27	120	45	1243
+item	Gyro Wrap (Regular)	355	876	48	87	29	1425
+item	Gyro Wrap (Extreme)	485	1256	63	130	50	2254
+item	Falafel Wrap (Regular)	355	541	12	98	18	1824
+item	Falafel Wrap (Extreme)	540	942	24	149	32	3395
+item	Butter Chicken Shawarma Wrap (Regular)	365	762	36	86	31	1379
+item	Butter Chicken Shawarma Wrap (Extreme)	475	926	37	119	38	1611
+item	Jamaican Jerk Chicken Wrap (Regular)	385	713	33	90	30	1824
+item	Jamaican Jerk Chicken Wrap (Extreme)	535	1024	47	132	38	2132
+item	Arabian Bites	297	684	30	82	29	855
+item	Greek Halloumi Wrap	338	886	39	96	40	1752
+item	Greek Halloumi Bowl	383	660	43	22	32	1596
+item	Chicken and Rice Bowl	443	617	32	51	27	1502
+item	Gyro and Rice Bowl	453	782	50	61	26	2092
+item	Falafel and Rice Bowl	483	492	15	71	15	2536
+item	Butter Chicken and Rice Bowl	463	668	39	60	27	2046
+item	Mixed Shawarma Wrap (Regular)	368	679	15	103	34	1153
+item	Mixed Shawarma Wrap (Extreme)	495	796	20	110	42	1604
+item	Mixed Shawarma Bowl (Regular)	543	1339	12	235	43	651
+item	Mixed Shawarma Bowl (Extreme)	767	1807	17	339	58	1072
+item	Classic Poutine (No Meat)	500	1342	70	98	24	5753
+item	Chicken Shawarma Poutine	630	1468	74	99	43	6037
+item	Gyro Poutine	630	1657	94	107	39	6582
+item	Messy Fries	533	943	36	114	31	2385
+item	Habibi Bowl	423	692	38	64	31	1582
+item	Jamaican Jerk Chicken Rice Bowl	493	526	23	65	25	2432
+item	Royal Shawarma Tray	2750	5627	246	651	175	8010
+item	Family Special	7455	5032	260	565	205	12481
+part	Falafel Piece	45	50	2	6	2	390
+part	Beef Samosa Piece	30	50	1	9	2	170
+part	Veggie Samosa Piece	33	50	0	10	1	135
+part	Fattoush Salad (100g)	100	20	0	4	1	10
+part	Saj Bread	102	340	3	75	9	390
+part	Rice (Large)	300	369	8	73	8	1586
+item	Falafel Pieces (3 pcs)	135	150	6	19	7	1160
+item	Falafel Pieces (5 pcs)	225	250	10	30	10	1950
+part	Chicken Shawarma (Meat Only - Regular)	130	126	4	1	19	284
+part	Chicken Shawarma (Meat Only - Large)	175	140	4	1	21	316
+part	Gyro (Meat Only - Small)	130	315	24	9	15	829
+part	Gyro (Meat Only - Large)	175	525	40	16	26	1383
+part	Jamaican Jerk Sauce	30	0	0	4	0	1013
+part	Butter Chicken Sauce	50	96	7	9	1	579
+part	Gravy (158g) - 1 Scoop	110	473	32	0	16	3938
+part	Garlic Sauce (50g)	40	340	38	1	1	210
+part	Hummus (60g)	40	156	11	10	6	816
+part	Tzatziki Sauce (50g)	40	120	10	3	5	140
+part	Tahini Sauce (60g)	30	159	14	0	5	124
+part	Pomegranate Molasses (20g)	5	60	0	15	0	187
+part	Italian Dressing (30g)	25	70	6	4	0	290
+part	Messy Sauce (30g)	40	40	0	9	0	277
+item	Crispy Spice Wrap	334	710	20	102	34	1751
+item	Tandoori Wrap (LTO)	393	698	18	100	38	1067
+item	Tandoori Bowl (LTO)	608	1462	23	259	49	968
+item	Beef Shawarma Wrap	338	859	33	92	43	1198
+item	Beef Shawarma Bowl	603	990	48	98	45	2749
+item	Original Crispy Fries (Regular)	225	206	6	34	3	449
+item	Original Crispy Fries (Large)	350	412	12	68	6	897
+item	Blueberry Flame Wrap	388	945	47	99	36	1341
+item	Chicken Shawarma Ramen	289	850	40	19	22	1850
+item	Halloumi Veggie Ramen	274	920	45	20	21	2200
+item	Habibi Churro Bites (8 pcs)	132	420	20	28	2	180

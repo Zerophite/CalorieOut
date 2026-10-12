@@ -16,6 +16,14 @@ npm run menus:pizzahut     # re-download Pizza Hut's PDF and regenerate (needs p
 npm run menus:marybrowns   # re-download Mary Brown's PDF and regenerate (needs pdftotext)
 npm run menus:thaiexpress  # re-download Thai Express's chart and regenerate (needs pdftotext)
 npm run menus:manchuwok    # re-download Manchu Wok's PDF and regenerate (needs pdftotext)
+npm run menus:osmows       # re-fetch Osmow's calculator data and regenerate
+npm run menus:subway       # re-download Subway's PDF and regenerate (needs pdftotext)
+npm run menus:pitapit      # re-download Pita Pit's guide and regenerate (needs pdftotext)
+npm run menus:muchoburrito # re-fetch MUCHO Burrito's calculator data and regenerate
+npm run menus:works        # re-download The WORKS' guide and regenerate (needs pdftotext)
+npm run menus:bostonpizza  # re-fetch Boston Pizza's nutrition page and regenerate
+npm run menus:tahinis      # regenerate Tahini's from raw/tahinis.tsv
+npm run menus:swisschalet  # regenerate Swiss Chalet from raw/swisschalet.tsv
 npm run menus:harveys      # regenerate Harvey's from raw/harveys.tsv
 npm run menus:dq           # regenerate Dairy Queen from raw/dq.tsv
 npm run menus:littlecaesars # regenerate Little Caesars from raw/littlecaesars.tsv
@@ -49,6 +57,14 @@ TypeScript scripts are run through `run.cjs`, which bundles them with esbuild
 | Mary Brown's | Nutrition PDF linked from marybrowns.com/menu | Published per serving; totals are whole items. A fat typo (Large Taters) is corrected, and the Fan Favourite 6 PC (≈2.5× its own pieces) uses the sum of the official pieces. |
 | Thai Express | Nutrition chart linked from thaiexpress.ca/nutritional-facts | Meals are the sum of official parts (sauce & vegetables or broth + protein + rice / noodles + egg). Vegan / gluten-friendly rows are told apart by order (icons in the PDF). |
 | Manchu Wok | Nutrition PDF linked from manchuwok.com | Read with `pdftotext -raw` because the PDF has overlapping text layers. Portions 5 / 6 / 7 / 16 oz become sizes. One broken row (Spring Roll) is skipped. |
+| Osmow's | Nutrition calculator on osmows.com (its `dodel_nutri` data endpoint) | Fetched by `fetch-osmows.cjs`. Most items list every component (base, protein, sauces) with full nutrition and are built from those parts; add-ons use official values. |
+| Subway | Nutrition data tables PDF linked from subway.com/en-ca/menunutrition/nutrition | Every bread, protein, cheese, vegetable and sauce is published per 6" sub, so the 6", footlong (two 6" servings) and salad builders use only official values. |
+| Pita Pit | Nutrition & allergen guide PDF linked from pitapit.ca/nutrition | Build-your-own components are published by portion size (Small / Large / XL); every "Created For You" item is listed with its published sizes. |
+| MUCHO Burrito | Calorie calculator on muchoburrito.com/nutrition (backed by a published spreadsheet) | Every ingredient per format and size, so each format is a builder. Sodium is derived from the published salt (g × 393 mg). |
+| Tahini's | Allergen & nutrition chart (August 2026) | The values table is an image, so it was transcribed into `raw/tahinis.tsv` and every row checked against its macros. Sauces, toppings and extra portions are add-ons. |
+| The WORKS | Nutritionals & allergens PDF linked from worksburger.com/menu | Patty, bun, each named topping combination, extra toppings and dips are published separately, so the burger builder and every named burger are built from official parts. Rows whose macros can't match their calories are skipped. |
+| Swiss Chalet | Nutrition & allergen page (swisschalet.com/en/nutritional.html) | The site blocks scripted requests, so `raw/swisschalet.tsv` was captured in a browser (checksum-verified). Chicken comes by cut, with Swiss Chalet's per-cut glaze values as add-ons; ribs by rack size. |
+| Boston Pizza | Nutrition page (bostonpizza.com/en/nutritional-information.html) | Fetched by `fetch-bostonpizza.cjs`. Pizzas include every size and the 8" cauliflower crust; GlutenWise versions are an option where values differ. Option labels the page leaves blank are named from the order in Boston Pizza's menu descriptions; unidentifiable ones (taco proteins) are left out. |
 | Harvey's | Nutrition & allergen page (harveys.ca/en/nutrition.html) | The site blocks scripted requests, so `raw/harveys.tsv` was captured in a browser (see below). Buns, patties, cheese, bacon and every garnish are listed separately, so burgers, sandwiches and breakfast items are built entirely from official parts. |
 | McDonald's | Product pages and the `/dnaapp/itemDetails` nutrition API on mcdonalds.com | The site blocks scripted requests, so `raw/mcd.json` was captured in a browser (see below). Includes McDonald's published per-ingredient calories. |
 
@@ -66,6 +82,21 @@ TypeScript scripts are run through `run.cjs`, which bundles them with esbuild
 2. In the developer console, read every table row and print one tab-separated
    line per item: `section heading, name, calories, fat, sodium, carbs, protein`.
 3. Save the lines as `raw/dq.tsv` and run `npm run menus:dq`.
+
+### Refreshing Swiss Chalet data
+
+1. Open `https://www.swisschalet.com/en/nutritional.html` in a browser.
+2. In the developer console, read every nutrition table row and print one
+   tab-separated line per item:
+   `section, name, serving g, calories, fat, sodium, carbs, protein`.
+3. Save the lines as `raw/swisschalet.tsv` and run `npm run menus:swisschalet`.
+
+### Starbucks
+
+`fetch-starbucks.cjs` reads the ordering menu behind starbucks.ca/menu
+(`/apiproxy/v1/ordering/menu`, then each product's per-size nutrition) into
+`raw/starbucks.json`. The site rate-limits aggressively, so the script makes one
+request at a time; if it is refused (HTTP 403), wait and run it again later.
 
 ### Refreshing McDonald's data
 

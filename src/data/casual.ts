@@ -15,42 +15,6 @@ function wingsMenu(prefix: string): MenuItem[] {
 
 export const casualSpots: Restaurant[] = [
   {
-    id: 'the-works',
-    name: 'The Works',
-    cuisine: 'Gourmet burgers',
-    accent: '#78350f',
-    segment: 'Sit-Down',
-    // Official figures from The WORKS published Nutritionals guide (Sept 2025).
-    // Burgers here are summed from their published patty + bun + cheese components.
-    dataSource: 'official',
-    items: [
-      {
-        id: 'tw-cheeseburger', name: 'Cheeseburger', kind: 'fixed', category: 'Burgers', serving: '1 burger', tags: ['high-protein'],
-        nutrition: { calories: 522, protein: 35, carbs: 39, fat: 24, sodium: 980 },
-        components: [
-          { id: 'bun', name: 'White bun', removable: false, nutrition: { calories: 224, protein: 6, carbs: 38, fat: 4, sodium: 416 } },
-          { id: 'beef', name: '4oz beef patty', removable: false, nutrition: { calories: 185, protein: 22, carbs: 1, fat: 11, sodium: 337 } },
-          { id: 'cheese', name: 'Cheddar', nutrition: { calories: 113, protein: 7, carbs: 0, fat: 9, sodium: 227 } },
-        ],
-      },
-      {
-        id: 'tw-chicken', name: 'Grilled Chicken Burger', kind: 'fixed', category: 'Chicken', serving: '1 burger', tags: ['high-protein'],
-        nutrition: { calories: 405, protein: 42, carbs: 41, fat: 7, sodium: 836 },
-        components: [
-          { id: 'bun', name: 'White bun', removable: false, nutrition: { calories: 224, protein: 6, carbs: 38, fat: 4, sodium: 416 } },
-          { id: 'chicken', name: 'Grilled chicken breast', removable: false, nutrition: { calories: 181, protein: 36, carbs: 3, fat: 3, sodium: 420 } },
-        ],
-      },
-      { id: 'tw-cobbfather', name: 'The Cobbfather Salad', kind: 'fixed', category: 'Salads', serving: '1 salad', tags: ['high-protein'], nutrition: { calories: 770, protein: 50, carbs: 13, fat: 54, sodium: 1484, fiber: 5 } },
-      { id: 'tw-romaine', name: 'Romaine Calm & Carry On Salad', kind: 'fixed', category: 'Salads', serving: '1 salad', tags: ['vegan', 'low-carb'], nutrition: { calories: 75, protein: 4, carbs: 15, fat: 1, sodium: 38, fiber: 7 } },
-      { id: 'tw-fries', name: 'Fresh Cut Fries', kind: 'fixed', category: 'Sides', serving: '1 order', tags: ['vegetarian', 'vegan'], nutrition: { calories: 620, protein: 9, carbs: 80, fat: 31, sodium: 221, fiber: 8 } },
-      { id: 'tw-sweet-fries', name: 'Sweet Potato Fries', kind: 'fixed', category: 'Sides', serving: '1 order', tags: ['vegetarian'], nutrition: { calories: 440, protein: 3, carbs: 59, fat: 22, sodium: 140, fiber: 7 } },
-      { id: 'tw-poutine', name: 'Traditional Poutine', kind: 'fixed', category: 'Sides', serving: 'full', tags: ['vegetarian'], nutrition: { calories: 1634, protein: 38, carbs: 178, fat: 86, sodium: 2839, fiber: 16 } },
-      { id: 'tw-side-poutine', name: 'Side Traditional Poutine', kind: 'fixed', category: 'Sides', serving: 'side', tags: ['vegetarian'], nutrition: { calories: 817, protein: 19, carbs: 89, fat: 43, sodium: 1420, fiber: 8 } },
-      { id: 'tw-icecream', name: 'Double Scoop Ice Cream', kind: 'fixed', category: 'Desserts', serving: '1 order', tags: ['vegetarian'], nutrition: { calories: 544, protein: 4, carbs: 96, fat: 18, sodium: 234, sugar: 66 } },
-    ],
-  },
-  {
     id: 'lone-star',
     name: 'Lone Star Texas Grill',
     cuisine: 'Tex-Mex · Sit-down',
@@ -219,68 +183,6 @@ export const casualSpots: Restaurant[] = [
       { id: 'sk-loaded-fries', name: 'Loaded Butter Chicken Fries', kind: 'fixed', category: 'Sides', serving: 'regular', nutrition: { calories: 880, protein: 30, carbs: 74, fat: 50, sodium: 1600 } },
       { id: 'sk-rice-bowl', name: 'Chicken Rice Bowl', kind: 'fixed', category: 'Bowls & Burritos', serving: '1 bowl', tags: ['high-protein'], nutrition: { calories: 720, protein: 38, carbs: 82, fat: 24, sodium: 1400 } },
       { id: 'sk-taco', name: 'Street Tacos (3)', kind: 'fixed', category: 'Bowls & Burritos', serving: '3 tacos', nutrition: { calories: 560, protein: 26, carbs: 52, fat: 26, sodium: 1200 } },
-    ],
-  },
-  {
-    id: 'tahinis',
-    name: "Tahini's",
-    cuisine: 'Middle Eastern · Shawarma',
-    accent: '#0f766e',
-    segment: 'Fast Food',
-    // Official figures from Tahini's published Nutritional Values guide (Sept 2025).
-    dataSource: 'official',
-    items: [
-      {
-        id: 'th-chicken-wrap', name: 'Chicken Shawarma Wrap (Original)', kind: 'fixed', category: 'Wraps', serving: '350 g', tags: ['high-protein'],
-        nutrition: { calories: 729, protein: 31, carbs: 82, fat: 30, sodium: 891 },
-        components: buildComponents({ calories: 729, protein: 31, carbs: 82, fat: 30, sodium: 891 }, [
-          { id: 'pita', name: 'Pita wrap', n: REF.pita, removable: false },
-          { id: 'chicken', name: 'Chicken shawarma', core: true },
-          { id: 'garlic', name: 'Garlic sauce', n: REF.garlicSauce },
-          { id: 'veg', name: 'Pickles & veg', n: REF.vegShawarma },
-        ]),
-      },
-      {
-        id: 'th-beef-wrap', name: 'Beef Shawarma Wrap', kind: 'fixed', category: 'Wraps', serving: '338 g', tags: ['high-protein'],
-        nutrition: { calories: 859, protein: 43, carbs: 92, fat: 33, sodium: 1198 },
-        components: buildComponents({ calories: 859, protein: 43, carbs: 92, fat: 33, sodium: 1198 }, [
-          { id: 'pita', name: 'Pita wrap', n: REF.pita, removable: false },
-          { id: 'beef', name: 'Beef shawarma', core: true },
-          { id: 'garlic', name: 'Garlic sauce', n: REF.garlicSauce },
-          { id: 'veg', name: 'Pickles & veg', n: REF.vegShawarma },
-        ]),
-      },
-      {
-        id: 'th-chicken-bowl', name: 'Chicken & Rice Bowl', kind: 'fixed', category: 'Bowls & Burritos', serving: '443 g', tags: ['high-protein'],
-        nutrition: { calories: 617, protein: 27, carbs: 51, fat: 32, sodium: 1502 },
-        components: buildComponents({ calories: 617, protein: 27, carbs: 51, fat: 32, sodium: 1502 }, [
-          { id: 'rice', name: 'Rice', n: REF.riceCup, removable: false },
-          { id: 'chicken', name: 'Chicken shawarma', core: true },
-          { id: 'garlic', name: 'Garlic sauce', n: REF.garlicSauce },
-          { id: 'salad', name: 'Salad', n: REF.vegShawarma },
-        ]),
-      },
-      {
-        id: 'th-beef-bowl', name: 'Beef Shawarma Bowl', kind: 'fixed', category: 'Bowls & Burritos', serving: '603 g', tags: ['high-protein'],
-        nutrition: { calories: 990, protein: 45, carbs: 98, fat: 48, sodium: 2749 },
-        components: buildComponents({ calories: 990, protein: 45, carbs: 98, fat: 48, sodium: 2749 }, [
-          { id: 'rice', name: 'Rice', n: REF.riceCup, removable: false },
-          { id: 'beef', name: 'Beef shawarma', core: true },
-          { id: 'garlic', name: 'Garlic sauce', n: REF.garlicSauce },
-          { id: 'salad', name: 'Salad', n: REF.vegShawarma },
-        ]),
-      },
-      {
-        id: 'th-falafel-wrap', name: 'Falafel Wrap', kind: 'fixed', category: 'Wraps', serving: '355 g', tags: ['vegan'],
-        nutrition: { calories: 541, protein: 18, carbs: 98, fat: 12, sodium: 1824, fiber: 11 },
-        components: buildComponents({ calories: 541, protein: 18, carbs: 98, fat: 12, sodium: 1824 }, [
-          { id: 'pita', name: 'Pita wrap', n: REF.pita, removable: false },
-          { id: 'falafel', name: 'Falafel', core: true },
-          { id: 'tahini', name: 'Tahini sauce', n: REF.garlicSauce },
-          { id: 'veg', name: 'Pickles & veg', n: REF.vegShawarma },
-        ]),
-      },
-      { id: 'th-fries', name: 'Fries (Large)', kind: 'fixed', category: 'Sides', serving: '350 g', tags: ['vegetarian', 'vegan'], nutrition: { calories: 412, protein: 6, carbs: 68, fat: 12, sodium: 897 } },
     ],
   },
   {

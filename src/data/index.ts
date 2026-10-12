@@ -27,6 +27,8 @@ import { starbucks } from './starbucks'
 import { swisschalet } from './swisschalet'
 import { bostonpizza } from './bostonpizza'
 import { osmows } from './osmows'
+import { tahinis } from './tahinis'
+import { theworks } from './theworks'
 // Local / independent (estimated)
 import { shawarmaSpots } from './shawarma'
 import { ramenSpots } from './ramen'
@@ -68,6 +70,8 @@ export const restaurants: Restaurant[] = [
   swisschalet,
   bostonpizza,
   osmows,
+  tahinis,
+  theworks,
   // Local / independent (estimated)
   ...shawarmaSpots,
   ...ramenSpots,
