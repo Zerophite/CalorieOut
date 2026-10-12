@@ -110,14 +110,14 @@ function SizedCustomizer({
   }
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[1fr_340px]">
+    <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_340px]">
       <div className="space-y-5 pb-4">
         <section>
           <h3 className="mb-1 font-bold text-body">Customize ingredients</h3>
           <p className="mb-3 text-sm text-muted">
             Everything is optional — tap anything to remove it, and the total updates instantly.
           </p>
-          <div className="grid gap-2 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
             {included.map((c) => {
               const on = selection[c.id]
               return (
@@ -164,7 +164,7 @@ function SizedCustomizer({
         {extras.length > 0 && (
           <section>
             <h3 className="mb-2 font-bold text-body">Add extras</h3>
-            <div className="grid gap-2 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
               {extras.map((c) => {
                 const on = selection[c.id]
                 return (

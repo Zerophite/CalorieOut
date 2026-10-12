@@ -108,7 +108,7 @@ export function SearchView({
         )}
       </p>
 
-      <div className="mt-3 grid gap-3 sm:grid-cols-2">
+      <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
         {results.map(({ restaurant, item }) => {
           const key = `${restaurant.id}:${item.id}`
           return (

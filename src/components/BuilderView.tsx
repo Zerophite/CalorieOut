@@ -76,7 +76,7 @@ export function BuilderView({ item, goal, onAddToCompare, onAddToDay }: Props) {
   }
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[1fr_340px]">
+    <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_340px]">
       {/* Option groups */}
       <div className="space-y-6 pb-40 lg:pb-6">
         {item.groups.map((group) => {
@@ -90,7 +90,7 @@ export function BuilderView({ item, goal, onAddToCompare, onAddToDay }: Props) {
                   {group.max ? ` · up to ${group.max}` : ''}
                 </span>
               </div>
-              <div className="grid gap-2 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                 {group.options.map((opt) => {
                   const active = chosen.includes(opt.id)
                   return (

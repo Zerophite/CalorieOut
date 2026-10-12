@@ -60,6 +60,12 @@ body,
   height: 100%;
 }
 
+/* Never let a long name widen the page: on phones that makes the browser zoom
+   out (and enlarge text to compensate), so everything appears to change size. */
+#root {
+  overflow-x: clip;
+}
+
 body {
   margin: 0;
   background: var(--bg);

@@ -121,7 +121,100 @@ async function aw() {
   return map
 }
 
+// Wendy's: the ordering API names each item's photo (baseImageName) on app.wendys.com.
+async function wendys() {
+  const API = 'https://api.app.prd.wendys.digital/web-client-gateway'
+  const COMMON = 'lang=en&cntry=CA&sourceCode=ORDER.WENDYS&version=2.22.2'
+  const site = JSON.parse(fs.readFileSync(path.join(__dirname, 'raw', 'wendys.json'), 'utf8')).site.id
+  const { menuLists: m } = await getJson(`${API}/menu/getSiteMenu?siteNum=${site}&freeStyleMenu=true&menuChannel=WEB_GUEST&${COMMON}`)
+  const map = {}
+  for (const x of [...m.menuItems, ...m.salesItems]) {
+    const name = x.displayName || x.name
+    const img = x.baseImageName || x.productGroupId
+    if (name && img && !map[norm(name)]) map[norm(name)] = `https://app.wendys.com/unified/assets/menu/productGroups/${img}_medium_CA_en.png`
+  }
+  return map
+}
+
+// KFC Canada: the ordering catalogue gives every product's photo (imageName).
+async function kfc() {
+  const cat = await getJson(
+    'https://orderserv-kfc-na-olo-api.yum.com/dev/v1/catalogs/a087813cef074625a8341e162356a1e5/KFCCanadaMenu-Generic-en',
+    { headers: { Origin: 'https://www.kfc.ca' } },
+  )
+  const map = {}
+  const walk = (node) => {
+    if (Array.isArray(node)) return node.forEach(walk)
+    if (!node || typeof node !== 'object') return
+    const url = typeof node.imageName === 'string' && /^https:/.test(node.imageName) ? node.imageName : null
+    if (url) {
+      const names = [node.name, ...(node.dname || []).map((d) => d.value)]
+      for (const n of names) if (n && !map[norm(n)]) map[norm(n)] = `${url}?w=480&fm=webp&q=70`
+    }
+    for (const v of Object.values(node)) if (typeof v === 'object') walk(v)
+  }
+  walk(cat)
+  return map
+}
+
+// Freshii: each menu category page (freshii.com/menu/<category>/) lists its dishes, photo then name.
+async function freshii() {
+  const map = {}
+  for (const cat of ['burrito', 'energii-bowls', 'poke-bowls', 'salads', 'smoothiis', 'wraps']) {
+    const html = await (await fetch(`https://freshii.com/menu/${cat}/`, { headers: { 'User-Agent': 'Mozilla/5.0' } })).text()
+    let img = null
+    for (const m of html.matchAll(/data-src="(https:\/\/freshii\.com\/wp-content\/uploads\/[^"]+)"|<h[2-5][^>]*>([^<]{3,60})<\/h[2-5]>/g)) {
+      if (m[1]) img = m[1]
+      else if (img) {
+        if (!map[norm(m[2])]) map[norm(m[2])] = img
+        img = null
+      }
+    }
+  }
+  return map
+}
+
+// Our item name → the chain's own product name, where the two differ.
+const ALIASES = {
+  aw: { Latte: 'Latte Small 2 Milk', Tea: 'Teas', Poutine: 'Poutine English Canada' },
+  bostonpizza: { 'Deluxe Pizza': 'Deluxe' },
+  freshii: {
+    'Build Your Bowl': 'Create Your Own Bowl',
+    "Buddha's Satay Bowl with Chicken": 'Buddha Satay Bowl',
+    "Buddha's Satay Burrito": 'Buddha Satay Burrito',
+    'Oaxaca Bowl': 'Oaxaca Bowl',
+    'Spicy Buffalo Bowl': 'Spiicy Buffalo Bowl',
+    'Spicy Buffalo Burrito': 'Spiicy Buffalo Burrito',
+    'Teriyaki Bowl with Chicken': 'Teriyaki Twiist Bowl',
+    'Teriyaki Twist Burrito': 'Teriyaki Twiist Burrito',
+    'Tuna Poke Bowl': 'Poke Tuna',
+    'Spicy Tuna Poke Bowl': 'Poke Tuna',
+    'Salmon Poke Bowl': 'Poke Salmon',
+    'Spicy Salmon Poke Bowl': 'Poke Salmon',
+    'Shrimp Poke Bowl': 'Poke Shrimps',
+    'Tofu Poke Bowl': 'Poke Tofu',
+    'Berrii Crunchii Salad': 'Berrii Crunch',
+    'Fiesta Salad': 'Fiiesta Salad',
+    'Fiesta Wrap': 'Fiiesta Wrap',
+    'Chocolate Peanut Butter Smoothie': 'Chocolate Peanut Butter',
+    'Freshii Green Smoothie': 'Freshii Green',
+    'Mixed Berry Smoothie': 'Mixed Berrii',
+    'Strawberry Banana Boost Smoothie': 'Strawberrii Banana',
+  },
+  kfc: {
+    'Original Recipe Chicken': '2 Piece Chicken',
+    'Original Recipe Tender': 'Go Bucket 1 Original Recipe Tender',
+    'Crispy Strips': 'Go Bucket 1 Crispy Strip',
+    'Seasoned French Fries': 'Fries',
+    'Coleslaw Salad': 'Homestyle Coleslaw',
+    'Lipton Brisk Tea': 'Brisk Iced Tea',
+  },
+}
+
 const BRANDS = {
+  freshii,
+  kfc,
+  wendys,
   aw,
   kettlemans,
   bostonpizza,
@@ -136,6 +229,18 @@ const BRANDS = {
   const brand = process.argv[2]
   if (!BRANDS[brand]) throw new Error(`Unknown brand "${brand}". Use one of: ${Object.keys(BRANDS).join(', ')}`)
   const map = await BRANDS[brand]()
+  for (const [ours, theirs] of Object.entries(ALIASES[brand] || {})) if (map[norm(theirs)]) map[norm(ours)] = map[norm(theirs)]
+  // Drop photos that don't actually load (retired items still listed in a feed).
+  const entries = Object.entries(map)
+  for (let i = 0; i < entries.length; i += 8) {
+    await Promise.all(
+      entries.slice(i, i + 8).map(async ([k, url]) => {
+        const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } }).catch(() => null)
+        if (!res || !res.ok || !/^image\//.test(res.headers.get('content-type') || '')) delete map[k]
+        if (res && res.body) await res.body.cancel().catch(() => {})
+      }),
+    )
+  }
   const dir = path.join(__dirname, 'images')
   fs.mkdirSync(dir, { recursive: true })
   fs.writeFileSync(path.join(dir, `${brand}.json`), JSON.stringify(map, null, 1))

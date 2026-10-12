@@ -157,10 +157,26 @@ request at a time (a full crawl takes several minutes); if it is refused
 `images/<file>.json` (product name → URL). `writeMenu` (via
 `attach-images.mjs`) attaches a photo to each item whose name matches, and the
 app loads it straight from the restaurant's own CDN, lazily, hiding it if it
-fails to load. Covered so far: Tim Hortons, Burger King, Firehouse Subs
-(Sanity), Starbucks, Taco Bell, A&W, Kettleman's and Boston Pizza (featured
-dishes only). McDonald's blocks scripted requests, so `images/mcdonalds.json`
-was captured from its full-menu page in a browser.
+fails to load.
+
+- **Fetched by script** (`fetch-images.cjs`): Tim Hortons, Burger King and
+  Firehouse Subs (Sanity), Starbucks, Taco Bell, Wendy's, KFC, Freshii, A&W,
+  Kettleman's and Boston Pizza (featured dishes only). Photos that don't load
+  are dropped, and `ALIASES` maps our item names to the chain's own product
+  names where they differ.
+- **Captured in a browser** (sites that render their menu with JavaScript or
+  block scripted requests): McDonald's, Harvey's, Swiss Chalet, Pizza Hut,
+  Dairy Queen, The WORKS, Pita Pit, Osmow's, Tahini's, MUCHO Burrito, Bar
+  Burrito, Mary Brown's, Thai Express, Manchu Wok, Noodlebox and Mad Radish.
+  These files are keyed by our own item names; refresh them by hand from the
+  chain's menu pages.
+- Not covered: Subway (its menu page doesn't load), Little Caesars and Red Swan
+  (menu only inside an order flow), and the local spots.
+
+A one-word item name only takes a longer photo name when the extra words are
+sizes ("Latte" → "Latte Small"), never another dish ("Banana" ≠ "Banana
+Split"). `images/exclude.json` lists items whose closest photo shows a
+different dish.
 
 ```bash
 npm run menus:images -- timhortons   # then regenerate that chain
