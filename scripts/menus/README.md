@@ -22,6 +22,10 @@ npm run menus:pitapit      # re-download Pita Pit's guide and regenerate (needs 
 npm run menus:muchoburrito # re-fetch MUCHO Burrito's calculator data and regenerate
 npm run menus:works        # re-download The WORKS' guide and regenerate (needs pdftotext)
 npm run menus:bostonpizza  # re-fetch Boston Pizza's nutrition page and regenerate
+npm run menus:barburrito   # re-fetch Bar Burrito's calculator and regenerate
+npm run menus:freshii      # re-download Freshii's guide and regenerate (needs pdftotext)
+npm run menus:tacobell     # re-fetch Taco Bell's nutrition menu data and regenerate
+npm run menus:starbucks    # re-crawl Starbucks (slow, one request at a time) and regenerate
 npm run menus:tahinis      # regenerate Tahini's from raw/tahinis.tsv
 npm run menus:swisschalet  # regenerate Swiss Chalet from raw/swisschalet.tsv
 npm run menus:harveys      # regenerate Harvey's from raw/harveys.tsv
@@ -65,6 +69,10 @@ TypeScript scripts are run through `run.cjs`, which bundles them with esbuild
 | The WORKS | Nutritionals & allergens PDF linked from worksburger.com/menu | Patty, bun, each named topping combination, extra toppings and dips are published separately, so the burger builder and every named burger are built from official parts. Rows whose macros can't match their calories are skipped. |
 | Swiss Chalet | Nutrition & allergen page (swisschalet.com/en/nutritional.html) | The site blocks scripted requests, so `raw/swisschalet.tsv` was captured in a browser (checksum-verified). Chicken comes by cut, with Swiss Chalet's per-cut glaze values as add-ons; ribs by rack size. |
 | Boston Pizza | Nutrition page (bostonpizza.com/en/nutritional-information.html) | Fetched by `fetch-bostonpizza.cjs`. Pizzas include every size and the 8" cauliflower crust; GlutenWise versions are an option where values differ. Option labels the page leaves blank are named from the order in Boston Pizza's menu descriptions; unidentifiable ones (taco proteins) are left out. |
+| Bar Burrito | Nutrition calculator (barburrito.ca/nutrition-information) | Fetched by `fetch-barburrito.cjs` from the calculator's per-ingredient values. Portions are scaled by format exactly as the calculator's script does (e.g. protein ×2 in a regular burrito, ×3 in a large). The calculator lists Black Beans with 0 g carbs; that published value is kept. |
+| Freshii | Nutritionals & allergens guide PDF linked from freshii.com | Every signature item, smoothie (12 / 16 / 24 oz) and per-portion protein, sauce and add-on. One broken row (Sweet Potato Bites, 0 g carbs at 470 kcal) is skipped. |
+| Taco Bell | Interactive nutrition menu linked from tacobell.ca (Nutritionix data, `menu-latest.json.gz`) | Fetched by `fetch-tacobell.cjs`. Ingredients are published per 100 g with each item's default weights, so breakdowns are built from official parts; add-ons use Taco Bell's own portions. |
+| Starbucks | Ordering menu API behind starbucks.ca/menu (`/apiproxy/v1/ordering/menu` and each product's per-size nutrition) | Fetched by `fetch-starbucks.cjs` (see below). Every drink in every size it is sold in; items shown in several menu sections are listed once. Sizes whose macros can't match their calories are skipped. |
 | Harvey's | Nutrition & allergen page (harveys.ca/en/nutrition.html) | The site blocks scripted requests, so `raw/harveys.tsv` was captured in a browser (see below). Buns, patties, cheese, bacon and every garnish are listed separately, so burgers, sandwiches and breakfast items are built entirely from official parts. |
 | McDonald's | Product pages and the `/dnaapp/itemDetails` nutrition API on mcdonalds.com | The site blocks scripted requests, so `raw/mcd.json` was captured in a browser (see below). Includes McDonald's published per-ingredient calories. |
 
@@ -96,7 +104,8 @@ TypeScript scripts are run through `run.cjs`, which bundles them with esbuild
 `fetch-starbucks.cjs` reads the ordering menu behind starbucks.ca/menu
 (`/apiproxy/v1/ordering/menu`, then each product's per-size nutrition) into
 `raw/starbucks.json`. The site rate-limits aggressively, so the script makes one
-request at a time; if it is refused (HTTP 403), wait and run it again later.
+request at a time (a full crawl takes several minutes); if it is refused
+(HTTP 403), wait and run it again later.
 
 ### Refreshing McDonald's data
 

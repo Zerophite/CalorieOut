@@ -10,9 +10,10 @@ dist-ssr/
 .claude/
 
 # Raw menu crawls (large, re-fetchable). The McDonald's capture is kept because
-# it needs a browser to collect.
+# it needs a browser to collect, and Starbucks because its site rate-limits crawls.
 scripts/menus/raw/*.json
 !scripts/menus/raw/mcd.json
+!scripts/menus/raw/starbucks.json
 
 # Logs
 *.log
