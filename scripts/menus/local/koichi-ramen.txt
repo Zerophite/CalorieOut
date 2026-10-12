@@ -1,0 +1,45 @@
+id: koichi-ramen
+name: Koichi Ramen
+cuisine: Japanese · Ramen
+accent: #c62633
+segment: Sit-Down
+source: https://www.koichiramen.com (menu)
+
+[Appetizers]
+Edamame = side.edamame
+Vegetable Gyoza = side.gyoza x0.95 :: vegetable dumplings, dipping sauce
+Chicken Gyoza = side.gyoza :: chicken dumplings, dipping sauce
+Agedashi Tofu = side.agedashi :: fried tofu, dashi dressing, green onion
+Chicken Karaage = side.karaage
+
+[Pork broth ramen]
+Koichi Signature Ramen = ramen.tonkotsu x1.1 :: pork broth, noodles, chashu, egg, bamboo shoots, bean sprouts, green onion, kikurage
+Hakata Tonkotsu = ramen.tonkotsu :: pork broth, noodles, chashu, bamboo shoots, bean sprouts, egg, green onion, kikurage
+Black Garlic Tonkotsu = ramen.tonkotsu x1.08 :: pork broth, noodles, chashu, black garlic oil, bamboo shoots, bean sprouts, egg, green onion, kikurage
+Miso Tonkotsu = ramen.miso x1.08 :: miso pork broth, noodles, chashu, bean sprouts, corn, mushrooms, green onions
+Curry Tonkotsu = ramen.curry :: curry pork broth, noodles, chashu, bean sprouts, corn, mushrooms, green onions
+
+[Chicken broth ramen]
+Chicken Shoyu Ramen = ramen.shoyu :: soy chicken broth, noodles, chicken, bamboo shoots, bean sprouts, egg, green onion, mushrooms
+Chicken Shio Ramen = ramen.chicken x0.95 :: chicken & fish broth, noodles, chicken, bean sprouts, mushrooms, green onion
+Chicken Miso Ramen = ramen.miso :: miso chicken broth, noodles, chicken, bean sprouts, mushrooms, green onion
+Chicken Curry Ramen = ramen.curry x0.95 :: curry chicken broth, noodles, chicken, bean sprouts, corn, mushrooms, green onions
+
+[Vegetable broth ramen]
+Vegetable Shoyu Ramen = ramen.veggie x0.95 :: vegetable broth, noodles, bamboo shoots, sprouts, green onion, mushrooms, bok choy
+Vegetable Miso Ramen = ramen.veggie :: miso vegetable broth, noodles, bean sprouts, corn, green onion, mushrooms, bok choy
+Vegetable Curry Ramen = ramen.curry x0.85 :: curry vegetable broth, noodles, bean sprouts, corn, green onion, mushrooms, bok choy
+Abura Soba = ramen.mazemen :: noodles, seasoning oil, sauces, chashu, egg, green onion
+
+[Extras]
+Extra Chashu = add.chashu
+Extra Egg = add.egg
+Extra Noodles = add.noodles
+
+[Beverages]
+Sapporo Tall Can = drink.beer x1.1
+Asahi Tall Can = drink.beer x1.05
+Calpico = drink.soft x0.9
+Iced Green Tea = coffee.tea
+Ramune = drink.soft x0.6
+UCC Iced Coffee = bt.coffee x0.4

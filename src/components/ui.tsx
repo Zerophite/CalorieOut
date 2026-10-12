@@ -105,9 +105,10 @@ export function EstimateBadge() {
 export function EstimateBanner() {
   return (
     <div className="rounded-2xl border border-amber-500/30 bg-amber-500/10 p-3 text-sm text-amber-700 dark:text-amber-300">
-      <strong>Estimated values.</strong> This spot doesn’t publish nutrition
-      info, so these numbers are modelled from typical recipes for each dish —
-      a ballpark for guidance, not exact figures.
+      <strong>Estimated values.</strong> This spot doesn’t publish full
+      nutrition info, so these numbers are modelled from typical recipes for
+      each dish (using the calories it posts on its menu where it does) — a
+      ballpark for guidance, not exact figures.
     </div>
   )
 }
@@ -224,6 +225,29 @@ export function BrandLogo({
           // Hide until measured so a tiny icon never flashes stretched.
           visibility: fit ? 'visible' : 'hidden',
         }}
+      />
+    </div>
+  )
+}
+
+/** A product photo from the restaurant's menu; hides itself if it can't load. */
+export function ItemPhoto({ src, alt, variant }: { src?: string; alt: string; variant: 'thumb' | 'hero' }) {
+  const [failed, setFailed] = useState(false)
+  if (!src || failed) return null
+  const cls =
+    variant === 'thumb'
+      ? 'h-16 w-16 shrink-0 rounded-xl sm:h-20 sm:w-20'
+      : 'mx-auto h-48 w-full max-w-sm rounded-2xl sm:h-60'
+  return (
+    <div className={cls + ' overflow-hidden bg-white ring-1 ring-[var(--border)]'}>
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        referrerPolicy="no-referrer"
+        onError={() => setFailed(true)}
+        className="h-full w-full object-contain p-1"
       />
     </div>
   )

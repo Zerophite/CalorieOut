@@ -1,0 +1,43 @@
+id: sushi-eki
+name: Sushi Eki
+cuisine: Japanese · Sushi
+accent: #b91c1c
+segment: Sit-Down
+source: No public menu found; a typical sushi-bar menu
+
+[Rolls]
+California Roll (8 pc) = maki.california
+Spicy Salmon Roll (8 pc) = maki.spicy-salmon
+Spicy Tuna Roll (8 pc) = maki.spicy-tuna
+Salmon Avocado Roll (8 pc) = maki.salmon-avocado
+Dynamite Roll (8 pc) = maki.dynamite
+Dragon Roll (8 pc) = maki.dragon
+Rainbow Roll (8 pc) = maki.rainbow
+Shrimp Tempura Roll (8 pc) = maki.tempura
+Spider Roll (soft-shell crab, 8 pc) = maki.crispy
+Philadelphia Roll (8 pc) = maki.salmon-avocado x1.15
+Avocado Roll (6 pc) = maki.veg
+Sweet Potato Roll (8 pc) = maki.veg x1.6
+
+[Nigiri, sashimi & combos]
+Salmon Nigiri = nigiri.pc ; 2 pc=2, 4 pc=4
+Tuna Nigiri = nigiri.pc x0.95 ; 2 pc=2, 4 pc=4
+Assorted Sashimi (9 pc) = sashimi.pc x9
+Sushi Combo (12 pc) = sushi.combo
+Sushi Boat (for 2–3, per person) = sushi.boat x0.4
+
+[Kitchen]
+Chicken Teriyaki Bento = jp.bento
+Salmon Teriyaki = jp.teriyaki x1.1
+Chicken Katsu Curry = don.curry
+Salmon Don = jp.donburi-fish
+Udon Noodle Soup = jp.udon
+Salmon Poke Bowl = jp.poke
+
+[Sides]
+Miso Soup = side.miso-soup
+Edamame = side.edamame
+Seaweed Salad = side.seaweed-salad
+Shrimp Tempura = side.tempura
+Gyoza = side.gyoza
+Mochi Ice Cream (2) = dessert.mochi

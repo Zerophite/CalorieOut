@@ -1,0 +1,40 @@
+id: suzy-q
+name: Suzy Q Doughnuts
+cuisine: Doughnuts · Café
+accent: #db2777
+segment: Coffee & Bakery
+source: https://suzyq.ca/doughnuts (Autumn 2026 menu)
+
+[Featured this season]
+Torched Sweet Potato = donut.specialty :: doughnut, sweet potato dough, marshmallow crème
+Lemon Ginger Twister = donut.yeast x1.1 :: vegan doughnut, lemon ginger poppyseed glaze
+Cranberry Fog = donut.specialty x0.95 :: doughnut, Earl Grey vanilla glaze, cranberry jam
+PB&J Square = donut.filled x1.15 :: vegan doughnut, peanut butter glaze, peanuts, raspberry jam
+Wündercrunch = donut.specialty x1.1 :: doughnut, peanut butter milk chocolate glaze, peanut brittle
+Brampton Cream = donut.filled x1.15 :: doughnut, vanilla pastry cream, chocolate
+Hazeldean Road = donut.filled x1.25 :: vegan doughnut, pudding, roasted hazelnuts, gianduja
+Black Forest = donut.filled x1.25 :: chocolate doughnut, cherry filling, whipped cream, chocolate curls
+Nanaimo Bar = pastry.brownie x1.2
+Nanaimo, BC = donut.filled x1.2 :: doughnut, Boston cream, Nanaimo topping
+Glitter Munkki = donut.cake x0.75 :: vegan doughnut, cardamom sugar
+Peppermint Avalanche = donut.specialty :: doughnut, peppermint glaze, meringue
+Sugar Plum Fairy = donut.filled :: doughnut, sugar, plum jam
+Yule Nog Fillie = donut.filled x1.05
+Yuzu Satsuma Twister = donut.yeast x1.1 :: vegan doughnut, mandarin yuzu glaze
+
+[Day ones & perennials]
+Raspberry Cassis = donut.yeast x1.15 :: doughnut, raspberry blackcurrant glaze, white chocolate
+Cookies & Cream = donut.specialty :: doughnut, vanilla bean glaze, cookie crumble
+Cinnamon Toast Crunch = donut.specialty :: doughnut, cinnamon brown butter glaze, cereal, sugar
+Dirty Chocolate = donut.specialty x0.95 :: vegan doughnut, dark chocolate ganache, cookie crumb
+Maple Bacon = donut.specialty x1.05 :: doughnut, maple glaze, bacon
+D'OH!nut = donut.yeast x1.05
+Sugar Munkki = donut.cake x0.75 :: vegan doughnut, cardamom sugar
+Sourdough V. Dip = donut.yeast x1.3 :: vegan sourdough doughnut, vanilla glaze
+
+[Drinks]
+Drip Coffee = coffee.drip
+Latte = coffee.latte
+Cappuccino = coffee.cappuccino
+London Fog = coffee.latte x0.75
+Hot Chocolate = coffee.hot-chocolate

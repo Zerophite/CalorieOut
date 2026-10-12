@@ -1,0 +1,42 @@
+id: sansotei-ramen
+name: Sansotei Ramen
+cuisine: Japanese · Ramen
+accent: #111827
+segment: Sit-Down
+source: https://www.sansotei.com (menu page)
+
+[Ramen — thick or thin noodles]
+Tonkotsu Ramen = ramen.tonkotsu :: pork bone broth, noodles, chashu, black fungus, egg, green onion
+Tonkotsu Black Ramen = ramen.tonkotsu x1.08 :: pork bone broth, noodles, chashu, black fungus, egg, green onion, garlic oil
+Miso Black Ramen = ramen.miso x1.12 :: miso broth, noodles, chashu, spicy kakuni pork belly, egg, shiitake, garlic oil
+Spicy Tantan Ramen = ramen.spicy :: spicy sesame broth, noodles, chashu, ground pork, egg, bamboo shoot, chili oil
+Shoyu Ramen = ramen.shoyu :: soy sauce broth, noodles, chashu, egg, bamboo shoot, green onion
+Tomato Ramen = ramen.shoyu x1.05 :: tomato broth, noodles, chashu, scallop, egg, tomato, shiitake
+Chicken Shio Ramen = ramen.chicken :: chicken shio broth, noodles, chicken breast, egg, black fungus, green onion
+Vegetarian Miso Ramen = ramen.veggie :: miso vegetable broth, noodles, tofu, daikon, wakame, onions
+Mazemen = ramen.mazemen :: noodles, spicy sauce, eggplant, peperoncini, corn, green onion
+Simple Set (Shio Ramen + Chashu Don) = ramen.shoyu x1.6 :: shio broth, noodles, bamboo shoot, green onion, rice, chashu
+
+[Extras]
+Extra Chashu = add.chashu
+Extra Egg = add.egg
+Kaedama (Noodle Refill) = add.noodles
+Rice = side.steamed-rice
+
+[Sides]
+Gyoza = side.gyoza
+Negi Shoga Gyoza = side.gyoza x1.05 :: pork dumplings, ginger, green onion
+Gyudon = don.rice-bowl x1.05 :: rice, shredded beef, caramelized onions
+Corn Croquette = side.takoyaki x1.1 :: creamy corn croquettes, panko
+Spicy Slow Cooked Wings = wing.pc x6
+Zangi (Hokkaido Fried Chicken) = side.karaage
+Seaweed Salad = side.seaweed-salad
+
+[Dessert]
+Mango Cheesecake = dessert.cheesecake
+Yuzu Cheesecake = dessert.cheesecake
+
+[Drinks]
+Peach Sake (300 mL) = drink.wine x2.6
+Pear Sake (300 mL) = drink.wine x2.6
+Sapporo Premium (355 mL) = drink.beer x0.75

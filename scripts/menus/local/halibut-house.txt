@@ -1,0 +1,79 @@
+id: halibut-house
+name: Halibut House Fish & Chips
+cuisine: Fish & chips
+accent: #0891b2
+segment: Fast Food
+source: https://www.halibuthouse.ca/takeout-menu (takeout menu PDF; calories as posted, ranges at their midpoint)
+
+[Signatures — battered fish, by side]
+Halibut = fish.and-chips @ 1/cal ; Fish & chips=950, Fish & onion rings=1200, Fish & sweet potato fries=940, Fish & poutine=1230, Fish & veggies=370, Fish & garden salad=330, Fish & Greek or Caesar salad=690, Fish & chips & garden salad=960, Fish & chips & Greek or Caesar salad=1320, 2 pc fish & chips=1270
+Lunch Size Halibut = fish.and-chips @ 1/cal ; Fish & chips=790, Fish & onion rings=1040, Fish & sweet potato fries=780, Fish & poutine=1070, Fish & veggies=210, Fish & garden salad=170, Fish & Greek or Caesar salad=530, Fish & chips & garden salad=800, Fish & chips & Greek or Caesar salad=1160, 2 pc fish & chips=950
+Hake = fish.and-chips @ 1/cal ; Fish & chips=970, Fish & onion rings=1220, Fish & sweet potato fries=960, Fish & poutine=1250, Fish & veggies=390, Fish & garden salad=350, Fish & Greek or Caesar salad=710, Fish & chips & garden salad=980, Fish & chips & Greek or Caesar salad=1340, 2 pc fish & chips=1310
+Haddock = fish.and-chips @ 1/cal ; Fish & chips=1310, Fish & onion rings=1560, Fish & sweet potato fries=1300, Fish & poutine=1590, Fish & veggies=730, Fish & garden salad=690, Fish & Greek or Caesar salad=1050, Fish & chips & garden salad=1320, Fish & chips & Greek or Caesar salad=1680, 2 pc fish & chips=1990
+Cod = fish.and-chips @ 1/cal ; Fish & chips=1140, Fish & onion rings=1390, Fish & sweet potato fries=1130, Fish & poutine=1420, Fish & veggies=560, Fish & garden salad=520, Fish & Greek or Caesar salad=880, Fish & chips & garden salad=1150, Fish & chips & Greek or Caesar salad=1510, 2 pc fish & chips=1650
+
+[Freshly grilled]
+Grilled Halibut = pub.salmon @ 1/cal ; With chips=810, With onion rings=1060, With sweet potato fries=800, With poutine=1090, With veggies=230, With choice of salad=375, With chips & salad=1005, With rice=570
+Grilled Atlantic Salmon = pub.salmon @ 1/cal ; With chips=1070, With onion rings=1320, With sweet potato fries=1060, With poutine=1350, With veggies=490, With choice of salad=635, With chips & salad=1255, With rice=830
+Grilled Shrimp (8 pc) = pub.salmon @ 1/cal ; With chips=790, With onion rings=1040, With sweet potato fries=780, With poutine=1070, With veggies=210, With choice of salad=355, With chips & salad=985, With rice=550
+
+[From the sea]
+Black Tiger Shrimp (8 pc) = fish.shrimp @ 1/cal ; With chips=1090, With onion rings=1340, With sweet potato fries=1080, With poutine=1370, With veggies=510, With choice of salad=655, With chips & salad=1285, With rice=850
+Breaded Scallops (8 pc) = fish.shrimp @ 1/cal ; With chips=1020, With onion rings=1270, With sweet potato fries=1010, With poutine=1300, With veggies=440, With choice of salad=585, With chips & salad=1215, With rice=780
+
+[Platters & specials]
+Shrimp & Scallop Combo = fish.shrimp @ 1160 :: battered shrimp, breaded scallops, fries
+Seafood Platter = fish.and-chips @ 1620 :: battered haddock, battered shrimp, breaded scallops, fries
+House Special = fish.and-chips @ 1500-1860 :: battered halibut, battered shrimp, breaded scallops, onion rings, fries, salad
+Halibut Fish Crispies & Chips = fish.and-chips @ 790 :: battered halibut crispies, fries
+Halibut Fish Burger & Chips = fish.burger @ 850 :: bun, pressed halibut, fries
+
+[Starters & sides]
+Homemade Fish Chowder = fish.chowder @ 150
+Fish Tacos = tex.tacos @ 630
+Garlic Bread = pizza.garlic-bread @ 330
+Garlic Bread with Cheese = pizza.garlic-bread @ 410
+Mussels = fish.chowder @ 760
+Battered Shrimp = side.tempura @ 350
+Mushrooms = pub.onion-rings @ 790
+Onion Rings = pub.onion-rings @ 880
+Calamari = side.tempura @ 660
+Deep Fried Pickles = pub.pickles @ 880
+Breaded Clams = fish.clams @ 530
+Sweet Potato Fries = pub.sweet-fries @ 780
+Fresh Cut Fries = pub.fries @ 630
+Poutine = pub.poutine @ 910
+Coleslaw = side.coleslaw @ 1/cal ; Small=70, Large=150
+Caesar Salad = pub.side-salad @ 1/cal ; Small=360, Large=540
+Greek Salad = side.greek-salad @ 1/cal ; Small=380, Large=570
+Garden Salad = side.house-salad @ 1/cal ; Small=10, Large=20
+Rice = side.rice @ 390
+Bread & Butter = side.pita @ 230
+California Style Veggies = side.house-salad @ 50
+Gravy = pizza.dip @ 1/cal ; Small=40, Large=80
+Mushy Peas = side.beans @ 250
+Tartar Sauce = fish.tartar
+
+[From the land]
+Burger with Chips = pub.burger @ 1290 :: bun, beef patty, fries
+Cheeseburger with Chips = pub.burger @ 1350 :: bun, beef patty, cheese, fries
+Chicken Wings (8 pc) with Chips = wing.combo @ 1600 :: chicken wings, fries
+Chicken Fingers (4 pc) with Chips = pub.tenders @ 1180 :: chicken fingers, fries
+Chicken Souvlaki = plate.chicken @ 980-1230 :: chicken souvlaki, rice, Greek salad, tzatziki
+
+[Family packs — per serving, serves 5]
+Hake Family Pack = fish.and-chips @ 780
+Haddock Family Pack = fish.and-chips @ 1120
+Cod Family Pack = fish.and-chips @ 920
+Halibut Family Pack = fish.and-chips @ 750
+
+[Kids — with chips and a drink]
+Kids' Halibut & Chips = pub.kids @ 500
+Kids' Chicken Fingers & Chips = pub.kids @ 590
+Kids' Burger & Chips = pub.kids @ 950
+
+[Dessert & drinks]
+Cheesecake = dessert.cheesecake @ 450-650
+Mini-Donut Bites (8) = donut.mini @ 500 #Desserts
+Pop, Juice or Water = drink.soft @ 0-150
+Coffee or Tea = coffee.drip

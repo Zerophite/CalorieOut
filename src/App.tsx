@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useLayoutEffect, useRef, useState } from 'react'
 import { getRestaurant } from './data'
 import { type MenuItem, type Nutrition, type Restaurant } from './types'
 import { type CompareEntry, type View } from './app-types'
@@ -34,23 +34,51 @@ export default function App() {
   const { day, total: dayTotal, addMeal, removeMeal, clearDay, setCalorieGoal } =
     useDayLog()
 
+  // Scroll position of every screen in the history, so Back returns to the
+  // same spot (e.g. halfway down the restaurant list) instead of the top.
+  const scrollStack = useRef<number[]>([])
+  const pendingScroll = useRef<number | null>(null)
+
   const navigate = useCallback((next: View) => {
-    setHistory((h) => [...h, next])
-    window.scrollTo(0, 0)
+    setHistory((h) => {
+      scrollStack.current[h.length - 1] = window.scrollY
+      return [...h, next]
+    })
+    pendingScroll.current = 0
   }, [])
 
   const back = useCallback(() => {
-    setHistory((h) => (h.length > 1 ? h.slice(0, -1) : h))
-    window.scrollTo(0, 0)
+    setHistory((h) => {
+      if (h.length <= 1) return h
+      pendingScroll.current = scrollStack.current[h.length - 2] ?? 0
+      scrollStack.current.length = h.length - 1
+      return h.slice(0, -1)
+    })
   }, [])
 
   const goHome = useCallback(() => {
     setHistory([{ name: 'home' }])
-    window.scrollTo(0, 0)
+    scrollStack.current = []
+    pendingScroll.current = 0
   }, [])
 
-  // Swipe down (at the top of the page) or press Escape to go back.
-  useSwipeBack(back, history.length > 1)
+  // Restore (or reset) the scroll position after the new screen renders. Lazy
+  // menus may still be growing the page, so keep trying briefly until it fits.
+  useLayoutEffect(() => {
+    const target = pendingScroll.current
+    if (target === null) return
+    pendingScroll.current = null
+    let tries = 0
+    const apply = () => {
+      window.scrollTo(0, target)
+      if (Math.abs(window.scrollY - target) > 2 && tries++ < 30) requestAnimationFrame(apply)
+    }
+    apply()
+  }, [history])
+
+  // Drag the screen down (at the top of the page) or press Escape to go back.
+  const screenRef = useRef<HTMLElement>(null)
+  useSwipeBack(back, history.length > 1, screenRef)
 
   const isInCompare = useCallback(
     (key: string) => compare.some((e) => e.key === key),
@@ -134,12 +162,12 @@ export default function App() {
         dayCount={day.meals.length}
       />
 
-      <main>
+      <main ref={screenRef} key={history.length} className="animate-screen-in">
         {history.length > 1 && (
           <div className="flex flex-col items-center pt-2 sm:hidden">
             <div className="h-1 w-10 rounded-full bg-[var(--border)]" />
             <span className="mt-1 text-[11px] text-muted">
-              Swipe down to go back
+              Pull down to go back
             </span>
           </div>
         )}

@@ -1,0 +1,70 @@
+id: coco
+name: CoCo Bubble Tea
+cuisine: Bubble tea
+accent: #dc2626
+segment: Coffee & Bakery
+source: https://www.cocobubbletea.ca/menu (assumes regular sugar; less sugar lowers the totals)
+
+[Fresh tea]
+CoCo Black Tea = bt.fruit-tea x0.5 ; Medium=0.75, Large=1
+Green Tea = bt.fruit-tea x0.5 ; Medium=0.75, Large=1
+
+[Milk tea]
+CoCo Milk Tea = bt.milk-tea x0.85 ; Medium=0.75, Large=1
+Pearl Milk Tea = bt.milk-tea ; Medium=0.75, Large=1 :: milk tea, tapioca pearls
+Brown Sugar Pearl Milk Tea = bt.brown-sugar ; Medium=0.75, Large=1 :: milk tea, brown sugar syrup, tapioca pearls
+Caramel Milk Tea = bt.milk-tea x0.95 ; Medium=0.75, Large=1
+Caramel Macchiato Milk Tea = bt.foam-tea x1.05 ; Medium=0.75, Large=1
+Jasmine Milk Tea = bt.milk-tea x0.85 ; Medium=0.75, Large=1
+Matcha Milk Tea = bt.matcha ; Medium=0.75, Large=1
+Taro Milk Tea = bt.taro ; Medium=0.75, Large=1
+Mango Milk Tea = bt.milk-tea x0.95 ; Medium=0.75, Large=1
+Fresh Mango Milk Tea = bt.fresh-milk x1.05 ; Medium=0.75, Large=1
+2 Ladies (Milk Tea with Pearls & Pudding) = bt.milk-tea x1.25 ; Medium=0.75, Large=1 :: milk tea, tapioca pearls, pudding
+3 Guys (Milk Tea with Pearls, Pudding & Grass Jelly) = bt.milk-tea x1.35 ; Medium=0.75, Large=1 :: milk tea, tapioca pearls, pudding, grass jelly
+
+[Fruit tea]
+Bubble GaGa = bt.fruit-tea x1.25 ; Medium=0.75, Large=1 :: passion fruit tea, coconut jelly, tapioca pearls
+Lemon Black Tea = bt.fruit-tea ; Medium=0.75, Large=1
+Lemon Green Tea = bt.fruit-tea ; Medium=0.75, Large=1
+Mango Green Tea = bt.fruit-tea x1.05 ; Medium=0.75, Large=1
+Grapefruit Green Tea = bt.fruit-tea ; Medium=0.75, Large=1
+Passionfruit Black Tea = bt.fruit-tea ; Medium=0.75, Large=1
+Passionfruit Green Tea = bt.fruit-tea ; Medium=0.75, Large=1
+Passionfruit Lemon Tea with Honey Jelly = bt.fruit-tea x1.2 ; Medium=0.75, Large=1
+Strawberry Iced Tea = bt.fruit-tea x1.05 ; Medium=0.75, Large=1
+
+[Macchiato]
+Black Tea Macchiato (Black Tea on Cloud) = bt.foam-tea ; Medium=0.75, Large=1
+Green Tea Macchiato (Green Tea on Cloud) = bt.foam-tea ; Medium=0.75, Large=1
+Matcha Macchiato = bt.foam-tea x1.1 ; Medium=0.75, Large=1
+Chocolate Macchiato (Chocolate on Cloud) = bt.foam-tea x1.25 ; Medium=0.75, Large=1
+
+[Fresh milk]
+Black Tea Latte = bt.fresh-milk ; Medium=0.75, Large=1
+Matcha Tea Latte = bt.fresh-milk x1.05 ; Medium=0.75, Large=1
+Strawberry Latte = bt.fresh-milk x1.1 ; Medium=0.75, Large=1
+Brown Sugar Pearl Latte = bt.brown-sugar x1.05 ; Medium=0.75, Large=1 :: fresh milk, brown sugar syrup, tapioca pearls
+
+[Chocolate & probiotic]
+Chocolate = coffee.hot-chocolate ; Medium=0.75, Large=1
+Chocolate with Pearls = coffee.hot-chocolate x1.35 ; Medium=0.75, Large=1
+Green Tea Yakult = bt.yakult ; Medium=0.75, Large=1
+Grapefruit Yakult = bt.yakult x1.05 ; Medium=0.75, Large=1
+
+[Slush & smoothie]
+Mango Slush = bt.slush ; Medium=0.75, Large=1
+Strawberry Slush = bt.slush ; Medium=0.75, Large=1
+Taro Slush = bt.slush x1.1 ; Medium=0.75, Large=1
+Chocolate Slush = bt.slush x1.15 ; Medium=0.75, Large=1
+Passion Fruit & Mango Slush = bt.slush ; Medium=0.75, Large=1
+Fresh Mango Smoothie = bt.slush x1.05 ; Medium=0.75, Large=1
+Passion Dragon Fruit Honey Jelly = bt.fruit-tea x1.3 ; Medium=0.75, Large=1
+Passionfruit Slush with Honey Jelly = bt.slush x1.1 ; Medium=0.75, Large=1
+
+[Toppings]
+Pearls = topping.pearls
+Grass Jelly = topping.pearls x0.4
+Pudding = topping.pearls x0.8
+Coconut Jelly = topping.pearls x0.6
+Red Bean = topping.pearls x0.95

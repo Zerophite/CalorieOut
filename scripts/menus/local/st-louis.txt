@@ -1,0 +1,106 @@
+id: st-louis
+name: St. Louis Bar & Grill
+cuisine: Wings · Sports bar
+accent: #dc2626
+segment: Sit-Down
+source: https://www.stlouiswings.com/stlouis-menu/ (calories as posted on the menu)
+
+[Starters]
+5-Cheese Spinach Dip (per serving) = pub.dip @ 625 :: spinach dip, cheese, seasoned flatbread
+Classic Beef Sliders = pub.burger @ 555-870 ; 2 pc=1, 4 pc=1 :: slider buns, beef patties, lettuce, red onion, cheese, pickles, burger sauce
+Crispy Chicken Sliders = pub.chicken-burger @ 555-870 ; 2 pc=1, 4 pc=1 :: slider buns, crispy chicken, garlic dill sauce, buffalo sauce, lettuce, pickles
+Crispy Fish Sliders = fish.burger @ 555-870 ; 2 pc=1, 4 pc=1 :: slider buns, crispy fish, tartar sauce, coleslaw
+Coins & Curds (per serving) = pub.pickles @ 500 :: fried pickle coins, battered cheese curds, chipotle garlic dill sauce
+Lettuce Wraps (per serving) = healthy.salad @ 210-350 :: grilled chicken, lettuce cups, vegetables, almonds, sweet chili sauce
+Classic Nachos = pub.nachos @ 770-1350 ; Personal=1, Regular=1 :: corn tortilla chips, pico de gallo, cheese blend, queso, salsa, sour cream
+St. Louis Wings Nachos = pub.nachos @ 1100-2000 ; Personal=1, Regular=1 :: corn tortilla chips, boneless chicken, wing sauce, garlic dill sauce, cheese blend, queso, pico de gallo, salsa, sour cream
+Southwest Quesadilla (per serving) = pub.quesadilla @ 410-510 :: flour tortilla, grilled chicken, cheese, peppers, salsa, sour cream
+St. Louis Wings Poutine (per serving) = pub.loaded-poutine @ 850-1120 :: fries, gravy, cheese curds, boneless chicken, wing sauce, garlic dill sauce
+Classic Poutine (per serving) = pub.poutine @ 750 :: fries, gravy, cheese curds
+Crispy Calamari (per serving) = side.tempura @ 400 :: breaded calamari, banana peppers, onions, BBQ mayo
+
+[Salads]
+House Salad = pub.side-salad @ 310 :: greens, tomato, cucumber, onion, carrot, croutons, balsamic vinaigrette
+SoCal Salad = healthy.salad @ 570-820 :: grilled chicken, quinoa, lettuce, almonds, tomato, cucumber, red pepper, onion, goat cheese, sweet chili poppyseed vinaigrette
+Classic Caesar Salad = pub.salad @ 850 :: romaine, grilled chicken, bacon, croutons, parmesan, Caesar dressing
+
+[Handhelds]
+BBQ Bacon Burger = pub.burger @ 1020 :: bun, beef patty, bacon, cheese, pickles, onion tanglers, lettuce, BBQ mayo
+Classic Angus Burger = pub.burger @ 710 :: bun, angus patty, lettuce, tomato, onion, pickles
+Drippin' Chicken Sandwich = pub.chicken-burger @ 820 :: bun, crispy chicken, sauce, pickles, garlic dill sauce
+Garlic Dill Chicken Sandwich = pub.chicken-burger @ 1000 :: bun, crispy chicken, bacon, lettuce, tomato, cheddar, onion, pickles, onion tanglers, hot sauce, garlic dill sauce
+Steakhouse Sandwich = pub.sandwich @ 810 :: bun, 8 oz strip steak, mozzarella, onion rings, horseradish aioli
+KD Dog = pub.sandwich @ 1145 :: hot dog bun, hot dog, KD mac & cheese, garlic dill sauce, sauce
+Pickle Dog = pub.sandwich @ 1090 :: hot dog bun, hot dog, fried pickle coins, diced pickle, garlic dill sauce
+Premium Hot Dogs (2) = pub.sandwich @ 860 :: hot dog buns, two hot dogs, mustard, ketchup
+Supreme Dog = pub.sandwich @ 1185 :: hot dog bun, hot dog, queso, beef, pico de gallo, jalapeños
+
+[Mains]
+Fiesta Bowl = tex.bowl @ 910-1330 :: rice, beef or grilled chicken, BBQ sauce, guacamole, pico de gallo, tortilla straws, lettuce, cheese, sour cream
+Hand-Battered Fish & Chips = fish.and-chips @ 1400 :: battered fish, fries, coleslaw, tartar sauce
+Primavera Alfredo = pub.pasta @ 780 :: rigatoni, pesto alfredo, mozzarella, red pepper, spinach, mushrooms, red onion, parmesan
+Spicy Butter Chicken = indian.butter-chicken @ 1140 :: butter chicken, basmati rice, naan
+Steak Frites = pub.steak @ 1070 :: 8 oz strip steak, peppercorn sauce, onion rings, horseradish aioli, fries
+
+[Wings, ribs & tenders — with fries]
+Original or Dusted Wings = wing.pc @ 710-1260 ; 8 pc=1, 16 pc=1 :: chicken wings, sauce, garlic dill sauce, fries
+Boneless Wings = wing.boneless-pc @ 710-1260 ; 8 pc=1, 16 pc=1 :: boneless chicken, sauce, garlic dill sauce, fries
+Plant-Based Wings = wing.boneless-pc @ 710-1260 ; 8 pc=1, 16 pc=1 :: plant-based wings, sauce, garlic dill sauce, fries
+KD Wings (8 pc) = wing.pc @ 1480 :: chicken wings, sauce, KD mac & cheese, garlic dill sauce
+Wings Supreme (8 pc) = wing.pc @ 1480 :: chicken wings, sauce, fries, nacho toppings, garlic dill sauce
+Wing & Rib Combo = pub.ribs @ 1390-1810 :: chicken wings, half rack pork ribs, sauce, garlic dill sauce, fries, coleslaw
+St. Louis Tenders (5) = pub.tenders @ 740-1160 :: chicken tenders, dipping sauce, fries
+Baby Back Ribs = pub.ribs @ 1030-1960 ; Half Rack=1, Full Rack=1 :: pork ribs, sauce, fries, coleslaw
+World Famous Wings Meal (12 pc) = wing.pc @ 1240-1440 :: chicken wings, garlic dill sauce, sauce, fries, pop
+
+[Hand-tossed pizza — per serving]
+Cheeseburger Pizza = pizza.slice @ 730 :: crust, cheese sauce, cheese blend, beef, pickles, onion, burger sauce
+Classic Pepperoni Pizza = pizza.slice @ 680 :: crust, tomato sauce, mozzarella, pepperoni, parmesan
+KD Pizza = pizza.slice @ 745 :: crust, KD mac & cheese, cheese blend, garlic dill sauce
+Pickle Pizza = pizza.slice @ 615 :: crust, garlic dill sauce, mozzarella, pickles
+St. Louis Wings Pizza = pizza.slice @ 650 :: crust, tomato sauce, mozzarella, boneless chicken, wing sauce, garlic dill sauce, parmesan
+
+[Sides]
+Signature Golden Fries = pub.fries @ 470
+Veggie Sticks = side.house-salad @ 45
+
+[Sweet Jesus desserts]
+Cheesecake — Bangin' Brownie = pastry.cheesecake x1.15
+Cheesecake — Birthday Cake = pastry.cheesecake x1.1
+Cheesecake — Red Rapture = pastry.cheesecake x1.1
+Pint — Red Rapture (473 mL) = drink.milkshake x1.6 #Desserts
+Pint — Bangin' Brownie (473 mL) = drink.milkshake x1.7 #Desserts
+Pint — Birthday Cake (473 mL) = drink.milkshake x1.6 #Desserts
+Slider — Bangin' Brownie = pub.dessert x0.6
+Slider — Birthday Cake = pub.dessert x0.55
+Slider — Red Rapture = pub.dessert x0.55
+
+[Kids]
+Kids' Fish & Chips = pub.kids @ 605
+Kids' KD Mac & Cheese = pub.kids @ 560
+Kids' Pasta = pub.kids @ 530
+Kids' Premium Hot Dog = pub.kids @ 430
+Kids' St. Louis Tenders (3) = pub.kids @ 470
+Kids' Cheese Quesadilla = pub.kids @ 870
+Kids' Mini Cheeseburgers (2) = pub.kids @ 580
+Kids' St. Louis Wings (4 pc) = pub.kids @ 360-600
+
+[Drinks]
+Classic Margarita (1.5 oz) = drink.cocktail
+Spicy Margarita (1.5 oz) = drink.cocktail
+Frozen Lemonade (Blue Raspberry, Dragon Fruit, Mango or Passion Fruit) = drink.cocktail x1.3
+St. Louis Sparkler = drink.lemonade x0.6
+Coco Mango Mojito = drink.cocktail
+Aperol Spritz (5 oz) = drink.wine x1.3
+Cosmopolitan (2 oz) = drink.cocktail x0.8
+Espresso Martini (3 oz) = drink.cocktail x1.1
+French 75 (3 oz) = drink.cocktail x0.8
+Old Fashioned (2 oz) = drink.cocktail x0.8
+Negroni (3 oz) = drink.cocktail x0.85
+Long Island Iced Tea (1.5 oz) = drink.cocktail x1.1
+Red Sangria (9 oz) = drink.wine x1.8
+White Sangria = drink.wine x1.6
+St. Louis Caesar (1 oz) = drink.cocktail x0.5
+Strawberry Daiquiri = drink.cocktail x1.1
+Draft Beer = drink.beer ; 16 oz=1, 20 oz=1.25, 60 oz pitcher=3.75
+Pepsi = drink.soft

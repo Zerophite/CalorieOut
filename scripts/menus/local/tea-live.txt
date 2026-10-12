@@ -1,0 +1,31 @@
+id: tea-live
+name: Tealive
+cuisine: Bubble tea · Toasties
+accent: #16a34a
+segment: Coffee & Bakery
+source: https://tealive.ca/order-now/ (Ottawa menu highlights; regular sugar assumed)
+
+[Signatures]
+Aren Palm Sugar Pearl Milk Tea = bt.brown-sugar ; Regular=0.85, Large=1 :: fresh milk, palm sugar, tapioca pearls
+Signature Pearl Milk Tea = bt.milk-tea ; Regular=0.85, Large=1 :: milk tea, tapioca pearls
+Big Bang Fresh Milk = bt.fresh-milk x1.25 ; Regular=0.85, Large=1 :: fresh milk, brown sugar, pearls, pudding
+Lotus Biscoff Frappe = drink.milkshake x0.85 ; Regular=0.85, Large=1 :: milk, ice, Biscoff spread, cookie crumbs, whipped cream
+Classic Milk Tea = bt.milk-tea x0.85 ; Regular=0.85, Large=1
+Taro Milk Tea = bt.taro ; Regular=0.85, Large=1
+Matcha Latte = bt.matcha ; Regular=0.85, Large=1
+Mango Fruit Tea = bt.fruit-tea ; Regular=0.85, Large=1
+Passion Fruit Green Tea = bt.fruit-tea ; Regular=0.85, Large=1
+
+[Toasties]
+Cheezy Egg Toastie = cafe.sandwich x0.8 :: toast, egg, cheese sauce
+Chicken Ham & Egg Toastie = cafe.sandwich x0.9 :: toast, chicken ham, egg, cheese
+Cheezy Chicken Katsu Toastie = cafe.sandwich x1.15 :: toast, chicken katsu, cheese sauce
+Spicy Chicken Katsu Toastie = cafe.sandwich x1.1 :: toast, chicken katsu, spicy mayo
+Double Down Chicken Ham & Egg = cafe.sandwich x1.15 :: toast, double chicken ham, egg, cheese
+Hashbrown & Egg Toastie = cafe.sandwich x0.95 :: toast, hashbrown, egg, cheese
+Hashbrown & Chicken Ham Toastie = cafe.sandwich :: toast, hashbrown, chicken ham, cheese
+
+[Toppings]
+Pearls = topping.pearls
+Pudding = topping.pearls x0.8
+Cheese Foam = topping.pearls x0.8

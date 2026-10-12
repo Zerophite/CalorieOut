@@ -1,0 +1,50 @@
+id: windbell-sushi
+name: Windbell Sushi
+cuisine: Japanese · Sushi
+accent: #5f7d64
+segment: Sit-Down
+source: No public menu found; a typical Ottawa sushi menu (Windbell's delivery listing shows maki sets)
+
+[Maki sets]
+Maki Set A (18 pc) = sushi.combo x1.4
+Maki Set B (24 pc) = sushi.combo x1.85
+Sushi & Maki Combo (12 pc) = sushi.combo
+Sashimi Combo (14 pc) = sashimi.pc x14
+
+[Rolls]
+California Roll (8 pc) = maki.california
+Spicy Salmon Roll (8 pc) = maki.spicy-salmon
+Spicy Tuna Roll (8 pc) = maki.spicy-tuna
+Salmon Avocado Roll (8 pc) = maki.salmon-avocado
+Dynamite Roll (8 pc) = maki.dynamite
+Dragon Roll (8 pc) = maki.dragon
+Rainbow Roll (8 pc) = maki.rainbow
+Shrimp Tempura Roll (8 pc) = maki.tempura
+Crispy Salmon Roll (8 pc) = maki.crispy
+Avocado Roll (6 pc) = maki.veg
+Cucumber Roll (6 pc) = maki.veg x0.75
+Salmon Roll (6 pc) = maki.small
+
+[Nigiri & sashimi]
+Salmon Nigiri = nigiri.pc ; 2 pc=2, 4 pc=4
+Tuna Nigiri = nigiri.pc x0.95 ; 2 pc=2, 4 pc=4
+Eel Nigiri = nigiri.pc x1.3 ; 2 pc=2, 4 pc=4
+Salmon Sashimi = sashimi.pc ; 5 pc=5, 9 pc=9
+
+[Kitchen]
+Chicken Teriyaki = jp.teriyaki
+Salmon Teriyaki = jp.teriyaki x1.1
+Chicken Teriyaki Bento = jp.bento
+Udon Noodle Soup = jp.udon
+Yaki Udon = jp.yaki-noodle
+Salmon Poke Bowl = jp.poke
+
+[Sides]
+Miso Soup = side.miso-soup
+Edamame = side.edamame
+Seaweed Salad = side.seaweed-salad
+House Salad = side.house-salad
+Shrimp Tempura = side.tempura
+Gyoza = side.gyoza
+Agedashi Tofu = side.agedashi
+Mochi Ice Cream (2) = dessert.mochi

@@ -1,0 +1,40 @@
+id: rock-n-deli
+name: Rock 'N Deli
+cuisine: Montreal smoked meat · Deli
+accent: #7c2d12
+segment: Fast Food
+source: https://rockndeli.com/en/menu
+
+[Smoked meat]
+Smoked Meat Sandwich = deli.smoked-meat ; Sandwich=1, Trio (fries · coleslaw · drink)=1.95 :: rye bread, smoked meat, mustard, pickle
+Reuben Smoked Meat Sandwich = deli.reuben ; Sandwich=1, Trio (fries · coleslaw · drink)=1.7 :: rye bread, smoked meat, sauerkraut, swiss cheese, Russian dressing
+
+[Smash burgers]
+The Bacon Burger = pub.burger x1.25 ; Burger=1, Trio (fries & drink)=1.75 :: brioche bun, two patties, bacon, cheddar, swiss cheese
+The Classic Burger = pub.burger x1.05 ; Burger=1, Trio (fries & drink)=1.75 :: brioche bun, two patties, cheddar, caramelized onions
+The Royal Burger = pub.burger x1.3 ; Burger=1, Trio (fries & drink)=1.75 :: brioche bun, two angus patties, smoked meat, swiss cheese
+The Smokey = deli.smoked-meat x0.9 ; Burger=1, Trio (fries & drink)=1.85 :: brioche bun, smoked meat, mustard
+The Crispy = pub.chicken-burger ; Burger=1, Trio (fries & drink)=1.75 :: brioche bun, crispy chicken, lettuce, mayo
+
+[Clubs & subs]
+Philly Steak Sub = sub.hot x1.05 :: sub bun, steak, swiss cheese, mushrooms, peppers, caramelized onions
+Smoked Meat Sub = sub.hot x1.1 :: sub bun, smoked meat, swiss cheese, mushrooms, peppers, caramelized onions
+Smoked Meat Club Trio = deli.sandwich x2 :: toast, smoked meat, bacon, mustard, lettuce, tomato, fries, drink
+Chicken Club Trio = deli.sandwich x1.9 :: toast, chicken breast, bacon, lettuce, tomato, mayo, fries, drink
+
+[Poutines]
+Classic Poutine = pub.poutine ; Small=0.65, Regular=1
+Smoked Meat Poutine = deli.poutine ; Small=0.65, Regular=1
+Philly Steak Poutine = pub.loaded-poutine ; Small=0.65, Regular=1
+Crispy Chicken Poutine = pub.loaded-poutine x1.05 ; Small=0.65, Regular=1
+Bacon Poutine = pub.loaded-poutine x0.95 ; Small=0.65, Regular=1
+
+[Sides]
+Fries = pub.fries
+Sweet Potato Fries = pub.sweet-fries
+Onion Rings = pub.onion-rings
+Pogo = pub.mozza x0.6
+Chicken Wings = wing.pc ; 6 pc=6, 10 pc=10
+Coleslaw = side.coleslaw
+Pickle = side.pickles
+Soft Drink = drink.soft

@@ -1,0 +1,41 @@
+id: kuma-takumi
+name: Kuma Takumi
+cuisine: Japanese · Ramen & Izakaya
+accent: #1a1a1a
+segment: Sit-Down
+source: No public menu found; a typical ramen & izakaya menu (its delivery listing mentions omurice)
+
+[Ramen]
+Tonkotsu Ramen = ramen.tonkotsu :: pork broth, noodles, chashu, seasoned egg, green onion, kikurage
+Black Garlic Tonkotsu = ramen.tonkotsu x1.08 :: pork broth, noodles, chashu, black garlic oil, seasoned egg, green onion
+Shoyu Ramen = ramen.shoyu :: soy chicken broth, noodles, chashu, seasoned egg, bamboo shoots, green onion
+Miso Ramen = ramen.miso :: miso broth, noodles, chashu, corn, bean sprouts, green onion
+Spicy Tantanmen = ramen.spicy :: spicy sesame broth, noodles, ground pork, bok choy, chili oil
+Vegetable Ramen = ramen.veggie :: vegetable broth, noodles, tofu, corn, bok choy, green onion
+Tsukemen (Dipping Ramen) = ramen.tsukemen
+
+[Rice dishes]
+Omurice = don.omurice :: omelette, chicken fried rice, demi-glace sauce
+Chashu Don = don.rice-bowl x0.95 :: rice, chashu, seasoned egg, green onion, sauce
+Chicken Katsu Don = don.rice-bowl x1.2 :: rice, chicken katsu, egg, onion, sauce
+Japanese Curry Rice = don.curry
+Karaage Curry Rice = don.curry x1.25
+
+[Izakaya plates]
+Chicken Karaage = side.karaage
+Pork Gyoza (5 pc) = side.gyoza
+Takoyaki (6 pc) = side.takoyaki
+Edamame = side.edamame
+Agedashi Tofu = side.agedashi
+Shrimp Tempura = side.tempura
+Steamed Rice = side.steamed-rice
+
+[Extras]
+Extra Chashu = add.chashu
+Extra Egg = add.egg
+Extra Noodles = add.noodles
+
+[Drinks & dessert]
+Ramune = drink.soft x0.6
+Sapporo Beer = drink.beer
+Matcha Ice Cream = dessert.ice-cream

@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { type MenuItem, type Nutrition, type Restaurant } from '../types'
 import { baseNutrition, formatNumber, minimalNutrition } from '../lib/nutrition'
 import { type Goal } from '../hooks/useGoal'
-import { MacroBar } from './MacroBar'
-import { EstimateBadge, GoalFitBadge, TagChip, evaluateGoal } from './ui'
+import { MacroBar, MacroChips } from './MacroBar'
+import { EstimateBadge, GoalFitBadge, ItemPhoto, TagChip, evaluateGoal } from './ui'
 import { IconCheck, IconCompare, IconPlus } from './icons'
 
 interface Props {
@@ -43,7 +43,8 @@ export function ItemCard({
     <div className="flex flex-col rounded-2xl border border-app bg-surface p-4 transition-shadow hover:shadow-md">
       <button onClick={onOpen} className="flex-1 text-left">
         <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0">
+          <ItemPhoto src={item.image} alt={item.name} variant="thumb" />
+          <div className="min-w-0 flex-1">
             {showRestaurant && (
               <div className="mb-0.5 flex items-center gap-1.5 text-xs font-medium text-muted">
                 {restaurant.name}
@@ -80,10 +81,8 @@ export function ItemCard({
         <div className="mt-3">
           <MacroBar nutrition={nutrition} />
         </div>
-        <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted">
-          <span>P {formatNumber(nutrition.protein)}g</span>
-          <span>C {formatNumber(nutrition.carbs)}g</span>
-          <span>F {formatNumber(nutrition.fat)}g</span>
+        <div className="mt-2">
+          <MacroChips nutrition={nutrition} />
         </div>
 
         {(fit !== 'off' || (item.tags && item.tags.length > 0)) && (

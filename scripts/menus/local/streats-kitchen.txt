@@ -1,0 +1,33 @@
+id: streats-kitchen
+name: Streats Kitchen
+cuisine: Global street food
+accent: #f59e0b
+segment: Fast Food
+source: strEATS Kitchens (streatskitchens.com lists tacos, burritos, bowls, smash burgers and poutine; items vary by location)
+
+[Tacos — 3 per order]
+Butter Chicken Tacos = tex.tacos x1.05 :: tortillas, butter chicken, slaw, cilantro, crema
+Korean BBQ Beef Tacos = tex.tacos x1.1 :: tortillas, Korean beef, kimchi slaw, sesame, spicy mayo
+Baja Fish Tacos = tex.tacos :: tortillas, battered fish, slaw, pico de gallo, lime crema
+Birria Tacos = tex.tacos x1.15 :: tortillas, birria beef, cheese, onion, cilantro, consommé
+Cauliflower Tacos = tex.tacos x0.85 :: tortillas, crispy cauliflower, slaw, chipotle mayo
+
+[Burritos]
+Butter Chicken Burrito = tex.burrito :: tortilla, butter chicken, rice, cheese, slaw
+Korean BBQ Beef Burrito = tex.burrito x1.05 :: tortilla, Korean beef, rice, kimchi slaw, spicy mayo
+Chipotle Chicken Burrito = tex.burrito :: tortilla, chipotle chicken, rice, beans, cheese, salsa
+
+[Bowls]
+Butter Chicken Bowl = bowl.butter-chicken x0.9
+Korean BBQ Beef Bowl = tex.bowl x1.05 :: rice, Korean beef, kimchi slaw, sesame, spicy mayo
+Chipotle Chicken Bowl = tex.bowl :: rice, chipotle chicken, beans, corn, cheese, salsa
+
+[Smash burgers]
+Classic Smash Burger = pub.burger :: bun, smash patties, cheese, pickles, onions, burger sauce
+Bacon Smash Burger = pub.burger x1.15 :: bun, smash patties, bacon, cheese, burger sauce
+
+[Poutine & fries]
+Loaded Butter Chicken Fries = pub.loaded-fries x1.05 :: fries, butter chicken, cheese curds, cilantro
+Classic Poutine = pub.poutine
+Korean Beef Poutine = pub.loaded-poutine
+Fries = pub.fries

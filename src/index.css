@@ -19,8 +19,8 @@
   --text-muted: #64748b;
   --brand: #10b981;
   --protein: #6366f1;
-  --carbs: #f59e0b;
-  --fat: #ef4444;
+  --carbs: #eda100;
+  --fat: #d6457d;
   color-scheme: light;
 }
 
@@ -33,9 +33,9 @@
     --text: #e2e8f0;
     --text-muted: #94a3b8;
     --brand: #10b981;
-    --protein: #818cf8;
-    --carbs: #fbbf24;
-    --fat: #f87171;
+    --protein: #9085e9;
+    --carbs: #c98500;
+    --fat: #d55181;
     color-scheme: dark;
   }
 }
@@ -48,9 +48,9 @@
   --text: #e2e8f0;
   --text-muted: #94a3b8;
   --brand: #10b981;
-  --protein: #818cf8;
-  --carbs: #fbbf24;
-  --fat: #f87171;
+  --protein: #9085e9;
+  --carbs: #c98500;
+  --fat: #d55181;
   color-scheme: dark;
 }
 
@@ -110,4 +110,25 @@ h3 {
 ::-webkit-scrollbar-thumb {
   background: var(--border);
   border-radius: 999px;
+}
+
+/* Screens fade and rise in; no fill-mode, so no transform lingers afterwards
+   (a lasting transform would break position:fixed bars inside the screen). */
+@keyframes screen-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-screen-in {
+  animation: screen-in 180ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-screen-in {
+    animation: none;
+  }
 }

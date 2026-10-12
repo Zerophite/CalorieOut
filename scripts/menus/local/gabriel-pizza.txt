@@ -1,0 +1,151 @@
+id: gabriel-pizza
+name: Gabriel Pizza
+cuisine: Pizza · Breakfast & dinner
+accent: #dc2626
+segment: Fast Food
+source: Gabriel Pizza's digital menu (tap-to-view.com/jxtgvy/gabriel-pizza, linked from gabrielpizza.com); calories as posted
+
+[Pizzas — per serving]
+Texas Bold'em Pizza = pizza.slice @ 510
+Garlic Fingers = pizza.garlic-bread @ 450
+Senators Pizza = pizza.slice @ 450
+Redblacks Pizza = pizza.slice @ 480
+Smokin' Chicken Pizza = pizza.slice @ 510
+Meatsa Pizza = pizza.slice @ 540
+Original Pizza = pizza.slice @ 470
+Hawaiian Pizza = pizza.slice @ 470
+Pepperoni Pizza = pizza.slice @ 450
+Gabriel Deluxe Pizza = pizza.slice @ 520
+Vegetarian Pizza = pizza.slice @ 470
+Mediterranean Pizza = pizza.slice @ 480
+Veggie Extreme Pizza = pizza.slice @ 470
+Cheese Pizza = pizza.slice @ 450
+Spicy Donair Pizza = pizza.slice @ 500
+Fajita Pizza = pizza.slice @ 505
+Stampede Pizza = pizza.slice @ 470
+Canadian Pizza = pizza.slice @ 500
+Combination Pizza = pizza.slice @ 460
+
+[Breakfast]
+Sunrise Special = cafe.breakfast-plate @ 730 :: eggs, toast, home fries, bacon
+Original Breakfast = cafe.breakfast-plate @ 820 :: eggs, toast, home fries, bacon
+Rise & Shiner = cafe.breakfast-plate @ 910
+Meltdown = cafe.breakfast-plate @ 1020
+Meat Mania = cafe.breakfast-plate @ 1150 :: eggs, toast, home fries, bacon, ham, sausage
+Steak & Eggs = cafe.breakfast-plate @ 1050 :: steak, eggs, toast, home fries
+Big Breakfast = cafe.breakfast-plate @ 1030
+Avocado Toast = cafe.breakfast-plate @ 470 :: toast, avocado, eggs, tomato
+Farmers Choice = cafe.breakfast-plate @ 1500
+Big Brioche = cafe.breakfast-plate @ 850
+Gabriel's Fave Omelette = cafe.breakfast-plate @ 1050
+Vegetarian Omelette = cafe.breakfast-plate @ 900
+Wild Western Omelette = cafe.breakfast-plate @ 1050
+Spanish Delight Omelette = cafe.breakfast-plate @ 950
+Meat Extravaganza Omelette = cafe.breakfast-plate @ 1200
+Mighty Greek Omelette = cafe.breakfast-plate @ 950
+CBS Omelette = cafe.breakfast-plate @ 1050
+Steak, Swiss & Mushroom Omelette = cafe.breakfast-plate @ 1000
+BLT Platter = cafe.breakfast-plate @ 750
+Western Platter = cafe.breakfast-plate @ 900
+Grilled Cheese Platter = cafe.breakfast-plate @ 500
+Breakfast Club Platter = cafe.breakfast-plate @ 1050
+Breakfast Bagel Platter = bagel.sandwich @ 950
+Lox Lovers Platter = bagel.lox @ 800
+Big Belgian Waffle = pastry.waffle @ 600 #Breakfast
+Strawberry Banana Waffle = pastry.waffle @ 600 #Breakfast
+Fruity Belgian Waffle = pastry.waffle @ 500 #Breakfast
+Big Belgian Breakfast = cafe.breakfast-plate @ 900
+Florentine Benedict = pub.brunch @ 750
+Traditional Benedict = pub.brunch @ 760
+Canadiana Benedict = pub.brunch @ 890
+Gabrielle Benedict = pub.brunch @ 900
+Big Ben Benedict = pub.brunch @ 750
+Salmon Benny = pub.brunch @ 900
+French Toast = pub.pancakes @ 500
+French & Fruity Toast = pub.pancakes @ 550
+Strawberry Banana French Toast = pub.pancakes @ 570
+Croissant French Toast = pub.pancakes @ 1100
+Pancakes = pub.pancakes @ 570
+Chocolate Chip Pancakes = pub.pancakes @ 700
+Blueberry Pancakes = pub.pancakes @ 600
+Banana Chocolate Chip Pancakes = pub.pancakes @ 750
+Strawberry Banana Pancakes = pub.pancakes @ 650
+Meat Lovers Breakfast Wrap = healthy.wrap @ 1100 #Breakfast
+Breakfast Wrap = healthy.wrap @ 990 #Breakfast
+Yogurt Berry Bowl = cafe.breakfast-plate @ 350
+Fruit Bowl = cafe.breakfast-plate @ 600
+Big Fruit Plate = cafe.breakfast-plate @ 250
+Meat Lover Pizza Frittata = cafe.quiche @ 1100
+Vegetarian Pizza Frittata = cafe.quiche @ 850
+
+[Appetizers]
+Gabriel Nachos = pub.nachos @ 1100
+Zucchini Sticks = pub.mozza @ 370
+Mozza Sticks = pub.mozza @ 600
+Poppers = pub.mozza @ 380
+Onion Rings = pub.onion-rings @ 440
+French Fries = pub.fries @ 300
+Poutine = pub.poutine @ 1020
+Italian Poutine = pub.poutine @ 640
+Gabe's Poutine = pub.loaded-poutine @ 1100
+Fried Pickles = pub.pickles @ 450
+Bruschetta = pizza.garlic-bread @ 700
+Sweet Potato Fries = pub.sweet-fries @ 350
+Gabriel Platter (share) = pub.nachos @ 1980
+Parm Bites = pub.mozza @ 400
+
+[Salads]
+Julienne Salad = healthy.salad @ 460
+Chef Gabriel Salad = healthy.salad @ 370
+Caesar Salad = pub.salad @ 830
+Mighty Greek Salad = side.greek-salad @ 270
+
+[Chicken]
+Chicken Wings = wing.pc ; 10 pc=10, 20 pc=20
+Boneless Bites = wing.boneless-pc ; 10 pc=10, 20 pc=20
+
+[Sandwiches]
+Turkey Stack = pub.sandwich @ 930
+Club Sandwich = pub.sandwich @ 860
+Fried Chicken Sandwich = pub.chicken-burger @ 950
+Baja Fish Sandwich = fish.burger @ 800
+Philly Melt = pub.sandwich @ 1000
+Steak Wrap = pub.wrap @ 650
+Garden Wrap = pub.wrap @ 430
+Burger = pub.burger @ 860
+Canadian Burger = pub.burger @ 1050
+Donair = wrap.donair @ 880
+Buffalo Wrap = pub.wrap @ 880
+Nashville Hot Chicken Sandwich = pub.chicken-burger x1.3
+
+[Pastas]
+Chicken Alfredo = pub.pasta @ 1020
+Spaghetti = pub.tomato-pasta @ 1000
+Spaghetti al Forno = pub.tomato-pasta @ 1350
+Gabriel Spaghetti = pub.tomato-pasta @ 1050
+Mac & Cheese = pub.pasta @ 1150
+Cannelloni = pub.tomato-pasta @ 1050
+Manicotti = pub.tomato-pasta @ 970
+Meat Lasagna = pub.tomato-pasta @ 1450
+Veggie Lasagna = pub.tomato-pasta @ 1300
+Gabriel Lasagna = pub.tomato-pasta @ 1600
+
+[Mains]
+Fish & Chips = fish.and-chips @ 1100
+NY Steak Sandwich = pub.steak @ 990
+Parmigiana = pub.tomato-pasta @ 1150
+Grilled Salmon = pub.salmon @ 710
+Chicken Tenders = pub.tenders @ 1050
+
+[Kids]
+Kids' Pizza = pub.kids @ 500-750
+Kids' Hamburger = pub.kids @ 510
+Kids' Cheeseburger = pub.kids @ 580
+Kids' Chicken Tenders = pub.kids @ 600
+Kids' Spaghetti = pub.kids @ 550
+Kids' Poutine = pub.kids @ 750
+Kids' Grilled Cheese = pub.kids @ 550
+Kids' Mac & Cheese = pub.kids @ 550
+Kids' Eggs Breakfast = cafe.breakfast-plate x0.45
+Kids' French Toast = pub.pancakes x0.5
+Kids' Pancakes = pub.pancakes x0.5

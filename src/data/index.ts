@@ -20,9 +20,13 @@ import { marybrowns } from './marybrowns'
 import { thaiexpress } from './thaiexpress'
 import { manchuwok } from './manchuwok'
 import { firehousesubs } from './firehousesubs'
+import { noodlebox } from './noodlebox'
+import { redswan } from './redswan'
+import { madradish } from './madradish'
 // Coffee & bakery (official)
 import { timhortons } from './timhortons'
 import { starbucks } from './starbucks'
+import { kettlemans } from './kettlemans'
 // Sit-down (official)
 import { swisschalet } from './swisschalet'
 import { bostonpizza } from './bostonpizza'
@@ -30,13 +34,7 @@ import { osmows } from './osmows'
 import { tahinis } from './tahinis'
 import { theworks } from './theworks'
 // Local / independent (estimated)
-import { shawarmaSpots } from './shawarma'
-import { ramenSpots } from './ramen'
-import { sushiSpots } from './sushi'
-import { bubbleTeaSpots } from './bubbletea'
-import { bakerySpots } from './bakery'
-import { pizzaLocalSpots } from './pizzalocal'
-import { casualSpots } from './casual'
+import { localSpots } from './local'
 
 // All seeded restaurants. "Official" figures come from published Canadian
 // nutrition guides; "estimated" figures (dataSource: 'estimated') are modelled
@@ -63,9 +61,13 @@ export const restaurants: Restaurant[] = [
   thaiexpress,
   manchuwok,
   firehousesubs,
+  noodlebox,
+  redswan,
+  madradish,
   // Coffee & bakery
   timhortons,
   starbucks,
+  kettlemans,
   // Sit-down
   swisschalet,
   bostonpizza,
@@ -73,13 +75,7 @@ export const restaurants: Restaurant[] = [
   tahinis,
   theworks,
   // Local / independent (estimated)
-  ...shawarmaSpots,
-  ...ramenSpots,
-  ...sushiSpots,
-  ...bubbleTeaSpots,
-  ...bakerySpots,
-  ...pizzaLocalSpots,
-  ...casualSpots,
+  ...localSpots,
 ]
 
 export function getRestaurant(id: string): Restaurant | undefined {

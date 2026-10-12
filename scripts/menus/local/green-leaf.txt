@@ -1,0 +1,50 @@
+id: green-leaf
+name: Green Leaf Bubble Tea
+cuisine: Bubble tea · Smoothies
+accent: #16a34a
+segment: Coffee & Bakery
+source: Green Leaf Bubble Tea, 591 March Rd., Kanata (its menu is only listed on delivery apps; a typical bubble-tea menu, regular sugar assumed)
+
+[Milk tea]
+Classic Milk Tea = bt.milk-tea x0.85 ; Regular=0.85, Large=1
+Pearl Milk Tea = bt.milk-tea ; Regular=0.85, Large=1 :: milk tea, tapioca pearls
+Brown Sugar Pearl Milk = bt.brown-sugar ; Regular=0.85, Large=1 :: fresh milk, brown sugar syrup, tapioca pearls
+Taro Milk Tea = bt.taro ; Regular=0.85, Large=1
+Matcha Milk Tea = bt.matcha ; Regular=0.85, Large=1
+Thai Milk Tea = bt.milk-tea x1.1 ; Regular=0.85, Large=1
+Jasmine Green Milk Tea = bt.milk-tea x0.85 ; Regular=0.85, Large=1
+Honeydew Milk Tea = bt.milk-tea x1.05 ; Regular=0.85, Large=1
+Coconut Milk Tea = bt.milk-tea x1.1 ; Regular=0.85, Large=1
+Oolong Milk Tea = bt.milk-tea x0.85 ; Regular=0.85, Large=1
+
+[Fruit tea]
+Passion Fruit Green Tea = bt.fruit-tea ; Regular=0.85, Large=1
+Mango Green Tea = bt.fruit-tea x1.05 ; Regular=0.85, Large=1
+Strawberry Green Tea = bt.fruit-tea ; Regular=0.85, Large=1
+Lychee Black Tea = bt.fruit-tea ; Regular=0.85, Large=1
+Peach Oolong Tea = bt.fruit-tea ; Regular=0.85, Large=1
+Lemon Green Tea = bt.fruit-tea x0.9 ; Regular=0.85, Large=1
+Grapefruit Green Tea = bt.fruit-tea ; Regular=0.85, Large=1
+Yakult Green Tea = bt.yakult ; Regular=0.85, Large=1
+
+[Cheese foam]
+Black Tea with Cheese Foam = bt.foam-tea ; Regular=0.85, Large=1
+Matcha with Cheese Foam = bt.foam-tea x1.1 ; Regular=0.85, Large=1
+Strawberry Cheese Foam Tea = bt.foam-tea x1.05 ; Regular=0.85, Large=1
+
+[Smoothies & slush]
+Mango Smoothie = bt.slush ; Regular=0.85, Large=1
+Strawberry Smoothie = bt.slush ; Regular=0.85, Large=1
+Taro Smoothie = bt.slush x1.15 ; Regular=0.85, Large=1
+Avocado Smoothie = bt.slush x1.25 ; Regular=0.85, Large=1
+Coconut Smoothie = bt.slush x1.1 ; Regular=0.85, Large=1
+Oreo Smoothie = drink.milkshake x0.8 ; Regular=0.85, Large=1
+
+[Toppings]
+Tapioca Pearls = topping.pearls
+Popping Boba = topping.pearls x0.6
+Lychee Jelly = topping.pearls x0.6
+Coconut Jelly = topping.pearls x0.6
+Grass Jelly = topping.pearls x0.4
+Pudding = topping.pearls x0.8
+Red Bean = topping.pearls x0.95

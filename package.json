@@ -35,7 +35,13 @@
     "menus:barburrito": "node scripts/menus/fetch-barburrito.cjs && node scripts/menus/run.cjs gen-barburrito.ts",
     "menus:freshii": "node scripts/menus/fetch-freshii.cjs && node scripts/menus/run.cjs gen-freshii.ts",
     "menus:tacobell": "node scripts/menus/fetch-tacobell.cjs && node scripts/menus/run.cjs gen-tacobell.ts",
-    "menus:starbucks": "node scripts/menus/fetch-starbucks.cjs && node scripts/menus/run.cjs gen-starbucks.ts"
+    "menus:starbucks": "node scripts/menus/fetch-starbucks.cjs && node scripts/menus/run.cjs gen-starbucks.ts",
+    "menus:noodlebox": "node scripts/menus/fetch-noodlebox.cjs && node scripts/menus/run.cjs gen-noodlebox.ts",
+    "menus:redswan": "node scripts/menus/fetch-redswan.cjs && node scripts/menus/run.cjs gen-redswan.ts",
+    "menus:madradish": "node scripts/menus/run.cjs gen-madradish.ts",
+    "menus:kettlemans": "node scripts/menus/fetch-kettlemans.cjs && node scripts/menus/run.cjs gen-kettlemans.ts",
+    "menus:local": "node scripts/menus/run.cjs gen-local.ts",
+    "menus:images": "node scripts/menus/fetch-images.cjs"
   },
   "dependencies": {
     "react": "^18.3.1",

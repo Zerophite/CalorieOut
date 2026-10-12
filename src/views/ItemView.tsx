@@ -2,7 +2,7 @@ import { type MenuItem, type Nutrition, type Restaurant } from '../types'
 import { type Goal } from '../hooks/useGoal'
 import { BuilderView } from '../components/BuilderView'
 import { FixedCustomizer } from '../components/FixedCustomizer'
-import { EstimateBanner, TagChip } from '../components/ui'
+import { EstimateBanner, ItemPhoto, TagChip } from '../components/ui'
 
 interface Props {
   restaurant: Restaurant
@@ -26,6 +26,11 @@ interface Props {
 export function ItemView({ restaurant, item, goal, toggleCompare, addToDay }: Props) {
   return (
     <div className="mx-auto max-w-5xl px-4 py-6">
+      {item.image && (
+        <div className="mb-4">
+          <ItemPhoto src={item.image} alt={item.name} variant="hero" />
+        </div>
+      )}
       <div className="mb-1 text-sm font-medium text-muted">{restaurant.name}</div>
       <h1 className="text-2xl font-black text-body">{item.name}</h1>
       {item.kind === 'fixed' && item.serving && (

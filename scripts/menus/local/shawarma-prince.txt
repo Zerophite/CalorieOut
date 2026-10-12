@@ -1,0 +1,76 @@
+id: shawarma-prince
+name: Shawarma Prince
+cuisine: Shawarma · Mediterranean
+accent: #7c3aed
+segment: Fast Food
+source: https://shawarmaprince.com/shawarma-menu/ and /awama-menu/
+
+[Sandwiches]
+Chicken Shawarma Sandwich = wrap.chicken ; Small=0.8, Large=1.2
+Beef Shawarma Sandwich = wrap.beef ; Small=0.8, Large=1.2
+Mixed Sandwich = wrap.mixed ; Small=0.8, Large=1.2
+Donair Sandwich = wrap.donair ; Small=0.8, Large=1.2
+Falafel Sandwich = wrap.falafel ; Small=0.8, Large=1.2
+Veggie Sandwich = wrap.veggie ; Small=0.8, Large=1.2
+Saj Sandwich = wrap.saj
+
+[Platters]
+Chicken Shawarma Plate = plate.chicken :: rice, garlic potatoes, salad, chicken shawarma, garlic sauce, hummus, pita bread, pickled turnips
+Beef Shawarma Plate = plate.beef :: rice, garlic potatoes, salad, beef shawarma, garlic sauce, hummus, pita bread, pickled turnips
+Mix Shawarma Plate = plate.mixed :: rice, garlic potatoes, salad, chicken & beef shawarma, garlic sauce, hummus, pita bread, pickled turnips
+Veggie Plate = plate.veggie :: rice, garlic potatoes, salad, grilled vegetables, garlic sauce, hummus, pita bread, pickled turnips
+Falafel Plate = plate.falafel :: rice, garlic potatoes, salad, falafel, tahini sauce, hummus, pita bread, pickled turnips
+Saj Plate = plate.chicken x1.1 :: saj sandwich, coleslaw, french fries
+
+[Subs]
+Chicken Fajita Sub = sub.hot :: sub bun, grilled chicken, bell peppers, onions, cheese, house sauce
+Beef Fajita Sub = sub.hot x1.05 :: sub bun, beef strips, bell peppers, onions, cheese, house sauce
+Francisco Sub = sub.hot :: sub bun, chicken, lettuce, cheese, corn, special sauce
+Soujuk Sub = sub.hot x1.1 :: sub bun, soujuk sausage, lettuce, tomatoes, pickles, garlic sauce
+Batata Sub = sub.fries :: sub bun, french fries, garlic sauce, pickles, ketchup, coleslaw
+
+[Poutine]
+Classic Poutine = poutine.classic ; Small=0.75, Large=1.25 :: fries, cheese curds, gravy, garlic sauce, pickled turnips
+Chicken Poutine = poutine.shawarma ; Small=0.75, Large=1.25 :: fries, cheese curds, gravy, chicken shawarma, garlic sauce, pickled turnips
+Beef Poutine = poutine.shawarma x1.05 ; Small=0.75, Large=1.25 :: fries, cheese curds, gravy, beef shawarma, garlic sauce, pickled turnips
+Mix Poutine = poutine.shawarma x1.03 ; Small=0.75, Large=1.25 :: fries, cheese curds, gravy, chicken & beef shawarma, garlic sauce, pickled turnips
+
+[Sides]
+Hummus = side.hummus
+Garlic = side.garlic-sauce
+Spicy Garlic = side.garlic-sauce
+Tahini Sauce = side.tahini
+Baba Ghanouj = side.baba
+Kibbeh = side.kibbeh
+Grape Leaves (6 pc) = side.grape-leaves
+Coleslaw = side.coleslaw
+Falafel (1 pc) = side.falafel-pc
+Rice = side.rice
+Garlic Potatoes = side.garlic-potatoes
+Mixed Fried Veggies = side.fried-veg
+Pickles = side.pickles
+Turnips = side.pickles
+French Fries = pub.fries
+
+[Awamas]
+Pistachio Crunch Awamas = dessert.awama x1.15 ; 8 pcs=0.67, 12 pcs=1
+CreamBoom Awamas = dessert.awama x1.1 ; 8 pcs=0.67, 12 pcs=1
+Triple Trouble Awamas = dessert.awama x1.15 ; 8 pcs=0.67, 12 pcs=1
+Nutella Banana Awamas = dessert.awama x1.1 ; 8 pcs=0.67, 12 pcs=1
+Milk Chocolate Awamas = dessert.awama ; Small (12 pcs)=1, Medium (33 pcs)=2.75, Large (50 pcs)=4.17
+Caramel Sea Salt Awamas = dessert.awama ; Small (12 pcs)=1, Medium (33 pcs)=2.75, Large (50 pcs)=4.17
+White Chocolate Awamas = dessert.awama ; Small (12 pcs)=1, Medium (33 pcs)=2.75, Large (50 pcs)=4.17
+Nutella Awamas = dessert.awama ; Small (12 pcs)=1, Medium (33 pcs)=2.75, Large (50 pcs)=4.17
+Cinnamon Sugar Awamas = dessert.awama x0.92 ; Small (12 pcs)=1, Medium (33 pcs)=2.75, Large (50 pcs)=4.17
+Strawberry Syrup Awamas = dessert.awama ; Small (12 pcs)=1, Medium (33 pcs)=2.75, Large (50 pcs)=4.17
+Biscoff and Nutella Awamas = dessert.awama x1.05 ; Small (12 pcs)=1, Medium (33 pcs)=2.75, Large (50 pcs)=4.17
+
+[Drinks by Nespresso]
+Latte Macchiato = coffee.latte x0.8
+Cappuccino = coffee.cappuccino x0.8
+Flat White = coffee.cappuccino x0.85
+Americano = coffee.americano
+Lungo = coffee.espresso
+Espresso = coffee.espresso
+Soft Drink = drink.soft
+Water Bottle = drink.water

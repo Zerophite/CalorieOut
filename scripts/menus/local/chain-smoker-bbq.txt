@@ -1,0 +1,36 @@
+id: chain-smoker-bbq
+name: Chainsmoker Urban Halal BBQ
+cuisine: Halal BBQ · Smokehouse
+accent: #78350f
+segment: Fast Food
+source: https://chainsmoker.ca (Canada menu PDF, August 2026)
+
+[Smoked plates — with coleslaw, onions, carrots, pickles & a side]
+Smoked Triple "A" Beef Brisket (½ lb) = bbq.brisket-plate :: hand-carved brisket, BBQ sauce, creamy coleslaw, sweet onions, carrots, sweet pickles, fries
+Smoked Triple "A" Beef Back Ribs = bbq.ribs-half x1.25 :: beef back ribs, BBQ glaze, creamy coleslaw, sweet onions, carrots, sweet pickles, fries
+Smoked Lamb Shank = bbq.brisket-plate x1.1 :: lamb shank, BBQ glaze, creamy coleslaw, sweet onions, carrots, sweet pickles, fries
+Smoked Jerk Chicken = bbq.chicken-dinner ; Leg Quarter=1, Boneless Thigh=0.9 :: jerk chicken, jerk BBQ sauce, creamy coleslaw, sweet onions, carrots, sweet pickles, fries
+Smoked BBQ Chicken = bbq.chicken-dinner ; Single Leg=1, Double Leg=1.45 :: BBQ chicken leg, BBQ sauce, creamy coleslaw, sweet onions, carrots, sweet pickles, fries
+Southern Fried Chicken Wings (1 lb) = wing.combo :: chicken wings, sauce, creamy coleslaw, sweet onions, carrots, sweet pickles, fries
+
+[Sandwiches — with a side]
+Cowboy Sandwich = bbq.sandwich x1.58 :: bun, pulled brisket, creamy coleslaw, crispy onions, sweet onions, sweet pickles, chili aioli, fries
+Chainsmoker Burger = pub.burger x1.6 :: bun, two chuck patties, cheddar, sweet pickles, crispy onions, sweet onions, lettuce, garlic aioli, fries
+Sliced Brisket Sandwich = bbq.sandwich x1.53 :: bun, sliced brisket, honey mustard BBQ sauce, crispy onions, sweet onions, sweet pickles, fries
+Nashville Fried Chicken Sandwich = pub.chicken-burger x1.68 :: bun, fried chicken, Nashville seasoning, chili aioli, garlic aioli, lettuce, sweet pickles, fries
+Fried Chicken Sandwich = pub.chicken-burger x1.63 :: bun, fried chicken, chili aioli, garlic aioli, sweet onions, sweet pickles, lettuce, fries
+Smoked Jerk Chicken Sandwich = bbq.sandwich x1.53 :: bun, jerk chicken, jerk BBQ sauce, coleslaw, carrots, sweet pickles, sweet onions, garlic aioli, fries
+
+[Sides & snacks]
+Mac & Cheese = side.mac x1.6 :: macaroni, cheese sauce, scallions, crispy onions, fried garlic
+Cheese Fries = pub.loaded-fries x0.85 :: fries, cheese sauce, chili aioli, garlic aioli, scallions
+Fries Dun'up = pub.loaded-fries x0.75 :: fries, scallions, fried garlic, chili aioli, garlic aioli
+Rice Dun'up = side.rice x1.4 :: rice, chili aioli, garlic aioli, scallions, fried garlic
+Coleslaw = side.coleslaw
+Caesar Salad = pub.side-salad x1.2 :: romaine, Caesar dressing, fried garlic, crispy wontons
+Crispy Fries = pub.fries
+
+[Platters — per person]
+Platter for 2 (per person) = bbq.brisket-plate x1.15
+Medium Platter (per person, serves 4–5) = bbq.brisket-plate x1.1
+Large Platter (per person, serves 7–8) = bbq.brisket-plate x1.1

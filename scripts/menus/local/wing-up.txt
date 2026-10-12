@@ -1,0 +1,36 @@
+id: wing-up
+name: WingsUp!
+cuisine: Wings
+accent: #ea580c
+segment: Fast Food
+source: No public menu found; a typical wing-shop menu
+
+[Wings]
+Chicken Wings = wing.pc x10 ; 1 lb=1, 2 lb=2, 3 lb=3, 5 lb=5 :: chicken wings, sauce
+Boneless Wings = wing.boneless-pc x10 ; 1 lb=1, 2 lb=2, 3 lb=3 :: boneless chicken, sauce
+Cauliflower Wings = pub.mozza x0.7
+
+[Combos]
+Wing Combo (1 lb, fries, pop) = wing.combo :: chicken wings, sauce, fries, pop
+Boneless Combo (1 lb, fries, pop) = wing.combo x1.05 :: boneless chicken, sauce, fries, pop
+
+[Burgers & wraps]
+Crispy Chicken Burger = pub.chicken-burger
+Classic Burger = pub.burger
+Buffalo Chicken Wrap = pub.wrap
+Chicken Caesar Wrap = pub.wrap x0.95
+
+[Sides]
+Fries = pub.fries
+Seasoned Fries = pub.fries x1.05
+Sweet Potato Fries = pub.sweet-fries
+Onion Rings = pub.onion-rings
+Poutine = pub.poutine
+Mozzarella Sticks = pub.mozza
+Coleslaw = side.coleslaw
+Celery & Carrots = side.house-salad x0.5
+
+[Dips & drinks]
+Extra Sauce = wing.sauce
+Ranch or Blue Cheese Dip = pizza.dip
+Pop = drink.soft

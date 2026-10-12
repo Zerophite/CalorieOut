@@ -1,0 +1,85 @@
+id: toppers-pizza
+name: Topper's Pizza
+cuisine: Pizza
+accent: #1d4ed8
+segment: Fast Food
+source: https://toppers.ca/menu/ (calories per slice / piece as posted; slice ranges span Small to X-Large)
+
+[Pizzas — per slice]
+Eight Topper = pizza.slice @ 220-300 ; Small=1, Medium=1, Large=1, X-Large=1
+10 Topper = pizza.slice @ 220-300 ; Small=1, Medium=1, Large=1, X-Large=1
+Cheese Pizza = pizza.slice x0.85 ; Small=0.7, Medium=0.85, Large=1, X-Large=1.15 :: crust, tomato sauce, mozzarella
+Pepperoni Pizza = pizza.slice ; Small=0.7, Medium=0.85, Large=1, X-Large=1.15 :: crust, tomato sauce, mozzarella, pepperoni
+Margherita = pizza.slice @ 180-230 ; Small=1, Medium=1, Large=1, X-Large=1 :: thin crust, olive oil, mozzarella, basil, parmesan
+Deluxe = pizza.slice @ 220-290 ; Small=1, Medium=1, Large=1, X-Large=1 :: crust, tomato sauce, mozzarella, onions, mushrooms, green peppers, bacon, pepperoni
+Canadiana = pizza.slice @ 220-290 ; Small=1, Medium=1, Large=1, X-Large=1 :: crust, tomato sauce, mozzarella, cheddar, bacon, mushrooms, pepperoni
+Veggie = pizza.slice @ 190-250 ; Small=1, Medium=1, Large=1, X-Large=1 :: crust, tomato sauce, mozzarella, tomatoes, green peppers, mushrooms, onions, green olives
+Hawaiian = pizza.slice @ 210-240 ; Small=1, Medium=1, Large=1, X-Large=1 :: crust, tomato sauce, mozzarella, pineapple, ham
+Tandoori Paneer = pizza.slice @ 185-225 ; Small=1, Medium=1, Large=1, X-Large=1 :: crust, tandoori sauce, paneer, red onions, green peppers, mozzarella
+Greek = pizza.slice @ 185-225 ; Small=1, Medium=1, Large=1, X-Large=1
+BBQ Bacon Potato Skin = pizza.slice @ 240-310 ; Small=1, Medium=1, Large=1, X-Large=1 :: crust, BBQ sauce, mozza-cheddar blend, potato skins, onions, bacon
+Bacon Double Cheeseburger Pizza = pizza.slice @ 250-330 ; Small=1, Medium=1, Large=1, X-Large=1 :: crust, seasoned ground beef, bacon, mozzarella, cheddar
+Meatball Amore = pizza.slice @ 260-350 ; Small=1, Medium=1, Large=1, X-Large=1 :: crust, tomato sauce, meatballs, Italian sausage, bacon, mozzarella, cheddar
+Meat Mountain = pizza.slice @ 240-320 ; Small=1, Medium=1, Large=1, X-Large=1 :: crust, tomato sauce, pepperoni, ham, bacon, ground beef, Italian sausage, mozzarella
+BBQ Steak = pizza.slice @ 240-330 ; Small=1, Medium=1, Large=1, X-Large=1 :: crust, garlic butter, BBQ sauce, mozzarella, shaved steak, red onions, mushrooms
+Montreal Steak Spice = pizza.slice @ 220-310 ; Small=1, Medium=1, Large=1, X-Large=1 :: crust, garlic butter, BBQ sauce, shaved steak, mushrooms, green peppers, red onions, mozzarella
+Pizza Romano = pizza.slice @ 230-310 ; Small=1, Medium=1, Large=1, X-Large=1 :: crust, tomato sauce, asiago, mozzarella, pepperoni, Italian sausage
+Tropical Heatwave = pizza.slice @ 290-410 ; Small=1, Medium=1, Large=1, X-Large=1 :: crust, tomato sauce, mozzarella, pineapple, bacon, hot peppers, buffalo sauce
+Buffalo Chicken = pizza.slice @ 240-300 ; Small=1, Medium=1, Large=1, X-Large=1 :: crust, wing sauce, breaded chicken, red onions, roasted red peppers, ranch swirl, mozzarella
+BBQ Chicken = pizza.slice @ 230-330 ; Small=1, Medium=1, Large=1, X-Large=1 :: crust, garlic butter, BBQ sauce, mozzarella, chicken, red onions, mushrooms
+Chicken Caesar = pizza.slice @ 190-250 ; Small=1, Medium=1, Large=1, X-Large=1 :: thin crust, creamy tomato garlic sauce, mozzarella, cheddar, grilled chicken, house sauce, bacon, parmesan
+Grilled Chicken Bruschetta = pizza.slice @ 260-380 ; Small=1, Medium=1, Large=1, X-Large=1 :: crust, garlic butter, grilled chicken, tomatoes, onions, parmesan
+Pickle Pizza = pizza.slice x0.95 ; Small=0.7, Medium=0.85, Large=1, X-Large=1.15 :: crust, garlic butter, shredded pickles, mozzarella, house swirl
+Pepperoni Explosion = pizza.slice x1.15 ; Small=0.7, Medium=0.85, Large=1, X-Large=1.15 :: crust, tomato sauce, extra mozzarella, pepperoni, roni cups
+Mexicana = pizza.slice x1.05 ; Small=0.7, Medium=0.85, Large=1, X-Large=1.15 :: crust, salsa, taco seasoned beef, onions, tomatoes, jalapeños, mozzarella
+
+[Panuzzos & Topperottis]
+BYO Panuzzo Sandwich = pizza.panzerotti @ 300
+Chicken Club Panuzzo Sandwich = pizza.panzerotti @ 620
+Chipotle Cheddar Steak Panuzzo Sandwich = pizza.panzerotti @ 620
+Tandoori Paneer Panuzzo Sandwich = pizza.panzerotti @ 620 :: bread crust, tandoori paneer, mozzarella, red onions, green peppers
+Meatball Panuzzo Sandwich = pizza.panzerotti @ 490 :: bread crust, marinara sauce, meatballs, mozzarella, parmesan
+Topperotti Build Your Own = pizza.calzone @ 1130
+Chicken Caesar Topperotti = pizza.calzone @ 1550 :: crust, creamy tomato garlic sauce, cheese blend, chicken strips, bacon, house dip
+Chicken Bruschetta Topperotti = pizza.calzone @ 1760 :: crust, garlic butter, mozzarella, chicken strips, onions, tomatoes, house dip
+
+[Apps]
+Shredded Pep Cheezy Sticks = pizza.sticks @ 92/piece ; 8 pc=8, 12 pc=12
+TopperSticks = pizza.sticks @ 160/piece ; 8 pc=8
+Extreme Cheezy Sticks = pizza.sticks @ 170/piece ; 8 pc=8
+BBQ Bacon Cheezy Sticks = pizza.sticks @ 150/piece ; 8 pc=8
+Jalapeño Cheezy Sticks = pizza.sticks @ 130/piece ; 8 pc=8
+Dill Pickle Cheezy Sticks = pizza.sticks @ 210/piece ; 8 pc=8
+Bacon Potato Skins = pub.loaded-fries @ 190/piece ; 5 pc=5
+Caesar Salad = pub.side-salad @ 380 :: romaine, bacon bits, parmesan, croutons, Caesar dressing
+Greek Salad = side.greek-salad @ 320 :: romaine, tomato, red onions, kalamata olives, feta, balsamic vinaigrette
+House Salad = pub.side-salad @ 410 :: romaine, tomato, red onions, cheese blend, dressing
+
+[Chicken]
+Chicken Wings = wing.pc @ 70/wing ; 10 pc=10, 20 pc=20, 30 pc=30
+Garlic & Parm Chicken Wings = wing.pc @ 70/wing ; 10 pc=10, 20 pc=20, 30 pc=30
+Chicken Bites = wing.boneless-pc @ 70/piece ; 10 pc=10, 20 pc=20
+Garlic & Parm Chicken Bites = wing.boneless-pc @ 70/piece ; 10 pc=10, 20 pc=20
+Thai Sensation Loaded Bites = wing.boneless-pc x12 :: chicken bites, red onions, green peppers, roasted red peppers, sweet & spicy Thai sauce
+Tropical Heatwave Loaded Bites = wing.boneless-pc x12 :: chicken bites, pineapple, bacon, hot peppers, buffalo sauce
+
+[Desserts]
+Celebration Sticks = pizza.dessert-stick @ 90/stick ; 8 pc=8
+Fudge Brownie = pastry.brownie @ 350
+Cinni-MiniSticks = pizza.dessert-stick @ 35/piece ; 12 pc=12
+Cinnamon Apple Crisp = pastry.tart @ 210/slice ; 1 slice=1, 8 slices=8
+
+[Drinks & Dips]
+Coca-Cola = drink.soft
+Coke Zero = drink.diet
+Diet Coke = drink.diet
+Canada Dry Ginger Ale = drink.soft x0.93
+Sprite = drink.soft
+Barq's Root Beer = drink.soft x1.07
+Fuze Iced Tea = drink.soft x0.65
+Dasani Water = drink.water
+Monster Energy = drink.energy x1.24
+House Dip = pizza.dip @ 300/serving ; 1 serving=1, Bottle (serves 8)=8
+Ranch Dip = pizza.dip
+Cheddar Chipotle Dip = pizza.dip
+Tomato Dip = pizza.dip x0.17

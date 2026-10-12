@@ -90,7 +90,6 @@ function SizedCustomizer({
   const extras = components.filter((c) => !isComponentDefaultOn(c))
 
   function toggle(c: IngredientComponent) {
-    if (c.removable === false) return
     setSelection((s) => ({ ...s, [c.id]: !s[c.id] }))
   }
 
@@ -116,24 +115,20 @@ function SizedCustomizer({
         <section>
           <h3 className="mb-1 font-bold text-body">Customize ingredients</h3>
           <p className="mb-3 text-sm text-muted">
-            Tap to remove what you don't want — the total updates instantly.
+            Everything is optional — tap anything to remove it, and the total updates instantly.
           </p>
           <div className="grid gap-2 sm:grid-cols-2">
             {included.map((c) => {
               const on = selection[c.id]
-              const locked = c.removable === false
               return (
                 <button
                   key={c.id}
                   onClick={() => toggle(c)}
-                  disabled={locked}
                   className={
                     'flex items-center justify-between rounded-xl border p-3 text-left transition-colors ' +
-                    (locked
-                      ? 'cursor-default border-app bg-surface-2 opacity-70'
-                      : on
-                        ? 'border-[var(--brand)] bg-emerald-500/10'
-                        : 'border-app bg-surface opacity-60 hover:opacity-100')
+                    (on
+                      ? 'border-[var(--brand)] bg-emerald-500/10'
+                      : 'border-app bg-surface opacity-60 hover:opacity-100')
                   }
                 >
                   <span className="flex items-center gap-2">
@@ -154,11 +149,6 @@ function SizedCustomizer({
                     >
                       {c.name}
                     </span>
-                    {locked && (
-                      <span className="text-[10px] uppercase tracking-wide text-muted">
-                        core
-                      </span>
-                    )}
                   </span>
                   <span className="shrink-0 pl-2 text-sm text-muted">
                     {on ? '' : '−'}

@@ -1,0 +1,26 @@
+id: lokma
+name: Lokma
+cuisine: Dessert bar · Lokma & mini donuts
+accent: #b45309
+segment: Coffee & Bakery
+source: https://www.lokma.ca (signature lokmas; other items are typical of the dessert bar)
+
+[Signature lokmas — regular box]
+Crunchy Pistachio Lokma = lokma.serving x1.15 :: lokma, pistachio spread, white chocolate, pistachios
+Explosion Lokma = lokma.serving x1.1 :: lokma, pastry cream, chocolate drizzle
+Kebueno Lokma = lokma.serving x1.15 :: lokma, Kinder Bueno spread, Kinder Bueno pieces
+Istanbul Lokma = lokma.serving x1.15 :: lokma, white chocolate, milk chocolate, dark chocolate, Biscoff
+Pure Speculoos Lokma = lokma.serving x1.1 :: lokma, speculoos spread, white chocolate, Biscoff
+Nutella Banana Lokma = lokma.serving x1.1 :: lokma, Nutella, banana
+Classic Lokma (syrup & cinnamon) = lokma.serving x0.8 :: lokma, honey syrup, cinnamon
+
+[More treats]
+Mini Donuts (12) = donut.mini x12
+Kroffle = pastry.waffle :: croissant waffle, Nutella, whipped cream
+Nutella Crêpe = pastry.crepe
+
+[Drinks]
+Milkshake = drink.milkshake
+Turkish Coffee = coffee.espresso
+Latte = coffee.latte
+Hot Chocolate = coffee.hot-chocolate

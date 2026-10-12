@@ -1,0 +1,66 @@
+BOWLS	Mad Caesar	142	8	519	15	4	3
+BOWLS	Smoky Chipotle Bowl	394	16	790	54	15	10
+BOWLS	The Santa Fe	217	9	344	28	9	6
+BOWLS	Piri-Piri Bowl	334	9	565	57	7	6
+BOWLS	Bibimbowl	240	2	633	49	6	6
+BOWLS	Thai Chili Bowl	287	10	313	45	10	7
+BOWLS	Maple Farm Bowl	332	11	613	48	10	5
+DRESSINGS	Caesar	165	18	146	1	1	0
+DRESSINGS	Carrot Ginger	137	13	319	4	1	1
+DRESSINGS	Maple Chipotle	174	17	168	5	1	0
+DRESSINGS	Avocado Tomatillo	31	4	47	1	0	0
+DRESSINGS	Piri-Piri	134	14	177	2	0	1
+DRESSINGS	Chili Peanut	98	8	275	5	3	1
+DRESSINGS	Mad Thai Vinaigrette	42	1	641	4	1	0
+DRESSINGS	Mexican Caesar	143	15	172	0	1	0
+DRESSINGS	Creamy Cilantro	132	14	110	1	0	0
+DRESSINGS	Mad Hot Sauce (15 g)	10	1	52	1	0	0
+DRESSINGS	Gochujang (15 g)	18	0	168	4	0	0
+PROTEINS	Lemon-Herb Chicken	155	6	459	2	24	1
+PROTEINS	Piri-Piri Chicken	174	8	452	5	22	1
+PROTEINS	Luisa's Chicken	175	9	633	3	22	1
+PROTEINS	Cilantro-Lime Tofu	187	12	177	4	16	2
+PROTEINS	Piri-Piri Tofu	190	12	244	6	17	3
+PROTEINS	Beef Barbacoa	165	13	79	2	12	0
+BURRITOS	The Barranquilla - Chicken	946	43	1947	102	44	12
+BURRITOS	The Barranquilla - Tofu	958	46	1491	104	38	13
+BURRITOS	The El Dorado	951	48	1456	102	34	11
+BURRITOS	The Flaming Batata - Chicken	1117	45	2154	136	45	15
+BURRITOS	The Flaming Batata - Tofu	1129	49	1697	138	39	16
+BURRITOS	The Smoking Gun - Chicken	967	44	2062	103	44	11
+BURRITOS	The Smoking Gun - Tofu	979	48	1606	104	38	13
+BURRITOS	The Vida Verde - Tofu	968	44	1424	112	36	13
+BURRITOS	The Spicy Satay - Chicken	1020	48	1897	110	44	12
+BURRITOS	The Spicy Satay - Tofu	1032	51	1441	112	38	13
+BURRITO BOWLS	The Barranquilla	442	13	925	70	15	10
+BURRITO BOWLS	The El Dorado	446	13	926	71	15	10
+BURRITO BOWLS	The Flaming Batata	603	15	1069	105	15	13
+BURRITO BOWLS	The Smoking Gun	453	14	978	72	15	10
+BURRITO BOWLS	The Vida Verde	453	12	858	79	13	10
+BURRITO BOWLS	The Spicy Satay	550	25	709	74	12	9
+HIGH PROTEIN	HP The Smoking Gun Burrito	1142	53	2695	106	67	12
+HIGH PROTEIN	HP The Spicy Satay Chicken Burrito	1194	57	2530	113	66	13
+HIGH PROTEIN	HP Smoky Chipotle Bowl	918	50	2224	64	61	12
+HIGH PROTEIN	HP The Santa Fe	558	26	1310	32	58	7
+HIGH PROTEIN	HP Maple Farm Bowl	856	45	2047	58	56	7
+HIGH PROTEIN	HP The Smoking Gun Bowl	945	47	2416	77	61	12
+HIGH PROTEIN	HP The Spicy Satay Chicken Bowl	998	50	2251	84	61	12
+LIL BOWLS	Lil' Piri-Piri Bowl	386	13	801	46	21	5
+LIL BOWLS	Lil' Buddha Bowl	299	9	837	34	21	3
+LIL BOWLS	Lil' Taco Bowl	450	19	992	50	25	8
+LIL BOWLS	Lil' Kid Option (no dressing)	274	8	741	32	21	3
+SOUPS	Coconut Curry Chowder (12 oz)	239	17	955	24	7	3
+SOUPS	Moroccan Chicken Soup (12 oz)	136	3	136	20	10	3
+SANDWICHES	Fajita Barbacoa Sandwich	597	24	945	71	25	3
+SANDWICHES	Piri-Piri Chicken Sandwich	614	23	1096	76	28	7
+SANDWICHES	Tofu Banh Mi	607	20	1001	77	30	7
+SANDWICHES	Smashed Chickpea Sandwich (no dressing)	556	19	1171	87	17	8
+SMOOTHIES	Very Berry Smoothie	338	2	3	83	3	9
+SMOOTHIES	Green Machine Smoothie	201	1	51	48	5	6
+SMOOTHIES	Nutty by Nature Smoothie	490	17	260	84	10	11
+SNACKS	Portuguese Custard Tart	230	9	200	33	3	0
+SNACKS	Cake Pop	135	6	48	20	2	1
+SNACKS	Ginger Molasses Cookie	320	13	380	48	4	1
+SNACKS	Sea Salt Chocolate Chip Cookie	240	10	200	34	3	1
+SNACKS	Oatmeal Raisin Cookie	330	14	210	50	4	2
+SNACKS	Rosemary Focaccia	350	5	630	64	12	3

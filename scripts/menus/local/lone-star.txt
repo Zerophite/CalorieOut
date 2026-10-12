@@ -1,0 +1,124 @@
+id: lone-star
+name: Lone Star Texas Grill
+cuisine: Tex-Mex · Sit-down
+accent: #b45309
+segment: Sit-Down
+source: https://www.lonestartexasgrill.com/menus (calories as posted on the menu)
+
+[Starters]
+Tableside Smashed Guacamole (per serving) = tex.guac @ 455 :: avocado, pico de gallo, roasted corn, jalapeño relish, lime, red onion, cilantro, cotija cheese, tortilla chips
+Classic Queso & Chips (per serving) = tex.queso @ 300 :: queso, crushed tomatoes, jalapeños, tortilla chips
+Crispy Mozzarella = pub.mozza @ 460-490 :: breaded mozzarella, sauce, house dip
+Bang Bang Shrimp (per serving, serves 2) = side.tempura @ 495 :: breaded shrimp, bang bang sauce, lime crema
+Gator Bites (per serving) = side.karaage @ 210 :: breaded alligator, cajun spice, gator dip
+Calamari Frito (per serving) = side.tempura @ 240 :: breaded calamari, red peppers, onions, jalapeños, southwest sauce, honey dill dip
+Lone Star Nachos (per serving) = pub.nachos @ 510 :: tortilla chips, jack & cheddar cheese, queso, tomatillo salsa, pico de gallo, jalapeños, green onions, lettuce, sour cream, salsa
+Dip Trio = tex.queso x1.4 :: black bean dip, queso, tomatillo salsa, flour tostadas, corn chips
+
+[Fajitas — per person]
+Grilled Chicken Fajitas = tex.fajitas @ 480 ; Una=1, Dos (per person)=1, Grande (per person)=1 :: grilled chicken, peppers & onions, flour tortillas, garlic butter
+Buffalo Chicken Fajitas = tex.fajitas @ 700 ; Una=1, Dos (per person)=1, Grande (per person)=1 :: breaded chicken, Texas butter sauce, peppers & onions, flour tortillas
+Grilled Steak Fajitas = tex.fajitas @ 520 ; Una=1, Dos (per person)=1, Grande (per person)=1 :: skirt steak, peppers & onions, flour tortillas
+Surf N' Turf Fajitas = tex.fajitas @ 720 :: skirt steak, cajun garlic butter shrimp, peppers & onions, flour tortillas
+Garlic Shrimp Fajitas = tex.fajitas @ 530 :: garlic butter shrimp, peppers & onions, flour tortillas
+Portobello & Halloumi Fajitas = tex.fajitas @ 690 :: portobello mushrooms, halloumi, avocado, broccoli, cabbage, black bean & corn salsa, chimichurri, flour tortillas
+Steak & Chicken Fajita Combo (per person) = tex.fajitas @ 500 ; Dos=1, Grande=1
+Fajita Trio (per person) = tex.fajitas @ 480-700
+Fiesta for 2 (per person) = pub.ribs @ 680 :: pork back ribs, grilled chicken, skirt steak, garlic shrimp, peppers & onions
+
+[Tacos — 2 per order]
+Birria Tacos = tex.tacos @ 740 :: corn tortillas, birria beef, mozzarella, cilantro, onions, birria broth
+Crispy Fish Tacos = tex.tacos @ 710 :: flour tortillas, breaded tilapia, pickle slaw, pico de gallo, lime crema
+Texican Chicken Tacos = tex.tacos @ 740 :: corn tortillas, Texican chicken, guacamole, jack cheese, cabbage, cotija cheese
+Bang Bang Shrimp Tacos = tex.tacos @ 760 :: flour tortillas, breaded shrimp, bang bang sauce, cabbage, cucumber, carrots
+Crispy Mushroom Tacos = tex.tacos x1.05 :: flour tortillas, breaded portobello, lettuce, cabbage, carrots, buffalo sauce, Caesar dressing, parmesan
+
+[Tex Mex — with rice & beans]
+Texican Chicken Enchiladas = tex.enchiladas @ 1340 :: flour tortillas, mole, Texican chicken, jack & cheddar cheese, ranchero sauce, pico de gallo, lime crema, southwest rice, beans
+Birria Beef Enchiladas = tex.enchiladas @ 1280 :: flour tortillas, mole, birria beef, jack & cheddar cheese, ranchero sauce, pico de gallo, lime crema, southwest rice, beans
+Black Bean & Corn Quesadilla = pub.quesadilla @ 1110 :: flour tortilla, black bean & corn, jack & cheddar cheese, pico de gallo, salsa, sour cream, southwest rice, beans
+Grilled Chicken Quesadilla = pub.quesadilla @ 1140 :: flour tortilla, grilled chicken, jack & cheddar cheese, pico de gallo, salsa, sour cream, southwest rice, beans
+Grilled Steak Quesadilla = pub.quesadilla @ 1190 :: flour tortilla, grilled steak, jack & cheddar cheese, pico de gallo, salsa, sour cream, southwest rice, beans
+Chicken Chimichanga = tex.burrito @ 1260
+Big Rig Burrito = tex.burrito @ 1750 :: flour tortilla, taco beef, southwest rice, pinto beans, tomatillo salsa, queso, jack & cheddar cheese, ranchero sauce, pico de gallo, lime crema
+
+[Grill]
+Top Sirloin (7 oz) = pub.steak @ 790 :: top sirloin, onion rings, seasonal vegetables, side
+New York Striploin (11 oz) = pub.steak @ 960 :: striploin, onion rings, seasonal vegetables, side
+Boneless Rib Steak (14 oz) = pub.steak @ 1190 :: rib steak, onion rings, seasonal vegetables, side
+Pork Back Ribs = pub.ribs @ 1390-1910 ; 2/3 Rack=1, Full Rack=1 :: pork back ribs, BBQ sauce, fries, pickle slaw
+Rib & Wing Combo = pub.ribs @ 1530-1590 :: pork back ribs, chicken wings, BBQ sauce, fries
+
+[Burgers — with a side]
+Big Smash Burger = pub.burger @ 960 :: bun, double chuck patties, cheddar, secret sauce, pickles, lettuce, onion
+Cheese Louise Burger = pub.burger @ 920 :: bun, double chuck patties, cheddar, pickles, lettuce, red onion, tomato, mayo
+Bacon Me Crazy Burger = pub.burger @ 1010 :: bun, double chuck patties, bacon, cheddar, pickles, lettuce, red onion, tomato, mayo
+Cowboy Bacon BBQ Burger = pub.burger @ 1090 :: bun, double chuck patties, BBQ sauce, mayo, sautéed onions, bacon
+
+[Chicken]
+Chicken Strips = pub.tenders @ 800 :: breaded chicken strips, sauce, Tex-Mex ranch, side
+Chicken Wings = wing.pc @ 950-2040 ; 1 lb=1, 2 lb=1 :: chicken wings, sauce, carrot sticks, ranch
+Nashville Chicken Sammy = pub.chicken-burger @ 810 :: bun, breaded chicken, Nashville sauce, sweet pickles, southwest sauce, fries
+El Paso Wrap = pub.wrap @ 810 :: tortilla, grilled chicken, bacon, jack cheese, romaine, pico de gallo, ancho crema, tomatillo salsa, garlic sauce
+
+[Salads & Bowls]
+Fajita Bowl — Grilled Chicken = tex.bowl @ 790 :: southwest rice, grilled chicken, cheddar, pico de gallo, lettuce, peppers & onions, tortilla straws, black bean & corn salsa, vinaigrette, poblano crema
+Fajita Bowl — Crispy Chicken = tex.bowl @ 910 :: southwest rice, crispy chicken, cheddar, pico de gallo, lettuce, peppers & onions, tortilla straws, black bean & corn salsa, vinaigrette, poblano crema
+Fajita Bowl — Grilled Steak = tex.bowl @ 820 :: southwest rice, grilled steak, cheddar, pico de gallo, lettuce, peppers & onions, tortilla straws, black bean & corn salsa, vinaigrette, poblano crema
+Chicken Caesar Salad = pub.salad @ 1080-1260 :: tortilla bowl, chicken, lettuce, bacon, croutons, parmesan, Caesar dressing
+Taco Salad — Texican Chicken = tex.taco-salad @ 1020 :: tortilla bowl, Texican chicken, southwest rice, cheddar, lettuce, pinto beans, pico de gallo, salsa, jalapeños, sour cream
+Taco Salad — Taco Beef = tex.taco-salad @ 1220 :: tortilla bowl, taco beef, southwest rice, cheddar, lettuce, pinto beans, pico de gallo, salsa, jalapeños, sour cream
+Taco Salad — Birria Beef = tex.taco-salad @ 1070 :: tortilla bowl, birria beef, southwest rice, cheddar, lettuce, pinto beans, pico de gallo, salsa, jalapeños, sour cream
+
+[Sides]
+Chips & Salsa = tex.chips-salsa @ 300
+Fries = pub.fries @ 350
+Seasonal Vegetables = side.house-salad @ 70
+Pickle Slaw = side.coleslaw @ 80
+Garlic Mashed Potatoes = side.garlic-potatoes @ 280
+Southwest Rice = tex.rice @ 180
+Gravy = pizza.dip @ 50
+Side Caesar Salad = pub.side-salad @ 470
+Side House Salad = side.house-salad @ 50
+Loaded Mashed Potatoes = side.garlic-potatoes @ 400
+Curly Fries = pub.fries @ 390
+Sweet Potato Fries = pub.sweet-fries @ 420
+Onion Rings (2) = pub.onion-rings @ 240
+
+[Desserts]
+Churros = dessert.churros @ 450/serving ; 4 pc=1, 8 pc=2
+Deep Fried Ice Cream = pub.dessert @ 610
+Deep Fried Salted Caramel Ice Cream = pub.dessert x0.85
+Guava Cheesecake = dessert.cheesecake @ 650
+Chocolate & Caramel Cheesecake = dessert.cheesecake @ 740
+Apple Sizzler = pub.dessert @ 470
+Señor Brownie = pub.dessert @ 690
+
+[Kids]
+Kids' Chicken Fajita = pub.kids @ 590
+Kids' Steak Fajita = pub.kids @ 620
+Kids' Chicken Fingers (3 pc) = pub.kids @ 260
+Kids' Cheeseburger = pub.kids @ 490
+Kids' Cheese Quesadilla = pub.kids @ 460
+Kids' Churros = dessert.churros @ 380
+
+[Drinks]
+Lime Frozen Margarita = drink.cocktail ; 1.5 oz=1, Grande (2.25 oz)=1.5
+Mango Frozen Margarita = drink.cocktail x1.2 ; 1.5 oz=1, Grande (2.25 oz)=1.5
+Strawberry Frozen Margarita = drink.cocktail x1.2 ; 1.5 oz=1, Grande (2.25 oz)=1.5
+Blue Raspberry Frozen Margarita = drink.cocktail x1.2 ; 1.5 oz=1, Grande (2.25 oz)=1.5
+Fuzzy Peach Frozen Margarita = drink.cocktail x1.2 ; 1.5 oz=1, Grande (2.25 oz)=1.5
+Lone Star Lime Margarita = drink.cocktail x0.9 ; 1.5 oz=1, Grande (2.25 oz)=1.5
+Spicy Pineapple Margarita = drink.cocktail ; 1.5 oz=1, Grande (2.25 oz)=1.5
+The OG Caesar = drink.cocktail x0.5 ; 1 oz=1, Grande (2 oz)=1.6
+Watermelon Sugar High = drink.cocktail x0.9 ; 1 oz=1, Grande (2 oz)=1.5
+Daisy Duke's Daiquiri = drink.cocktail x1.1 ; 1 oz=1, Grande (2 oz)=1.5
+Mock-A-Rita (0%) = drink.lemonade x1.2
+Watermelon Lemonade = drink.lemonade
+Texas Gold Lager = drink.beer ; 18 oz=1.1, 22 oz=1.35, 32 oz=2
+Corona Extra = drink.beer ; 330 ml=0.7, 710 ml=1.5
+Classic Red Sangria = drink.wine x1.3 ; 5 oz=1, 8 oz=1.6
+Red or White Wine = drink.wine ; 5 oz=1, 8 oz=1.6, 10 oz=2
+Corona Cero (330 mL) = drink.beer x0.3
+Bottomless Coca-Cola = drink.soft
+Coffee or Tea = coffee.drip

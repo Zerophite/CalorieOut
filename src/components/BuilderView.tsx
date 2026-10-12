@@ -86,7 +86,7 @@ export function BuilderView({ item, goal, onAddToCompare, onAddToDay }: Props) {
               <div className="mb-2 flex items-baseline justify-between">
                 <h3 className="font-bold text-body">{group.name}</h3>
                 <span className="text-xs text-muted">
-                  {group.min > 0 ? 'Required' : 'Optional'}
+                  {group.min > 0 ? 'Pick · tap again to skip' : 'Optional'}
                   {group.max ? ` · up to ${group.max}` : ''}
                 </span>
               </div>

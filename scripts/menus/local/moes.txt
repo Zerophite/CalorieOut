@@ -1,0 +1,32 @@
+id: moes
+name: Moe's
+cuisine: Tex-Mex · Burritos
+accent: #dc2626
+segment: Fast Food
+source: No public menu found; a typical Tex-Mex burrito-bar menu
+
+[Burritos & bowls]
+Chicken Burrito = tex.burrito :: tortilla, grilled chicken, rice, beans, cheese, salsa, sour cream
+Steak Burrito = tex.burrito x1.05 :: tortilla, steak, rice, beans, cheese, salsa, sour cream
+Ground Beef Burrito = tex.burrito x1.08 :: tortilla, ground beef, rice, beans, cheese, salsa, sour cream
+Veggie Burrito = tex.burrito x0.85 :: tortilla, grilled vegetables, rice, beans, cheese, salsa
+Chicken Burrito Bowl = tex.bowl :: rice, grilled chicken, beans, cheese, salsa, lettuce, sour cream
+Steak Burrito Bowl = tex.bowl x1.05 :: rice, steak, beans, cheese, salsa, lettuce, sour cream
+
+[Tacos & quesadillas]
+Chicken Tacos (3) = tex.tacos
+Beef Tacos (3) = tex.tacos x1.05
+Chicken Quesadilla = pub.quesadilla
+Cheese Quesadilla = pub.quesadilla x0.8
+
+[Salads]
+Taco Salad = tex.taco-salad
+Chicken Salad Bowl = healthy.salad
+
+[Sides]
+Loaded Nachos = pub.nachos x0.7
+Chips & Salsa = tex.chips-salsa
+Chips & Queso = tex.queso
+Chips & Guacamole = tex.guac
+Mexican Rice = tex.rice
+Refried Beans = tex.beans

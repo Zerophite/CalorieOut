@@ -1,0 +1,35 @@
+id: chicha-san-chen
+name: Chicha San Chen
+cuisine: Bubble tea
+accent: #0d9488
+segment: Coffee & Bakery
+source: No Canadian menu page found; the brand's signature fresh-brewed teas (regular sugar assumed)
+
+[Fresh-brewed tea]
+Dong Ding Oolong Tea = bt.pure-tea ; Regular=0.85, Large=1
+Jasmine Green Tea = bt.pure-tea ; Regular=0.85, Large=1
+Osmanthus Oolong Tea = bt.pure-tea ; Regular=0.85, Large=1
+Black Tea = bt.pure-tea ; Regular=0.85, Large=1
+
+[Tea lattes]
+Dong Ding Oolong Tea Latte = bt.fresh-milk ; Regular=0.85, Large=1
+Jasmine Green Tea Latte = bt.fresh-milk ; Regular=0.85, Large=1
+Black Tea Latte = bt.fresh-milk ; Regular=0.85, Large=1
+Dong Ding Oolong Tea Latte with Bubble = bt.fresh-milk x1.35 ; Regular=0.85, Large=1 :: fresh milk, oolong tea, tapioca pearls
+Brown Sugar Bubble Milk = bt.brown-sugar ; Regular=0.85, Large=1
+Taro Milk Tea = bt.taro ; Regular=0.85, Large=1
+
+[Milk foam teas]
+Dong Ding Oolong with Milk Foam = bt.foam-tea ; Regular=0.85, Large=1
+Black Tea with Milk Foam = bt.foam-tea ; Regular=0.85, Large=1
+
+[Fruit teas]
+Passion Fruit Green Tea = bt.fruit-tea ; Regular=0.85, Large=1
+Lemon Green Tea = bt.fruit-tea x0.9 ; Regular=0.85, Large=1
+Grapefruit Green Tea = bt.fruit-tea ; Regular=0.85, Large=1
+Mango Green Tea = bt.fruit-tea x1.05 ; Regular=0.85, Large=1
+
+[Toppings]
+Bubble (Tapioca Pearls) = topping.pearls
+Grass Jelly = topping.pearls x0.4
+Aiyu Jelly = topping.pearls x0.4

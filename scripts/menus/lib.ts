@@ -2,6 +2,7 @@
 // restaurant stub (src/data/<file>.ts) plus its lazy-loaded item list
 // (src/data/menus/<file>.items.ts).
 import * as fs from 'fs'
+import { attachImages } from './attach-images.mjs'
 import type { MealCategory, Nutrition } from '../../src/types'
 
 export interface RestaurantMeta {
@@ -66,8 +67,11 @@ export function writeMenu(opts: {
   source: string[]
   /** True when the menu includes build-your-own items. */
   hasBuilder?: boolean
+  /** 'estimated' for spots that publish no nutrition data (default 'official'). */
+  dataSource?: 'official' | 'estimated'
 }) {
   const { file, exportName, meta: m, order } = opts
+  attachImages(file, opts.items)
   const items = [...opts.items].sort(
     (a, b) =>
       (a.kind === 'builder' ? 0 : 1) - (b.kind === 'builder' ? 0 : 1) ||
@@ -97,7 +101,7 @@ export const ${exportName}: Restaurant = {
   cuisine: ${q(m.cuisine)},
   accent: ${q(m.accent)},
   segment: ${q(m.segment)},
-  dataSource: 'official',
+  dataSource: '${opts.dataSource ?? 'official'}',
   items: [],
   itemCount: ${items.length},
   hasBuilder: ${opts.hasBuilder ? 'true' : 'false'},

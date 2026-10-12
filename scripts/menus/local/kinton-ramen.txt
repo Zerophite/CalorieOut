@@ -1,0 +1,62 @@
+id: kinton-ramen
+name: Kinton Ramen
+cuisine: Japanese · Ramen
+accent: #dc2626
+segment: Sit-Down
+source: https://kintonramen.com/menu/ontario/ (calories as posted on the menu)
+
+[Ramen — the posted range covers broth richness and noodle choice]
+Pork Original Ramen = ramen.tonkotsu @ 583-983 :: pork broth, noodles, pork, bamboo shoots, nori, wood ear mushrooms, seasoned egg, scallions
+Pork Shoyu Ramen = ramen.shoyu @ 555-955 :: soy sauce broth, noodles, pork, nori, bamboo shoots, garlic oil, wood ear mushrooms, pickled red ginger, scallions
+Pork Miso Ramen = ramen.miso @ 653-1053 :: miso broth, noodles, pork, bamboo shoots, sweet corn, garlic oil, scallions
+Pork Spicy Garlic Ramen = ramen.spicy @ 586-986 :: spicy broth, noodles, pork, grated garlic, wood ear mushrooms, bamboo shoots, scallions
+Pork Spicy Jalapeño Ramen = ramen.spicy @ 521-921 :: jalapeño broth, noodles, pork, wood ear mushrooms, bamboo shoots, scallions
+Beef Original Ramen = ramen.tonkotsu @ 351-751 :: beef broth, noodles, beef, bamboo shoots, nori, wood ear mushrooms, seasoned egg, scallions
+Beef Shoyu Ramen = ramen.shoyu @ 291-691 :: soy sauce broth, noodles, beef, nori, bamboo shoots, garlic oil, wood ear mushrooms, pickled red ginger, scallions
+Beef Miso Ramen = ramen.miso @ 386-786 :: miso broth, noodles, beef, sweet corn, bamboo shoots, garlic oil, scallions
+Beef Spicy Garlic Ramen = ramen.spicy @ 346-746 :: spicy broth, noodles, beef, bamboo shoots, wood ear mushrooms, grated garlic, scallions
+Beef Spicy Jalapeño Ramen = ramen.spicy @ 289-689 :: jalapeño broth, noodles, beef, wood ear mushrooms, bamboo shoots, scallions
+Chicken Original Ramen = ramen.chicken @ 285-685 :: chicken broth, noodles, chicken, bamboo shoots, nori, wood ear mushrooms, seasoned egg, scallions
+Chicken Shoyu Ramen = ramen.shoyu @ 212-612 :: soy sauce broth, noodles, chicken, bamboo shoots, nori, wood ear mushrooms, scallions, pickled red ginger
+Chicken Miso Ramen = ramen.miso @ 301-701 :: miso broth, noodles, chicken, sweet corn, bamboo shoots, scallions
+Chicken Spicy Garlic Ramen = ramen.spicy @ 288-688 :: spicy broth, noodles, chicken, grated garlic, wood ear mushrooms, bamboo shoots, scallions
+Chicken Spicy Jalapeño Ramen = ramen.spicy @ 221-621 :: jalapeño broth, noodles, chicken, wood ear mushrooms, bamboo shoots, scallions
+Veggie Original Ramen = ramen.veggie @ 217-617 :: creamy vegetable broth, noodles, inari tofu, bamboo shoots, nori, sweet corn, wood ear mushrooms, scallions
+Veggie Shoyu Ramen = ramen.veggie @ 222-622 :: soy sauce broth, noodles, inari tofu, nori, bamboo shoots, wood ear mushrooms, sweet corn, garlic oil, pickled red ginger, scallions
+Veggie Miso Ramen = ramen.veggie @ 292-692 :: miso broth, noodles, inari tofu, bamboo shoots, wood ear mushrooms, sweet corn, garlic oil, scallions
+Veggie Spicy Garlic Ramen = ramen.veggie @ 276-676 :: spicy broth, noodles, inari tofu, bamboo shoots, wood ear mushrooms, sweet corn, grated garlic, scallions
+Veggie Spicy Jalapeño Ramen = ramen.veggie @ 218-618 :: jalapeño broth, noodles, inari tofu, wood ear mushrooms, bamboo shoots, sweet corn, scallions
+Golden Sesame Ramen = ramen.spicy @ 710-1110 :: sesame broth, noodles, seasoned ground pork, seasoned egg, spinach, bean sprouts, scallions, chili oil, fried onions
+Black Sesame Ramen = ramen.spicy @ 680-1080 :: black sesame broth, noodles, seasoned ground pork, seasoned egg, spinach, bean sprouts, scallions, fried onions
+
+[Sides]
+Tokyo Fries = side.fries-asian @ 332 :: french fries, bonito flakes, shredded nori, ketchup
+Edamame = side.edamame @ 180
+Original Karaage (3 pc) = side.karaage @ 342 :: fried chicken, lemon
+Hot Karaage (3 pc) = side.karaage @ 288 :: fried chicken, chili sauce
+Takoyaki (4 pc) = side.takoyaki @ 230 :: octopus balls, tonkatsu sauce, mayo, bonito flakes
+Beef Donburi = don.rice-bowl @ 456 :: rice, chopped beef, Kinton sauce, honey, mayo, shredded nori, red ginger, scallions
+Pork Donburi = don.rice-bowl @ 366 :: rice, chopped pork, shoyu sauce, honey, mayo, shredded nori, red ginger
+Chicken Donburi = don.rice-bowl @ 339 :: rice, chopped chicken breast, Kinton sauce, honey, mayo, shredded nori, red ginger
+Pork Gyoza (4 pc) = side.gyoza @ 281 :: dumplings, sweet chili sauce
+Veggie Gyoza (4 pc) = side.gyoza @ 261 :: vegetable dumplings, sweet chili sauce
+Rice = side.steamed-rice @ 166
+
+[Desserts]
+Cheesecake = dessert.cheesecake @ 131-221
+Matcha Ice Cream (2 scoops) = dessert.ice-cream @ 84
+
+[Drinks]
+Yuzu Coconut Dirty Coke = drink.soft @ 140
+Lychee Cream Tea = bt.milk-tea @ 170
+Peach Yuzu Cream Soda = drink.soft @ 280
+Mandarin Orange Cream Soda = drink.soft @ 190
+Yuzu Coconut Marble Ramune = drink.soft @ 130
+Kinton Ramune = drink.soft @ 70
+Homemade Lemonade = drink.lemonade @ 70
+Coca-Cola (355 mL) = drink.soft @ 144
+Sapporo Draft (16 oz) = drink.beer @ 200
+Mini Sapporo (8 oz) = drink.beer @ 100
+Sapporo 0.0 (355 mL) = drink.beer @ 60
+House Sake (5 oz) = drink.wine @ 127
+San Pellegrino (17 oz) = drink.water

@@ -1,0 +1,53 @@
+id: sushi-sama
+name: Sushi Sama
+cuisine: Japanese · Sushi
+accent: #0f172a
+segment: Sit-Down
+source: https://www.sushisama.com (dishes named on the site; other items are typical of the chain's menu)
+
+[Signature rolls]
+Pizza Explosion = maki.crispy x0.95 :: crispy rice base, salmon, avocado, spicy mayo, tobiko
+Seduction Roll = maki.special :: rice, nori, salmon, avocado, tempura bits, sweet sauce
+Erotica Roll = maki.special :: rice, nori, salmon tartare, tobiko, cucumber, spicy mayo
+Three Kingdom Roll = maki.special x1.05 :: rice, nori, salmon, tuna, white fish, avocado
+Rainbow Roll = maki.rainbow :: rice, nori, crab, avocado, salmon, tuna, white fish
+Tempura Shrimp Roll = maki.tempura :: rice, nori, tempura shrimp, avocado, spicy mayo
+Tiger Eyes Roll = maki.special x0.95 :: rice, nori, smoked salmon, cream cheese, avocado
+Cali L.A. Roll = maki.california x1.1 :: rice, nori, crab, avocado, cucumber, tobiko
+Exotic Veggie Roll = maki.veg x1.4 :: rice, nori, avocado, mango, cucumber, sweet potato
+
+[Maki & hosomaki]
+California Roll (8 pc) = maki.california
+Spicy Salmon Roll (8 pc) = maki.spicy-salmon
+Spicy Tuna Roll (8 pc) = maki.spicy-tuna
+Salmon Avocado Roll (8 pc) = maki.salmon-avocado
+Kappa Hosomaki (cucumber, 6 pc) = maki.veg x0.75
+Salmon Hosomaki (6 pc) = maki.small
+Avocado Hosomaki (6 pc) = maki.veg
+
+[Nigiri & sashimi]
+Salmon Nigiri = nigiri.pc ; 2 pc=2, 4 pc=4
+Tuna Nigiri = nigiri.pc x0.95 ; 2 pc=2, 4 pc=4
+Shrimp Nigiri = nigiri.pc x0.9 ; 2 pc=2, 4 pc=4
+Salmon Sashimi = sashimi.pc ; 5 pc=5, 9 pc=9
+Tuna Sashimi = sashimi.pc x0.8 ; 5 pc=5, 9 pc=9
+Salmon Tartare = jp.poke x0.6 :: salmon, avocado, tobiko, spicy mayo, crispy tempura bits
+
+[Plates & bowls]
+Assorted Sushi Plate (12 pc) = sushi.combo
+Assorted Sushi Plate (24 pc) = sushi.combo x2
+Chicken Teriyaki Bento = jp.bento
+Salmon Poke Bowl = jp.poke
+Tuna Poke Bowl = jp.poke x0.95
+Chicken Teriyaki = jp.teriyaki
+Tonkinese Soup = viet.pho
+Pad Thai = asian.pad-thai
+Fried Rice = asian.fried-rice
+
+[Sides & dessert]
+Miso Soup = side.miso-soup
+Edamame = side.edamame
+Seaweed Salad = side.seaweed-salad
+Shrimp Tempura = side.tempura
+Gyoza = side.gyoza
+Sushi Dessert = dessert.mochi x1.5

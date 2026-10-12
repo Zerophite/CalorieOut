@@ -1,0 +1,35 @@
+id: shelbys-shawarma
+name: Shelby's Legendary Shawarma
+cuisine: Shawarma · Mediterranean
+accent: #be123c
+segment: Fast Food
+source: https://shelbys.ca/take-out (2026 takeout menu; calories as posted)
+
+[Shelby's Our Way]
+Bacon Halloumi Wrap = wrap.halloumi @ 1050-1150 :: saj bread, fries, chicken shawarma, halal beef bacon, halloumi, garlic sauce, fresh veggies
+Shelby's Famous Shawarma Wrap = wrap.chicken @ 950-1050 :: saj bread, fries, spring lettuce mix, tahini sauce, chicken shawarma, garlic sauce, hummus, tomato & cucumber, sumac onion, pickled cabbage, pickles
+Shelby's Famous Shawarma Bowl = bowl.shawarma @ 1000-1300 :: basmati rice, chicken shawarma, garlic sauce, salad, tahini, tomato & cucumber, sumac onions, pickled cabbage, pickles
+Indo-Chinese Shawarma Bowl = bowl.shawarma @ 1000-1300 :: noodles, salad, butter chicken sauce, chicken shawarma, dill garlic sauce, pickled red onions, crispy onions, spicy pineapple, tomato & cucumber
+El Pastor Shawarma Bowl = bowl.shawarma @ 1050-1150 :: basmati rice, chicken shawarma, garlic sauce, cilantro lime sauce, tomato & cucumber, pickled onions, sumac onions, cabbage, Monterey Jack cheese
+Crispy Butter Chicken Bowl = bowl.butter-chicken @ 1000-1200 :: basmati rice, chicken shawarma, garlic sauce, butter chicken sauce, tomato & cucumber, sumac onions, crispy onions, pickles
+Canadian Bowl = bowl.shawarma @ 950-1050 :: basmati rice, salad, chicken shawarma, halal beef bacon, pomegranate garlic sauce, hot honey, spicy pineapple, pickled onions, Monterey Jack cheese
+
+[Traditional Way — saj wraps]
+Traditional Single Wrap = wrap.saj @ 870-1060 :: saj bread, chicken shawarma, pickles, fries, pomegranate molasses, garlic sauce
+Bites Box = wrap.saj @ 1140-1230 :: saj wrap bites, garlic sauce, pickles, fries
+Single Box (per serving) = wrap.saj @ 1170 :: saj wrap bites, garlic sauce, pickles, fries
+Double Box (per serving) = wrap.saj @ 1170 :: saj wrap bites, garlic sauce, pickles, fries
+Shawarma Poutine = poutine.shawarma @ 1000-1300 :: fries, chicken shawarma, poutine sauce, chipotle sauce, garlic sauce, feta
+
+[Shelby's Your Way — build your own]
+Build Your Own Wrap = wrap.chicken @ 800-1150 :: saj bread, chicken shawarma, rice, garlic sauce, hummus, sumac onions, pickles, tomato & cucumber, pickled cabbage
+Build Your Own Bowl = bowl.shawarma @ 800-1150 :: basmati rice, salad, chicken shawarma, garlic sauce, tahini, sumac onions, pickles, tomato & cucumber, pickled cabbage
+
+[Kidz]
+Kidz Meal = pub.kids @ 400-550 :: wrap, chicken shawarma, garlic sauce, rice, tomato & cucumber, juice
+
+[Sides]
+Fries = pub.fries
+Hummus = side.hummus
+Garlic Sauce = side.garlic-sauce
+Churros = dessert.churros

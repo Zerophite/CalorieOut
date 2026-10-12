@@ -1,0 +1,80 @@
+id: three-brothers
+name: 3 Brothers Shawarma & Poutine
+cuisine: Shawarma & Poutine
+accent: #b45309
+segment: Fast Food
+source: https://3brothers.order-online.ai (online ordering menu)
+
+[Shawarma wraps]
+Chicken Shawarma = wrap.chicken ; Small=0.8, Large=1.25
+Beef Shawarma = wrap.beef ; Small=0.8, Large=1.25
+Donair Sandwich = wrap.donair ; Small=0.8, Large=1.25
+Halifax Donair Sandwich = wrap.donair x1.05 ; Small=0.8, Large=1.25 :: pita, donair meat, sweet sauce, tomatoes, onions
+Mixed Shawarma = wrap.mixed ; Small=0.8, Large=1.25
+Falafel Sandwich = wrap.falafel ; Small=0.8, Large=1.25
+
+[Shawarma combos — wrap, side & drink]
+Chicken Combo = wrap.combo ; Small=0.85, Large=1.15
+Beef Combo = wrap.combo x1.05 ; Small=0.85, Large=1.15
+Donair Combo = wrap.combo x1.08 ; Small=0.85, Large=1.15
+Halifax Donair Combo = wrap.combo x1.1 ; Small=0.85, Large=1.15
+Mixed Combo = wrap.combo x1.03 ; Small=0.85, Large=1.15
+Falafel Combo = wrap.combo x0.92 ; Small=0.85, Large=1.15
+
+[Platters]
+Chicken Platter = plate.chicken :: rice, garlic potatoes, salad, chicken shawarma, garlic sauce, hummus, pita bread
+Beef Platter = plate.beef :: rice, garlic potatoes, salad, beef shawarma, garlic sauce, hummus, pita bread
+Donair Platter = plate.beef x1.03 :: rice, garlic potatoes, salad, donair meat, sweet sauce, garlic sauce, pita bread
+Mixed Platter = plate.mixed :: rice, garlic potatoes, salad, chicken & beef shawarma, garlic sauce, hummus, pita bread
+Falafel Platter = plate.falafel :: rice, garlic potatoes, salad, falafel, tahini sauce, hummus, pita bread
+
+[Power bowls]
+Chicken Power Bowl = bowl.shawarma ; Small=0.8, Large=1.2
+Beef Power Bowl = bowl.shawarma x1.07 ; Small=0.8, Large=1.2
+Donair Power Bowl = bowl.shawarma x1.1 ; Small=0.8, Large=1.2
+Falafel Power Bowl = bowl.shawarma x0.95 ; Small=0.8, Large=1.2
+Mixed Power Bowl = bowl.shawarma x1.04 ; Small=0.8, Large=1.2
+Original Saj Shawarma = wrap.saj x1.15
+
+[Poutines]
+Classic Poutine = poutine.classic ; Small=0.75, Large=1.25
+3 Brother Potato Poutine = poutine.classic x1.05 ; Small=0.75, Large=1.25
+Chicken Poutine = poutine.shawarma ; Small=0.75, Large=1.25
+Beef Poutine = poutine.shawarma x1.05 ; Small=0.75, Large=1.25
+Donair Poutine = poutine.shawarma x1.08 ; Small=0.75, Large=1.25
+Mixed Poutine = poutine.shawarma x1.03 ; Small=0.75, Large=1.25
+
+[Family specials — per person]
+Chicken Family Plate = plate.chicken ; Family for 3 (per person)=1, Family for 5 (per person)=1
+Beef Family Plate = plate.beef ; Family for 3 (per person)=1, Family for 5 (per person)=1
+Donair Family Plate = plate.beef x1.03 ; Family for 3 (per person)=1, Family for 5 (per person)=1
+Falafel Family Plate = plate.falafel ; Family for 3 (per person)=1, Family for 5 (per person)=1
+Family Mixed Meat Shawarma = plate.mixed ; Family for 3 (per person)=1, Family for 5 (per person)=1
+
+[Salads]
+Fattoush Salad = side.fattoush ; Small=1, Large=1.5
+Shawarma Fattoush Salad = side.fattoush x2 ; Small=1, Large=1.4 :: romaine, cucumber, tomato, radish, crispy pita, chicken shawarma, dressing
+
+[Sides]
+Fries = pub.fries ; Small=0.8, Large=1.5
+Garlic Potato = side.garlic-potatoes ; Small=0.8, Large=1.5
+Rice = side.rice ; Small=0.8, Large=1.5
+Side Pita Bread Bag = side.pita x2
+Mozzarella Sticks (6) = pub.mozza
+Cheesy Donair Roll = side.meat-pie
+Fried Pickles = pub.pickles
+Grape Leaves Dolma (6) = side.grape-leaves
+Donair Eggrolls (2) = side.spring-roll x1.1
+
+[Dips & sauces]
+Garlic Sauce = side.garlic-sauce ; Small 2 oz=1, Medium 8 oz=4
+Hummus = side.hummus x0.5 ; Small 2 oz=1, Medium 8 oz=4
+Spicy Garlic = side.garlic-sauce ; Small 2 oz=1, Medium 8 oz=4
+Sweet Sauce = side.tahini x0.8 ; Small 2 oz=1, Medium 8 oz=4
+Tahini = side.tahini ; Small 2 oz=1, Medium 8 oz=4
+
+[Desserts & drinks]
+Baklava = dessert.baklava
+Coconut Cookie = pastry.cookie
+Soft Drink = drink.soft
+Water = drink.water

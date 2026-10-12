@@ -90,6 +90,8 @@ interface MenuItemBase {
   category: MealCategory
   description?: string
   tags?: DietTag[]
+  /** Product photo from the restaurant's own menu (loaded from its CDN). */
+  image?: string
 }
 
 /**

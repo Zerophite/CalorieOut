@@ -1,0 +1,86 @@
+id: tartelette
+name: Tartelette Bakery & Café
+cuisine: Pastries · Café
+accent: #a16207
+segment: Coffee & Bakery
+source: https://www.tartelette.ca (viennoiseries, pastries, brunch, drinks, sandwiches & soup pages)
+
+[Viennoiseries]
+Plain Croissant = pastry.croissant
+Pain au Chocolat = pastry.croissant x1.25
+Double Chocolate Pain au Chocolat = pastry.croissant x1.45
+Hazelnut Pain au Chocolat = pastry.filled-croissant x1.05
+Almond Croissant = pastry.filled-croissant x1.15 :: croissant, almond cream, sliced almonds, powdered sugar
+Pistachio Rose Croissant = pastry.filled-croissant x1.1 :: croissant, pistachio cream, rose water
+Coconut Pain Suisse = pastry.filled-croissant x1.05
+Pain Suisse = pastry.filled-croissant :: croissant dough, custard, dark chocolate
+Apple Cinnamon Danish = pastry.danish x1.05 :: croissant dough, pastry cream, cream cheese, apple compote
+Apple Turnover = pastry.danish x0.9
+Palmier = pastry.cookie x1.1
+Apricotine = pastry.danish x0.95
+Cinnamon Pain au Raisin = pastry.danish x1.05
+Strawberry Cream Croissant = pastry.filled-croissant x1.05 :: croissant, fresh strawberries, strawberry confit, whipped cream
+Tiramisu Croissant = pastry.filled-croissant x1.15
+Rocher Croissant = pastry.filled-croissant x1.3 :: croissant, Nutella, dark chocolate, roasted hazelnuts
+
+[Tarts & cheesecakes]
+Espresso Chocolate Tart = pastry.tart x1.25
+Coconut Strawberry Pistachio Tart = pastry.tart x1.15
+Chocolate Caramel Tart = pastry.tart x1.35
+Pecan Maple Tart = pastry.tart x1.4
+Shirazi Tart = pastry.tart x1.15
+Raspberry Almond Tart = pastry.tart x1.15
+Blueberry Lemon Tart = pastry.tart
+Lemon Meringue Tart = pastry.tart x0.95
+Trompe-l'œil Entremet = pastry.tart x0.85
+Pumpkin Spice Cheesecake = pastry.cheesecake
+Tiramisu Cheesecake = pastry.cheesecake x1.05
+Nutella Cheesecake = pastry.cheesecake x1.15
+Biscoff Cheesecake = pastry.cheesecake x1.15
+Oreo Cheesecake = pastry.cheesecake x1.1
+Shirazi Cheesecake = pastry.cheesecake x1.05
+Signature Cake (slice) = pastry.cake
+
+[Brunch — Kanata]
+Green Goddess = cafe.breakfast-plate x0.75 :: sourdough, mashed avocado, garlic mayo, arugula, pickled onions, cherry tomatoes, feta, balsamic glaze
+Mediterranean Garden = cafe.breakfast-plate x0.8 :: sourdough, falafel, hummus, za'atar, garlic sauce, arugula, pickled turnips, pomegranate sauce
+Nordic Benedict = pub.brunch x0.85 :: sourdough, smoked salmon, poached eggs, dill cream cheese, arugula, pickled onions, capers, hollandaise sauce
+Royal Benedict = pub.brunch :: sourdough, bacon, ham, garlic butter, arugula, pickled onions, tomatoes, poached eggs, hollandaise sauce, hot honey
+Rustic Turkey = cafe.sandwich :: sourdough, pesto, smoked turkey, arugula, cherry tomatoes, parmesan, balsamic glaze
+Smoky Sunrise = cafe.breakfast-plate x0.85 :: sourdough, cheddar scrambled eggs, bacon, honey mustard sauce, cherry tomatoes
+Maison French Toast = pub.pancakes x0.95 :: croissant loaf, bananas, mixed berries, maple syrup, nuts
+House Granola Bowl = cafe.breakfast-plate x0.7 :: granola, Greek yogurt, bananas, mixed berries, coconut, berry confit, honey, chia seeds
+
+[Sandwiches & soup]
+Smoked Salmon Croissant = cafe.sandwich x0.9 :: croissant, smoked salmon, herbed cream cheese
+Ham & Cheese Croissant = cafe.sandwich :: croissant, ham, cheddar, pickles, mayo, mustard
+Egg Croissant = cafe.sandwich x0.85 :: croissant, boiled egg, herbed cream cheese, tomatoes
+Turkey Bacon Wrap = healthy.wrap :: tortilla, turkey, bacon, lettuce, tomato, mayo
+Grilled Cheese Toast = cafe.sandwich :: toast, havarti, cheddar, herbed butter
+Pesto Toast = cafe.sandwich x0.8 :: whole wheat toast, pesto, cheese, sun-dried tomatoes
+Pumpkin Spice Soup = cafe.soup :: pumpkin soup, croutons
+
+[Drinks]
+Saffron Rose Latte = coffee.flavoured-latte
+Pumpkin Spice Latte = coffee.flavoured-latte x1.15
+Maple Latte = coffee.flavoured-latte
+Iced Maple Waffle Latte = coffee.flavoured-latte x1.1
+Caramel Apple Cider = drink.juice x1.6
+Latte = coffee.latte
+Cappuccino = coffee.cappuccino
+Flat White = coffee.cappuccino x0.85
+Cortado = coffee.cappuccino x0.6
+Caramel Macchiato = coffee.flavoured-latte
+Café au Lait = coffee.latte x0.7
+Americano = coffee.americano
+Drip Coffee = coffee.drip ; 8 oz=0.6, 12 oz=0.8, 16 oz=1
+Espresso Double = coffee.espresso
+Mocha = coffee.mocha
+Hot Chocolate = coffee.hot-chocolate
+Matcha Latte = coffee.chai x0.9
+Iced Blueberry Muffin Matcha Latte = coffee.chai x1.1
+Chai Latte = coffee.chai
+Dirty Chai = coffee.chai x1.05
+London Fog = coffee.latte x0.75
+Gold Leaf Cappuccino = coffee.cappuccino
+Loose-leaf Tea = coffee.tea

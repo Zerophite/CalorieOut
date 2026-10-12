@@ -1,0 +1,64 @@
+id: 6ixty-wings
+name: 6ixty Wings
+cuisine: Wings
+accent: #0f172a
+segment: Fast Food
+source: https://6ixtywings.com (wings, combos, burgers, fries, greens, bites, quesadillas & wraps pages)
+
+[Wings — bone-in, ~10 wings per pound]
+Bone-In Wings = wing.pc x10 ; 1 lb=1, 2 lb=2, 3 lb=3, 4 lb=4, 5 lb=5 :: chicken wings, sauce
+Boneless Chicken = wing.boneless-pc x10 ; 1 lb=1, 2 lb=2, 3 lb=3, 4 lb=4, 5 lb=5 :: boneless chicken, sauce
+
+[Combos]
+Single Combo (1 lb, fries, pop) = wing.combo :: chicken wings, sauce, fries, pop
+6IXTY's Signature Combo (1 lb, loaded fries, pop) = wing.combo x1.25 :: chicken wings, sauce, loaded fries, pop
+Veggie Lovers Combo = pub.loaded-fries x1.3 :: cauliflower bites, fries, pop
+Kids Combo = pub.kids x1.1 :: chicken nuggets, fries, ranch dip, juice box
+
+[Burgers — with fries]
+Chicken Burger = pub.chicken-burger x1.5 :: bun, chicken patty, tomato, lettuce, red onion, burger sauce, fries
+Fully Loaded Burger = pub.burger x1.75 :: bun, two beef patties, cheese, bacon bits, tomato, lettuce, red onion, burger sauce, fries
+Hamburger = pub.burger x1.45 :: bun, beef patty, cheese, tomato, lettuce, pickle, burger sauce, fries
+Veggie Burger = pub.veggie-burger x1.6 :: bun, veggie patty, tomato, lettuce, red onion, pickle, burger sauce, fries
+
+[Fries & poutine]
+Fries = pub.fries
+Garlic Parm Fries = pub.loaded-fries x0.7 :: fries, Caesar dressing, parmesan, garlic seasoning
+Loaded Fries = pub.loaded-fries x0.8 :: fries, ranch, chili, onion, garlic seasoning
+Loaded Parm Fries = pub.loaded-fries x0.85 :: fries, Caesar dressing, parmesan, chili, onion
+Chicken Bacon Ranch Fries = pub.loaded-fries :: fries, breaded chicken, ranch, bacon bits
+Chilli Chicken Fries = pub.loaded-fries x0.95 :: fries, breaded chicken, sweet chili sauce
+Devils Ranch Fries = pub.loaded-fries x0.95 :: fries, devil chicken, ranch, Tex Mex seasoning
+Onion Rings = pub.onion-rings
+Loaded Onion Rings = pub.onion-rings x1.5 :: onion rings, chili, onion, ranch, garlic seasoning
+Poutine = pub.poutine
+Meaty Poutine = pub.loaded-poutine :: fries, cheese, breaded chicken, bacon, gravy
+
+[Greens]
+6IXTY's Signature Salad = healthy.salad x1.2 :: lettuce, breaded chicken, popcorn shrimp, tomatoes, onions, cucumbers, cheese, balsamic dressing
+Caesar Salad = pub.side-salad x1.5 :: lettuce, Caesar dressing, parmesan, bacon bits, croutons
+
+[Bites]
+Cauliflower Bites = pub.mozza x0.7
+Chicken Fingers = pub.tenders x0.8
+Coconut Shrimp = side.tempura
+Garlic Bread = pizza.garlic-bread x2
+Garlic Bread with Cheese = pizza.garlic-bread x2.6
+Jalapeño Poppers = pub.mozza x0.8
+Mozzarella Sticks = pub.mozza
+Popcorn Shrimp = side.tempura x0.9
+
+[Quesadillas & wraps]
+6IXTY's Meaty Quesadilla = pub.quesadilla x1.15 :: tortilla, breaded chicken, popcorn shrimp, bacon, onion, cheese, ranch dip, salsa
+Chicken Quesadilla = pub.quesadilla :: tortilla, chicken, tomatoes, onions, cheese, ranch, ranch dip, salsa
+Veggie Quesadilla = pub.quesadilla x0.85 :: tortilla, cauliflower bites, onion, tomatoes, cheese, ranch dip, salsa
+6IXTY's Meaty Wrap = pub.wrap x1.15 :: tortilla, lettuce, breaded chicken, popcorn shrimp, bacon, onion, cheese, ranch
+Chicken Caesar Wrap = pub.wrap :: tortilla, lettuce, breaded chicken, Caesar dressing, parmesan, bacon bits
+Veggie Wrap = pub.wrap x0.85 :: tortilla, lettuce, cauliflower bites, onion, cheese, sweet chili sauce, house dressing
+
+[Add-ons]
+Extra Sauce = wing.sauce
+Dipping Sauce (Ranch, Blue Cheese or Dill) = pizza.dip
+Extra Cheese = pizza.dip x0.75
+Extra Breaded Chicken = pub.tenders x0.35
+Pop = drink.soft

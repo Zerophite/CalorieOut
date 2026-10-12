@@ -1,0 +1,42 @@
+id: mr-shawarma
+name: Mr Shawarma
+cuisine: Shawarma · Lebanese
+accent: #1d4ed8
+segment: Fast Food
+source: Zabihah and DoorDash listings for the Baseline Rd. and Hazeldean locations (no full public menu)
+
+[Sandwiches on pita]
+Chicken Shawarma Sandwich = wrap.chicken ; Regular=1, Large=1.3
+Beef Shawarma Sandwich = wrap.beef ; Regular=1, Large=1.3
+Mixed Shawarma Sandwich = wrap.mixed ; Regular=1, Large=1.3
+Falafel Sandwich = wrap.falafel ; Regular=1, Large=1.3
+Shish Taouk Sandwich = wrap.chicken x0.95 ; Regular=1, Large=1.3
+Kafta Sandwich = wrap.kafta ; Regular=1, Large=1.3
+
+[Plates — white or lentil rice]
+Chicken Shawarma Plate = plate.chicken :: rice, garlic potatoes, salad, chicken shawarma, garlic sauce, hummus, pita bread
+Beef Shawarma Plate = plate.beef :: rice, garlic potatoes, salad, beef shawarma, garlic sauce, hummus, pita bread
+Mixed Shawarma Plate = plate.mixed :: rice, garlic potatoes, salad, chicken & beef shawarma, garlic sauce, hummus, pita bread
+Shish Taouk Plate = plate.chicken x0.95 :: rice, garlic potatoes, salad, grilled chicken, garlic sauce, hummus, pita bread
+Kafta Plate = plate.kafta :: rice, garlic potatoes, salad, kafta, garlic sauce, hummus, pita bread
+Falafel Plate = plate.falafel :: rice, salad, falafel, tahini sauce, hummus, pita bread
+
+[Combos]
+Sandwich Combo (fries & drink) = wrap.combo
+Large Sandwich Combo = wrap.combo x1.2
+Family Set (per person) = plate.mixed
+
+[Sides]
+Garlic Potatoes = side.garlic-potatoes
+Lentil Rice = side.rice x1.05
+Tabbouleh = side.tabbouleh
+Fattoush = side.fattoush
+Grape Leaves (6) = side.grape-leaves
+Fried Kibbeh = side.kibbeh ; 1 pc=1, 3 pc=3
+Falafel = side.falafel-pc ; 1 pc=1, 6 pc=6
+Meat Pie = side.meat-pie
+Hummus = side.hummus
+Garlic Sauce = side.garlic-sauce
+Shawarma Poutine = poutine.shawarma
+Fries = pub.fries
+Soft Drink = drink.soft
