@@ -5,6 +5,9 @@ import { type CompareEntry, type View } from './app-types'
 import { useGoal } from './hooks/useGoal'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { useDayLog } from './hooks/useDayLog'
+import { useSwipeBack } from './hooks/useSwipeBack'
+import { useMenu } from './hooks/useMenu'
+import { MenuLoading } from './components/ui'
 import { formatNumber } from './lib/nutrition'
 import { Home } from './views/Home'
 import { RestaurantView } from './views/RestaurantView'
@@ -45,6 +48,9 @@ export default function App() {
     setHistory([{ name: 'home' }])
     window.scrollTo(0, 0)
   }, [])
+
+  // Swipe down (at the top of the page) or press Escape to go back.
+  useSwipeBack(back, history.length > 1)
 
   const isInCompare = useCallback(
     (key: string) => compare.some((e) => e.key === key),
@@ -94,6 +100,7 @@ export default function App() {
       detail?: string,
     ) => {
       addMeal({
+        restaurantId: restaurant.id,
         restaurantName: restaurant.name,
         restaurantAccent: restaurant.accent,
         itemName: item.name,
@@ -108,10 +115,10 @@ export default function App() {
     view.name === 'restaurant' || view.name === 'item'
       ? getRestaurant(view.restaurantId)
       : undefined
+  const menu = useMenu(view.name === 'item' ? restaurant : undefined)
   const item =
-    view.name === 'item' && restaurant
-      ? restaurant.items.find((i) => i.id === view.itemId)
-      : undefined
+    view.name === 'item' && menu ? menu.find((i) => i.id === view.itemId) : undefined
+  const itemLoading = view.name === 'item' && !!restaurant && !menu
 
   return (
     <div className="min-h-full bg-app">
@@ -128,6 +135,15 @@ export default function App() {
       />
 
       <main>
+        {history.length > 1 && (
+          <div className="flex flex-col items-center pt-2 sm:hidden">
+            <div className="h-1 w-10 rounded-full bg-[var(--border)]" />
+            <span className="mt-1 text-[11px] text-muted">
+              Swipe down to go back
+            </span>
+          </div>
+        )}
+
         {view.name === 'home' && (
           <Home
             onOpenRestaurant={(id) =>
@@ -171,6 +187,8 @@ export default function App() {
               toggleCompare={toggleCompare}
               addToDay={addToDay}
             />
+          ) : itemLoading ? (
+            <MenuLoading />
           ) : (
             <NotFound onHome={goHome} />
           ))}

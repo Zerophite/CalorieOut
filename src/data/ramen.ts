@@ -16,8 +16,8 @@ function ramenMenu(prefix: string): MenuItem[] {
 export const ramenSpots: Restaurant[] = [
   { id: 'kinton-ramen', name: 'Kinton Ramen', cuisine: 'Japanese · Ramen', accent: '#dc2626', segment: 'Sit-Down', dataSource: 'estimated', items: ramenMenu('kt') },
   { id: 'sansotei-ramen', name: 'Sansotei Ramen', cuisine: 'Japanese · Ramen', accent: '#111827', segment: 'Sit-Down', dataSource: 'estimated', items: ramenMenu('st') },
-  { id: 'koichi-ramen', name: 'Koichi Ramen', cuisine: 'Japanese · Ramen', accent: '#b91c1c', segment: 'Sit-Down', dataSource: 'estimated', items: ramenMenu('ko') },
-  { id: 'kuma-takumi', name: 'Kuma Takumi', cuisine: 'Japanese · Ramen & Izakaya', accent: '#374151', segment: 'Sit-Down', dataSource: 'estimated', items: [
+  { id: 'koichi-ramen', name: 'Koichi Ramen', cuisine: 'Japanese · Ramen', accent: '#c62633', segment: 'Sit-Down', dataSource: 'estimated', items: ramenMenu('ko') },
+  { id: 'kuma-takumi', name: 'Kuma Takumi', cuisine: 'Japanese · Ramen & Izakaya', accent: '#1a1a1a', segment: 'Sit-Down', dataSource: 'estimated', items: [
     ...ramenMenu('ku'),
     { id: 'ku-chashu-don', name: 'Chashu Don (rice bowl)', kind: 'fixed', category: 'Bowls & Burritos', serving: '1 bowl', tags: ['high-protein'], nutrition: { calories: 620, protein: 30, carbs: 78, fat: 20, sodium: 1400 } },
   ] },

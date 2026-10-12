@@ -153,8 +153,8 @@ export const shawarmaSpots: Restaurant[] = [
   ] },
   { id: 'shawarma-prince', name: 'Shawarma Prince', cuisine: 'Shawarma · Mediterranean', accent: '#7c3aed', segment: 'Fast Food', dataSource: 'estimated', items: shawarmaMenu('sp') },
   { id: 'mr-shawarma', name: 'Mr Shawarma', cuisine: 'Shawarma · Mediterranean', accent: '#1d4ed8', segment: 'Fast Food', dataSource: 'estimated', items: shawarmaMenu('ms') },
-  { id: 'shelbys-shawarma', name: "Shelby's Shawarma", cuisine: 'Shawarma · Mediterranean', accent: '#be123c', segment: 'Fast Food', dataSource: 'estimated', items: shawarmaMenu('ss') },
-  { id: 'chain-smoker-bbq', name: 'Chain Smoker Urban Halal BBQ', cuisine: 'Halal BBQ · Grill', accent: '#78350f', segment: 'Fast Food', dataSource: 'estimated', items: [
+  { id: 'shelbys-shawarma', name: "Shelby's Legendary Shawarma", cuisine: 'Shawarma · Mediterranean', accent: '#be123c', segment: 'Fast Food', dataSource: 'estimated', items: shawarmaMenu('ss') },
+  { id: 'chain-smoker-bbq', name: 'Chainsmoker Urban Halal BBQ', cuisine: 'Halal BBQ · Grill', accent: '#78350f', segment: 'Fast Food', dataSource: 'estimated', items: [
     ...shawarmaMenu('cs'),
     { id: 'cs-butter-chicken', name: 'Butter Chicken with Rice', kind: 'fixed', category: 'Mains', serving: 'with rice', tags: ['high-protein'], nutrition: { calories: 890, protein: 45, carbs: 88, fat: 38, sodium: 1600 } },
   ] },

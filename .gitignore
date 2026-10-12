@@ -9,6 +9,11 @@ dist-ssr/
 # Local dev tooling (Claude Code preview config)
 .claude/
 
+# Raw menu crawls (large, re-fetchable). The McDonald's capture is kept because
+# it needs a browser to collect.
+scripts/menus/raw/*.json
+!scripts/menus/raw/mcd.json
+
 # Logs
 *.log
 npm-debug.log*

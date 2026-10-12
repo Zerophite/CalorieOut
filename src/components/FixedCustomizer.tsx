@@ -8,36 +8,85 @@ import {
   totalForComponents,
 } from '../lib/nutrition'
 import { type Goal } from '../hooks/useGoal'
+import { componentsFor } from '../data/templates'
 import { NutritionFacts } from './NutritionFacts'
 import { GoalFitBadge, evaluateGoal } from './ui'
 import { IconCheck, IconPlus } from './icons'
 
 interface Props {
-  item: FixedItem & { components: IngredientComponent[] }
+  item: FixedItem
   goal: Goal
   onAddToDay: (nutrition: Nutrition, detail: string) => void
   onAddToCompare: (nutrition: Nutrition, detail: string) => void
 }
 
-export function FixedCustomizer({
+/**
+ * Size-aware wrapper: when an item comes in sizes, show size chips and run the
+ * ingredient customizer for the chosen size (selection resets per size).
+ */
+export function FixedCustomizer(props: Props) {
+  const { item } = props
+  const sizes = item.sizes && item.sizes.length > 1 ? item.sizes : null
+  const initial = sizes ? Math.max(0, sizes.findIndex((s) => s.label === item.defaultSize)) : 0
+  const [sizeIdx, setSizeIdx] = useState(initial)
+
+  if (!sizes) return <SizedCustomizer {...props} sizeLabel={null} />
+
+  const size = sizes[sizeIdx]
+  const sizedItem: FixedItem = {
+    ...item,
+    nutrition: size.nutrition,
+    components: size.components,
+    sizes: undefined,
+  }
+  return (
+    <div className="space-y-4">
+      <section>
+        <h3 className="mb-2 font-bold text-body">Size</h3>
+        <div className="flex flex-wrap gap-2">
+          {sizes.map((s, i) => (
+            <button
+              key={s.label}
+              onClick={() => setSizeIdx(i)}
+              className={
+                'rounded-xl border px-3 py-2 text-left text-sm transition-colors ' +
+                (i === sizeIdx
+                  ? 'border-[var(--brand)] bg-emerald-500/10 font-semibold text-body'
+                  : 'border-app bg-surface text-muted hover:bg-surface-2')
+              }
+            >
+              {s.label}
+              <span className="ml-1.5 text-xs text-muted">{formatNumber(s.nutrition.calories)} cal</span>
+            </button>
+          ))}
+        </div>
+      </section>
+      <SizedCustomizer key={size.label} {...props} item={sizedItem} sizeLabel={size.label} />
+    </div>
+  )
+}
+
+function SizedCustomizer({
   item,
   goal,
   onAddToDay,
   onAddToCompare,
-}: Props) {
+  sizeLabel,
+}: Props & { sizeLabel: string | null }) {
+  const components = useMemo(() => componentsFor(item), [item])
   const [selection, setSelection] = useState<ComponentSelection>(() =>
-    defaultComponentSelection(item.components),
+    defaultComponentSelection(components),
   )
   const [added, setAdded] = useState(false)
 
   const total = useMemo(
-    () => totalForComponents(item.components, selection),
-    [item.components, selection],
+    () => totalForComponents(components, selection),
+    [components, selection],
   )
   const fit = evaluateGoal(total, goal)
 
-  const included = item.components.filter((c) => isComponentDefaultOn(c))
-  const extras = item.components.filter((c) => !isComponentDefaultOn(c))
+  const included = components.filter((c) => isComponentDefaultOn(c))
+  const extras = components.filter((c) => !isComponentDefaultOn(c))
 
   function toggle(c: IngredientComponent) {
     if (c.removable === false) return
@@ -51,8 +100,8 @@ export function FixedCustomizer({
     const addedExtras = extras
       .filter((c) => selection[c.id])
       .map((c) => `+${c.name.toLowerCase()}`)
-    return [...removed, ...addedExtras].join(', ')
-  }, [included, extras, selection])
+    return [...(sizeLabel ? [sizeLabel] : []), ...removed, ...addedExtras].join(', ')
+  }, [included, extras, selection, sizeLabel])
 
   function handleAddToDay() {
     onAddToDay(total, detail)

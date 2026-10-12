@@ -107,8 +107,23 @@ export interface IngredientComponent {
   removable?: boolean
 }
 
+/** One size of an item (Small / Medium / Large…), with its own nutrition. */
+export interface ItemSize {
+  label: string
+  nutrition: Nutrition
+  /** Optional per-size ingredient breakdown (add-on amounts differ by size). */
+  components?: IngredientComponent[]
+}
+
 /** A fixed item with a single known nutrition profile. */
 export interface FixedItem extends MenuItemBase {
+  /**
+   * Available sizes. When present, `nutrition` / `components` describe the
+   * default size (`defaultSize`) so cards and search show a sensible number.
+   */
+  sizes?: ItemSize[]
+  /** Label of the default size in `sizes`. */
+  defaultSize?: string
   kind: 'fixed'
   nutrition: Nutrition
   /** Serving description, e.g. "1 sandwich" or "medium (400 mL)". */
@@ -119,6 +134,13 @@ export interface FixedItem extends MenuItemBase {
    * Default-on components should sum to `nutrition`.
    */
   components?: IngredientComponent[]
+  /**
+   * Official per-ingredient calories as published by the restaurant
+   * (e.g. McDonald's lists bun 210, sauce 140…). When present, these real
+   * calories drive the breakdown; macros are apportioned and reconciled so
+   * the parts still sum exactly to `nutrition`.
+   */
+  parts?: { name: string; cal: number }[]
 }
 
 /** A build-your-own item assembled from option groups. */
@@ -145,5 +167,13 @@ export interface Restaurant {
    *                because this place publishes no nutrition data.
    */
   dataSource?: 'official' | 'estimated'
+  /**
+   * Menu items. Large menus are loaded on demand instead: `items` is then
+   * empty and `loadItems` fetches them (see useMenu), with `itemCount` /
+   * `hasBuilder` available up front for the restaurant list.
+   */
   items: MenuItem[]
+  itemCount?: number
+  hasBuilder?: boolean
+  loadItems?: () => Promise<MenuItem[]>
 }

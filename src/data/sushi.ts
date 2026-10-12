@@ -18,6 +18,6 @@ function sushiMenu(prefix: string): MenuItem[] {
 
 export const sushiSpots: Restaurant[] = [
   { id: 'sushi-sama', name: 'Sushi Sama', cuisine: 'Japanese · Sushi', accent: '#0f172a', segment: 'Sit-Down', dataSource: 'estimated', items: sushiMenu('sm') },
-  { id: 'windbell-sushi', name: 'Windbell Sushi', cuisine: 'Japanese · Sushi', accent: '#0891b2', segment: 'Sit-Down', dataSource: 'estimated', items: sushiMenu('wb') },
+  { id: 'windbell-sushi', name: 'Windbell Sushi', cuisine: 'Japanese · Sushi', accent: '#5f7d64', segment: 'Sit-Down', dataSource: 'estimated', items: sushiMenu('wb') },
   { id: 'sushi-eki', name: 'Sushi Eki', cuisine: 'Japanese · Sushi', accent: '#b91c1c', segment: 'Sit-Down', dataSource: 'estimated', items: sushiMenu('ek') },
 ]

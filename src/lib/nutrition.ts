@@ -40,15 +40,12 @@ export function totalForComponents(
   )
 }
 
-/** Whether a fixed item exposes an editable ingredient breakdown. */
-export function isCustomizable(
-  item: MenuItem,
-): item is FixedItem & { components: IngredientComponent[] } {
-  return (
-    item.kind === 'fixed' &&
-    Array.isArray(item.components) &&
-    item.components.length > 0
-  )
+/**
+ * Every item is customizable: builders via their option groups, fixed items
+ * via an ingredient breakdown (explicit or generated from a recipe template).
+ */
+export function isCustomizable(item: MenuItem): item is FixedItem | BuilderItem {
+  return item.kind === 'fixed' || item.kind === 'builder'
 }
 
 /** Add two nutrition objects field by field. */

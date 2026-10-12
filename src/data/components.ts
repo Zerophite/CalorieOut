@@ -123,11 +123,22 @@ export function buildComponents(
   // Reconcile each field so the default-on parts sum exactly to the total.
   const onParts = built.filter((b) => b.p.default !== false)
   for (const f of FIELDS) {
-    const sum = onParts.reduce((s, b) => s + b.nut[f], 0)
-    const diff = Math.round(total[f]) - Math.round(sum)
-    if (diff !== 0 && onParts.length) {
+    if (!onParts.length) break
+    let diff =
+      Math.round(total[f]) - onParts.reduce((s, b) => s + Math.round(b.nut[f]), 0)
+    if (diff > 0) {
+      // Undershoot: give it to the largest contributor.
       const target = onParts.reduce((m, b) => (b.nut[f] > m.nut[f] ? b : m), onParts[0])
-      target.nut[f] = Math.max(0, Math.round(target.nut[f] + diff))
+      target.nut[f] = Math.round(target.nut[f]) + diff
+    }
+    // Overshoot: take it from the largest contributors in turn until resolved,
+    // never pushing any ingredient below zero.
+    while (diff < 0) {
+      const target = onParts.reduce((m, b) => (b.nut[f] > m.nut[f] ? b : m), onParts[0])
+      if (target.nut[f] <= 0) break
+      const take = Math.min(target.nut[f], -diff)
+      target.nut[f] = Math.round(target.nut[f] - take)
+      diff += take
     }
   }
 

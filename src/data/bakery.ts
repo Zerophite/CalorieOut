@@ -52,15 +52,15 @@ export const bakerySpots: Restaurant[] = [
   {
     id: 'lokma',
     name: 'Lokma',
-    cuisine: 'Turkish · Mediterranean café',
+    cuisine: 'Dessert bar · Lokma & mini donuts',
     accent: '#b45309',
     segment: 'Coffee & Bakery',
     dataSource: 'estimated',
     items: [
-      { id: 'lk-lokma', name: 'Lokma (fried dough, honey)', kind: 'fixed', category: 'Desserts', serving: '1 order', tags: ['vegetarian'], nutrition: { calories: 480, protein: 6, carbs: 74, fat: 18, sodium: 260, sugar: 40 } },
-      { id: 'lk-baklava', name: 'Baklava (2 pc)', kind: 'fixed', category: 'Desserts', serving: '2 pieces', tags: ['vegetarian'], nutrition: { calories: 420, protein: 6, carbs: 46, fat: 24, sodium: 200, sugar: 32 } },
-      { id: 'lk-turkish-coffee', name: 'Turkish Coffee', kind: 'fixed', category: 'Coffee', serving: '1 cup', tags: ['vegan', 'low-carb'], nutrition: { calories: 15, protein: 0, carbs: 3, fat: 0, sodium: 5 } },
-      { id: 'lk-manti', name: 'Manti (Turkish dumplings)', kind: 'fixed', category: 'Mains', serving: '1 plate', nutrition: { calories: 620, protein: 24, carbs: 70, fat: 26, sodium: 1100 } },
+      { id: 'lk-lokma', name: 'Lokma with Nutella', kind: 'fixed', category: 'Desserts', serving: '1 order', tags: ['vegetarian'], nutrition: { calories: 560, protein: 7, carbs: 78, fat: 25, sodium: 260, sugar: 44 } },
+      { id: 'lk-mini-donuts', name: 'Mini Donuts (12)', kind: 'fixed', category: 'Desserts', serving: '12 pieces', tags: ['vegetarian'], nutrition: { calories: 520, protein: 6, carbs: 70, fat: 24, sodium: 380, sugar: 34 } },
+      { id: 'lk-kroffle', name: 'Kroffle', kind: 'fixed', category: 'Desserts', serving: '1 kroffle', tags: ['vegetarian'], nutrition: { calories: 450, protein: 6, carbs: 52, fat: 24, sodium: 300, sugar: 26 } },
+      { id: 'lk-shake', name: 'Milkshake', kind: 'fixed', category: 'Drinks', serving: 'regular', tags: ['vegetarian'], nutrition: { calories: 620, protein: 12, carbs: 86, fat: 26, sodium: 280, sugar: 76 } },
     ],
   },
 ]

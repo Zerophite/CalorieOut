@@ -8,6 +8,7 @@ import { useLocalStorage } from './useLocalStorage'
 export interface LoggedMeal {
   /** Unique per log entry (so duplicates of the same item can coexist). */
   key: string
+  restaurantId: string
   restaurantName: string
   restaurantAccent: string
   itemName: string

@@ -2,7 +2,7 @@ import { useState, type ReactNode } from 'react'
 import { restaurants, SEGMENTS } from '../data'
 import { type Restaurant } from '../types'
 import { formatNumber } from '../lib/nutrition'
-import { BrandTile, Chip, EstimateBadge } from '../components/ui'
+import { BrandLogo, Chip, EstimateBadge } from '../components/ui'
 import {
   IconBowl,
   IconBurger,
@@ -36,16 +36,22 @@ function RestaurantCard({
   restaurant: Restaurant
   onOpen: () => void
 }) {
-  const builderCount = restaurant.items.filter((i) => i.kind === 'builder').length
-  const customizable = restaurant.items.some(
-    (i) => i.kind === 'fixed' && i.components && i.components.length > 0,
-  )
+  const builderCount =
+    restaurant.hasBuilder !== undefined
+      ? Number(restaurant.hasBuilder)
+      : restaurant.items.filter((i) => i.kind === 'builder').length
+  const itemCount = restaurant.itemCount ?? restaurant.items.length
   return (
     <button
       onClick={onOpen}
       className="group flex items-center gap-4 rounded-2xl border border-app bg-surface p-4 text-left transition-shadow hover:shadow-md"
     >
-      <BrandTile name={restaurant.name} accent={restaurant.accent} size="lg" />
+      <BrandLogo
+        id={restaurant.id}
+        name={restaurant.name}
+        accent={restaurant.accent}
+        size="lg"
+      />
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-2">
           <h3 className="font-bold text-body">{restaurant.name}</h3>
@@ -53,11 +59,11 @@ function RestaurantCard({
         </div>
         <p className="truncate text-sm text-muted">{restaurant.cuisine}</p>
         <p className="mt-1 flex items-center gap-1 text-xs text-muted">
-          {restaurant.items.length} items
-          {(builderCount > 0 || customizable) && (
+          {itemCount} items
+          {builderCount > 0 && (
             <>
               {' · '}
-              <IconSliders size={11} /> customizable
+              <IconSliders size={11} /> build your own
             </>
           )}
         </p>

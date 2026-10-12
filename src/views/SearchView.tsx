@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { restaurants } from '../data'
+import { useAllMenus } from '../hooks/useMenu'
 import { type MenuItem, type Nutrition, type Restaurant } from '../types'
 import { type Goal } from '../hooks/useGoal'
 import {
@@ -32,7 +33,8 @@ export function SearchView({
   toggleCompare,
   addToDay,
 }: Props) {
-  const index = useMemo(() => buildIndex(restaurants), [])
+  const loaded = useAllMenus(restaurants)
+  const index = useMemo(() => (loaded ? buildIndex(loaded) : []), [loaded])
   const [filters, setFilters] = useState<SearchFilters>({ query: '' })
 
   const results = useMemo(
@@ -127,7 +129,8 @@ export function SearchView({
         })}
       </div>
 
-      {results.length === 0 && (
+      {!loaded && <div className="mt-10 text-center text-muted">Loading all menus…</div>}
+      {loaded && results.length === 0 && (
         <div className="mt-10 text-center text-muted">
           No items match. Try loosening a filter.
         </div>

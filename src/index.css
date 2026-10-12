@@ -65,7 +65,22 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+/* Tighter number rendering for calorie/macro figures */
+.tabular {
+  font-variant-numeric: tabular-nums;
 }
 
 /* Utility shortcuts mapped to the token variables so components stay terse. */

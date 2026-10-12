@@ -2,7 +2,7 @@ import { type DayState, type LoggedMeal } from '../hooks/useDayLog'
 import { type Nutrition } from '../types'
 import { formatNumber } from '../lib/nutrition'
 import { MacroBar, MacroLegend } from '../components/MacroBar'
-import { BrandTile } from '../components/ui'
+import { BrandLogo } from '../components/ui'
 import { IconFlame, IconPlus, IconTrash } from '../components/icons'
 
 interface Props {
@@ -152,7 +152,12 @@ function MealRow({
 }) {
   return (
     <li className="flex items-center gap-3 rounded-xl border border-app bg-surface p-3">
-      <BrandTile name={meal.restaurantName} accent={meal.restaurantAccent} size="sm" />
+      <BrandLogo
+        id={meal.restaurantId}
+        name={meal.restaurantName}
+        accent={meal.restaurantAccent}
+        size="sm"
+      />
       <div className="min-w-0 flex-1">
         <div className="truncate font-semibold text-body">{meal.itemName}</div>
         <div className="truncate text-xs text-muted">

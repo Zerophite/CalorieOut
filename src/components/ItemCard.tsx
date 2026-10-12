@@ -1,15 +1,10 @@
 import { useState } from 'react'
 import { type MenuItem, type Nutrition, type Restaurant } from '../types'
-import {
-  baseNutrition,
-  formatNumber,
-  isCustomizable,
-  minimalNutrition,
-} from '../lib/nutrition'
+import { baseNutrition, formatNumber, minimalNutrition } from '../lib/nutrition'
 import { type Goal } from '../hooks/useGoal'
 import { MacroBar } from './MacroBar'
 import { EstimateBadge, GoalFitBadge, TagChip, evaluateGoal } from './ui'
-import { IconCheck, IconCompare, IconPlus, IconSliders } from './icons'
+import { IconCheck, IconCompare, IconPlus } from './icons'
 
 interface Props {
   restaurant: Restaurant
@@ -34,7 +29,6 @@ export function ItemCard({
   onAddToDay,
 }: Props) {
   const isBuilder = item.kind === 'builder'
-  const customizable = isCustomizable(item)
   const nutrition = isBuilder ? minimalNutrition(item) : baseNutrition(item)
   const fit = evaluateGoal(nutrition, goal)
   const [dayAdded, setDayAdded] = useState(false)
@@ -57,8 +51,13 @@ export function ItemCard({
               </div>
             )}
             <h3 className="font-semibold leading-tight text-body">{item.name}</h3>
-            {item.kind === 'fixed' && item.serving && (
-              <div className="mt-0.5 text-xs text-muted">{item.serving}</div>
+            {item.kind === 'fixed' && item.sizes && item.sizes.length > 1 ? (
+              <div className="mt-0.5 text-xs text-muted">
+                {item.defaultSize ?? item.sizes[0].label} · {item.sizes.length} sizes
+              </div>
+            ) : (
+              item.kind === 'fixed' &&
+              item.serving && <div className="mt-0.5 text-xs text-muted">{item.serving}</div>
             )}
           </div>
           <div className="shrink-0 text-right">
@@ -86,14 +85,9 @@ export function ItemCard({
           <span>F {formatNumber(nutrition.fat)}g</span>
         </div>
 
-        {(fit !== 'off' || customizable || (item.tags && item.tags.length > 0)) && (
+        {(fit !== 'off' || (item.tags && item.tags.length > 0)) && (
           <div className="mt-3 flex flex-wrap items-center gap-1.5">
             <GoalFitBadge fit={fit} />
-            {customizable && (
-              <span className="inline-flex items-center gap-1 rounded-full bg-[var(--brand)]/15 px-2 py-0.5 text-xs font-semibold text-[var(--color-brand-dark)] dark:text-emerald-400">
-                <IconSliders size={12} /> Customizable
-              </span>
-            )}
             {item.tags?.map((t) => (
               <TagChip key={t} tag={t} />
             ))}
@@ -106,7 +100,7 @@ export function ItemCard({
           onClick={onOpen}
           className="flex-1 rounded-xl bg-[var(--brand)] px-3 py-2 text-sm font-semibold text-white hover:bg-[var(--color-brand-dark)]"
         >
-          {isBuilder || customizable ? 'Customize' : 'Details'}
+          Customize
         </button>
         {!isBuilder && onAddToDay && (
           <button

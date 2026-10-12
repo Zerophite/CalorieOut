@@ -15,6 +15,6 @@ function bubbleTeaMenu(prefix: string): MenuItem[] {
 
 export const bubbleTeaSpots: Restaurant[] = [
   { id: 'coco', name: 'CoCo Bubble Tea', cuisine: 'Bubble tea', accent: '#dc2626', segment: 'Coffee & Bakery', dataSource: 'estimated', items: bubbleTeaMenu('coco') },
-  { id: 'tea-live', name: 'Tea Live', cuisine: 'Bubble tea', accent: '#16a34a', segment: 'Coffee & Bakery', dataSource: 'estimated', items: bubbleTeaMenu('tl') },
+  { id: 'tea-live', name: 'Tealive', cuisine: 'Bubble tea', accent: '#16a34a', segment: 'Coffee & Bakery', dataSource: 'estimated', items: bubbleTeaMenu('tl') },
   { id: 'chicha-san-chen', name: 'Chicha San Chen', cuisine: 'Bubble tea', accent: '#0d9488', segment: 'Coffee & Bakery', dataSource: 'estimated', items: bubbleTeaMenu('csc') },
 ]
