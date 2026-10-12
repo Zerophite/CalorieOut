@@ -1,70 +1,15 @@
 import { type Restaurant } from '../types'
-import { buildComponents, REF } from './components'
 
-// Approximate values from Wendy's Canada nutrition information.
+// Wendy's — 103 products, loaded on demand from ./menus.
 export const wendys: Restaurant = {
   id: 'wendys',
   name: "Wendy's",
   cuisine: 'Burgers · Fast food',
   accent: '#b91c1c',
   segment: 'Fast Food',
-  items: [
-    {
-      id: 'wd-dave', name: "Dave's Single", kind: 'fixed', category: 'Burgers', serving: '1 burger',
-      nutrition: { calories: 570, protein: 30, carbs: 39, fat: 34, sodium: 1120 },
-      components: [
-        { id: 'bun', name: 'Bun', removable: false, nutrition: { calories: 230, protein: 8, carbs: 38, fat: 4, sodium: 450 } },
-        { id: 'beef', name: 'Quarter-pound beef patty', removable: false, nutrition: { calories: 200, protein: 18, carbs: 0, fat: 16, sodium: 250 } },
-        { id: 'cheese', name: 'Cheese', nutrition: { calories: 50, protein: 2, carbs: 1, fat: 4, sodium: 230 } },
-        { id: 'sauce', name: 'Mayo & ketchup', nutrition: { calories: 60, protein: 0, carbs: 0, fat: 9, sodium: 120 } },
-        { id: 'veg', name: 'Lettuce, tomato, onion, pickle', nutrition: { calories: 30, protein: 2, carbs: 0, fat: 1, sodium: 70 } },
-      ],
-    },
-    {
-      id: 'wd-baconator', name: 'Baconator', kind: 'fixed', category: 'Burgers', serving: '1 burger',
-      nutrition: { calories: 950, protein: 59, carbs: 39, fat: 62, sodium: 1810 },
-      components: buildComponents({ calories: 950, protein: 59, carbs: 39, fat: 62, sodium: 1810 }, [
-        { id: 'bun', name: 'Bun', n: REF.bunMedium, removable: false },
-        { id: 'beef', name: 'Two beef patties', core: true },
-        { id: 'cheese', name: 'Two cheese slices', n: { calories: 100, protein: 6, carbs: 2, fat: 8, sodium: 460 } },
-        { id: 'bacon', name: 'Bacon (6 strips)', n: { calories: 200, protein: 14, carbs: 0, fat: 16, sodium: 560 } },
-        { id: 'sauce', name: 'Mayo & ketchup', n: { calories: 90, protein: 0, carbs: 1, fat: 9, sodium: 160 } },
-      ]),
-    },
-    {
-      id: 'wd-jr-cheese', name: 'Jr. Cheeseburger', kind: 'fixed', category: 'Burgers', serving: '1 burger',
-      nutrition: { calories: 290, protein: 15, carbs: 26, fat: 14, sodium: 690 },
-      components: buildComponents({ calories: 290, protein: 15, carbs: 26, fat: 14, sodium: 690 }, [
-        { id: 'bun', name: 'Bun', n: REF.bunPlain, removable: false },
-        { id: 'beef', name: 'Beef patty', core: true },
-        { id: 'cheese', name: 'Cheese', n: REF.cheeseSlice },
-        { id: 'veg', name: 'Ketchup, mustard, pickle, onion', n: { calories: 25, protein: 0, carbs: 5, fat: 0, sodium: 150 } },
-      ]),
-    },
-    {
-      id: 'wd-spicy-chicken', name: 'Spicy Chicken Sandwich', kind: 'fixed', category: 'Chicken', serving: '1 sandwich', tags: ['spicy'],
-      nutrition: { calories: 500, protein: 29, carbs: 48, fat: 21, sodium: 1140 },
-      components: buildComponents({ calories: 500, protein: 29, carbs: 48, fat: 21, sodium: 1140 }, [
-        { id: 'bun', name: 'Bun', n: REF.bunMedium, removable: false },
-        { id: 'chicken', name: 'Spicy crispy chicken fillet', core: true },
-        { id: 'mayo', name: 'Mayo', n: REF.mayo },
-        { id: 'veg', name: 'Lettuce & tomato', n: { calories: 15, protein: 0, carbs: 3, fat: 0, sodium: 10 } },
-      ]),
-    },
-    {
-      id: 'wd-grilled-chicken', name: 'Grilled Chicken Sandwich', kind: 'fixed', category: 'Chicken', serving: '1 sandwich', tags: ['high-protein'],
-      nutrition: { calories: 370, protein: 34, carbs: 38, fat: 10, sodium: 800 },
-      components: buildComponents({ calories: 370, protein: 34, carbs: 38, fat: 10, sodium: 800 }, [
-        { id: 'bun', name: 'Bun', n: REF.bunMedium, removable: false },
-        { id: 'chicken', name: 'Grilled chicken breast', core: true },
-        { id: 'sauce', name: 'Herb sauce', n: { calories: 45, protein: 0, carbs: 1, fat: 4, sodium: 120 } },
-        { id: 'veg', name: 'Lettuce & tomato', n: { calories: 15, protein: 0, carbs: 3, fat: 0, sodium: 10 } },
-      ]),
-    },
-    { id: 'wd-nuggets-10', name: 'Crispy Nuggets (10 pc)', kind: 'fixed', category: 'Chicken', serving: '10 pieces', nutrition: { calories: 420, protein: 22, carbs: 24, fat: 27, sodium: 800 } },
-    { id: 'wd-chili', name: 'Chili', kind: 'fixed', category: 'Sides', serving: 'small', tags: ['high-protein'], nutrition: { calories: 240, protein: 17, carbs: 23, fat: 8, sodium: 830, fiber: 6 } },
-    { id: 'wd-fries-m', name: 'Medium Fries', kind: 'fixed', category: 'Sides', serving: 'medium', tags: ['vegetarian', 'vegan'], nutrition: { calories: 420, protein: 5, carbs: 56, fat: 20, sodium: 470 } },
-    { id: 'wd-frosty', name: 'Chocolate Frosty', kind: 'fixed', category: 'Desserts', serving: 'small', tags: ['vegetarian'], nutrition: { calories: 340, protein: 8, carbs: 56, fat: 9, sodium: 200, sugar: 46 } },
-    { id: 'wd-apple-salad', name: 'Apple Pecan Salad (full)', kind: 'fixed', category: 'Salads', serving: '1 bowl w/ dressing', nutrition: { calories: 540, protein: 30, carbs: 41, fat: 30, sodium: 1170 } },
-  ],
+  dataSource: 'official',
+  items: [],
+  itemCount: 103,
+  hasBuilder: false,
+  loadItems: () => import('./menus/wendys.items').then((m) => m.items),
 }

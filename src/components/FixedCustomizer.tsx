@@ -37,12 +37,13 @@ export function FixedCustomizer(props: Props) {
     ...item,
     nutrition: size.nutrition,
     components: size.components,
+    ingredients: size.ingredients ?? item.ingredients,
     sizes: undefined,
   }
   return (
     <div className="space-y-4">
       <section>
-        <h3 className="mb-2 font-bold text-body">Size</h3>
+        <h3 className="mb-2 font-bold text-body">{item.sizeTitle ?? 'Size'}</h3>
         <div className="flex flex-wrap gap-2">
           {sizes.map((s, i) => (
             <button

@@ -53,7 +53,8 @@ export function ItemCard({
             <h3 className="font-semibold leading-tight text-body">{item.name}</h3>
             {item.kind === 'fixed' && item.sizes && item.sizes.length > 1 ? (
               <div className="mt-0.5 text-xs text-muted">
-                {item.defaultSize ?? item.sizes[0].label} · {item.sizes.length} sizes
+                {item.defaultSize ?? item.sizes[0].label} · {item.sizes.length}{' '}
+                {item.sizeTitle ? item.sizeTitle.toLowerCase() : 'sizes'}
               </div>
             ) : (
               item.kind === 'fixed' &&

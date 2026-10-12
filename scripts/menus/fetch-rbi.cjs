@@ -1,14 +1,36 @@
-// Crawl Tim Hortons Canada's public menu GraphQL (Sanity, dataset prod_th_ca)
+// Crawl a Restaurant Brands International chain's public menu (Sanity GraphQL)
 // and save every menu item with nutrition, sizes (pickers) and modifiers.
+//
+//   node scripts/menus/fetch-rbi.cjs <brand>      brand: timhortons | burgerking | firehouse
 const fs = require('fs')
 const path = require('path')
-const EP = 'https://czqk28jt.apicdn.sanity.io/v1/graphql/prod_th_ca/default'
-const MENU_ID = '2905970d-fa8d-4d25-9c85-6fbea4670a29'
-const SKIP_SECTIONS = /merchandise|tims® at home|tims at home/i
+
+const BRANDS = {
+  timhortons: {
+    endpoint: 'https://czqk28jt.apicdn.sanity.io/v1/graphql/prod_th_ca/default',
+    skip: /merchandise|tims® at home|tims at home/i,
+  },
+  burgerking: {
+    endpoint: 'https://kjfd81ul.apicdn.sanity.io/v1/graphql/prod_bk_ca/default',
+    // Meal/deal/bundle sections only repackage items listed elsewhere.
+    skip: /meals?$|deals?$|bundle|buy one|king jr|mix n|for \$/i,
+  },
+  firehouse: {
+    endpoint: 'https://czqk28jt.apicdn.sanity.io/v1/graphql/prod_fhs_ca/default',
+    skip: /meals?$|combos?$|deals?$|bundle|catering|platter|box(es)? lunch/i,
+  },
+}
+
+const brand = process.argv[2]
+const cfg = BRANDS[brand]
+if (!cfg) {
+  console.error(`Unknown brand "${brand}". Use one of: ${Object.keys(BRANDS).join(', ')}`)
+  process.exit(1)
+}
 
 async function gql(query) {
   for (let attempt = 0; attempt < 4; attempt++) {
-    const res = await fetch(EP + '?query=' + encodeURIComponent(query))
+    const res = await fetch(cfg.endpoint + '?query=' + encodeURIComponent(query))
     if (res.ok) {
       const j = await res.json()
       if (j.errors) throw new Error(JSON.stringify(j.errors).slice(0, 300))
@@ -22,13 +44,13 @@ async function gql(query) {
 const NUT = 'calories fat proteins carbohydrates sodium fiber sugar weight'
 const CHILDREN = `options{__typename ... on Section{_id name{en}} ... on Picker{_id name{en}} ... on Item{_id name{en}} ... on Combo{_id name{en} mainItem{_id}}}`
 
-const items = new Map() // itemId -> item data
-const placements = [] // { path, pickerName, itemId }
+const items = new Map()
+const placements = []
 
 async function fetchItem(id) {
   if (items.has(id)) return
   items.set(id, null)
-  const d = await gql(`query{Item(id:"${id}"){_id name{en} nutrition{${NUT}} nutritionWithModifiers{${NUT}} productHierarchy{L1 L2 L3} options{name{en} minAmount maxAmount options{default modifierMultiplier{multiplier prefix{en} modifier{name{en}}} nutrition{${NUT}}}}}}`)
+  const d = await gql(`query{Item(id:"${id}"){_id name{en} nutrition{${NUT}} nutritionWithModifiers{${NUT}} options{name{en} minAmount maxAmount options{default modifierMultiplier{multiplier prefix{en} modifier{name{en}}} nutrition{${NUT}}}}}}`)
   items.set(id, d.Item)
 }
 
@@ -37,7 +59,7 @@ async function walkSection(id, trail) {
   const sec = d.Section
   if (!sec) return
   const name = (sec.name?.en || '').trim()
-  if (SKIP_SECTIONS.test(name)) return
+  if (cfg.skip.test(name)) return
   const here = [...trail, name]
   for (const c of sec.options || []) await visit(c, here)
 }
@@ -67,11 +89,14 @@ async function visit(c, trail) {
 }
 
 ;(async () => {
-  const d = await gql(`query{Menu(id:"${MENU_ID}"){options{__typename ... on Section{_id name{en}}}}}`)
+  const fm = await gql(`query{FeatureMenu(id:"feature-menu-singleton"){defaultMenu{_id}}}`)
+  const menuId = fm.FeatureMenu.defaultMenu._id
+  const d = await gql(`query{Menu(id:"${menuId}"){options{__typename ... on Section{_id name{en}}}}}`)
   for (const s of d.Menu.options) if (s.__typename === 'Section') await walkSection(s._id, [])
   const out = { placements, items: Object.fromEntries([...items].filter(([, v]) => v)) }
-  fs.writeFileSync(path.join(__dirname, 'raw', 'tims.json'), JSON.stringify(out))
-  console.log(`placements: ${placements.length}, unique items: ${Object.keys(out.items).length}`)
+  fs.mkdirSync(path.join(__dirname, 'raw'), { recursive: true })
+  fs.writeFileSync(path.join(__dirname, 'raw', `${brand}.json`), JSON.stringify(out))
+  console.log(`${brand}: placements ${placements.length}, unique items ${Object.keys(out.items).length}`)
 })().catch((e) => {
   console.error(e)
   process.exit(1)

@@ -1,0 +1,112 @@
+# Little Caesars Canada nutritional guide (2026), transcribed from the image on
+# littlecaesars.ca/en-ca/menu/nutrition/ (canadian-nutrition-guide-en-ca-2026-1).
+# Pizzas are whole pizzas (8 slices). Columns: section, name, calories, fat, carbs, protein, sodium.
+12 classic	Pepperoni	1620	64	188	75	3060
+12 classic	Cheese	1420	46	187	67	2490
+14 classic	Pepperoni	2190	88	247	105	4320
+14 classic	Cheese	1940	65	246	95	3600
+12 specialty	3 Meat Treat	2040	97	189	95	4260
+12 specialty	Ultimate Supreme	1810	76	195	83	3470
+12 specialty	Veggie	1560	52	204	71	3210
+12 specialty	Hula Hawaiian	1580	48	206	83	3670
+12 specialty	Canadian	1910	88	190	93	3980
+12 specialty	BBQ Chicken	1630	48	219	82	3810
+12 specialty	Bacon-N-Pepperoni	1900	88	188	91	3980
+12 specialty	Extra! Extra! Pepperoni	1840	81	191	89	3660
+12 specialty	BBQ Meat Overload	2130	96	214	99	5720
+12 specialty	Stuffed Crust Pepperoni	2080	97	193	112	4160
+12 specialty	Stuffed Crust Cheese	1880	79	192	104	3590
+12 specialty	Thin Crust Pepperoni	1490	91	103	66	2740
+12 specialty	Thin Crust Cheese	1190	64	102	54	1890
+12 specialty	Butter Chicken	1670	57	202	88	3660
+12 specialty	Butter Masala Veggie	1610	56	204	75	3540
+12 specialty	Creamy Garlic Chicken	1610	56	192	87	3110
+14 specialty	3 Meat Treat	2680	127	248	129	5750
+14 specialty	Ultimate Supreme	2400	100	257	114	4720
+14 specialty	Veggie	2130	74	269	101	4520
+14 specialty	Hula Hawaiian	2150	69	270	115	5100
+14 specialty	Canadian	2430	108	249	121	5100
+14 specialty	BBQ Chicken	2260	69	289	123	5410
+14 specialty	Bacon-N-Pepperoni	2590	122	247	128	5640
+14 specialty	Extra! Extra! Pepperoni	2530	114	251	127	5230
+14 specialty	BBQ Meat Overload	2840	127	280	137	7760
+14 specialty	Stuffed Crust Pepperoni	2740	128	254	150	5900
+14 specialty	Stuffed Crust Cheese	2500	105	252	140	4940
+14 specialty	Butter Chicken	2290	80	266	126	5280
+14 specialty	Butter Masala Veggie	2190	79	267	107	4950
+14 specialty	Creamy Garlic Chicken	2200	79	252	123	4380
+detroit	Pepperoni	2790	110	326	130	5270
+detroit	Cheese	2530	86	324	119	4250
+crazy puffs	Pepperoni	500	25	50	20	920
+crazy puffs	3 Cheese & Herb	540	25	51	26	1050
+sides	Crazy Combo	820	23	130	26	1580
+sides	Crazy Bread (8 pieces)	790	22	123	25	1010
+sides	Crazy Sauce (1 sauce cup)	30	0	7	1	570
+sides	Italian Cheese Bread (10 pieces)	1350	54	156	59	2250
+sides	Stuffed Crazy Bread (4 pieces)	970	34	125	41	1410
+sides	Cinnamon Bites (10 pieces)	1360	42	220	28	1000
+sides	Little Caesars Cookies (1 pack)	100	3.5	16	1	80
+wings	Oven Roasted	620	42	4	55	2250
+wings	Buffalo	630	42	6	55	3040
+wings	BBQ	710	42	25	56	3350
+wings	Honey Garlic	740	42	33	55	2320
+dips	Ranch	190	20	3	1	330
+dips	Creamy Garlic	260	27	2	0	290
+dips	Zesty Cheddar	190	19	3	1	520
+dips	Buffalo Ranch	130	13	2	1	630
+stuffed crust	12	400	27	4	36	900
+stuffed crust	14	490	33	5	44	1100
+stuffed crust	detroit	540	36	6	48	1200
+topping 12	Pepperoni	200	18	1	8	570
+topping 12	Bacon	280	24	0	16	920
+topping 12	Chicken	120	2	4	22	370
+topping 12	Italian Sausage	220	17	1	8	540
+topping 12	Ham	60	2	1	10	790
+topping 12	Green Peppers	10	0	3	1	0
+topping 12	Onions	20	0	5	1	0
+topping 12	Red Onions	20	0	5	1	0
+topping 12	Tomatoes	20	0	4	1	5
+topping 12	Mushrooms	15	0	2	2	0
+topping 12	Black Olives	90	7	4	0	310
+topping 12	Green Olives	80	9	2	1	900
+topping 12	Jalapeño Peppers	20	0	3	1	0
+topping 12	Hot Banana Peppers	5	0	1	0	670
+topping 12	Pineapple	70	0	17	1	0
+topping 12	Extra Cheese	140	10	2	11	360
+topping 12	Feta Cheese	180	13	2	13	910
+topping 12	Crazy Crust	60	6	0	1	200
+topping 14	Pepperoni	250	23	1	10	710
+topping 14	Bacon	400	35	0	23	1330
+topping 14	Chicken	160	2.5	5	28	480
+topping 14	Italian Sausage	260	20	1	10	650
+topping 14	Ham	80	2.5	2	13	1000
+topping 14	Green Peppers	15	0	4	1	0
+topping 14	Onions	25	0	6	1	0
+topping 14	Red Onions	25	0	6	1	0
+topping 14	Tomatoes	20	0	4	1	5
+topping 14	Mushrooms	15	0	2	2	0
+topping 14	Black Olives	120	9	5	0	390
+topping 14	Green Olives	110	11	3	0	1150
+topping 14	Jalapeño Peppers	25	0	5	1	0
+topping 14	Hot Banana Peppers	10	0	2	0	870
+topping 14	Pineapple	100	0	22	1	0
+topping 14	Extra Cheese	230	16	4	18	580
+topping 14	Feta Cheese	230	18	3	18	1200
+topping 14	Crazy Crust	70	7	0	1	240
+topping detroit	Pepperoni	270	24	1	11	760
+topping detroit	Bacon	400	35	0	23	1320
+topping detroit	Chicken	160	3	5	30	500
+topping detroit	Italian Sausage	330	25	1	13	810
+topping detroit	Ham	80	2.5	2	14	1050
+topping detroit	Green Peppers	15	0	4	1	0
+topping detroit	Onions	30	0	7	1	0
+topping detroit	Red Onions	30	0	7	1	0
+topping detroit	Tomatoes	20	0	4	1	5
+topping detroit	Mushrooms	10	0	2	1	0
+topping detroit	Black Olives	120	10	5	0	420
+topping detroit	Green Olives	110	12	3	1	1220
+topping detroit	Jalapeño Peppers	25	0.5	5	1	0
+topping detroit	Hot Banana Peppers	10	0	2	0	990
+topping detroit	Pineapple	70	0	16	1	0
+topping detroit	Extra Cheese	250	17	4	20	640
+topping detroit	Feta Cheese	250	19	3	19	1290

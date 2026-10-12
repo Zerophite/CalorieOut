@@ -1,6 +1,6 @@
 import { type Restaurant } from '../types'
 
-// Tim Hortons Canada — 373 products, loaded on demand from ./menus.
+// Tim Hortons — 373 products, loaded on demand from ./menus.
 export const timhortons: Restaurant = {
   id: 'tim-hortons',
   name: 'Tim Hortons',

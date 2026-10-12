@@ -113,6 +113,8 @@ export interface ItemSize {
   nutrition: Nutrition
   /** Optional per-size ingredient breakdown (add-on amounts differ by size). */
   components?: IngredientComponent[]
+  /** Per-size ingredient list (see FixedItem.ingredients). */
+  ingredients?: { name: string; cal?: number }[]
 }
 
 /** A fixed item with a single known nutrition profile. */
@@ -124,6 +126,11 @@ export interface FixedItem extends MenuItemBase {
   sizes?: ItemSize[]
   /** Label of the default size in `sizes`. */
   defaultSize?: string
+  /**
+   * Heading for the `sizes` chips when they are versions rather than plain
+   * sizes (e.g. "Options" for regular / with cheese / lettuce-wrapped).
+   */
+  sizeTitle?: string
   kind: 'fixed'
   nutrition: Nutrition
   /** Serving description, e.g. "1 sandwich" or "medium (400 mL)". */
@@ -141,6 +148,13 @@ export interface FixedItem extends MenuItemBase {
    * the parts still sum exactly to `nutrition`.
    */
   parts?: { name: string; cal: number }[]
+  /**
+   * The restaurant's own ingredient list for the item, when it publishes
+   * names but not per-ingredient calories (e.g. A&W). `cal` is set only where
+   * it can be derived from official numbers (e.g. a bun from the
+   * lettuce-wrapped version); the rest are apportioned by ingredient type.
+   */
+  ingredients?: { name: string; cal?: number }[]
 }
 
 /** A build-your-own item assembled from option groups. */

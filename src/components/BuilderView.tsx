@@ -10,7 +10,7 @@ import { suggestSwaps } from '../lib/swaps'
 import { type Goal } from '../hooks/useGoal'
 import { NutritionFacts } from './NutritionFacts'
 import { GoalFitBadge, TagChip, evaluateGoal } from './ui'
-import { IconCheck, IconPlus } from './icons'
+import { IconCheck, IconLeaf, IconPlus } from './icons'
 
 interface Props {
   item: BuilderItem
@@ -150,7 +150,10 @@ export function BuilderView({ item, goal, onAddToCompare, onAddToDay }: Props) {
         {/* Smart swaps */}
         {swaps.length > 0 && (
           <section className="rounded-2xl border border-app bg-surface-2 p-4">
-            <h3 className="mb-1 font-bold text-body">💡 Smart swaps</h3>
+            <h3 className="mb-1 flex items-center gap-1.5 font-bold text-body">
+              <IconLeaf className="h-4 w-4 text-[var(--brand)]" />
+              Smart swaps
+            </h3>
             <p className="mb-3 text-sm text-muted">
               Small changes to trim calories from your current build:
             </p>

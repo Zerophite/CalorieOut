@@ -1,0 +1,599 @@
+	Toppings	Mozzarella Cheese PPP	Per 1 Pizza	60	4	90	1	6
+	Toppings	Mozzarella Cheese Small	1 slice= 1/6 pizza	20	1	27	0	1.7
+	Toppings	Mozzarella Cheese Medium	1 slice= 1/8 pizza	25	2	38	0	2.3
+	Toppings	Mozzarella Cheese Large	1 slice= 1/12 pizza	25	2	37	0	2.3
+	Toppings	Cheddar Cheese PPP	Per 1 Pizza	50	5	90	0	3
+	Toppings	Cheddar Cheese Small	1 slice= 1/6 pizza	20	2	35	0	1.2
+	Toppings	Cheddar Cheese Medium	1 slice= 1/8 pizza	30	3	46	0	1.6
+	Toppings	Cheddar Cheese Large	1 slice= 1/12 pizza	25	2	43	0	1.5
+	Toppings	Feta Cheese PPP	Per 1 Pizza	50	4	270	1	4
+	Toppings	Feta Cheese Small	1 slice= 1/6 pizza	20	1	93	0	1.3
+	Toppings	Feta Cheese Medium	1 slice= 1/8 pizza	25	2	128	0	1.9
+	Toppings	Feta Cheese Large	1 slice= 1/12 pizza	25	2	116	0	1.8
+	Toppings	Bacon PPP	Per 1 Pizza	60	5	240	0	5
+	Toppings	Bacon Small	1 slice= 1/6 pizza	20	2	80	0	1.8
+	Toppings	Bacon Medium	1 slice= 1/8 pizza	30	2	105	0	2.3
+	Toppings	Bacon Large	1 slice= 1/12 pizza	25	2	96	0	2.1
+	Toppings	Beef PPP	Per 1 Pizza	40	2.5	110	1	3
+	Toppings	Beef Small	1 slice= 1/6 pizza	15	1	38	0	1.2
+	Toppings	Beef Medium	1 slice= 1/8 pizza	20	1	58	0	1.8
+	Toppings	Beef Large	1 slice= 1/12 pizza	20	1	54	0	1.7
+	Toppings	Pepperoni Slices PPP	Per 1 Pizza	30	2.5	70	0	1
+	Toppings	Pepperoni Slices Small	1 slice= 1/6 pizza	15	1	30	0	0.7
+	Toppings	Pepperoni Slices Medium	1 slice= 1/8 pizza	20	2	40	0	0.9
+	Toppings	Pepperoni Slices Large	1 slice= 1/12 pizza	20	2	42	0	0.8
+	Toppings	Italian Sausage PPP	Per 1 Pizza	50	4.5	100	1	3
+	Toppings	Italian Sausage Small	1 slice= 1/6 pizza	20	2	43	0	1.0
+	Toppings	Italian Sausage Medium	1 slice= 1/8 pizza	30	3	58	0	1.4
+	Toppings	Italian Sausage Large	1 slice= 1/12 pizza	30	3	60	0	1.5
+	Toppings	Sliced Ham PPP	Per 1 Pizza	15	0.5	115	0	2
+	Toppings	Sliced Ham Small	1 slice= 1/6 pizza	5	0	48	0	1.0
+	Toppings	Sliced Ham Medium	1 slice= 1/8 pizza	10	0	65	0	1.3
+	Toppings	Sliced Ham Large	1 slice= 1/12 pizza	10	0	68	0	1.3
+	Toppings	Pork PPP	Per 1 Pizza	40	3	115	1	3
+	Toppings	Pork Small	1 slice= 1/6 pizza	15	1	40	0	1.2
+	Toppings	Pork Medium	1 slice= 1/8 pizza	25	2	60	0	1.8
+	Toppings	Pork Large	1 slice= 1/12 pizza	20	1	57	0	1.6
+	Toppings	Chicken PPP	Per 1 Pizza	20	0	105	0	4
+	Toppings	Chicken Small	1 slice= 1/6 pizza	10	0	40	0	1.5
+	Toppings	Chicken Medium	1 slice= 1/8 pizza	10	0	51	0	2.0
+	Toppings	Chicken Large	1 slice= 1/12 pizza	10	0	44	0	1.7
+	Toppings	Green Peppers PPP	Per 1 Pizza	5	0	0	1	0
+	Toppings	Green Peppers Small	1 slice= 1/6 pizza	0	0	0	0	0.0
+	Toppings	Green Peppers Medium	1 slice= 1/8 pizza	0	0	0	0	0.0
+	Toppings	Green Peppers Large	1 slice= 1/12 pizza	0	0	0	0	0.1
+	Toppings	Red Onions PPP	Per 1 Pizza	5	0	0	1	0.2
+	Toppings	Red Onions Small	1 slice= 1/6 pizza	0	0	0	1	0.1
+	Toppings	Red Onions Medium	1 slice= 1/8 pizza	5	0	0	1	0.1
+	Toppings	Red Onions Large	1 slice= 1/12 pizza	0	0	0	1	0.1
+	Toppings	Mushrooms PPP	Per 1 Pizza	5	0	1	0	0.2
+	Toppings	Mushrooms Small	1 slice= 1/6 pizza	0	0	0	0	0.1
+	Toppings	Mushrooms Medium	1 slice= 1/8 pizza	0	0	0	0	0.1
+	Toppings	Mushrooms Large	1 slice= 1/12 pizza	0	0	0	0	0.1
+	Toppings	Tomatoes PPP	Per 1 Pizza	5	0	0	1	0.2
+	Toppings	Tomatoes Small	1 slice= 1/6 pizza	0	0	0	0	0.2
+	Toppings	Tomatoes Medium	1 slice= 1/8 pizza	0	0	0	0	0.1
+	Toppings	Tomatoes Large	1 slice= 1/12 pizza	0	0	0	0	0.1
+	Toppings	Black Olives PPP	Per 1 Pizza	25	1.5	140	1	0.2
+	Toppings	Black Olives Small	1 slice= 1/6 pizza	5	0	37	0	0.1
+	Toppings	Black Olives Medium	1 slice= 1/8 pizza	10	1	53	0	0.1
+	Toppings	Black Olives Large	1 slice= 1/12 pizza	10	1	53	0	0.1
+	Toppings	Green Olives PPP	Per 1 Pizza	15	1.5	150	0	0.1
+	Toppings	Green Olives Small	1 slice= 1/6 pizza	5	0	38	0	0.0
+	Toppings	Green Olives Medium	1 slice= 1/8 pizza	5	1	55	0	0.0
+	Toppings	Green Olives Large	1 slice= 1/12 pizza	5	1	56	0	0.0
+	Toppings	Hot Peppers PPP	Per 1 Pizza	5	0	350	1	0
+	Toppings	Hot Peppers Small	1 slice= 1/6 pizza	0	0	110	0	0.0
+	Toppings	Hot Peppers Medium	1 slice= 1/8 pizza	0	0	141	0	0.0
+	Toppings	Hot Peppers Large	1 slice= 1/12 pizza	0	0	133	0	0.0
+	Toppings	Pineapple PPP	Per 1 Pizza	20	0	0	5	0.2
+	Toppings	Pineapple Small	1 slice= 1/6 pizza	10	0	0	2	0.1
+	Toppings	Pineapple Medium	1 slice= 1/8 pizza	10	0	0	2	0.1
+	Toppings	Pineapple Large	1 slice= 1/12 pizza	10	0	0	2	0.1
+	Toppings	Spinach PPP	Per 1 Pizza	0	0	3	0	0.1
+	Toppings	Spinach Small	1 slice= 1/6 pizza	0	0	1	0	0.0
+	Toppings	Spinach Mediim	1 slice= 1/8 pizza	0	0	1	0	0.0
+	Toppings	Spinach Large	1 slice= 1/12 pizza	0	0	1	0	0.0
+	Toppings	Parmesan PPP	Per 1 Pizza	20	1	105	1	2
+	Toppings	Parmesan Small	1 slice= 1/6 pizza	5	0	32	0	0.5
+	Toppings	Parmesan Medium	1 slice= 1/8 pizza	10	1	48	0	0.8
+	Toppings	Parmesan Large	1 slice= 1/12 pizza	10	1	48	0	0.8
+	Toppings	Roasted Red Pepper PPP	Per 1 Pizza	5	0	0	1	0.1
+	Toppings	Roasted Red Pepper Small	1 slice= 1/6 pizza	0	0	0	1	0.1
+	Toppings	Roasted Red Pepper Medium	1 slice= 1/8 pizza	5	0	0	1	0.1
+	Toppings	Roasted Red Pepper Large	1 slice= 1/12 pizza	5	0	0	1	0.1
+	Toppings	Garlic PPP	Per 1 Pizza	5	0	1	0	0
+	Toppings	Garlic Small	1 slice= 1/6 pizza	0	0	0	0	0.0
+	Toppings	Garlic Medium	1 slice= 1/8 pizza	5	0	0	1	0.0
+	Toppings	Garlic Large	1 slice= 1/12 pizza	5	0	0	1	0.0
+	Toppings	Old World Sauce PPP	Per 1 Pizza	10	0.1	80	2	0.3
+	Toppings	Old World Sauce Small	1 slice= 1/6 pizza	5	0	42	1	0.2
+	Toppings	Old World Sauce Medium	1 slice= 1/8 pizza	10	0	65	2	0.3
+	Toppings	Old World Sauce Large	1 slice= 1/12 pizza	5	0	58	1	0.3
+	Toppings	Regular Sauce PPP	Per 1 Pizza	10	0	75	2	0.3
+	Toppings	Regular Sauce Small	1 slice= 1/6 pizza	5	0	38	1	0.2
+	Toppings	Regular Sauce Medium	1 slice= 1/8 pizza	5	0	60	1	0.3
+	Toppings	Regular Sauce Large	1 slice= 1/12 pizza	5	0	53	1	0.2
+	Toppings	Pesto Sauce PPP	Per 1 Pizza	35	3.5	90	0	1
+	Toppings	Pesto Sauce Small	1 slice= 1/6 pizza	10	1	32	0	0.2
+	Toppings	Pesto Sauce Medium	1 slice= 1/8 pizza	20	2	48	0	0.3
+	Toppings	Pesto Sauce Large	1 slice= 1/12 pizza	20	2	48	0	0.3
+	Toppings	Alfredo Sauce PPP	Per 1 Pizza	20	1.5	80	1	0.2
+	Toppings	Alfredo Sauce Small	1 slice= 1/6 pizza	10	1	43	0	0.2
+	Toppings	Alfredo Sauce Medium	1 slice= 1/8 pizza	15	1	63	0	0.1
+	Toppings	Alfredo Sauce Large	1 slice= 1/12 pizza	15	1	56	0	0.1
+	Toppings	BBQ Sauce PPP	Per 1 Pizza	30	0	220	7	0.2
+	Toppings	BBQ Sauce Small	1 slice= 1/6 pizza	15	0	103	3	0.1
+	Toppings	BBQ Sauce Medium	1 slice= 1/8 pizza	20	0	163	5	0.1
+	Toppings	BBQ Sauce Large	1 slice= 1/12 pizza	20	0	143	4	0.1
+APPETIZERS	Appetizers	Breadstick	1 piece	190	10	150	22	4
+APPETIZERS	Appetizers	Breadstick with Cheese	1 piece	230	12	200	22	7
+APPETIZERS	Appetizers	Breadstick Sauce	dip cup	45	1	340	8	1
+APPETIZERS	Appetizers	Garlic Bread	1 piece	120	5	230	17	3
+APPETIZERS	Appetizers	Garlic Bread with Cheese	1 piece	190	10	400	15	11
+APPETIZERS	Appetizers	Top Your Own Bruschetta	1/6 of order	260	13	520	28	8
+APPETIZERS	Appetizers	Stuffed Pizza Rollers	1 roll	270	11	390	31	12
+APPETIZERS	Appetizers	Poutine Bacon	1 order	1440	78	4290	147	34
+APPETIZERS	Appetizers	Poutine Canadian	1 order	1440	78	4300	148	35
+APPETIZERS	Appetizers	Poutine Chicken	1 order	1410	71	4120	154	36
+APPETIZERS	Appetizers	Poutine Plain	1 order	1330	70	3780	146	26
+APPETIZERS	Appetizers	Pesto Chicken Spin Rolls	1 roll	420	22	1020	39	16
+APPETIZERS	Appetizers	French Fries	Medium size	940	47	2120	121	8
+WINGS	Oven Baked Wings	Buffalo Wings	1 pieces	47.5	3	147.5	0.5	6
+WINGS	WingStreet Wings	Traditional Wings	1 pieces	40	3	126	0	4
+WINGS	WingStreet Wings	Boneless Bites	1 pieces	60	4	196	5	3
+WINGS	WingStreet Sauces	Buffalo Mild Wing Sauce	per serving for 1 wings	15	0	210	3	0
+WINGS	WingStreet Sauces	Buffalo Medium Wing Sauce	per serving for 1 wings	15	0	212	3	0
+WINGS	WingStreet Sauces	Buffalo Burning Hot Wing Sauce	per serving for 1 wings	15	0	212	3	0
+WINGS	WingStreet Sauces	Honey BBQ Sauce	per serving for 1 wings	35	0	128	8	0
+WINGS	WingStreet Sauces	Garlic Parmesan sauce	per serving for 1 wings	5	0	21	0	0
+WINGS	WingStreet Sauces	Honey Garlic Sauce	per serving for 1 wings	20	0	46	5	0
+WINGS	WingStreet Sauces	Salt and Pepper Dry Rub	per serving for 1 wings	5	0	56	0	0
+WINGS	WingStreet Sauces	Indian Butter Sauce	per serving for 1 wings	20	1	118	3	0
+WINGS	Salads	Caesar Salad with Dressing	side	260	19	690	12	8
+WINGS	Salads	Caesar Salad with Dressing	entrée	540	40	1490	25	18
+WINGS	Salads	Greek Salad w/o Dressing	side	130	7	560	6	7
+WINGS	Salads	Greek Salad w/o Dressing	entrée	280	16	1200	12	16
+WINGS	Salads	Italian House Salad with Low Fat Raspberry Dressing	side	45	1	45	6	2
+WINGS	Salads	Italian House Salad w/o Dressing	side	80	2	190	12	3
+WINGS	Salads	Italian House Salad w/o Dressing	entrée	160	4	380	24	6
+WINGS	Salads	Warm Spinach Salad with Dressing	entrée	410	29	1080	13	27
+WINGS	WRAPS Oven Toasted Wraps	Chicken Caesar Wrap	1 Wrap	570	33	1530	41	28
+WINGS	WRAPS Oven Toasted Wraps	Chicken Pesto Wrap	1 Wrap	490	24	1110	41	29
+WINGS	Pastas	Tuscani Chicken Alfredo Pasta - (regular size)	(1/2 order)	550	26	1290	54	22
+WINGS	Pastas	Tuscani Chicken Alfredo Pasta - (family size)	(1/4 order)	550	26	1290	54	22
+WINGS	Pastas	Tuscani Premium Bacon Mac'n Cheese	individual meal	580	31	1460	46	30
+WINGS	Pastas	Tuscani Premium Bacon Mac'n Cheese - (regular size)	(1/2 order)	600	31	1490	55	26
+WINGS	Pastas	Tuscani Premium Bacon Mac'n Cheese - (family size)	(1/4 order)	600	31	1490	55	26
+WINGS	Pastas	Tuscani Mediterranean con Pollo Pasta	individual meal	450	10	714	69	29
+WINGS	Pastas	Tuscani Mediterranean con Pollo Pasta	1/3 of tray	340	7	705	55	22
+WINGS	Pastas	Tuscani Mediterranean Vegatable Pasta	individual meal	430	10	706	68	28
+WINGS	Pastas	Tuscani Mediterranean Vegatable Pasta	1/3 of tray	320	7	606	54	18
+WINGS	Pastas	Tuscani Meaty Marinara Pasta - (regular size)	(1/2 order)	550	24	115	58	26
+WINGS	Pastas	Tuscani Meaty Marinara Pasta - (family size)	(1/4 order)	550	24	105	59	26
+WINGS	Pastas	Fettuccini Alfredo	meal size	760	32	1670	93	24
+WINGS	Pastas	Chicken Fettuccini Alfredo	meal size	860	34	2150	95	42
+WINGS	Pastas	Spaghetti Bolognesé	meal size	770	24	1290	104	32
+WINGS	Pastas	Spicy Italian Sausage Pasta	meal size	1130	62	4420	107	38
+WINGS	Pastas	Grilled Chicken Breast Strips (optional)	Side	50	1	270	1	10
+MEAT	Italian Classic	6" Personal Pan Pizza®	1 pizza	650	28	790	73	27
+MEAT	Italian Classic	9" Small Pan	1 slice= 1/6 pizza	210	10	280	23	9
+MEAT	Italian Classic	12" Medium Pan	1 slice= 1/8 pizza	290	13	390	30	13
+MEAT	Italian Classic	14" Large Pan	1 slice= 1/12 pizza	270	13	370	28	12
+MEAT	Italian Classic	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	250	11	500	28	12
+MEAT	Italian Classic	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	240	10	480	26	12
+MEAT	Italian Classic	12" Medium Stuffed Crust	1 slice= 1/8 pizza	300	14	560	26	18
+MEAT	Italian Classic	14" Large Stuffed Crust	1 slice= 1/12 pizza	270	13	500	22	16
+MEAT	Italian Classic	12" Medium Homestyle	1 slice= 1/8 pizza	250	11	430	26	12
+MEAT	Italian Classic	14" Large Homestyle	1 slice= 1/12 pizza	230	10	390	22	11
+MEAT	Italian Classic	Panormous	1 slice= 1/16 pizza	290	13	390	31	12
+MEAT	Canadian	6" Personal Pan Pizza®	1 pizza	650	28	930	72	29
+MEAT	Canadian	9" Small Pan	1 slice= 1/6 pizza	210	9	320	22	10
+MEAT	Canadian	12" Medium Pan	1 slice= 1/8 pizza	290	13	450	30	14
+MEAT	Canadian	14" Large Pan	1 slice= 1/12 pizza	270	12	420	27	13
+MEAT	Canadian	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	250	10	550	27	13
+MEAT	Canadian	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	240	10	530	25	12
+MEAT	Canadian	12" Medium Stuffed Crust	1 slice= 1/8 pizza	290	13	610	25	18
+MEAT	Canadian	14" Large Stuffed Crust	1 slice= 1/12 pizza	260	12	540	21	16
+MEAT	Canadian	12" Medium Homestyle	1 slice= 1/8 pizza	250	11	470	25	13
+MEAT	Canadian	14" Large Homestyle	1 slice= 1/12 pizza	220	10	420	21	12
+MEAT	Canadian	Panormous	1 slice= 1/16 pizza	280	13	430	30	13
+MEAT	Triple Crown®	6" Personal Pan Pizza®	1 pizza	590	24	690	72	24
+MEAT	Triple Crown®	9" Small Pan	1 slice= 1/6 pizza	190	8	240	22	8
+MEAT	Triple Crown®	12" Medium Pan	1 slice= 1/8 pizza	260	11	330	30	11
+MEAT	Triple Crown®	14" Large Pan	1 slice= 1/12 pizza	240	10	310	27	11
+MEAT	Triple Crown®	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	220	8	450	27	11
+MEAT	Triple Crown®	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	210	8	420	26	10
+MEAT	Triple Crown®	12" Medium Stuffed Crust	1 slice= 1/8 pizza	270	11	500	25	16
+MEAT	Triple Crown®	14" Large Stuffed Crust	1 slice= 1/12 pizza	230	10	440	22	14
+MEAT	Triple Crown®	12" Medium Homestyle	1 slice= 1/8 pizza	220	8	370	25	11
+MEAT	Triple Crown®	14" Large Homestyle	1 slice= 1/12 pizza	190	8	330	21	10
+MEAT	Triple Crown®	Panormous	1 slice= 1/16 pizza	250	11	330	30	11
+MEAT	Hawaiian	6" Personal Pan Pizza®	1 pizza	650	25	810	77	30
+MEAT	Hawaiian	9" Small Pan	1 slice= 1/6 pizza	210	8	280	24	10
+MEAT	Hawaiian	12" Medium Pan	1 slice= 1/8 pizza	280	11	390	32	14
+MEAT	Hawaiian	14" Large Pan	1 slice= 1/12 pizza	260	11	370	29	13
+MEAT	Hawaiian	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	240	8	500	29	13
+MEAT	Hawaiian	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	230	8	480	27	13
+MEAT	Hawaiian	12" Medium Stuffed Crust	1 slice= 1/8 pizza	280	12	560	27	19
+MEAT	Hawaiian	14" Large Stuffed Crust	1 slice= 1/12 pizza	250	10	500	23	17
+MEAT	Hawaiian	12" Medium Homestyle	1 slice= 1/8 pizza	210	7	390	27	11
+MEAT	Hawaiian	14" Large Homestyle	1 slice= 1/12 pizza	210	8	380	23	12
+MEAT	Hawaiian	Panormous	1 slice= 1/16 pizza	280	11	390	32	13
+MEAT	Pepperoni Lover's®	6" Personal Pan Pizza®	1 pizza	710	33	910	72	32
+MEAT	Pepperoni Lover's®	9" Small Pan	1 slice= 1/6 pizza	230	11	320	22	11
+MEAT	Pepperoni Lover's®	12" Medium Pan	1 slice= 1/8 pizza	310	15	440	30	15
+MEAT	Pepperoni Lover's®	14" Large Pan	1 slice= 1/12 pizza	290	14	410	27	14
+MEAT	Pepperoni Lover's®	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	280	12	550	27	14
+MEAT	Pepperoni Lover's®	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	260	12	520	25	13
+MEAT	Pepperoni Lover's®	12" Medium Stuffed Crust	1 slice= 1/8 pizza	320	16	610	25	20
+MEAT	Pepperoni Lover's®	14" Large Stuffed Crust	1 slice= 1/12 pizza	280	14	540	21	18
+MEAT	Pepperoni Lover's®	12" Medium Homestyle	1 slice= 1/8 pizza	270	13	480	25	14
+MEAT	Pepperoni Lover's®	14" Large Homestyle	1 slice= 1/12 pizza	240	12	430	21	13
+MEAT	Pepperoni Lover's®	Panormous	1 slice= 1/16 pizza	310	15	430	30	14
+MEAT	Meat Lover's®	6" Personal Pan Pizza®	1 pizza	710	33	1080	73	33
+MEAT	Meat Lover's®	9" Small Pan	1 slice= 1/6 pizza	230	11	360	22	11
+MEAT	Meat Lover's®	12" Medium Pan	1 slice= 1/8 pizza	320	15	500	30	15
+MEAT	Meat Lover's®	14" Large Pan	1 slice= 1/12 pizza	300	15	470	28	14
+MEAT	Meat Lover's®	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	280	13	610	28	15
+MEAT	Meat Lover's®	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	270	12	580	26	14
+MEAT	Meat Lover's®	12" Medium Stuffed Crust	1 slice= 1/8 pizza	320	16	660	25	20
+MEAT	Meat Lover's®	14" Large Stuffed Crust	1 slice= 1/12 pizza	290	15	600	22	18
+MEAT	Meat Lover's®	12" Medium Homestyle	1 slice= 1/8 pizza	280	13	530	25	15
+MEAT	Meat Lover's®	14" Large Homestyle	1 slice= 1/12 pizza	250	12	490	22	14
+MEAT	Meat Lover's®	Panormous	1 slice= 1/16pizza	310	15	480	30	15
+MEAT	Smokey Maple Bacon	6" Personal Pan Pizza®	1 pizza	570	23	770	70	22
+MEAT	Smokey Maple Bacon	9" Small Pan	1 slice= 1/6 pizza	180	8	260	21	7
+MEAT	Smokey Maple Bacon	12" Medium Pan	1 slice= 1/8 pizza	240	11	350	28	10
+MEAT	Smokey Maple Bacon	14" Large Pan	1 slice= 1/12 pizza	230	10	330	26	9
+MEAT	Smokey Maple Bacon	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	210	8	460	26	9
+MEAT	Smokey Maple Bacon	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	200	8	440	24	9
+MEAT	Smokey Maple Bacon	12" Medium Stuffed Crust	1 slice= 1/8 pizza	250	11	520	23	15
+MEAT	Smokey Maple Bacon	14" Large Stuffed Crust	1 slice= 1/12 pizza	220	10	460	20	13
+MEAT	Smokey Maple Bacon	12" Medium Homestyle	1 slice= 1/8 pizza	200	8	390	23	9
+MEAT	Smokey Maple Bacon	14" Large Homestyle	1 slice= 1/12 pizza	180	8	350	20	9
+MEAT	Smokey Maple Bacon	Panormous	1 slice= 1/16pizza	240	10	350	28	9
+MEAT	Supreme Lover's™	6" Personal Pan Pizza®	1 pizza	670	29	910	73	31
+MEAT	Supreme Lover's™	9" Small Pan	1 slice= 1/6 pizza	220	10	320	23	10
+MEAT	Supreme Lover's™	12" Medium Pan	1 slice= 1/8 pizza	300	14	450	30	15
+MEAT	Supreme Lover's™	14" Large Pan	1 slice= 1/12 pizza	280	13	420	28	14
+MEAT	Supreme Lover's™	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	260	11	560	28	14
+MEAT	Supreme Lover's™	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	250	10	530	26	13
+MEAT	Supreme Lover's™	12" Medium Stuffed Crust	1 slice= 1/8 pizza	310	14	620	26	20
+MEAT	Supreme Lover's™	14" Large Stuffed Crust	1 slice= 1/12 pizza	270	13	550	22	18
+MEAT	Supreme Lover's™	12" Medium Homestyle	1 slice= 1/8 pizza	260	11	490	26	14
+MEAT	Supreme Lover's™	14" Large Homestyle	1 slice= 1/12 pizza	230	10	440	22	13
+MEAT	Supreme Lover's™	Panormous	1 slice= 1/16 pizza	300	13	440	30	14
+MEAT	Pepperoni Only	6" Personal Pan Pizza®	1 pizza	620	26	760	71	25
+MEAT	Pepperoni Only	9" Small Pan	1 slice= 1/6 pizza	200	9	260	22	9
+MEAT	Pepperoni Only	12" Medium Pan	1 slice= 1/8 pizza	270	12	360	29	12
+MEAT	Pepperoni Only	14" Large Pan	1 slice= 1/12 pizza	260	12	340	27	11
+MEAT	Pepperoni Only	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	240	9	470	26	11
+MEAT	Pepperoni Only	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	220	9	450	25	11
+MEAT	Pepperoni Only	12" Medium Stuffed Crust	1 slice= 1/8 pizza	260	11	480	24	16
+MEAT	Pepperoni Only	14" Large Stuffed Crust	1 slice= 1/12 pizza	230	10	430	21	14
+MEAT	Pepperoni Only	12" Medium Homestyle	1 slice= 1/8 pizza	230	10	390	24	12
+MEAT	Pepperoni Only	14" Large Homestyle	1 slice= 1/12 pizza	210	9	360	21	11
+MEAT	Pepperoni Only	Panormous	1 slice= 1/16 pizza	270	12	350	29	11
+MEAT	Super Supreme	6" Personal Pan Pizza®	1 pizza	670	29	950	73	30
+MEAT	Super Supreme	9" Small Pan	1 slice= 1/6 pizza	220	10	330	22	10
+MEAT	Super Supreme	12" Medium Pan	1 slice= 1/8 pizza	300	13	450	30	14
+MEAT	Super Supreme	14" Large Pan	1 slice= 1/12 pizza	280	13	430	28	13
+MEAT	Super Supreme	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	260	10	610	28	14
+MEAT	Super Supreme	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	250	10	540	26	13
+MEAT	Super Supreme	12" Medium Stuffed Crust	1 slice= 1/8 pizza	300	14	620	26	19
+MEAT	Super Supreme	14" Large Stuffed Crust	1 slice= 1/12 pizza	270	13	550	22	17
+MEAT	Super Supreme	12" Medium Homestyle	1 slice= 1/8 pizza	260	11	490	25	13
+MEAT	Super Supreme	14" Large Homestyle	1 slice= 1/12 pizza	230	10	440	22	13
+MEAT	Super Supreme	Panormous	1 slice= 1/16 pizza	290	13	440	30	13
+CHICKEN	Chicken Lover's™	6" Personal Pan Pizza®	1 pizza	580	21	720	73	27
+CHICKEN	Chicken Lover's™	9" Small Pan	1 slice= 1/6 pizza	190	7	250	22	9
+CHICKEN	Chicken Lover's™	12" Medium Pan	1 slice= 1/8 pizza	250	9	350	30	12
+CHICKEN	Chicken Lover's™	14" Large Pan	1 slice= 1/12 pizza	230	9	310	28	11
+CHICKEN	Chicken Lover's™	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	220	7	460	28	12
+CHICKEN	Chicken Lover's™	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	200	6	420	26	11
+CHICKEN	Chicken Lover's™	12" Medium Stuffed Crust	1 slice= 1/8 pizza	260	10	510	25	17
+CHICKEN	Chicken Lover's™	14" Large Stuffed Crust	1 slice= 1/12 pizza	230	9	440	22	15
+CHICKEN	Chicken Lover's™	12" Medium Homestyle	1 slice= 1/8 pizza	210	7	380	25	12
+CHICKEN	Chicken Lover's™	14" Large Homestyle	1 slice= 1/12 pizza	190	6	330	22	11
+CHICKEN	Chicken Lover's™	Panormous	1 slice= 1/16 pizza	250	9	340	30	12
+CHICKEN	Chicken Caesar	6" Personal Pan Pizza®	1 pizza	610	25	980	72	28
+CHICKEN	Chicken Caesar	9" Small Pan	1 slice= 1/6 pizza	200	8	340	22	9
+CHICKEN	Chicken Caesar	12" Medium Pan	1 slice= 1/8 pizza	270	11	470	29	13
+CHICKEN	Chicken Caesar	14" Large Pan	1 slice= 1/12 pizza	250	10	430	27	12
+CHICKEN	Chicken Caesar	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	230	8	570	27	12
+CHICKEN	Chicken Caesar	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	220	8	530	25	11
+CHICKEN	Chicken Caesar	12" Medium Stuffed Crust	1 slice= 1/8 pizza	270	12	620	25	17
+CHICKEN	Chicken Caesar	14" Large Stuffed Crust	1 slice= 1/12 pizza	240	10	550	21	15
+CHICKEN	Chicken Caesar	12" Medium Homestyle	1 slice= 1/8 pizza	220	9	490	24	12
+CHICKEN	Chicken Caesar	14" Large Homestyle	1 slice= 1/12 pizza	200	8	430	21	11
+CHICKEN	Chicken Caesar	Panormous	1 slice= 1/16 pizza	260	11	450	29	12
+CHICKEN	Creamy Butter Chicken	6" Personal Pan Pizza®	1 pizza	600	22	790	76	26
+CHICKEN	Creamy Butter Chicken	9" Small Pan	1 slice= 1/6 pizza	190	7	270	23	9
+CHICKEN	Creamy Butter Chicken	12" Medium Pan	1 slice= 1/8 pizza	260	10	370	31	12
+CHICKEN	Creamy Butter Chicken	14" Large Pan	1 slice= 1/12 pizza	240	9	350	29	11
+CHICKEN	Creamy Butter Chicken	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	220	7	480	28	12
+CHICKEN	Creamy Butter Chicken	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	210	7	450	27	11
+CHICKEN	Creamy Butter Chicken	12" Medium Stuffed Crust	1 slice= 1/8 pizza	270	10	540	26	17
+CHICKEN	Creamy Butter Chicken	14" Large Stuffed Crust	1 slice= 1/12 pizza	230	9	470	23	15
+CHICKEN	Creamy Butter Chicken	12" Medium Homestyle	1 slice= 1/8 pizza	220	8	400	26	12
+CHICKEN	Creamy Butter Chicken	14" Large Homestyle	1 slice= 1/12 pizza	190	7	360	23	11
+CHICKEN	Creamy Butter Chicken	Panormous	1 slice= 1/16 pizza	260	10	360	31	12
+CHICKEN	BBQ Chicken	6" Personal Pan Pizza®	1 pizza	550	18	890	81	20
+CHICKEN	BBQ Chicken	9" Small Pan	1 slice= 1/6 pizza	180	6	300	25	8
+CHICKEN	BBQ Chicken	12" Medium Pan	1 slice= 1/8 pizza	250	9	430	34	10
+CHICKEN	BBQ Chicken	14" Large Pan	1 slice= 1/12 pizza	230	8	390	31	9
+CHICKEN	BBQ Chicken	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	210	6	540	31	10
+CHICKEN	BBQ Chicken	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	200	5	490	29	9
+CHICKEN	BBQ Chicken	12" Medium Stuffed Crust	1 slice= 1/8 pizza	260	9	600	29	15
+CHICKEN	BBQ Chicken	14" Large Stuffed Crust	1 slice= 1/12 pizza	230	8	510	25	13
+CHICKEN	BBQ Chicken	12" Medium Homestyle	1 slice= 1/8 pizza	210	6	460	29	10
+CHICKEN	BBQ Chicken	14" Large Homestyle	1 slice= 1/12 pizza	180	5	400	25	9
+CHICKEN	BBQ Chicken	Panormous	1 slice= 1/16 pizza	260	10	450	34	11
+CHICKEN	Grilled Chicken Arrabbiatta	6" Personal Pan Pizza®	1 pizza	600	23	750	74	27
+CHICKEN	Grilled Chicken Arrabbiatta	9" Small Pan	1 slice= 1/6 pizza	190	7	260	23	9
+CHICKEN	Grilled Chicken Arrabbiatta	12" Medium Pan	1 slice= 1/8 pizza	260	10	350	31	12
+CHICKEN	Grilled Chicken Arrabbiatta	14" Large Pan	1 slice= 1/12 pizza	240	9	320	28	11
+CHICKEN	Grilled Chicken Arrabbiatta	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	220	7	460	28	12
+CHICKEN	Grilled Chicken Arrabbiatta	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	210	6	430	26	11
+CHICKEN	Grilled Chicken Arrabbiatta	12" Medium Stuffed Crust	1 slice= 1/8 pizza	260	10	520	26	17
+CHICKEN	Grilled Chicken Arrabbiatta	14" Large Stuffed Crust	1 slice= 1/12 pizza	230	9	450	22	15
+CHICKEN	Grilled Chicken Arrabbiatta	12" Medium Homestyle	1 slice= 1/8 pizza	220	7	390	26	12
+CHICKEN	Grilled Chicken Arrabbiatta	14" Large Homestyle	1 slice= 1/12 pizza	190	6	340	22	11
+CHICKEN	Grilled Chicken Arrabbiatta	Panormous	1 slice= 1/16 pizza	250	10	350	31	12
+CHICKEN	Grilled Chicken Rustico	6" Personal Pan Pizza®	1 pizza	600	23	750	73	27
+CHICKEN	Grilled Chicken Rustico	9" Small Pan	1 slice= 1/6 pizza	190	7	260	23	9
+CHICKEN	Grilled Chicken Rustico	12" Medium Pan	1 slice= 1/8 pizza	250	10	350	30	12
+CHICKEN	Grilled Chicken Rustico	14" Large Pan	1 slice= 1/12 pizza	230	9	320	28	11
+CHICKEN	Grilled Chicken Rustico	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	220	7	460	28	12
+CHICKEN	Grilled Chicken Rustico	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	200	6	430	26	11
+CHICKEN	Grilled Chicken Rustico	12" Medium Stuffed Crust	1 slice= 1/8 pizza	260	10	520	25	17
+CHICKEN	Grilled Chicken Rustico	14" Large Stuffed Crust	1 slice= 1/12 pizza	230	9	450	22	15
+CHICKEN	Grilled Chicken Rustico	12" Medium Homestyle	1 slice= 1/8 pizza	210	7	390	25	12
+CHICKEN	Grilled Chicken Rustico	14" Large Homestyle	1 slice= 1/12 pizza	190	6	340	22	11
+CHICKEN	Grilled Chicken Rustico	Panormous	1 slice= 1/16 pizza	250	9	350	30	12
+VEGGIE	Veggie Lover's®	6" Personal Pan Pizza®	1 pizza	570	21	610	74	23
+VEGGIE	Veggie Lover's®	9" Small Pan	1 slice= 1/6 pizza	180	7	210	23	8
+VEGGIE	Veggie Lover's®	12" Medium Pan	1 slice= 1/8 pizza	250	9	290	31	11
+VEGGIE	Veggie Lover's®	14" Large Pan	1 slice= 1/12 pizza	230	9	270	28	10
+VEGGIE	Veggie Lover's®	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	210	6	410	28	10
+VEGGIE	Veggie Lover's®	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	200	6	380	26	9
+VEGGIE	Veggie Lover's®	12" Medium Stuffed Crust	1 slice= 1/8 pizza	280	11	500	26	18
+VEGGIE	Veggie Lover's®	14" Large Stuffed Crust	1 slice= 1/12 pizza	240	10	430	23	16
+VEGGIE	Veggie Lover's®	12" Medium Homestyle	1 slice= 1/8 pizza	210	7	330	26	10
+VEGGIE	Veggie Lover's®	14" Large Homestyle	1 slice= 1/12 pizza	180	6	290	22	9
+VEGGIE	Veggie Lover's®	Panormous	1 slice= 1/16 pizza	240	9	290	31	10
+VEGGIE	Greek	6" Personal Pan Pizza®	1 pizza	580	22	930	74	21
+VEGGIE	Greek	9" Small Pan	1 slice= 1/6 pizza	170	7	290	22	7
+VEGGIE	Greek	12" Medium Pan	1 slice= 1/8 pizza	250	10	420	30	10
+VEGGIE	Greek	14" Large Pan	1 slice= 1/12 pizza	230	9	390	28	9
+VEGGIE	Greek	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	210	7	540	28	9
+VEGGIE	Greek	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	200	6	500	26	8
+VEGGIE	Greek	12" Medium Stuffed Crust	1 slice= 1/8 pizza	340	13	790	34	19
+VEGGIE	Greek	14" Large Stuffed Crust	1 slice= 1/12 pizza	330	13	780	33	19
+VEGGIE	Greek	12" Medium Homestyle	1 slice= 1/8 pizza	210	7	460	26	9
+VEGGIE	Greek	14" Large Homestyle	1 slice= 1/12 pizza	180	6	410	22	8
+VEGGIE	Greek	Panormous	1 slice= 1/16 pizza	240	9	420	30	9
+VEGGIE	Margherita	6" Personal Pan Pizza®	1 pizza	580	23	730	73	24
+VEGGIE	Margherita	9" Small Pan	1 slice= 1/6 pizza	170	7	160	20	7
+VEGGIE	Margherita	12" Medium Pan	1 slice= 1/8 pizza	250	10	320	30	11
+VEGGIE	Margherita	14" Large Pan	1 slice= 1/12 pizza	230	9	290	27	10
+VEGGIE	Margherita	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	210	7	440	27	10
+VEGGIE	Margherita	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	200	7	410	25	10
+VEGGIE	Margherita	12" Medium Stuffed Crust	1 slice= 1/8 pizza	250	10	480	25	16
+VEGGIE	Margherita	14" Large Stuffed Crust	1 slice= 1/12 pizza	220	9	420	21	14
+VEGGIE	Margherita	12" Medium Homestyle	1 slice= 1/8 pizza	210	8	360	25	10
+VEGGIE	Margherita	14" Large Homestyle	1 slice= 1/12 pizza	180	7	320	21	9
+VEGGIE	Margherita	Panormous	1 slice= 1/16 pizza	250	10	320	29	11
+CHEESE	Cheese Lover's®	6" Personal Pan Pizza®	1 pizza	650	28	770	72	29
+CHEESE	Cheese Lover's®	9" Small Pan	1 slice= 1/6 pizza	210	9	260	22	10
+CHEESE	Cheese Lover's®	12" Medium Pan	1 slice= 1/8 pizza	280	12	370	30	13
+CHEESE	Cheese Lover's®	14" Large Pan	1 slice= 1/12 pizza	260	12	350	27	13
+CHEESE	Cheese Lover's®	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	250	10	480	27	13
+CHEESE	Cheese Lover's®	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	230	9	450	25	12
+CHEESE	Cheese Lover's®	12" Medium Stuffed Crust	1 slice= 1/8 pizza	290	13	540	25	18
+CHEESE	Cheese Lover's®	14" Large Stuffed Crust	1 slice= 1/12 pizza	260	12	480	22	16
+CHEESE	Cheese Lover's®	12" Medium Homestyle	1 slice= 1/8 pizza	240	10	410	25	13
+CHEESE	Cheese Lover's®	14" Large Homestyle	1 slice= 1/12 pizza	220	9	360	21	12
+CHEESE	Cheese Lover's®	Panormous	1 slice= 1/16 pizza	280	12	360	30	13
+CHEESE	Cheese Only	6" Personal Pan Pizza®	1 pizza	610	25	700	72	28
+CHEESE	Cheese Only	9" Small Pan	1 slice= 1/6 pizza	190	8	230	22	9
+CHEESE	Cheese Only	12" Medium Pan	1 slice= 1/8 pizza	260	11	330	30	12
+CHEESE	Cheese Only	14" Large Pan	1 slice= 1/12 pizza	240	10	310	27	12
+CHEESE	Cheese Only	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	230	8	440	27	12
+CHEESE	Cheese Only	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	210	8	410	25	11
+CHEESE	Cheese Only	12" Medium Stuffed Crust	1 slice= 1/8 pizza	270	11	500	25	17
+CHEESE	Cheese Only	14" Large Stuffed Crust	1 slice= 1/12 pizza	240	10	430	21	16
+CHEESE	Cheese Only	12" Medium Homestyle	1 slice= 1/8 pizza	220	9	360	25	12
+CHEESE	Cheese Only	14" Large Homestyle	1 slice= 1/12 pizza	200	8	320	21	11
+CHEESE	Cheese Only	Panormous	1 slice= 1/16 pizza	260	11	320	29	12
+CHEESE	Poutine Pizza	6" Personal Pan Pizza®	1 pizza	690	30	940	82	25
+CHEESE	Poutine Pizza	9" Small Pan	1 slice= 1/6 pizza	220	10	310	25	8
+CHEESE	Poutine Pizza	12" Medium Pan	1 slice= 1/8 pizza	300	14	450	34	11
+CHEESE	Poutine Pizza	14" Large Pan	1 slice= 1/12 pizza	300	14	470	34	11
+CHEESE	Poutine Pizza	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	270	11	560	32	11
+CHEESE	Poutine Pizza	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	270	11	570	32	11
+CHEESE	Poutine Pizza	12" Medium Stuffed Crust	1 slice= 1/8 pizza	310	14	620	29	16
+CHEESE	Poutine Pizza	14" Large Stuffed Crust	1 slice= 1/12 pizza	290	14	600	28	15
+CHEESE	Poutine Pizza	12" Medium Homestyle	1 slice= 1/8 pizza	260	11	480	29	11
+CHEESE	Poutine Pizza	14" Large Homestyle	1 slice= 1/12 pizza	250	11	480	28	10
+CHEESE	Poutine Pizza	Panormous	1 slice= 1/16 pizza	330	15	490	35	14
+CHEESE	Gluten Free	Gluten Free Crust- Pepperoni	Pizza 1 pizza	1060	45	1820	126	38
+CHEESE	Donair Pizza's	6" Personal Pan Pizza®	1 pizza	540	19	540	77	18
+CHEESE	Donair Pizza's	9" Small Pan	1 slice= 1/6 pizza	180	7	190	23	7
+CHEESE	Donair Pizza's	12" Medium Pan	1 slice= 1/8 pizza	250	10	260	31	10
+CHEESE	Donair Pizza's	Donair	14" Large Pan 1 slice= 1/12 pizza	230	9	250	29	9
+CHEESE	Donair Pizza's	12" Medium Thin 'N Crispy®	1 slice= 1/8 pizza	210	7	370	29	9
+CHEESE	Donair Pizza's	14" Large Thin 'N Crispy®	1 slice= 1/12 pizza	200	7	360	27	9
+CHEESE	Donair	12" Medium Stuffed Crust	1 slice= 1/8 pizza	190	9	350	15	12
+CHEESE	Donair	14" Large Stuffed Crust	1 slice= 1/12 pizza	210	9	350	20	12
+CHEESE	Donair	12" Medium Homestyle	1 slice= 1/8 pizza	150	7	220	15	7
+CHEESE	Donair	14" Large Homestyle	1 slice= 1/12 pizza	170	7	240	20	8
+CHEESE	Donair	Panormous	1 slice= 1/8 pizza	250	10	260	31	10
+CHEESE	Pzones P'zone	Pepperoni	1/2 Calzone	700	24	650	92	28
+CHEESE	Pzones P'zone	Meat Lovers	1/2 Calzone	730	26	780	93	32
+CHEESE	Pzones P'zone	Canadian	1/2 Calzone	730	26	820	93	32
+CHEESE	Kids' Menu	Cheese- 6" Pan Pizza®	1 pizza	510	16	730	64	28
+CHEESE	Kids' Menu	Pepperoni-6" Pan Pizza®	1 pizza	510	17	790	61	25
+CHEESE	Kids' Menu	Hawaiian-6" Pan Pizza®	1 pizza	650	25	810	77	30
+CHEESE	Kids' Menu	KIDS MENU	1 pizza	570	21	610	74	23
+CHEESE	Kids' Menu	Fettuccini Alfredo Pasta	1 order	400	17	930	47	13
+CHEESE	Kids' Menu	Mac N' Cheese	1 order	520	27	1170	45	25
+CHEESE	Kids' Menu	Spaghetti with Meat Sauce	1 order	400	14	800	50	18
+CHEESE	Kids' Menu	Boneless Bites with Honey BBQ sauce	5 Pieces	500	18	1620	65	17.5
+CHEESE	Kids' Menu	Boneless Bites with Honey Garlic sauce	5 Pieces	420	18	1210	48	17
+CHEESE	Kids' Menu	Celery Sticks	1 order	35	0	90	9	1
+CHEESE	Kids' Menu	Garlic Bread	1 piece	120	5	230	17	3
+CHEESE	Kids' Menu	Crispy Potato Wedges	1 order	350	17	720	44	4
+CHEESE	Kids' Menu	Caesar Salad w Dressing	side	260	19	690	12	8
+CHEESE	Kids' Menu	Italian House Salad w low fat raspberry Dressing	side	45	1	45	6	2
+CHEESE	Desserts	Brownie	1 piece	250	9	600	28	13
+CHEESE	Desserts	Triple Chocolate Brownie	1/12 Piece	170	7	40	25	2
+CHEESE	Desserts	Cinnaparts®	1/4 piece	58	1	55	11	1
+CHEESE	Desserts	Caramel Chocolate Lava Cake	1 slice	630	32	280	79	9
+CHEESE	Desserts	Strawberry Sauce	30 ml	70	0	10	18	0.1
+CHEESE	Beverages	Aquafina 591ml	1	0	0	0	0	0
+CHEESE	Beverages	Brisk Lemon Iced	Tea 591ml 1	130	0	170	33	0
+CHEESE	Beverages	Diet Pepsi 591ml	1	0	0	40	0	0
+CHEESE	Beverages	Dr Pepper 591ml	1	240	0	95	64	0
+CHEESE	Beverages	G2 Fruit Punch 591ml	1	50	0	270	12	0
+CHEESE	Beverages	Gatorade Perform Cool	Blue 591ml 1	150	0	250	38	0
+CHEESE	Beverages	Mountain Dew	591ml 1	290	0	75	77	0
+CHEESE	Beverages	Pepsi 591ml	1	260	0	20	69	0
+CHEESE	Beverages	7UP 355ml	1	160	0	60	42	0
+CHEESE	Beverages	7UP 355ml	1	160	0	60	42	0
+CHEESE	Beverages	7UP 591ml	1	260	0	100	70	0
+CHEESE	Beverages	Aquafina FlavourSplash Grape 591ml	1	5	0	170	0	0
+CHEESE	Beverages	Aquafina	FlavourSplash Raspberry 591ml 1	10	0	130	0	0
+CHEESE	Beverages	Aquafina	Plus Acai Fruit Punch 591ml 1	10	0	25	16	0
+CHEESE	Beverages	Aquafina Plus Black & Blue Berry 591ml	1	10	0	25	16	0
+CHEESE	Beverages	Aquafina Plus Orange Tangerine 591ml	1	100	0	10	42	0
+CHEESE	Beverages	Aquafina	Plus Pomegranate Cherry VitaMin' Enhanced Water 591ml 1	100	0	10	42	0
+CHEESE	Beverages	Aquafina	Plus Strawberry Kiwi 591ml 1	100	0	10	42	0
+CHEESE	Beverages	Aquafina Plus Strawberry Lemonade 10 CAL 591ml	1	10	0	60	16	0
+CHEESE	Beverages	Aquafina Plus Vitamins 10 CAL Fuji Apple Pear 591ml	1	10	0	25	16	0
+CHEESE	Beverages	Aquafina Plus Yumberry Pomegranate	10 CAL 591ml 1	10	0	25	16	0
+CHEESE	Beverages	Brisk Fruit Punch 355ml	1	110	0	60	28	0
+CHEESE	Beverages	Brisk Fruit Punch 591ml	1	180	0	105	47	0
+CHEESE	Beverages	Brisk Lemon Iced Tea 355ml	1	80	0	105	20	0
+CHEESE	Beverages	Brisk Lemonade 355ml	1	110	0	95	28	0
+CHEESE	Beverages	Brisk Lemonade 591ml	1	180	0	160	47	0
+CHEESE	Beverages	Brisk Raspberry Iced Tea 355ml	1	70	0	80	19	0
+CHEESE	Beverages	Caffeine Free Diet Pepsi 355ml	1	0	0	25	0	0
+CHEESE	Beverages	Caffeine Free Pepsi 355ml	1	150	0	15	41	0
+CHEESE	Beverages	Crush Birch Beer 355ml	1	180	0	65	44	0
+CHEESE	Beverages	Crush Cherry 591ml	1	280	0	115	74	0
+CHEESE	Beverages	Crush Cream Soda 355ml	1	170	0	65	45	0
+CHEESE	Beverages	Crush Cream Soda 591ml	1	120	0	45	32	0
+CHEESE	Beverages	Crush Grape 355ml	1	130	0	40	34	0
+CHEESE	Beverages	Crush	Grape 591ml 1	280	0	90	74	0
+CHEESE	Beverages	Crush	Lime 355ml 1	170	0	45	44	0
+CHEESE	Beverages	Crush	Lime 591ml 1	130	0	30	32	0
+CHEESE	Beverages	Crush Orange 355ml	1	160	0	70	43	0
+CHEESE	Beverages	Crush Orange 591ml	1	270	0	120	72	0
+CHEESE	Beverages	Crush Pineapple 355ml	1	220	0	90	49	0
+CHEESE	Beverages	Crush Pineapple	591ml 1	160	0	65	34	0
+CHEESE	Beverages	Diet 7UP 355ml	1	0	0	65	0	0
+CHEESE	Beverages	Diet 7UP 591ml	1	5	0	100	0	0
+CHEESE	Beverages	Diet Crush Cream Soda 355ml	1	0	0	80	0	0
+CHEESE	Beverages	Diet Crush Orange 355ml	1	0	0	80	0	0
+CHEESE	Beverages	Diet Dr Pepper 355ml	1	0	0	60	0	0
+CHEESE	Beverages	Diet Dr Pepper 591ml	1	0	0	100	0	0
+CHEESE	Beverages	Diet	Lipton Green Tea with Citrus 355ml 1	0	0	105	0	0
+CHEESE	Beverages	Diet	Lipton Lemon Iced Tea 355ml 1	0	0	80	0	0
+CHEESE	Beverages	Diet	Mountain Dew 355ml 1	5	0	30	0	0
+CHEESE	Beverages	Diet	Mountain Dew 591ml 1	10	0	50	1	0
+CHEESE	Beverages	Diet	Mug Root Beer 355ml 1	0	0	50	0	0
+CHEESE	Beverages	Diet	Pepsi 355ml 1	0	0	30	0	0
+CHEESE	Beverages	Diet	Pepsi 355ml 1	0	0	25	0	0
+CHEESE	Beverages	Diet	Pepsi Lime 355ml 1	0	0	15	0	0
+CHEESE	Beverages	Diet Schweppes Ginger Ale	355ml 1	0	0	105	0	0
+CHEESE	Beverages	Dr Pepper 355ml	1	140	0	55	38	0
+CHEESE	Beverages	Dr Pepper Cherry 355ml	1	150	0	55	41	0
+CHEESE	Beverages	Dr Pepper Cherry 591ml	1	260	0	95	68	0
+CHEESE	Beverages	G2	Blueberry Pomegranate 591ml 1	50	0	270	12	0
+CHEESE	Beverages	G2	Grape 591ml 1	20	0	115	5	0
+CHEESE	Beverages	G2	Orange 591ml 1	20	0	115	5	0
+CHEESE	Beverages	Gatorade Frost Glacier Freeze 591mL	1	140	0	270	36	0
+CHEESE	Beverages	Gatorade Ice Punch 591mL	1	150	0	250	38	0
+CHEESE	Beverages	Gatorade Perform Fruit Punch 591ml	1	150	0	250	38	0
+CHEESE	Beverages	Gatorade Perform Lemon-Lime 591ml	1	150	0	250	38	0
+CHEESE	Beverages	Gatorade Perform Orange 591ml	1	150	0	250	38	0
+CHEESE	Beverages	Lipton Green Tea with Citrus 355ml	1	120	0	95	32	0
+CHEESE	Beverages	Lipton Green Tea with Citrus 591ml	1	80	0	65	23	0
+CHEESE	Beverages	Lipton Lemon Iced Tea 355ml	1	80	0	86	20	0
+CHEESE	Beverages	Mountain Dew 355ml	1	170	0	45	46	0
+CHEESE	Beverages	Mountain Dew Code Red 355ml	1	170	0	75	46	0
+CHEESE	Beverages	Mountain Dew Code Red 591ml	1	280	0	125	76	0
+CHEESE	Beverages	Mountain Dew Supernova 355ml	1	170	0	30	46	0
+CHEESE	Beverages	Mountain Dew Supernova 591ml	1	290	0	50	76	0
+CHEESE	Beverages	Mountain Dew Voltage 355ml	1	170	0	45	46	0
+CHEESE	Beverages	Mountain	Dew Voltage 591ml 1	290	0	75	76	0
+CHEESE	Beverages	Mountain	Dew White Out 355ml 1	170	0	30	46	0
+CHEESE	Beverages	Mountain	Dew White Out 591ml 1	280	0	50	76	0
+CHEESE	Beverages	Mug Root Beer 355ml	1	160	0	45	43	0
+CHEESE	Beverages	Mug Root Beer 591ml	1	270	0	75	72	0
+CHEESE	Beverages	Pepsi 355ml	1	150	0	15	41	0
+CHEESE	Beverages	Pepsi 355ml	1	150	0	15	42	0
+CHEESE	Beverages	Pepsi Lime 355ml	1	150	0	15	41	0
+CHEESE	Beverages	Pepsi MAX 355ml	1	0	0	15	0	0
+CHEESE	Beverages	Pepsi MAX 591ml	1	0	0	25	0	0
+CHEESE	Beverages	Pepsi Next 355mL	1	100	0	5	27	0
+CHEESE	Beverages	Pepsi Next 591mL	1	170	0	10	44	0
+CHEESE	Beverages	Schweppes Club Soda	355ml 1	0	0	105	0	0
+CHEESE	Beverages	Schweppes	Dark Ginger Ale 355mL 1	150	0	50	38	0
+CHEESE	Beverages	Schweppes	Ginger Ale 355ml 1	120	0	45	32	0
+CHEESE	Beverages	Schweppes	Ginger Ale 591ml 1	200	0	80	53	0
+CHEESE	Beverages	Schweppes Tonic Water 355ml	1	130	0	55	31	0
+CHEESE	Beverages	Seamans Ginger Ale 355ml	1	90	0	0	23	0
+CHEESE	Beverages	Sussex Golden Ale 355ml	1	150	0	45	39	0
+CHEESE	Beverages	Sussex Golden Ale 591ml	1	240	0	80	64	0
+CHEESE	Beverages	Vernors Ginger Ale 355ml	1	140	0	20	35	0
+MEAT	Italian Classic	12" Medium Pan	1 slice= 1/12 pizza	190	9	260	20	8
+MEAT	Italian Classic	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	170	7	340	19	8
+MEAT	Italian Classic	12" Medium Homestyle	1 slice= 1/12 pizza	170	7	290	17	8
+MEAT	Canadian	12" Medium Pan	1 slice= 1/12 pizza	190	9	300	20	9
+MEAT	Canadian	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	170	7	370	18	9
+MEAT	Canadian	12" Medium Homestyle	1 slice= 1/12 pizza	160	7	320	17	9
+MEAT	Triple Crown®	12" Medium Pan	1 slice= 1/12 pizza	170	7	220	20	8
+MEAT	Triple Crown®	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	150	5	300	18	7
+MEAT	Triple Crown®	12" Medium Homestyle	1 slice= 1/12 pizza	150	6	250	17	7
+MEAT	Hawaiian	12" Medium Pan	1 slice= 1/12 pizza	190	8	200	22	9
+MEAT	Hawaiian	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	160	6	340	19	9
+MEAT	Hawaiian	12" Medium Homestyle	1 slice= 1/12 pizza	140	5	260	18	7
+MEAT	Pepperoni Lover's®	12" Medium Pan	1 slice= 1/12 pizza	210	10	290	20	10
+MEAT	Pepperoni Lover's®	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	180	8	370	18	9
+MEAT	Pepperoni Lover's®	12" Medium Homestyle	1 slice= 1/12 pizza	180	9	320	17	10
+MEAT	Meat Lover's®	12" Medium Pan	1 slice= 1/12 pizza	210	10	330	20	10
+MEAT	Meat Lover's®	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	190	8	410	18	10
+MEAT	Meat Lover's®	12" Medium Homestyle	1 slice= 1/12 pizza	190	9	360	17	10
+MEAT	Smokey Maple Bacon	12" Medium Pan	1 slice= 1/12 pizza	160	7	230	19	6
+MEAT	Smokey Maple Bacon	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	140	5	310	17	6
+MEAT	Smokey Maple Bacon	12" Medium Homestyle	1 slice= 1/12 pizza	140	5	260	16	6
+MEAT	Supreme Lover's™	12" Medium Pan	1 slice= 1/12 pizza	200	9	300	20	10
+MEAT	Supreme Lover's™	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	180	7	380	19	9
+MEAT	Supreme Lover's™	12" Medium Homestyle	1 slice= 1/12 pizza	170	8	320	17	10
+MEAT	Pepperoni Only	12" Medium Pan	1 slice= 1/12 pizza	180	8	240	19	8
+MEAT	Pepperoni Only	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	160	6	310	18	8
+MEAT	Pepperoni Only	12" Medium Homestyle	1 slice= 1/12 pizza	150	7	260	16	8
+MEAT	Super Supreme	12" Medium Pan	1 slice= 1/12 pizza	200	9	300	20	9
+MEAT	Super Supreme	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	170	7	410	18	9
+MEAT	Super Supreme	12" Medium Homestyle	1 slice= 1/12 pizza	170	7	320	17	9
+CHICKEN	Chicken Lover's™	12" Medium Pan	1 slice= 1/12 pizza	170	6	230	20	8
+CHICKEN	Chicken Lover's™	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	140	5	300	18	8
+CHICKEN	Chicken Lover's™	12" Medium Homestyle	1 slice= 1/12 pizza	140	5	250	17	8
+CHICKEN	Chicken Caesar	12" Medium Pan	1 slice= 1/12 pizza	180	8	310	20	8
+CHICKEN	Chicken Caesar	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	150	6	380	18	8
+CHICKEN	Chicken Caesar	12" Medium Homestyle	1 slice= 1/12 pizza	150	6	330	16	8
+CHICKEN	Creamy Butter Chicken	12" Medium Pan	1 slice= 1/12 pizza	170	7	250	21	8
+CHICKEN	Creamy Butter Chicken	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	150	5	320	19	8
+CHICKEN	Creamy Butter Chicken	12" Medium Homestyle	1 slice= 1/12 pizza	150	5	270	17	8
+CHICKEN	BBQ Chicken	12" Medium Pan	1 slice= 1/12 pizza	170	6	290	22	7
+CHICKEN	BBQ Chicken	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	140	4	360	21	6
+CHICKEN	BBQ Chicken	12" Medium Homestyle	1 slice= 1/12 pizza	140	4	310	19	7
+CHICKEN	Grilled Chicken Arrabbiatta	12" Medium Pan	1 slice= 1/12 pizza	180	7	170	21	8
+CHICKEN	Grilled Chicken Arrabbiatta	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	150	5	310	19	8
+CHICKEN	Grilled Chicken Arrabbiatta	12" Medium Homestyle	1 slice= 1/12 pizza	140	5	260	17	8
+CHICKEN	Grilled Chicken Rustico	12" Medium Pan	1 slice= 1/12 pizza	170	6	230	20	8
+CHICKEN	Grilled Chicken Rustico	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	250	10	550	27	13
+CHICKEN	Grilled Chicken Rustico	12" Medium Homestyle	1 slice= 1/12 pizza	140	5	260	17	8
+VEGGIE	Veggie Lover's®	12" Medium Pan	1 slice= 1/12 pizza	160	6	200	20	7
+VEGGIE	Veggie Lover's®	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	140	4	270	19	7
+VEGGIE	Veggie Lover's®	12" Medium Homestyle	1 slice= 1/12 pizza	140	5	220	17	7
+VEGGIE	Greek	12" Medium Pan	1 slice= 1/12 pizza	160	6	280	20	6
+VEGGIE	Greek	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	140	5	360	19	6
+VEGGIE	Greek	12" Medium Homestyle	1 slice= 1/12 pizza	140	5	310	17	6
+VEGGIE	Margherita	12" Medium Pan	1 slice= 1/12 pizza	140	5	290	18	7
+VEGGIE	Margherita	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	140	5	290	18	7
+VEGGIE	Margherita	12" Medium Homestyle	1 slice= 1/12 pizza	140	5	240	17	7
+CHEESE	Cheese Lover's®	12" Medium Pan	1 slice= 1/12 pizza	190	8	250	20	9
+CHEESE	Cheese Lover's®	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	160	6	320	18	9
+CHEESE	Cheese Lover's®	12" Medium Homestyle	1 slice= 1/12 pizza	160	7	270	17	9
+CHEESE	Cheese Only	12" Medium Pan	1 slice= 1/12 pizza	180	7	220	20	8
+CHEESE	Cheese Only	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	150	5	290	18	8
+CHEESE	Cheese Only	12" Medium Homestyle	1 slice= 1/12 pizza	150	6	240	16	8
+CHEESE	Poutine Pizza	12" Medium Pan	1 slice= 1/12 pizza	200	9	300	23	8
+CHEESE	Poutine Pizza	12" Medium Thin 'N Crispy®	1 slice= 1/12 pizza	180	7	370	21	7
+CHEESE	Poutine Pizza	12" Medium Homestyle	1 slice= 1/12 pizza	180	8	320	20	7
+CHEESE	Kids Menu/School Lunch Program	Kids Spaghetti with Tomato sauce (with Carrot & Celery Sticks)	1 order	330	4	631	62	15
+CHEESE	Kids Menu/School Lunch Program	Kids Spaghetti with Tomato Sauce (with Health Check Italian House Side Salad)	1 order	340	5	740	60	16

@@ -815,7 +815,8 @@ function generic(item: FixedItem): Recipe {
 
 /** Does the item come on bread (bun, tortilla, muffin…)? Uses official parts when available. */
 function onBread(item: FixedItem): boolean {
-  if (item.parts?.some((p) => /bun|tortilla|muffin|bagel|griddles|bread|biscuit|pita/i.test(p.name))) return true
+  const bread = /bun|tortilla|muffin|bagel|griddles|bread|biscuit|pita/i
+  if ([...(item.parts ?? []), ...(item.ingredients ?? [])].some((p) => bread.test(p.name))) return true
   return words(item)('sandwich', 'burger', 'royale', 'mcchicken', 'mccrispy', 'zinger', 'wrap', 'big mary', 'junior chicken', 'club', 'sub')
 }
 
@@ -967,6 +968,76 @@ function componentsFromParts(item: FixedItem): IngredientComponent[] | null {
   return buildComponents(t, specs)
 }
 
+/** Typical calories of one serving of an ingredient, from its name. */
+function typicalCal(name: string): number {
+  const n = name.toLowerCase()
+  const has = (...w: string[]) => w.some((x) => n.includes(x))
+  if (has('large beef patty')) return 300
+  if (has('small beef patty')) return 110
+  if (has('plant-based patty', 'veggie patty')) return 250
+  if (has('patty') && has('sausage')) return 200
+  if (has('beef patty')) return 220
+  if (has('sausage')) return 150
+  if (has('cruncher chicken')) return 400
+  if (has('chicken buddy')) return 150
+  if (has('chicken strip')) return 100
+  if (has('chicken')) return 300
+  if (has('fish')) return 350
+  if (has('eggs')) return 160
+  if (has('egg')) return 80
+  if (has('bacon')) return 70
+  if (has('cheese curds')) return 180
+  if (has('cheese')) return 60
+  if (has('hash brown', 'hashbrown')) return 180
+  if (has('fries')) return 300
+  if (has('pancake')) return 120
+  if (has('toast')) return 80
+  if (has('english muffin')) return 140
+  if (has('hamburger bun')) return 150
+  if (has('bun')) return 200
+  if (has('tortilla')) return 180
+  if (has('margarine', 'butter')) return 35
+  if (has('syrup')) return has('table') ? 200 : 40
+  if (has('gravy', 'poutine sauce')) return 100
+  if (has('coleslaw')) return 50
+  if (has('tartar', 'mayo', 'aioli', 'teen', 'mozza', 'chipotle', 'sauce', 'ranch')) return 80
+  if (has('glaze')) return 40
+  if (has('ketchup')) return 15
+  if (has('mustard')) return 5
+  if (has('grilled onion')) return 10
+  if (has('pickle')) return 2
+  if (has('lettuce', 'tomato', 'onion')) return 5
+  if (has('milk', 'oat beverage', 'cream')) return 120
+  if (has('espresso')) return 5
+  return 60
+}
+
+/** Names that are cooking media / seasoning rather than removable toppings. */
+const NOT_A_TOPPING = /seasoning|pan coating|frying oil|^batter|breadcrumbs|^salt$|^-$|creamer \(for|kraft (liquid|pure|peanut|raspberry|blueberry|table syrup)/i
+
+/** Build components from the restaurant's ingredient names, or null if too few. */
+function componentsFromIngredients(item: FixedItem): IngredientComponent[] | null {
+  const t = item.nutrition
+  const seen = new Set<string>()
+  const list = (item.ingredients ?? []).filter((g) => {
+    const key = g.name.trim().toLowerCase()
+    if (!key || NOT_A_TOPPING.test(key) || seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
+  if (list.length < 2 || t.calories <= 0) return null
+
+  // Known (officially derived) calories stay as-is; the rest share what's left.
+  const known = list.reduce((s, g) => s + (g.cal ?? 0), 0)
+  const unknown = list.filter((g) => g.cal == null)
+  const typical = unknown.reduce((s, g) => s + typicalCal(g.name), 0)
+  const room = t.calories - known
+  if (room < 0 || (unknown.length > 0 && typical <= 0)) return null
+  const k = unknown.length ? room / typical : 0
+  const parts = list.map((g) => ({ name: g.name, cal: Math.round(g.cal ?? typicalCal(g.name) * k) }))
+  return componentsFromParts({ ...item, parts })
+}
+
 /** Drop "Add X" extras when X is already in the item (keep "Extra X"). */
 function relevantExtras(extras: Extra[], present: IngredientComponent[]): Extra[] {
   const names = present.map((c) => c.name.toLowerCase())
@@ -997,6 +1068,10 @@ export function componentsFor(item: FixedItem): IngredientComponent[] {
   if (item.parts && item.parts.length > 0) {
     const official = componentsFromParts(item)
     if (official) return [...official, ...extrasToComponents(relevantExtras(recipe.extras, official))]
+  }
+  if (item.ingredients && item.ingredients.length > 0) {
+    const named = componentsFromIngredients(item)
+    if (named) return [...named, ...extrasToComponents(relevantExtras(recipe.extras, named))]
   }
   if (item.components && item.components.length > 0) {
     const hasExtras = item.components.some((c) => c.default === false)

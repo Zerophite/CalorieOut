@@ -13,7 +13,7 @@ for (const r of restaurants) {
   for (const base of menu) {
     if (base.kind !== 'fixed') continue
     const variants = base.sizes && base.sizes.length > 1
-      ? base.sizes.map((s) => ({ ...base, name: `${base.name} [${s.label}]`, nutrition: s.nutrition, components: s.components, sizes: undefined }))
+      ? base.sizes.map((s) => ({ ...base, name: `${base.name} [${s.label}]`, nutrition: s.nutrition, components: s.components, ingredients: s.ingredients ?? base.ingredients, sizes: undefined }))
       : [base]
     for (const it of variants) {
     items++
