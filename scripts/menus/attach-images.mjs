@@ -9,6 +9,7 @@ const normName = (s) =>
   String(s)
     .toLowerCase()
     .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
     .replace(/[®™©]/g, '')
     .replace(/[^a-z0-9&]+/g, ' ')
     .replace(/\band\b/g, '&')
@@ -17,7 +18,8 @@ const normName = (s) =>
     .trim()
 
 const STOP = new Set(['&', 'of', 'the', 'with', 'a', 'side', 'new', 'single', 'regular', 'large', 'small', 'medium'])
-const MULTI = /\b(combo|pack|box|bucket|platter|family|meal)\b/
+const FORMS = new Set(['wrap', 'salad', 'bowl', 'sub', 'sandwich', 'pizza', 'burrito', 'taco', 'quesadilla', 'soup', 'poutine', 'pita', 'ciabatta', 'shake', 'smoothie', 'cookie', 'fries', 'nachos', 'pasta', 'sundae', 'blizzard', 'cone', 'float', 'latte', 'tea', 'coffee', 'muffin', 'bagel', 'donut', 'combo'])
+const MULTI =/\b(combo|pack|box|bucket|platter|family|meal)\b/
 
 function attachImages(file, items) {
   const path = `scripts/menus/images/${file}.json`
@@ -43,7 +45,12 @@ function attachImages(file, items) {
     const sizeOnly = (rest) => rest.split(' ').every((t) => STOP.has(t))
     if (!url && bare.length >= 3) {
       const k = keys
-        .filter((x) => x.startsWith(bare + ' ') && (!single || sizeOnly(x.slice(bare.length + 1))))
+        .filter((x) => {
+          if (!x.startsWith(bare + ' ')) return false
+          const rest = x.slice(bare.length + 1)
+          // "Berry Smoothie" never takes "Berry Smoothie Bowl"'s photo.
+          return single ? sizeOnly(rest) : !rest.split(' ').some((t) => FORMS.has(t))
+        })
         .sort((a, b) => a.length - b.length)[0]
       if (k) url = map[k]
     }
@@ -53,17 +60,25 @@ function attachImages(file, items) {
       const k = keys
         .filter((x) => multi || !MULTI.test(x))
         .map((x) => ({ x, w: x.split(' ').filter((t) => !STOP.has(t)) }))
-        .filter(({ w }) => words.length > 0 && words.every((t) => w.includes(t)) && w.length <= words.length + (single ? 0 : 1))
+        .filter(
+          ({ w }) =>
+            words.length > 0 &&
+            words.every((t) => w.includes(t)) &&
+            w.length <= words.length + (single ? 0 : 1) &&
+            !w.some((t) => FORMS.has(t) && !words.includes(t)),
+        )
         .sort((a, b) => a.w.length - b.w.length || a.x.length - b.x.length)[0]
       if (k) url = map[k.x]
     }
     if (!url && bare.length >= 3) {
       // The photo's name is contained in the item's name ("Egg BLT Bagel" for "Egg BLT Bagel with Plain Bagel").
+      // Never across product types: a wrap doesn't take the sub's photo.
       const words = new Set(bare.split(' '))
+      const forms = [...words].filter((t) => FORMS.has(t))
       const k = keys
         .filter((x) => !MULTI.test(x) || MULTI.test(bare))
         .map((x) => ({ x, w: x.split(' ').filter((t) => !STOP.has(t)) }))
-        .filter(({ w }) => w.length >= 2 && w.every((t) => words.has(t)))
+        .filter(({ w }) => w.length >= 2 && w.every((t) => words.has(t)) && (!w.some((t) => FORMS.has(t)) || forms.every((f) => w.includes(f))))
         .sort((a, b) => b.w.length - a.w.length)[0]
       if (k) url = map[k.x]
     }

@@ -11,6 +11,7 @@ const norm = (s) =>
   String(s)
     .toLowerCase()
     .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
     .replace(/[®™©]/g, '')
     .replace(/&amp;/g, '&')
     .replace(/[^a-z0-9&]+/g, ' ')
@@ -97,20 +98,6 @@ async function kettlemans() {
   return map
 }
 
-// Boston Pizza: each menu category page (bostonpizza.com/en/menu/<category>.html) shows its dishes with photos.
-async function bostonpizza() {
-  const map = {}
-  for (const cat of ['apps-and-shareables', 'bowls-and-salads', 'desserts', 'kids-menu', 'mains', 'pasta', 'pizza', 'sandwiches']) {
-    const html = await (await fetch(`https://bostonpizza.com/en/menu/${cat}.html`, { headers: { 'User-Agent': 'Mozilla/5.0' } })).text()
-    for (const m of html.matchAll(/src="(\/content\/dam\/bostonpizza\/menu-images\/[^"]*?\/([a-z0-9-]+)\/images\/[^"]+\.(?:png|jpe?g|webp))"/gi)) {
-      const [, src, slug] = m
-      const name = slug.replace(/-/g, ' ')
-      if (!map[norm(name)]) map[norm(name)] = `https://bostonpizza.com${src}`
-    }
-  }
-  return map
-}
-
 // A&W: the menu site serves each product's photo from /i/menu/?i=<slug>; slugs come from raw/aw.json.
 async function aw() {
   const raw = JSON.parse(fs.readFileSync(path.join(__dirname, 'raw', 'aw.json'), 'utf8'))
@@ -177,7 +164,6 @@ async function freshii() {
 // Our item name → the chain's own product name, where the two differ.
 const ALIASES = {
   aw: { Latte: 'Latte Small 2 Milk', Tea: 'Teas', Poutine: 'Poutine English Canada' },
-  bostonpizza: { 'Deluxe Pizza': 'Deluxe' },
   freshii: {
     'Build Your Bowl': 'Create Your Own Bowl',
     "Buddha's Satay Bowl with Chicken": 'Buddha Satay Bowl',
@@ -188,9 +174,7 @@ const ALIASES = {
     'Teriyaki Bowl with Chicken': 'Teriyaki Twiist Bowl',
     'Teriyaki Twist Burrito': 'Teriyaki Twiist Burrito',
     'Tuna Poke Bowl': 'Poke Tuna',
-    'Spicy Tuna Poke Bowl': 'Poke Tuna',
     'Salmon Poke Bowl': 'Poke Salmon',
-    'Spicy Salmon Poke Bowl': 'Poke Salmon',
     'Shrimp Poke Bowl': 'Poke Shrimps',
     'Tofu Poke Bowl': 'Poke Tofu',
     'Berrii Crunchii Salad': 'Berrii Crunch',
@@ -208,6 +192,40 @@ const ALIASES = {
     'Seasoned French Fries': 'Fries',
     'Coleslaw Salad': 'Homestyle Coleslaw',
     'Lipton Brisk Tea': 'Brisk Iced Tea',
+    '7 UP': '7up',
+    'Big Crunch': 'Big Crunch Sandwich',
+  },
+}
+
+// Photos from the chain's ordering site (content.tacitcorp.ca) for items its menu pages don't show.
+const T = 'https://content.tacitcorp.ca/restaurants/'
+const EXTRA = {
+  freshii: {
+    "Chicken Pesto Parm Bowl": T + 'ef475ba5823a411ebcb2dd4b28ebd012_D@2x.jpeg',
+    "Combo Poke Bowl (Tuna & Salmon)": T + '7232753954d7477cbca8641c0fff461e_D@2x.png',
+    "Spicy Salmon Poke Bowl": T + '807fe8cd0ba94914bd15f6a77c0e4473_D@2x.png',
+    "Spicy Tuna Poke Bowl": T + '7d881f30e5804a73816f03285e26ee06_D@2x.png',
+    "Habibi Bowl": T + 'cc725404519b4c2f92ea61bf94b0a308_D@2x.jpeg',
+    "Harmony Bowl": T + '4079528b73e948279c41a8687bb6ca18_D@2x.png',
+    "Protein Power Bowl": T + 'fee1f829888d44c6bbc37dfad4d62053_D@2x.png',
+    "Macro Balance Bowl": T + '77eeba310c87465a96c2315ec093cdf9_D@2x.png',
+    "Hot Honey Mustard Bowl with Chicken": T + '1bb466a295ca4a389034a8a894c1e115_D@2x.jpeg',
+    "Mercado Sol Bowl with Chicken": T + 'fa4491aa9657411daa4b28512879f640_D@2x.png',
+    "Kale Caesar Bowl": T + 'daa70c30052c42e380ad862e26ed15bb_D@2x.jpeg',
+    "Chicken Pesto Cranberry Pocket": T + '3a6c537692854dbfaf16560e36fdbcf1_D@2x.png',
+    "Spicy BBQ Chicken Pocket": T + 'b41e11145da44fce9c790e247e1b56f5_D@2x.png',
+    "Chipotle Steak Pocket": T + '0b0026ed31be48cca3ccfe43bd758d3a_D@2x.png',
+    "Kids' Cheesy Chicken Pocket": T + '09c949fd189c4e778ea426105ba6017c_D@2x.jpeg',
+    "Super Kids Salad": T + '0c901c25fe1c45c8822224cf9c189569_D@2x.jpeg',
+    "Lean Power Greens Smoothie": T + 'a455177469154d6abca8307525478269_D@2x.jpeg',
+    "Spicy Lemongrass Soup": T + '23aec53735f6418382ccd6ba8680f72e_D@2x.jpeg',
+    "Berry Litt Smoothie Bowl": T + '71e91d23dd254500931f59976b2712c8_D@2x.jpeg',
+    "Golden Tropical Elixir Smoothie Bowl": T + '71e91d23dd254500931f59976b2712c8_D@2x.jpeg',
+    "Lean Power Greens Smoothie Bowl": T + '71e91d23dd254500931f59976b2712c8_D@2x.jpeg',
+    "Strawberry Banana Smoothie Bowl": T + '71e91d23dd254500931f59976b2712c8_D@2x.jpeg',
+    "Chocolate Peanut Butter Smoothie Bowl": T + '71e91d23dd254500931f59976b2712c8_D@2x.jpeg',
+    "Freshii Green Smoothie Bowl": T + '71e91d23dd254500931f59976b2712c8_D@2x.jpeg',
+    "Mixed Berrii Smoothie Bowl": T + '71e91d23dd254500931f59976b2712c8_D@2x.jpeg',
   },
 }
 
@@ -217,7 +235,6 @@ const BRANDS = {
   wendys,
   aw,
   kettlemans,
-  bostonpizza,
   tacobell,
   starbucks,
   timhortons: () => sanity(SANITY.timhortons),
@@ -229,6 +246,7 @@ const BRANDS = {
   const brand = process.argv[2]
   if (!BRANDS[brand]) throw new Error(`Unknown brand "${brand}". Use one of: ${Object.keys(BRANDS).join(', ')}`)
   const map = await BRANDS[brand]()
+  for (const [ours, url] of Object.entries(EXTRA[brand] || {})) map[norm(ours)] = url
   for (const [ours, theirs] of Object.entries(ALIASES[brand] || {})) if (map[norm(theirs)]) map[norm(ours)] = map[norm(theirs)]
   // Drop photos that don't actually load (retired items still listed in a feed).
   const entries = Object.entries(map)

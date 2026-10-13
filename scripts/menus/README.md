@@ -160,23 +160,34 @@ app loads it straight from the restaurant's own CDN, lazily, hiding it if it
 fails to load.
 
 - **Fetched by script** (`fetch-images.cjs`): Tim Hortons, Burger King and
-  Firehouse Subs (Sanity), Starbucks, Taco Bell, Wendy's, KFC, Freshii, A&W,
-  Kettleman's and Boston Pizza (featured dishes only). Photos that don't load
-  are dropped, and `ALIASES` maps our item names to the chain's own product
-  names where they differ.
-- **Captured in a browser** (sites that render their menu with JavaScript or
-  block scripted requests): McDonald's, Harvey's, Swiss Chalet, Pizza Hut,
+  Firehouse Subs (Sanity), Starbucks, Taco Bell, Wendy's, KFC, Freshii, A&W and
+  Kettleman's. Photos that don't load are dropped, `ALIASES` maps our item
+  names to the chain's own product names where they differ, and `EXTRA` adds
+  photos from the chain's ordering site for items its menu pages don't show.
+- **Captured in a browser** (menus that only render with JavaScript, block
+  scripted requests, or appear only on the chain's ordering site after picking
+  a store): McDonald's, Subway, Harvey's, Swiss Chalet, Boston Pizza, Pizza Hut,
   Dairy Queen, The WORKS, Pita Pit, Osmow's, Tahini's, MUCHO Burrito, Bar
   Burrito, Mary Brown's, Thai Express, Manchu Wok, Noodlebox and Mad Radish.
-  These files are keyed by our own item names; refresh them by hand from the
-  chain's menu pages.
-- Not covered: Subway (its menu page doesn't load), Little Caesars and Red Swan
-  (menu only inside an order flow), and the local spots.
+  These files are keyed by our own item names; refresh them by hand.
+- **Local spots** (`images/local/<id>.json`, attached by `gen-local.ts`):
+  photos from the spot's own website or ordering page where it shows them —
+  Kinton, 3 Brothers, Sushi Sama, Shawarma Prince, CoCo, Suzy Q, St. Louis and
+  Lone Star.
+- Where a chain shows one official photo per format rather than per recipe,
+  every item of that format uses it: Pita Pit's signature items (its pita /
+  rice bowl / salad photos), Thai Express stir-fries and Shak-a-Bowls, Freshii
+  smoothie bowls and Lone Star fajitas.
+- Not covered: Little Caesars, Red Swan and Gabriel Pizza (their menus only
+  appear after starting an order), and items a chain doesn't picture anywhere
+  (mostly bottled drinks, sauces and some breakfast items).
 
-A one-word item name only takes a longer photo name when the extra words are
-sizes ("Latte" → "Latte Small"), never another dish ("Banana" ≠ "Banana
-Split"). `images/exclude.json` lists items whose closest photo shows a
-different dish.
+Matching never crosses a product type ("Berry Smoothie" doesn't take "Berry
+Smoothie Bowl"'s photo, and a wrap doesn't take the sub's), and a one-word item
+name only takes a longer photo name when the extra words are sizes ("Latte" →
+"Latte Small"), never another dish ("Banana" ≠ "Banana Split"). Accents are
+ignored ("Jalapeño" = "Jalapeno"). `images/exclude.json` lists items whose
+closest photo shows a different dish.
 
 ```bash
 npm run menus:images -- timhortons   # then regenerate that chain

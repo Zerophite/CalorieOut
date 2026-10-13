@@ -32,6 +32,7 @@ import type { FixedItem, MealCategory, Nutrition } from '../../src/types'
 import { ARCHETYPES, atCalories, scaled } from './estimate'
 import { componentsFromNames } from './ingredients'
 import { idMaker, tagsFor } from './lib'
+import { attachImages } from './attach-images.mjs'
 
 const DIR = 'scripts/menus/local'
 const OUT = 'src/data/menus/local'
@@ -175,6 +176,8 @@ for (const s of spots) {
   s.items.forEach((it, i) => first.has(it.category) || first.set(it.category, i))
   const items = [...s.items].sort((a, b) => first.get(a.category)! - first.get(b.category)!)
   s.items = items
+  // Photos from the spot's own website, where it shows them (images/local/<id>.json).
+  attachImages(`local/${s.id}`, items)
   const body = items.map((it) => '  ' + JSON.stringify(it).replace(/"(\w+)":/g, '$1: ')).join(',\n')
   fs.writeFileSync(
     path.join(OUT, `${s.id}.items.ts`),

@@ -1,5 +1,40 @@
 {
- "swisschalet": ["Loaded Baked Potato Soup with Rotisserie Chicken - Family Size"],
- "kfc": ["Popcorn Chicken Poutine"],
- "tahinis": ["Butter Chicken and Rice Bowl"]
+ "swisschalet": [
+  "Loaded Baked Potato Soup with Rotisserie Chicken - Family Size"
+ ],
+ "kfc": [
+  "Popcorn Chicken Poutine"
+ ],
+ "subway": [
+  "B.L.T. Wrap",
+  "Italian B.M.T. Wrap",
+  "Meatball Marinara Wrap",
+  "Veggie Patty Wrap",
+  "Cold Cut Combo Wrap",
+  "Pizza Sub Wrap",
+  "Black Forest Ham Salad",
+  "Italian B.M.T. Salad",
+  "Meatball Marinara Salad",
+  "Turkey Breast Salad",
+  "Veggie Patty Salad",
+  "Cold Cut Combo Salad",
+  "Pizza Sub Melt Salad",
+  "Bourbon BBQ Steak & Cheddar Power Bowl",
+  "Smashed Avocado & Turkey Power Bowl"
+ ],
+ "local/kinton-ramen": [
+  "Coca-Cola (355 mL)"
+ ],
+ "local/st-louis": [
+  "Southwest Quesadilla (per serving)"
+ ],
+ "local/coco": [
+  "Mango Green Tea",
+  "Grapefruit Green Tea",
+  "Passionfruit Green Tea",
+  "Green Tea Macchiato (Green Tea on Cloud)"
+ ],
+ "local/sushi-sama": [
+  "Tempura Shrimp Roll"
+ ]
 }
