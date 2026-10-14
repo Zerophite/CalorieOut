@@ -1,0 +1,84 @@
+id: kochu
+name: Kochu
+cuisine: Korean · Sushi
+accent: #dc2626
+segment: Fast Food
+source: Kochu's Uber Eats menu (Ottawa, 2026); no posted calories, so every dish is estimated
+
+[KOCHU Bowls]
+Stone Bibim Bowl = kr.bibimbap :: rice, beef, seasonal veggies, Japanese omelette, Kochu spicy sauce
+Bulgogi Bowl = kr.bulgogi-bowl :: rice, marinated beef, broccoli, carrots, zucchini, Kochu soy sauce
+Chicken mayo Bowl = kr.chicken-bowl :: rice, crispy chicken, marinated onion, scrambled eggs, nori flakes, mayo, teriyaki
+Japchae Noodle Bowl(Vegan) = kr.japchae-bowl :: sweet potato noodles, spinach, carrot, omelette, soy-marinated tofu
+Veggie Bowl = healthy.veg-bowl :: rice, avocado, soy-marinated tofu, zucchini, carrot, spinach, cabbage, omelette, Kochu soy sauce
+
+[KOCHU Bites]
+Sweet&Spicy Dakgangjeong(Glazed Fried Chicken) = kr.fried-chicken :: fried chicken, gochujang glaze, potato wedges, sweet corn, peppers, edamame, crispy onions
+Original Soy Dakgangjeong (Glazed Fried Chicken) = kr.fried-chicken :: fried chicken, sweet soy glaze, potato wedges, sweet corn, peppers, edamame, crispy onions
+Tteokbokki = kr.tteokbokki :: rice cakes, gochujang sauce, fish cakes, veggies
+Soy Tteokbokki = kr.tteokbokki :: rice cakes, soy sauce, veggies
+
+[KOCHU Gimbaps]
+Bulgogi Gimbap (10 pieces) = kr.gimbap x1.1 :: rice, marinated beef, carrot, spinach, cucumber, inari, pickled radish
+Chicken Katsu Gimbap (10 pieces) = kr.gimbap x1.2 :: rice, breaded chicken, Japanese omelette, cabbage, carrot, cucumber, katsu sauce, crispy onions
+Gimbap (10 pieces) = kr.gimbap :: rice, crab stick, pickled radish, cucumber, egg, carrot, spinach, fried tofu
+Veggie Gimbap (10 pieces) = kr.gimbap x0.9 :: rice, pickled radish, cucumber, egg, carrot, spinach, fried tofu
+
+[KOCHU Rolls]
+Crunch Salmon Roll (10 pieces) = maki.crispy x1.1 :: sushi rice, salmon, tempura flakes, spicy mayo, crab stick, avocado, cucumber
+Crunch Shrimp Roll (10 pieces) = maki.crispy x1.1 :: sushi rice, tempura shrimp, tempura flakes, spicy mayo, crab stick, avocado, cucumber
+Crunch Avo Roll (10 pieces) = maki.crispy x1.05 :: sushi rice, tempura shrimp, cucumber, mashed avocado, tempura flakes, teriyaki sauce
+Craving Salmon Roll (8 pieces) = maki.special :: sushi rice, tempura shrimp, cucumber, salmon, avocado, teriyaki sauce, spicy mayo
+Preston Roll = maki.special :: soybean paper, sushi rice, tempura shrimp, avocado, spicy salmon
+
+[Classic Rolls — 4 pieces]
+California Roll = maki.california x0.5 :: sushi rice, crab stick, cucumber, fish roe, avocado
+Crunchy California Roll = maki.crispy x0.5 :: sushi rice, crab stick, avocado, cucumber, tempura flakes, spicy mayo
+Salmon and Avocado Roll (GF) = maki.salmon-avocado x0.5
+Spicy Salmon Roll (GF) = maki.spicy-salmon x0.5
+Salmon Plus Roll = maki.spicy-salmon x0.55 :: sushi rice, salmon, spicy mayo, tempura flakes, cucumber
+Crazy Roll = maki.special x0.45 :: sushi rice, avocado, cream cheese, crab stick, spicy sauce
+Spicy Crab Roll = maki.california x0.5 :: sushi rice, spicy crab stick, cucumber
+Spicy Shrimp Tempura Roll = maki.tempura x0.5 :: sushi rice, tempura shrimp, spicy crab, cucumber, tempura flakes, spicy mayo
+Shrimp Tempura Roll = maki.tempura x0.5 :: sushi rice, tempura shrimp, avocado, tempura flakes, teriyaki sauce
+Chicken Tempura Roll = maki.tempura x0.5 :: sushi rice, fried chicken, avocado, tempura flakes, spicy mayo, teriyaki sauce
+Veggie Roll = maki.veg x0.75 :: sushi rice, carrot, fried tofu, avocado, cucumber
+Avocado Roll (GF) = maki.veg x0.67
+Avocado and Cucumber Roll (GF) = maki.veg x0.67
+Avocado and Cream Cheese Roll = maki.veg x0.8 :: sushi rice, avocado, cream cheese
+Cucumber Roll (GF) = maki.veg x0.6
+Tofu Roll = maki.veg x0.7 :: sushi rice, inari tofu
+Tamago Roll = maki.veg x0.7 :: sushi rice, sweet omelette
+Oshinko Roll = maki.veg x0.6 :: sushi rice, pickled radish
+
+[Sashimi & Nigiri]
+Sake Nigiri = nigiri.pc x2
+Sake Sashimi = sashimi.pc x3
+
+[Appetizers & dessert]
+Gyoza(beef, chicken, veggie, kimchi) = side.gyoza
+Japchae Spring Roll = side.spring-roll x1.2 :: rice paper, sweet potato noodles, veggies
+Stir fried sweet potato noodle (Japchae) = kr.japchae :: sweet potato noodles, veggies, soy sauce, sesame oil
+Edamame = side.edamame
+Inari = jp.inari
+Bulgogi Inari = jp.inari x1.3 :: rice, fried tofu pouch, bulgogi beef
+Seaweed Salad = side.seaweed-salad
+Shrimp Tempura = side.tempura x0.9
+Miso Soup = side.miso-soup
+Sesame Balls = dessert.sesame-balls
+Matcha Cheese Cake = dessert.cheesecake x0.8
+Yuzu Cheese Cake = dessert.cheesecake x0.8
+
+[Drinks]
+Green Plum Juice = drink.juice x1.4
+Oi Ocha (Japan's No1 Green tea brand) = coffee.tea
+Aloe Juice = drink.juice x1.4
+Ginger Ale = drink.soft
+Bubly = drink.water
+Pop = drink.soft
+
+[Extras]
+Steam Rice = side.steamed-rice x1.1
+Spicy Mayo = pub.dip
+Kochu Sause = pub.dip x0.4
+Teriyaki Sause = pub.dip x0.5

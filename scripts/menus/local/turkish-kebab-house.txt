@@ -1,0 +1,84 @@
+id: turkish-kebab-house
+name: Turkish Kebab House
+cuisine: Turkish · Charcoal grill
+accent: #b91c1c
+segment: Sit-Down
+source: Turkish Kebab House (Bank St) Uber Eats menu, 2026; no posted calories, so every dish is estimated
+
+[Mains — charcoal grill, with bulgur, onion salad, grilled tomato, ezme & cacik]
+Adana Kebab = tr.kebab-plate :: hand-minced beef, bread, bulgur, onion salad, grilled tomato, spicy ezme, cacik
+Beyti Kebab = tr.kebab-plate :: minced beef, lavash, bulgur, onion salad, grilled tomato, green pepper
+Köfte = tr.kebab-plate :: ground beef and ground lamb, bulgur, onion salad, grilled tomato, spicy ezme, cacik
+Chicken Shish = tr.chicken-plate :: chicken breast, bulgur, onion salad, grilled tomato, spicy ezme, cacik
+Chicken Chops = tr.chicken-plate x1.1 :: chicken thighs, bulgur, onion salad, grilled tomato, spicy ezme, cacik
+Chicken Wings = tr.chicken-plate x1.15 :: chicken wings, bulgur, onion salad, grilled tomato, spicy ezme, cacik
+Beef Shish = tr.kebab-plate x0.95 :: beef cubes, bulgur, onion salad, grilled tomato, spicy ezme, cacik
+Lamb Shish = tr.lamb-plate x0.95 :: lamb cubes, bulgur, onion salad, grilled tomato, spicy ezme, cacik
+Lamb Chops = tr.lamb-plate :: lamb chops, bulgur, onion salad, grilled tomato, spicy ezme, cacik
+
+[Specialty mains]
+Beyti Sarma Kebab = tr.iskender :: hand-minced beef, lavash, tomato sauce, butter, yoghurt
+Pideli Kofte (Iskender) = tr.iskender :: kofte, bread, tomato sauce, butter, yoghurt
+Ali Nazik = tr.iskender x0.9 :: adana kebab, smoked eggplant puree, yoghurt, butter
+
+[Mix grill / family platters]
+Mix Grill for 2 = tr.mixed-grill x2 :: adana kebab, chicken shish, beef shish, chicken wings, kofte, bread, bulgur, grilled tomatoes
+Mix Grill for 4 = tr.mixed-grill x4 :: adana kebab, chicken shish, beef shish, chicken wings, kofte, bread, bulgur, grilled tomatoes
+
+[Wraps]
+Adana Kebab Wrap = tr.kebab-wrap :: lavash, adana kebab, onion, tomato, parsley, fries
+Beyti Kebab Wrap = tr.kebab-wrap :: lavash, minced beef kebab, tomatoes, onions, parsley, fries
+Kofte Wrap = tr.kebab-wrap x0.95 :: lavash, kofte, tomatoes, onions, fries
+Chicken Shish Wrap = tr.kebab-wrap x0.9 :: lavash, chicken shish, tomatoes, onions, fries
+Tombik Kofte = tr.kebab-wrap :: tombik bread, kofte, lettuce, tomatoes, onions, fries
+
+[Fresh from the oven]
+Lahmacun = tr.lahmacun :: flatbread, beef mince, tomatoes, parsley, onions, onion salad, lettuce, lemon
+Cheese Pide = tr.pide x0.85 :: pide dough, mozzarella
+Spinach Pide = tr.pide x0.8 :: pide dough, spinach, red onion, mozzarella
+Vegetable Pide = tr.pide x0.8 :: pide dough, mozzarella, tomatoes, green pepper
+Kiymali Pide = tr.pide x0.95 :: pide dough, ground beef, green pepper, tomatoes
+Kuşbaşılı Pide = tr.pide :: pide dough, diced beef, green pepper, tomatoes
+Chicken Pide = tr.pide x0.95 :: pide dough, chicken, mozzarella, peppers
+Sucuk Pide = tr.pide x1.05 :: pide dough, sausage, mozzarella
+Mixed Meat Pide = tr.pide x1.15 :: pide dough, ground beef, diced beef, sausage, mozzarella
+Meat and Cheese (Calzone) = tr.pide x1.05 :: pide dough, ground beef, mozzarella, onion, green pepper, tomatoes
+
+[Appetizers — mezes]
+Hummus = tr.meze x1.2 :: chickpeas, tahini, olive oil
+Cacik = tr.meze x0.7 :: yoghurt, cucumber, garlic, herbs, olive oil
+Haydari = tr.meze :: strained yoghurt, garlic, dill, mint, olive oil
+Carrot Tarator = tr.meze x0.9 :: carrots, yoghurt, garlic
+Spicy Ezme = tr.meze x0.6 :: tomatoes, onions, green pepper, parsley, olive oil
+Eggplant in Tomato Sauce = tr.meze x1.1 :: eggplant, tomatoes, garlic, parsley, olive oil
+
+[Soups & salads]
+Lentil soup = healthy.soup x1.1
+Kaşik Salad = tr.salad :: tomatoes, cucumber, onion, parsley, pomegranate sauce, olive oil
+Nurdagi Salad = tr.salad x1.4 :: tomatoes, cucumber, onion, parsley, walnuts, pomegranate sauce, olive oil
+Mix Salad = tr.salad x0.8 :: lettuce, carrot, red cabbage, lemon, pomegranate juice
+Mediterranean Salad = side.greek-salad
+
+[Desserts]
+Künefe = tr.kunefe
+Baklava (2 pc) = dessert.baklava x2
+Baklava (4 pc) = dessert.baklava x4
+Havuç Dilimi (1 pc) = dessert.baklava x1.3
+Sütlaç = dessert.rice-pudding
+Tres Leches Cake = pastry.cake
+
+[Drinks]
+Ayran = drink.ayran
+Şalgam = drink.juice x0.3
+Nestea - Lemon = drink.soft x0.9
+Soft Drinks = drink.soft
+Mango Juice = drink.juice
+Pineapple Juice = drink.juice
+Natural Mineral Water = drink.water
+
+[Extras]
+Bulghur = side.rice
+Rice = side.rice
+Fries = pub.fries
+Yoghurt = tr.meze x0.6 :: yoghurt
+Slice of Pide = side.pita x0.5

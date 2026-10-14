@@ -63,6 +63,21 @@ export const ARCHETYPES: Record<string, Archetype> = {
   'dessert.baklava': A([230, 4, 26, 13, 120], 'Desserts', '1 piece', 'baklava'),
   'dessert.churros': A([380, 5, 48, 19, 250], 'Desserts', '1 order', 'churros'),
 
+  // --- Turkish grill -------------------------------------------------------------------------------
+  'tr.kebab-plate': A([1100, 58, 92, 52, 2300], 'Mains', 'with bulgur & sides', 'adana kebab plate'),
+  'tr.chicken-plate': A([950, 66, 90, 34, 2000], 'Mains', 'with bulgur & sides', 'chicken shish plate'),
+  'tr.lamb-plate': A([1200, 60, 85, 66, 2000], 'Mains', 'with bulgur & sides', 'lamb chops plate'),
+  'tr.mixed-grill': A([1350, 92, 80, 70, 2900], 'Mains', 'per person', 'mixed grill platter'),
+  'tr.iskender': A([1200, 55, 85, 70, 2600], 'Mains', '1 plate', 'iskender kebab'),
+  'tr.kebab-wrap': A([900, 40, 98, 38, 2000], 'Wraps', 'with fries', 'kebab wrap'),
+  'tr.pide': A([1100, 50, 130, 40, 2400], 'Pizza', '1 pide', 'turkish pide'),
+  'tr.lahmacun': A([600, 28, 80, 18, 1400], 'Pizza', '1 lahmacun', 'lahmacun'),
+  'tr.meze': A([180, 4, 12, 13, 400], 'Sides', '1 dish', 'turkish meze'),
+  'tr.salad': A([200, 3, 15, 15, 400], 'Salads', '1 salad', 'turkish salad'),
+  'tr.kunefe': A([600, 14, 70, 30, 400], 'Desserts', '1 order', 'kunefe'),
+  'dessert.rice-pudding': A([300, 8, 50, 7, 120], 'Desserts', '1 bowl', 'rice pudding'),
+  'drink.ayran': A([110, 6, 8, 6, 400], 'Drinks', '1 bottle', 'ayran'),
+
   // --- BBQ & grill ----------------------------------------------------------------------------------
   'bbq.brisket-plate': A([1050, 60, 70, 58, 2300], 'Mains', 'with 2 sides', 'brisket dinner'),
   'bbq.ribs-half': A([950, 55, 40, 62, 1900], 'Mains', 'half rack', 'bbq beef ribs'),
@@ -127,6 +142,18 @@ export const ARCHETYPES: Record<string, Archetype> = {
   'jp.yaki-noodle': A([700, 26, 90, 24, 1900], 'Mains', '1 plate', 'yaki udon'),
   'jp.poke': A([650, 32, 75, 22, 1400], 'Bowls & Burritos', '1 bowl', 'salmon poke bowl'),
   'jp.donburi-fish': A([700, 35, 95, 16, 1200], 'Bowls & Burritos', '1 bowl', 'salmon rice bowl'),
+  'jp.inari': A([300, 7, 50, 8, 600], 'Sides', '3 pieces', 'inari'),
+
+  // --- Korean ---------------------------------------------------------------------------------------
+  'kr.bibimbap': A([750, 30, 95, 26, 1500], 'Bowls & Burritos', '1 bowl', 'bibimbap'),
+  'kr.bulgogi-bowl': A([780, 36, 95, 26, 1600], 'Bowls & Burritos', '1 bowl', 'bulgogi rice bowl'),
+  'kr.chicken-bowl': A([900, 38, 100, 36, 1600], 'Bowls & Burritos', '1 bowl', 'crispy chicken mayo rice bowl'),
+  'kr.japchae-bowl': A([650, 18, 100, 20, 1300], 'Bowls & Burritos', '1 bowl', 'japchae noodle bowl'),
+  'kr.fried-chicken': A([1300, 55, 120, 65, 2600], 'Chicken', '1 order', 'korean glazed fried chicken'),
+  'kr.tteokbokki': A([700, 15, 140, 8, 2200], 'Mains', '1 order', 'tteokbokki'),
+  'kr.gimbap': A([480, 15, 80, 10, 900], 'Mains', '10 pieces', 'gimbap'),
+  'kr.japchae': A([420, 8, 70, 12, 900], 'Sides', '1 order', 'japchae'),
+  'dessert.sesame-balls': A([350, 5, 50, 14, 100], 'Desserts', '5 pieces', 'sesame balls'),
 
   // --- Bubble tea (regular ~500–700 mL, standard sweetness) ---------------------------------------
   'bt.milk-tea': A([400, 4, 72, 9, 90], 'Drinks', 'regular', 'milk tea'),

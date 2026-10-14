@@ -3,31 +3,71 @@ name: Streats Kitchen
 cuisine: Global street food
 accent: #f59e0b
 segment: Fast Food
-source: strEATS Kitchens (streatskitchens.com lists tacos, burritos, bowls, smash burgers and poutine; items vary by location)
+source: strEATS Kanata Kitchen Uber Eats menu, 2026; no posted calories, so every dish is estimated
 
-[Tacos — 3 per order]
-Butter Chicken Tacos = tex.tacos x1.05 :: tortillas, butter chicken, slaw, cilantro, crema
-Korean BBQ Beef Tacos = tex.tacos x1.1 :: tortillas, Korean beef, kimchi slaw, sesame, spicy mayo
-Baja Fish Tacos = tex.tacos :: tortillas, battered fish, slaw, pico de gallo, lime crema
-Birria Tacos = tex.tacos x1.15 :: tortillas, birria beef, cheese, onion, cilantro, consommé
-Cauliflower Tacos = tex.tacos x0.85 :: tortillas, crispy cauliflower, slaw, chipotle mayo
+[Tacos — 1 taco]
+Baja Fish Taco = tex.tacos x0.4 :: tortilla, battered fish, pico de gallo, cabbage, chipotle aioli
+Chicken Taco = tex.tacos x0.35 :: tortilla, chicken, pico de gallo, cabbage, cilantro lime crema, chipotle aioli
+Beef Taco = tex.tacos x0.37 :: tortilla, beef, pico de gallo, cabbage, cilantro lime crema, chipotle aioli
+Mango Shrimp Taco = tex.tacos x0.4 :: tortilla, coconut shrimp, sweet chili, cabbage, mango salsa, cilantro lime crema
+Buffalo Chicken Taco = tex.tacos x0.4 :: tortilla, crispy chicken, buffalo sauce, celery, carrots, cabbage, ranch
+Gochujang Chicken Taco = tex.tacos x0.4 :: tortilla, crispy chicken, gochujang, carrots, red cabbage, pico de gallo
+PERi-PERi Chicken Taco = tex.tacos x0.4 :: tortilla, crispy chicken, hot sauce, cabbage, peppers, mayo
+Jerk Chicken Taco = tex.tacos x0.4 :: tortilla, crispy chicken, jerk sauce, cabbage, mango salsa, aioli
+~Cauliflower Taco = tex.tacos x0.35 :: tortilla, crispy cauliflower, pico de gallo, cabbage, cilantro lime crema, chipotle aioli
+
+[Bowls — rice & black beans]
+Chicken Bowl = tex.bowl :: rice, black beans, chicken, pico de gallo, cabbage, cilantro lime crema, chipotle aioli
+Beef Bowl = tex.bowl x1.05 :: rice, black beans, beef, pico de gallo, cabbage, cilantro lime crema, chipotle aioli
+Baja Fish Bowl = tex.bowl x1.1 :: rice, black beans, battered fish, pico de gallo, cabbage, spinach, chipotle aioli
+Mango Shrimp Bowl = tex.bowl x1.1 :: rice, black beans, coconut shrimp, sweet chili, cabbage, mango salsa, cilantro lime crema
+Jerk Chicken Bowl = tex.bowl x1.1 :: rice, black beans, crispy chicken, jerk sauce, cabbage, mango salsa, aioli
+Gochujang Chicken Bowl = tex.bowl x1.1 :: rice, black beans, crispy chicken, gochujang, carrots, red cabbage, pico de gallo
+Buffalo Chicken Bowl = tex.bowl x1.1 :: rice, black beans, crispy chicken, buffalo sauce, celery, carrots, cabbage, ranch
+PERi-PERi Chicken Bowl = tex.bowl x1.1 :: rice, black beans, crispy chicken, hot sauce, cabbage, peppers, mayo
+~Cauliflower Bowl = tex.bowl x0.95 :: rice, black beans, crispy cauliflower, pico de gallo, cabbage, cilantro lime crema, chipotle aioli
+~Naked Burrito = tex.bowl x1.2 :: rice, black beans, chicken, pico de gallo, cabbage, cheese, sour cream, chipotle aioli
 
 [Burritos]
-Butter Chicken Burrito = tex.burrito :: tortilla, butter chicken, rice, cheese, slaw
-Korean BBQ Beef Burrito = tex.burrito x1.05 :: tortilla, Korean beef, rice, kimchi slaw, spicy mayo
-Chipotle Chicken Burrito = tex.burrito :: tortilla, chipotle chicken, rice, beans, cheese, salsa
+Chicken Burrito = tex.burrito :: tortilla, rice, black beans, chicken, pico de gallo, cabbage, cilantro lime crema, chipotle aioli
+Beef Burrito = tex.burrito x1.05 :: tortilla, rice, black beans, beef, pico de gallo, cabbage, cilantro lime crema, chipotle aioli
+Baja Fish Burrito = tex.burrito x1.1 :: tortilla, rice, black beans, battered fish, pico de gallo, cabbage, chipotle aioli
+Mango Shrimp Burrito = tex.burrito x1.1 :: tortilla, rice, black beans, coconut shrimp, sweet chili, cabbage, mango salsa
+Gochujang Chicken Burrito = tex.burrito x1.1 :: tortilla, rice, black beans, crispy chicken, gochujang, carrots, red cabbage
+Buffalo Chicken Burrito = tex.burrito x1.1 :: tortilla, rice, black beans, crispy chicken, buffalo sauce, celery, carrots, ranch
+PERi-PERi Chicken Burrito = tex.burrito x1.1 :: tortilla, rice, black beans, crispy chicken, hot sauce, cabbage, mayo
+Jerk Chicken Burrito = tex.burrito x1.1 :: tortilla, rice, black beans, crispy chicken, jerk sauce, cabbage, mango salsa
+~Cauliflower Burrito = tex.burrito :: tortilla, rice, black beans, crispy cauliflower, pico de gallo, cabbage, chipotle aioli
 
-[Bowls]
-Butter Chicken Bowl = bowl.butter-chicken x0.9
-Korean BBQ Beef Bowl = tex.bowl x1.05 :: rice, Korean beef, kimchi slaw, sesame, spicy mayo
-Chipotle Chicken Bowl = tex.bowl :: rice, chipotle chicken, beans, corn, cheese, salsa
+[Smash burgers & features]
+Smash Burger = pub.burger :: brioche bun, beef patties, cheese, burger sauce
+The Deluxe Streats Smash Burger = pub.burger x1.1 :: brioche bun, beef patties, cheese, burger sauce, lettuce, tomato
+The Double Deluxe Streats Smash Burger = pub.burger x1.7 :: brioche bun, beef patties, cheese, burger sauce, lettuce, tomato
+~Steak Frites = pub.steak :: steak, fries, peppercorn sauce
+~2pc Fish & Chips = fish.and-chips
+~10pc Fish & Chips = fish.and-chips x5
 
-[Smash burgers]
-Classic Smash Burger = pub.burger :: bun, smash patties, cheese, pickles, onions, burger sauce
-Bacon Smash Burger = pub.burger x1.15 :: bun, smash patties, bacon, cheese, burger sauce
+[Poutines & fries]
+Full Classic Poutine = pub.poutine
+Mini Classic Poutine = pub.poutine x0.6
+Buffalo Chicken Poutine = pub.loaded-poutine :: fries, crispy chicken, buffalo sauce, gravy, cheese curds, ranch
+Perogy Poutine = pub.loaded-poutine x1.1 :: fries, perogies, bacon, crispy onions, cheese, sour cream, cheese curds, gravy
+Mexican Poutine = pub.loaded-poutine :: fries, pulled beef, pico de gallo, sour cream, cheese, cheese curds, gravy
+Basic A** Fries = pub.fries
+Halloumi Fries = pub.mozza x0.9 :: halloumi, sweet chili, lemon
 
-[Poutine & fries]
-Loaded Butter Chicken Fries = pub.loaded-fries x1.05 :: fries, butter chicken, cheese curds, cilantro
-Classic Poutine = pub.poutine
-Korean Beef Poutine = pub.loaded-poutine
-Fries = pub.fries
+[Snacks]
+Mini Perogies = pub.mozza x0.6 :: perogies, crispy onions, bacon, sour cream
+Coconut Shrimp = side.tempura x0.7 :: coconut shrimp, sweet chili
+Thai Chicken Bites = side.karaage x0.8 :: fried chicken, sweet chili, green onion
+Chicken Fingers = pub.kids :: chicken strips, fries, ranch
+Chicken Quesadilla = pub.quesadilla x0.6
+Make It A Combo = pub.poutine x0.8 :: fries, cheese curds, gravy, pop
+
+[Beverages]
+Canned Pop = drink.soft
+Premium Pop = drink.soft
+Monster Energy = drink.energy x1.4
+Vitamin Water = drink.juice x0.7
+Chocolate Milk = coffee.hot-chocolate
+Dasani Water = drink.water

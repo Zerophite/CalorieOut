@@ -172,24 +172,26 @@ fails to load.
   These files are keyed by our own item names; refresh them by hand.
 - **Local spots** (`images/local/<id>.json`, attached by `gen-local.ts`):
   photos from the spot's own website or ordering page where it shows them —
-  Kinton, 3 Brothers, Sushi Sama, Shawarma Prince, CoCo, Suzy Q, St. Louis and
-  Lone Star.
+  Kinton, 3 Brothers, Sushi Sama, Shawarma Prince, CoCo, Suzy Q, St. Louis,
+  Lone Star and Pita Bell Kabab.
 - Where a chain shows one official photo per format rather than per recipe,
   every item of that format uses it: Pita Pit's signature items (its pita /
   rice bowl / salad photos), Thai Express stir-fries and Shak-a-Bowls, Freshii
   smoothie bowls and Lone Star fajitas.
-- **Delivery-app fallback** (`images/ubereats/[local/]<file>.json`): the photos
-  each restaurant uploaded to its own Uber Eats listing (an Ottawa location),
-  captured from the store page in a browser with a delivery address set. They
-  are used only for items the sources above don't cover, and a dish named as a
-  wrap / salad / bowl only takes a photo whose name says so too.
-  Uber Eats names are cleaned of menu codes, calorie counts and sizes;
-  `images/ubereats/aliases.json` pairs dishes named differently there
-  ("Chicken Shoyu Ramen" → "Shoyu - Chicken Broth"), and exclusions go in
-  `images/exclude.json` under `ubereats/<file>`.
-- Not covered: pizzas at Gabriel Pizza, Pizza Hut and Topper's (their listings
-  show one photo per size, not per recipe), and items a restaurant doesn't
-  picture anywhere (mostly bottled drinks, sauces and some breakfast items).
+- **Delivery-app fallback** (`images/delivery/[local/]<file>.json`): the photos
+  each restaurant uploaded to its own Uber Eats listings (Ottawa locations,
+  several stores merged where one shows more) and, for Pizza Hut, DoorDash —
+  captured from the store pages in a browser. They are used only for items the
+  sources above don't cover, and a dish named as a wrap / salad / bowl only
+  takes a photo whose name says so too. Listing names are cleaned of menu
+  codes, calorie counts and sizes; `images/delivery/aliases.json` pairs dishes
+  named differently there ("Chicken Shoyu Ramen" → "Shoyu - Chicken Broth"),
+  and exclusions go in `images/exclude.json` under `delivery/<file>`.
+- Not covered: pizzas at Gabriel Pizza and Topper's (their listings show one
+  photo per size, not per recipe), items no listing carries (Harvey's
+  breakfast, Pizza Hut pastas and wraps), estimated local dishes with no
+  counterpart on the spot's real listing, and items a restaurant doesn't
+  picture anywhere (mostly bottled drinks, sauces and add-ons).
 
 Matching never crosses a product type ("Berry Smoothie" doesn't take "Berry
 Smoothie Bowl"'s photo, and a wrap doesn't take the sub's), and a one-word item

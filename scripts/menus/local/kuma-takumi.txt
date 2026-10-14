@@ -3,39 +3,41 @@ name: Kuma Takumi
 cuisine: Japanese · Ramen & Izakaya
 accent: #1a1a1a
 segment: Sit-Down
-source: No public menu found; a typical ramen & izakaya menu (its delivery listing mentions omurice)
+source: Kuma Takumi Uber Eats menu (Ottawa, 2026); no posted calories, so every dish is estimated
 
 [Ramen]
-Tonkotsu Ramen = ramen.tonkotsu :: pork broth, noodles, chashu, seasoned egg, green onion, kikurage
-Black Garlic Tonkotsu = ramen.tonkotsu x1.08 :: pork broth, noodles, chashu, black garlic oil, seasoned egg, green onion
-Shoyu Ramen = ramen.shoyu :: soy chicken broth, noodles, chashu, seasoned egg, bamboo shoots, green onion
-Miso Ramen = ramen.miso :: miso broth, noodles, chashu, corn, bean sprouts, green onion
-Spicy Tantanmen = ramen.spicy :: spicy sesame broth, noodles, ground pork, bok choy, chili oil
-Vegetable Ramen = ramen.veggie :: vegetable broth, noodles, tofu, corn, bok choy, green onion
-Tsukemen (Dipping Ramen) = ramen.tsukemen
+Tonkotsu = ramen.tonkotsu :: pork broth, noodles, chashu, egg, black fungus, bamboo shoots, bean sprouts, green onion
+Tonkotsu Black = ramen.tonkotsu x1.05 :: pork broth, noodles, chashu, sweet corn, egg, bean sprouts, green onion, black garlic oil
+Tonkotsu Shrimp = ramen.tonkotsu :: pork broth, noodles, tempura shrimp, egg, bean sprouts, black fungus, bamboo shoots, green onion
+Shoyu = ramen.shoyu :: soy broth, noodles, chashu, egg, black fungus, bean sprouts, fried onions
+Miso = ramen.miso :: miso broth, noodles, chashu, sweet corn, egg, mushrooms, green onion
+Miso Shrimp = ramen.miso :: miso broth, noodles, tempura shrimp, sweet corn, egg, mushrooms, green onion
+Spicy Miso = ramen.spicy :: spicy miso broth, noodles, chashu, sweet corn, egg, bean sprouts, chili, seaweed, green onion
+Hellfire Spicy = ramen.spicy x1.1 :: spicy broth, noodles, panko shrimp, sweet corn, egg, bean sprouts, bamboo shoots, mushrooms, chili, seaweed
+Chicken Paitan Ramen = ramen.chicken x1.1 :: chicken paitan broth, noodles, chicken, egg, green onion
+Vegetarian Miso = ramen.veggie :: miso broth, noodles, vegetable croquette, sweet corn, egg, bean sprouts, green onion
 
-[Rice dishes]
-Omurice = don.omurice :: omelette, chicken fried rice, demi-glace sauce
-Chashu Don = don.rice-bowl x0.95 :: rice, chashu, seasoned egg, green onion, sauce
-Chicken Katsu Don = don.rice-bowl x1.2 :: rice, chicken katsu, egg, onion, sauce
-Japanese Curry Rice = don.curry
-Karaage Curry Rice = don.curry x1.25
+[Rice bowls — Japanese curry]
+Rice Chicken Katsu Curry = don.curry x1.1 :: rice, breaded chicken, curry
+Omurice Chicken Katsu Curry = don.omurice x1.3 :: rice, omelette, breaded chicken, curry
+Rice Karrage Curry = don.curry x1.05 :: rice, karaage, curry
+Omurice Karaage Curry = don.omurice x1.25 :: rice, omelette, karaage, curry
+Rice Tempura Shrimp Curry = don.curry :: rice, tempura shrimp, curry
+Omurice Tempura Shrimp Curry = don.omurice x1.2 :: rice, omelette, tempura shrimp, curry
 
-[Izakaya plates]
-Chicken Karaage = side.karaage
-Pork Gyoza (5 pc) = side.gyoza
-Takoyaki (6 pc) = side.takoyaki
+[Appetizers]
+Karaage Chicken = side.karaage x0.8
+Takoyaki = side.takoyaki
+Gyoza (Chicken) = side.gyoza
+Gyoza (Chicken) with Green Onion = side.gyoza
+Chicken Katsu = side.karaage x1.2 :: breaded chicken, tonkatsu sauce
+Japanese French Fries = side.fries-asian
 Edamame = side.edamame
-Agedashi Tofu = side.agedashi
-Shrimp Tempura = side.tempura
-Steamed Rice = side.steamed-rice
+Panko Shrimp = side.tempura x0.8
+Seaweed Salad = side.seaweed-salad
+Vegetable Croquette = side.fried-veg x0.4
 
-[Extras]
-Extra Chashu = add.chashu
-Extra Egg = add.egg
-Extra Noodles = add.noodles
-
-[Drinks & dessert]
-Ramune = drink.soft x0.6
-Sapporo Beer = drink.beer
-Matcha Ice Cream = dessert.ice-cream
+[Soft drinks]
+Iced Tea = drink.soft x0.6
+Coca Cola = drink.soft
+Diet Coke = drink.diet

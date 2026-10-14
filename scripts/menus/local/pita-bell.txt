@@ -1,0 +1,99 @@
+id: pita-bell
+name: Pita Bell Kabab
+cuisine: Turkish & Mediterranean
+accent: #c2410c
+segment: Fast Food
+source: https://order.pitabellkabab.com (Carling Ave online menu, 2026; no posted calories, so every dish is estimated)
+
+[Plates — 2 skewers with rice, salad & bread]
+Regular Kabab Plate = tr.kebab-plate :: ground beef kabab, rice, salad, grilled tomato, bread
+Adana Kabab Plate (Spicy) = tr.kebab-plate :: spicy ground beef kabab, rice, salad, grilled tomato, bread
+Pistachio Kabab Plate = tr.kebab-plate x1.05 :: ground beef kabab with pistachio, rice, salad, grilled tomato, bread
+Simit Kabab Plate = tr.kebab-plate :: ground beef kabab with bulgur, rice, salad, grilled tomato, bread
+Pita Bell Mix Plate = tr.kebab-plate x1.25 :: ground beef kabab, shish taouk, beef tenderloin, rice, salad, grilled tomato, bread
+Chicken Kabab Plate = tr.chicken-plate :: ground chicken kabab, rice, salad, grilled tomato, bread
+Shish Taouk Plate = tr.chicken-plate :: chicken breast, rice, salad, grilled tomato, bread
+Filet Mignon Plate = tr.kebab-plate x0.95 :: beef tenderloin, rice, salad, grilled tomato, bread
+Lamb Shank Plate = tr.lamb-plate :: lamb shank, rice, salad, bread
+Half Chicken Plate = tr.chicken-plate x1.2 :: half chicken, rice, salad, bread
+Whole Chicken = tr.chicken-plate x2.2 :: whole chicken, rice, salad, bread
+Lamb Chops Plate = tr.lamb-plate :: lamb chops, rice, salad, grilled tomato, bread
+Falafel Plate = plate.falafel
+Poutine = poutine.classic
+Grilled Chicken Salad = healthy.salad
+Beyti Sarma Kabab = tr.iskender :: ground beef kabab, pita, tomato sauce, butter, yoghurt
+
+[Sandwiches]
+Kabab Sandwich = wrap.kafta
+Shish Taouk Sandwich = wrap.chicken
+Filet Mignon Sandwich = wrap.beef
+Chicken Kabab Sandwich = wrap.chicken
+Falafel Sandwich = wrap.falafel
+Kabab Combo = wrap.combo x1.05 :: pita, ground beef kabab, garlic sauce, fries, pop
+Shish Taouk Combo = wrap.combo :: pita, shish taouk, garlic sauce, fries, pop
+Filet Mignon Combo = wrap.combo x1.03 :: pita, beef tenderloin, garlic sauce, fries, pop
+Chicken Kabab Combo = wrap.combo :: pita, ground chicken kabab, garlic sauce, fries, pop
+Falafel Combo = wrap.combo x0.9 :: pita, falafel, tahini, fries, pop
+
+[Family platters — whole platter]
+Regular Kabab Family Platter (10 skewers) = tr.kebab-plate x5 :: ground beef kabab, rice, salad, grilled tomatoes, bread, garlic sauce
+Adana Kabab Spicy Family Platter (10 skewers) = tr.kebab-plate x5 :: ground beef kabab, rice, salad, grilled tomatoes, bread, garlic sauce
+Simit Kabab Family Platter (10 skewers) = tr.kebab-plate x5 :: ground beef kabab, rice, salad, grilled tomatoes, bread, garlic sauce
+Chicken Kabab Family Platter (10 skewers) = tr.chicken-plate x5 :: ground chicken kabab, rice, salad, grilled tomatoes, bread, garlic sauce
+Shish Taouk Family Platter (10 skewers) = tr.chicken-plate x5 :: shish taouk, rice, salad, grilled tomatoes, bread, garlic sauce
+Shish Taouk Spicy Family Platter (10 skewers) = tr.chicken-plate x5 :: shish taouk, rice, salad, grilled tomatoes, bread, garlic sauce
+Filet Mignon Family Platter (10 skewers) = tr.kebab-plate x4.8 :: beef tenderloin, rice, salad, grilled tomatoes, bread, garlic sauce
+Pita Bell Mix Family Platter (10 skewers) = tr.kebab-plate x5 :: ground beef kabab, shish taouk, beef tenderloin, rice, salad, grilled tomatoes, bread, garlic sauce
+Pita Bell Mix Family Platter (6 skewers) = tr.kebab-plate x3 :: ground beef kabab, shish taouk, beef tenderloin, rice, salad, grilled tomatoes, bread, garlic sauce
+Regular Kabab Family Platter (6 skewers) = tr.kebab-plate x3 :: ground beef kabab, rice, salad, grilled tomatoes, bread, garlic sauce
+Adana Kabab Spicy Family Platter (6 skewers) = tr.kebab-plate x3 :: ground beef kabab, rice, salad, grilled tomatoes, bread, garlic sauce
+Simit Kabab Family Platter (6 skewers) = tr.kebab-plate x3 :: ground beef kabab, rice, salad, grilled tomatoes, bread, garlic sauce
+Chicken Kabab Family Platter (6 skewers) = tr.chicken-plate x3 :: ground chicken kabab, rice, salad, grilled tomatoes, bread, garlic sauce
+Shish Taouk Family Platter (6 skewers) = tr.chicken-plate x3 :: shish taouk, rice, salad, grilled tomatoes, bread, garlic sauce
+Shish Taouk Spicy Family Platter (6 skewers) = tr.chicken-plate x3 :: shish taouk, rice, salad, grilled tomatoes, bread, garlic sauce
+Filet Mignon Family Platter (6 skewers) = tr.kebab-plate x2.9 :: beef tenderloin, rice, salad, grilled tomatoes, bread, garlic sauce
+
+[Pita Pie (Turkish pide)]
+Ground Beef Pide = tr.pide x0.95 :: pide dough, ground beef, mozzarella
+Diced Beef Tenderloin Pide = tr.pide :: pide dough, beef tenderloin, green pepper, tomato, onion, mozzarella
+Sausage & Cheese Pide = tr.pide x1.05 :: pide dough, sausage, mozzarella
+Sausage & Egg Pide = tr.pide :: pide dough, sausage, eggs
+Mix Pide = tr.pide x1.05 :: pide dough, beef, chicken, sausage, mozzarella
+Zaatar, Veggie & Cheese Pide = tr.pide x0.85 :: pide dough, zaatar, veggies, mozzarella
+Chicken Pide = tr.pide x0.95 :: pide dough, chicken, mozzarella
+Veggie Pide = tr.pide x0.75 :: pide dough, veggies
+Mozzarella Cheese Pide = tr.pide x0.85 :: pide dough, mozzarella
+Feta Cheese Pide = tr.pide x0.85 :: pide dough, feta
+
+[Sides]
+Garden Salad = side.house-salad x1.5
+Greek Salad = side.greek-salad
+Tabouli = side.tabbouleh
+Fatouche = side.fattoush
+Rice = side.rice
+Baba Ghanoush = side.baba
+Hummos = side.hummus
+Fries = pub.fries
+Falafel (side) = side.falafel-pc x5
+Garlic Sauce = side.garlic-sauce
+Kubba (6 pcs) = side.kibbeh x6
+Kubbat Halab (6 pcs) = side.kibbeh x6
+Kubba Potato (6 pcs) = side.kibbeh x5
+Mousol Kubba = side.kibbeh x3
+Kubba Hilaly = side.kibbeh x2
+Cheese Roll (3 pcs) = side.meat-pie x0.8
+Meat Roll (3 pcs) = side.meat-pie x0.9
+Cheese Roll (1 pc) = side.meat-pie x0.27
+Meat Roll (1 pc) = side.meat-pie x0.3
+Pita Bell Bread = side.pita
+Spicy Grilled Pita = side.pita x1.3
+
+[Desserts]
+Kunafa = tr.kunefe
+Kunafa Tray = tr.kunefe x6
+
+[Drinks]
+Homemade Ayran = drink.ayran
+Can of Pop = drink.soft
+Bottle of Pop = drink.soft x1.6
+Water = drink.water

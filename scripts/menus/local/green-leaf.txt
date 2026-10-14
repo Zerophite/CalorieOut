@@ -3,48 +3,98 @@ name: Green Leaf Bubble Tea
 cuisine: Bubble tea · Smoothies
 accent: #16a34a
 segment: Coffee & Bakery
-source: Green Leaf Bubble Tea, 591 March Rd., Kanata (its menu is only listed on delivery apps; a typical bubble-tea menu, regular sugar assumed)
+source: Green Leaf Bubble Tea (591 March Rd., Kanata) Uber Eats menu, 2026 (regular size, regular sugar assumed; no posted calories)
+
+[Signature mango series]
+Fresh Mango Slush = bt.slush :: mango slush, mango
+Fresh Mango Coconut Slush = bt.slush x1.15 :: mango slush, coconut milk, mango
+Mango Lychee Slush = bt.slush :: mango slush, lychee, mango
+Fresh Mango Lychee Grape Fruit Slush = bt.slush :: mango slush, lychee, grapefruit, mango
+Fresh Mango Aloe Slush = bt.slush :: mango slush, aloe jelly, mango
+Fresh Mango Aloe Slush with Coconut Milk = bt.slush x1.15 :: mango slush, coconut milk, aloe jelly
+Fresh Mango Red Bean Slush with Coconut Slush = bt.slush x1.25 :: mango slush, coconut slush, red beans, mango
+Mango Yogurt Slush = bt.slush x1.1 :: yogurt slush, mango
+
+[Slush series]
+Strawberry Banana Slush = bt.slush :: strawberry, banana, ice
+Strawberry Mango Slush = bt.slush :: strawberry, mango, ice
+Blueberry Mango Slush = bt.slush :: blueberry, mango, ice
+Lychee Slush With Boba = bt.slush x1.3 :: lychee slush, tapioca pearls
+Taro Slush = bt.slush x1.1 :: taro, milk, ice
+Matcha Red Bean Slush = bt.slush x1.1 :: matcha, milk, ice, red beans
+
+[Brown sugar milk latte]
+Brown Sugar Pearl Boba Latte = bt.brown-sugar :: milk, brown sugar, tapioca pearls
+Brown Sugar Banana Latte = bt.brown-sugar x0.85 :: milk, brown sugar, banana
+Brown Sugar Grass Jelly Latte = bt.brown-sugar x0.85 :: milk, brown sugar, grass jelly
 
 [Milk tea]
-Classic Milk Tea = bt.milk-tea x0.85 ; Regular=0.85, Large=1
-Pearl Milk Tea = bt.milk-tea ; Regular=0.85, Large=1 :: milk tea, tapioca pearls
-Brown Sugar Pearl Milk = bt.brown-sugar ; Regular=0.85, Large=1 :: fresh milk, brown sugar syrup, tapioca pearls
-Taro Milk Tea = bt.taro ; Regular=0.85, Large=1
-Matcha Milk Tea = bt.matcha ; Regular=0.85, Large=1
-Thai Milk Tea = bt.milk-tea x1.1 ; Regular=0.85, Large=1
-Jasmine Green Milk Tea = bt.milk-tea x0.85 ; Regular=0.85, Large=1
-Honeydew Milk Tea = bt.milk-tea x1.05 ; Regular=0.85, Large=1
-Coconut Milk Tea = bt.milk-tea x1.1 ; Regular=0.85, Large=1
-Oolong Milk Tea = bt.milk-tea x0.85 ; Regular=0.85, Large=1
+Classic Milk Tea = bt.milk-tea :: black tea, milk, tapioca pearls, sugar
+Grass Jelly Milk Tea = bt.milk-tea x0.95 :: black tea, milk, grass jelly, sugar
+Pudding Milk Tea = bt.milk-tea x0.95 :: black tea, milk, pudding, sugar
+Sakura Hokkaido Milk Tea = bt.milk-tea x0.9 :: black tea, milk, sakura syrup
+Assam Milk Tea = bt.milk-tea x0.85 :: assam tea, milk, sugar
+Jasmine Green Milk Tea = bt.milk-tea x0.85 :: jasmine green tea, milk, sugar
+Peach Oolong Milk Tea = bt.milk-tea x0.85 :: oolong tea, milk, peach syrup
+Earl Grey Milk Tea with Three Topping = bt.milk-tea x1.25 :: earl grey tea, milk, tapioca pearls, pudding, grass jelly
+Roasted Oolong Milk Tea = bt.milk-tea x0.85 :: roasted oolong tea, milk, sugar
+Genmaicha Green Milk Tea = bt.milk-tea x0.85 :: genmaicha tea, milk, sugar
+Toffee Pudding Milk Tea = bt.milk-tea :: black tea, milk, toffee syrup, pudding
+Four Season Milk Tea with Lyche Jelly Boba = bt.milk-tea :: oolong tea, milk, lychee jelly, sugar
+
+[Fruit milk tea (decaf)]
+Taro Milk Tea with Tapioca = bt.taro :: taro, milk, tapioca pearls
+Okinawa Brown Sugar Milk Tea = bt.brown-sugar x0.9 :: black tea, milk, brown sugar
+Coconut Milk Tea = bt.milk-tea x0.9 :: coconut, milk, sugar
+Strawberry Milk Tea = bt.milk-tea x0.9 :: strawberry syrup, milk
+Mango Milk Tea = bt.milk-tea x0.9 :: mango syrup, milk
+Honeydew Milk Tea = bt.milk-tea x0.9 :: honeydew syrup, milk
+Hazlenut Milk Tea = bt.milk-tea x0.9 :: hazelnut syrup, milk
+Dark Cocoa Milk Tea = bt.milk-tea x0.95 :: cocoa, milk, sugar
+Honey Peach Milk Tea = bt.milk-tea x0.9 :: honey, peach syrup, milk
 
 [Fruit tea]
-Passion Fruit Green Tea = bt.fruit-tea ; Regular=0.85, Large=1
-Mango Green Tea = bt.fruit-tea x1.05 ; Regular=0.85, Large=1
-Strawberry Green Tea = bt.fruit-tea ; Regular=0.85, Large=1
-Lychee Black Tea = bt.fruit-tea ; Regular=0.85, Large=1
-Peach Oolong Tea = bt.fruit-tea ; Regular=0.85, Large=1
-Lemon Green Tea = bt.fruit-tea x0.9 ; Regular=0.85, Large=1
-Grapefruit Green Tea = bt.fruit-tea ; Regular=0.85, Large=1
-Yakult Green Tea = bt.yakult ; Regular=0.85, Large=1
+Mango GT/BT = bt.fruit-tea :: green tea, mango syrup
+Grape GT/BT = bt.fruit-tea :: green tea, grape syrup
+Yogurt/Yakult GT/BT = bt.yakult :: green tea, yakult
+Blueberry GT/BT = bt.fruit-tea :: green tea, blueberry syrup
+Passion Fruit GT/BT = bt.fruit-tea :: green tea, passion fruit
+Lychee GT/BT = bt.fruit-tea :: green tea, lychee syrup
+Strawberry GT/BT = bt.fruit-tea :: green tea, strawberry syrup
+Green Apple GT/BT = bt.fruit-tea :: green tea, green apple syrup
+Passion Fruit Green Tea with Pearls and Lychee Jelly = bt.fruit-tea x1.4 :: green tea, passion fruit, tapioca pearls, lychee jelly
+Passion Fruit Black Tea with Pearls and Lychee Jelly = bt.fruit-tea x1.4 :: black tea, passion fruit, tapioca pearls, lychee jelly
+Full of Fresh Fruit Tea = bt.fruit-tea :: tea, strawberries, lime, fruit
+Honey Green Tea with Aloe (Decaf) = bt.fruit-tea :: green tea, honey, aloe jelly
+Blueberry Fruit Tea w/ Jelly = bt.fruit-tea x1.15 :: tea, blueberry syrup, jelly
+Passion Fruit Lime Honey (Decaf) = bt.fruit-tea :: passion fruit, lime, honey
+Fresh Honey Osmanthus Oolong Tea = bt.fruit-tea x0.8 :: osmanthus oolong tea, honey
+Passion Fruit Osmanthus Oolong Tea = bt.fruit-tea :: osmanthus oolong tea, passion fruit
+Strawberry Lemon Tea = bt.fruit-tea :: tea, strawberry, lemon
+Strawberry Black Tea = bt.fruit-tea :: black tea, strawberry syrup, strawberries
+Strawberry Yakult = bt.yakult :: yakult, strawberry
+Fresh GT/BT Ice Tea = bt.fruit-tea x0.5 :: green tea, sugar
 
-[Cheese foam]
-Black Tea with Cheese Foam = bt.foam-tea ; Regular=0.85, Large=1
-Matcha with Cheese Foam = bt.foam-tea x1.1 ; Regular=0.85, Large=1
-Strawberry Cheese Foam Tea = bt.foam-tea x1.05 ; Regular=0.85, Large=1
+[Coffee]
+Coffee Slush (咖啡冰沙) = bt.slush :: coffee, milk, ice
+Thai Tea Coffee (泰式奶茶咖啡) = bt.coffee :: thai tea, coffee, milk
+Coffee Toffee Tea (太妃咖啡奶茶) = bt.coffee :: coffee, tea, milk, toffee syrup
+Coffee Coconut (醇厚椰奶咖啡) = bt.coffee :: coffee, coconut milk
 
-[Smoothies & slush]
-Mango Smoothie = bt.slush ; Regular=0.85, Large=1
-Strawberry Smoothie = bt.slush ; Regular=0.85, Large=1
-Taro Smoothie = bt.slush x1.15 ; Regular=0.85, Large=1
-Avocado Smoothie = bt.slush x1.25 ; Regular=0.85, Large=1
-Coconut Smoothie = bt.slush x1.1 ; Regular=0.85, Large=1
-Oreo Smoothie = drink.milkshake x0.8 ; Regular=0.85, Large=1
+[Lattes & milk]
+Fresh Strawberry Milk Latte = bt.fresh-milk :: milk, strawberry puree, strawberries
+Strawberry Latte (草莓牛乳) = bt.fresh-milk :: milk, strawberry syrup
+Mango Latte（芒果牛乳） = bt.fresh-milk :: milk, mango syrup
+Osmanthus Oolong Milk Tea = bt.milk-tea x0.85 :: osmanthus oolong tea, milk
+Honey Fragrant Black Roasted Milk Tea = bt.milk-tea x0.9 :: roasted black tea, milk, honey
+Taro Roasted Milk Tea = bt.taro x0.9 :: roasted tea, milk, taro
+Red Bean Roasted Milk Tea = bt.milk-tea :: roasted tea, milk, red beans
 
-[Toppings]
-Tapioca Pearls = topping.pearls
-Popping Boba = topping.pearls x0.6
-Lychee Jelly = topping.pearls x0.6
-Coconut Jelly = topping.pearls x0.6
-Grass Jelly = topping.pearls x0.4
-Pudding = topping.pearls x0.8
-Red Bean = topping.pearls x0.95
+[Cheese foam & cream]
+Cheese Foam Milk Tea = bt.foam-tea x1.1 :: black tea, milk, cheese foam
+Cheese Foam Slush = bt.slush x1.2 :: fruit slush, cheese foam
+Cheese Foam Fresh Tea = bt.foam-tea :: tea, cheese foam
+Cheese Foam Osmanthus Oolong Tea = bt.foam-tea :: osmanthus oolong tea, cheese foam
+Cream Milk Tea = bt.foam-tea x1.15 :: black tea, milk, whipped cream
+Cream Slush = bt.slush x1.2 :: fruit slush, whipped cream
+Cream Fresh Tea = bt.foam-tea :: tea, whipped cream

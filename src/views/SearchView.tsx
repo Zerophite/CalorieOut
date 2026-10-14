@@ -55,23 +55,43 @@ export function SearchView({ goal, onOpenItem, onOpenRestaurant, isInCompare, to
     return counts
   }, [base])
 
-  // Restaurants under a cuisine: the ones that serve it first (ramen shops
-  // before a sub chain's teriyaki), then by how many of its dishes they have.
-  const restaurantResults = useMemo(() => {
+  // Restaurants whose name or type matches the search.
+  const matchedRestaurants = useMemo(() => {
     const words = fold(deferredQuery).split(/\s+/).filter(Boolean)
-    const matched = restaurants.filter((r) => {
+    return restaurants.filter((r) => {
       const text = fold(`${r.name} ${r.cuisine} ${r.segment}`)
       return !words.length || words.every((w) => text.includes(w))
     })
-    if (!cuisine) return matched
+  }, [deferredQuery])
+
+  // How many of each cuisine's dishes every restaurant serves.
+  const dishesByRestaurant = useMemo(() => {
+    const out: Record<string, Record<string, number>> = {}
+    for (const e of index) {
+      const r = (out[e.restaurant.id] ??= {})
+      for (const c of e.cuisines) r[c] = (r[c] ?? 0) + 1
+    }
+    return out
+  }, [index])
+
+  // On the Restaurants tab the chips count restaurants, not dishes.
+  const restaurantCounts = useMemo(() => {
+    const counts: Record<string, number> = {}
+    for (const r of matchedRestaurants) for (const c of Object.keys(dishesByRestaurant[r.id] ?? {})) counts[c] = (counts[c] ?? 0) + 1
+    return counts
+  }, [matchedRestaurants, dishesByRestaurant])
+
+  // Restaurants under a cuisine: the ones that serve it first (ramen shops
+  // before a sub chain's teriyaki), then by how many of its dishes they have.
+  const restaurantResults = useMemo(() => {
+    if (!cuisine) return matchedRestaurants
     const def = CUISINES.find((c) => c.id === cuisine)!
-    const dishes: Record<string, number> = {}
-    for (const e of index) if (e.cuisines.includes(cuisine)) dishes[e.restaurant.id] = (dishes[e.restaurant.id] ?? 0) + 1
-    const serves = (r: Restaurant) => (def.restaurant ?? def.dish).test(r.cuisine) || def.dish.test(r.name) ? 1 : 0
-    return matched
-      .filter((r) => dishes[r.id])
-      .sort((x, y) => serves(y) - serves(x) || dishes[y.id] - dishes[x.id])
-  }, [deferredQuery, cuisine, index])
+    const dishes = (r: Restaurant) => dishesByRestaurant[r.id]?.[cuisine] ?? 0
+    const serves = (r: Restaurant) => ((def.restaurant ?? def.dish).test(r.cuisine) || def.dish.test(r.name) ? 1 : 0)
+    return matchedRestaurants.filter((r) => dishes(r)).sort((x, y) => serves(y) - serves(x) || dishes(y) - dishes(x))
+  }, [matchedRestaurants, cuisine, dishesByRestaurant])
+
+  const chipCounts = mode === 'food' ? cuisineCounts : restaurantCounts
 
   // A new search starts back at the first page.
   useEffect(() => setShown(PAGE), [deferredQuery, deferredFilters, mode])
@@ -145,11 +165,11 @@ export function SearchView({ goal, onOpenItem, onOpenRestaurant, isInCompare, to
           <Chip active={!filters.cuisine} onClick={() => patch({ cuisine: undefined })}>
             All cuisines
           </Chip>
-          {CUISINES.filter((c) => cuisineCounts[c.id] || filters.cuisine === c.id).map((c) => (
+          {CUISINES.filter((c) => chipCounts[c.id] || filters.cuisine === c.id).map((c) => (
             <span key={c.id} className="shrink-0">
               <Chip active={filters.cuisine === c.id} onClick={() => patch({ cuisine: filters.cuisine === c.id ? undefined : c.id })}>
                 {c.label}
-                <span className="ml-1 text-xs opacity-70">{cuisineCounts[c.id] ?? 0}</span>
+                <span className="ml-1 text-xs opacity-70">{chipCounts[c.id] ?? 0}</span>
               </Chip>
             </span>
           ))}

@@ -3,7 +3,7 @@
 // parenthetical, as the start of a longer name, or with the same words in any
 // order (one extra word allowed, or only size words for a one-word name). A single item never takes a combo / pack /
 // box photo. Items the official photos don't cover fall back to the restaurant's
-// own delivery-app listing (images/ubereats/<file>.json). Used by writeMenu
+// own delivery-app listings (images/delivery/<file>.json). Used by writeMenu
 // (lib.ts) and the McDonald's generator.
 import fs from 'fs'
 
@@ -30,10 +30,10 @@ function loadMap(file) {
   const map = {}
   for (const [k, v] of Object.entries(raw)) if (!map[normName(k)]) map[normName(k)] = v
   // Delivery apps name some dishes differently ("Shoyu - Chicken Broth" for
-  // "Chicken Shoyu Ramen"); images/ubereats/aliases.json pairs them by hand.
-  const aliasPath = 'scripts/menus/images/ubereats/aliases.json'
-  if (file.startsWith('ubereats/') && fs.existsSync(aliasPath)) {
-    const aliases = JSON.parse(fs.readFileSync(aliasPath, 'utf8'))[file.slice('ubereats/'.length)] || {}
+  // "Chicken Shoyu Ramen"); images/delivery/aliases.json pairs them by hand.
+  const aliasPath = 'scripts/menus/images/delivery/aliases.json'
+  if (file.startsWith('delivery/') && fs.existsSync(aliasPath)) {
+    const aliases = JSON.parse(fs.readFileSync(aliasPath, 'utf8'))[file.slice('delivery/'.length)] || {}
     for (const [ours, theirs] of Object.entries(aliases)) {
       if (map[normName(theirs)]) map[normName(ours)] = map[normName(theirs)]
       else console.warn(`  alias not found in ${file}: ${theirs}`)
@@ -47,7 +47,7 @@ function loadMap(file) {
 }
 
 function attachImages(file, items) {
-  const maps = [loadMap(file), loadMap(`ubereats/${file}`)].filter(Boolean)
+  const maps = [loadMap(file), loadMap(`delivery/${file}`)].filter(Boolean)
   if (!maps.length) return
   let found = 0
   for (const it of items) {

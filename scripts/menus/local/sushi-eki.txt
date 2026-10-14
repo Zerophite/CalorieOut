@@ -3,41 +3,194 @@ name: Sushi Eki
 cuisine: Japanese · Sushi
 accent: #b91c1c
 segment: Sit-Down
-source: No public menu found; a typical sushi-bar menu
+source: Sushi Eki Uber Eats menu (Ottawa, 2026); no posted calories, so every item is estimated from typical sushi portions by piece count
 
-[Rolls]
-California Roll (8 pc) = maki.california
-Spicy Salmon Roll (8 pc) = maki.spicy-salmon
-Spicy Tuna Roll (8 pc) = maki.spicy-tuna
-Salmon Avocado Roll (8 pc) = maki.salmon-avocado
-Dynamite Roll (8 pc) = maki.dynamite
-Dragon Roll (8 pc) = maki.dragon
-Rainbow Roll (8 pc) = maki.rainbow
-Shrimp Tempura Roll (8 pc) = maki.tempura
-Spider Roll (soft-shell crab, 8 pc) = maki.crispy
-Philadelphia Roll (8 pc) = maki.salmon-avocado x1.15
-Avocado Roll (6 pc) = maki.veg
-Sweet Potato Roll (8 pc) = maki.veg x1.6
+[Maki-roll Combo]
+Maki Set A (18 pcs) = sushi.combo x1.38
+Maki Set B (30 pcs) = sushi.combo x2.31
+Vegetarian Maki Set (18 pcs) = sushi.combo x1.38
+Hand Roll Set (1 Cone Each) = sushi.combo
 
-[Nigiri, sashimi & combos]
-Salmon Nigiri = nigiri.pc ; 2 pc=2, 4 pc=4
-Tuna Nigiri = nigiri.pc x0.95 ; 2 pc=2, 4 pc=4
-Assorted Sashimi (9 pc) = sashimi.pc x9
-Sushi Combo (12 pc) = sushi.combo
-Sushi Boat (for 2–3, per person) = sushi.boat x0.4
+[Sushi Combo]
+Salmon Lover = sushi.combo
+Sushi Set B (22 pcs) = sushi.combo x1.69
+Sushi Set A (14 pcs) = sushi.combo x1.08
 
-[Kitchen]
+[Poké Bowl]
+Salmon Poké = jp.poke
+Fried Chicken Katsu Poké = jp.poke
+Ahi-tuna Poke = jp.poke
+Veggie Poké = jp.poke
+House Eki Poké = jp.poke
+Lobster Seafood Poké = jp.poke
+
+[Bento Box]
+Torched Sushi Bento = jp.bento
 Chicken Teriyaki Bento = jp.bento
-Salmon Teriyaki = jp.teriyaki x1.1
-Chicken Katsu Curry = don.curry
-Salmon Don = jp.donburi-fish
-Udon Noodle Soup = jp.udon
-Salmon Poke Bowl = jp.poke
+Salmon Teriyaki Bento = jp.bento
+Maki Bento = jp.bento
+Vegetarian Bento = jp.bento
+Poké Bento = jp.bento
 
-[Sides]
-Miso Soup = side.miso-soup
+[Chef's Baked Roll]
+Mountain Fuji Roll (5 pcs) = maki.special x0.63
+Canadian Roll (5 pcs) = maki.special x0.63
+Royal Mozzarella Roll (5 pcs) = maki.special x0.63
+Snow Corn Roll (5 pcs) = maki.special x0.63
+
+[Signature Roll]
+Dynamite Roll (Large) (5 pcs) = maki.dynamite x0.81
+Green Dragon Roll (Large) (5 pcs) = maki.dragon x0.81
+Red Dragon Roll (Large) (5 pcs) = maki.dragon x0.81
+Rainbow Roll (Large) (5 pcs) = maki.rainbow x0.81
+House Eki Roll (Large) (5 pcs) = maki.special x0.81
+Tiger Stripe Roll (Large) (5 pcs) = maki.special x0.81
+Philadelphia Roll (Large) (5 pcs) = maki.salmon-avocado x0.81
+Eel Special Roll (Large) (5 pcs) = maki.special x0.69
+Golden Chicken Roll (Large) (5 pcs) = maki.special x0.81
+
+[Sashimi Combo]
+Sashimi Set B (24 pcs) = sushi.combo x1.85
+Sashimi Set A (15 pcs) = sushi.combo x1.15
+
+[Una Maki]
+Spicy Crispy Lobster (Medium) = maki.special
+Spicy Crispy Salmon (Medium) = maki.crispy
+Spicy Crispy Tuna (Medium) = maki.crispy
+Salmon & Avocado (Medium) = maki.small x1.33
+California (Medium) = maki.california
+Tempura Shrimp & Avocado (Medium) = maki.tempura
+Salmon Roll (Medium) = maki.small x1.33
+Sweet Potato Tempura (Medium) = maki.tempura
+Avocado (Medium) = maki.veg x1.33
+Avocado & Cucumber (Medium) = maki.veg x1.33
+Spicy Crispy Avocado (Medium) = maki.crispy
+Spicy Crispy Snow Crab (Medium) = maki.crispy
+Spicy Crab Meat (Medium) = maki.small x1.33
+Crispy Mango (Medium) = maki.crispy
+Tempura Shrimp & Cucumber (Medium) = maki.tempura
+Tempura Shrimp & Mango (Medium) = maki.tempura
+Cucumber (Medium) = maki.veg x1.33
+Spicy Crispy Scallop (Medium) = maki.crispy
+Tuna Roll (Medium) = maki.small x1.33
+Mango & Crab Meat (Medium) = maki.small x1.33
+Spicy Crispy Vegetable (Medium) = maki.crispy
+Spicy Crispy Cucumber (Medium) = maki.crispy
+Spicy Crispy Butter Fish Roll (6pcs) = maki.crispy x0.75
+
+[Appetizer]
 Edamame = side.edamame
+Fried Cheese and Snow Crab Wonton (5 pcs) = side.spring-roll x1.5
+Kara-age (10 pcs) = side.karaage
+Japanese Pork Egg Roll (2 pcs) = side.spring-roll
+Tao's Orange Peel Chicken = side.karaage x1.3
+Fried Calamari (8pcs) = side.tempura x0.9
+Gyoza Veggies (5 pcs) = side.gyoza
+Kaki-Fry Oyster Breaded (6 pcs) = side.tempura x0.8
+Ikayaki = side.karaage x0.6
+Gyoza Beef (5 pcs) = side.gyoza
+Veggies Spring Roll (5 pcs) = side.spring-roll x1.5
+Takoyaki (5 pcs) = side.takoyaki
+Golden Fried Sesame Ball (5 pcs) = dessert.sesame-balls
+Golden Fried Banana (5 pcs) = dessert.sesame-balls
+Age-dashi Tofu (4 pcs) = side.agedashi
+
+[Chef's Deep Fry Roll]
+Golden California Roll (5 pcs) = maki.california x0.63
+Volcano Roll (5 pcs) = maki.special x0.63
+Sun Kissed Roll (5 pcs) = maki.special x0.63
+Las Vegas Roll (5 pcs) = maki.special x0.63
+Kabuki Bomb (4 pcs) = maki.special x0.5
+
+[Chef's Torch Sushi]
+Torched Spicy Salmon (2 pcs) = nigiri.pc x2.3
+Torched Original Salmon (2 pcs) = nigiri.pc x2.3
+Torched Original Butter Fish (2pcs) = nigiri.pc x2.3
+Torched Spicy Tuna (2 pcs) = nigiri.pc x2.3
+Torch Hokkaido Scallop (2 pcs) = nigiri.pc x2.3
+Torched Spicy Scallop (2 pcs) = nigiri.pc x2.3
+Torched Original Tuna (2 pcs) = nigiri.pc x2.3
+Torched Spicy Butter Fish (2pcs) = nigiri.pc x2.3
+
+[Soup and Salad]
+Green Salad = side.house-salad
+Miso Soup = side.miso-soup
+Mango and Avocado Salad = side.seaweed-salad x1.3
 Seaweed Salad = side.seaweed-salad
-Shrimp Tempura = side.tempura
-Gyoza = side.gyoza
-Mochi Ice Cream (2) = dessert.mochi
+
+[Tempura]
+Shrimp Tempura (5 pcs) = side.tempura x0.85
+Assorted Tempura (9 pcs) = side.tempura x0.85
+Sweet Potato Tempura (6 pcs) = side.tempura x0.8
+Crab Meat Tempura (6 pcs) = side.tempura x0.85
+
+[Donburi]
+Teriyaki Chicken on Rice = jp.teriyaki
+BBQ Eel on Rice = jp.donburi-fish
+Teriyaki Salmon on Rice = jp.teriyaki
+Fried Chicken Katsu on Rice = don.rice-bowl x1.2
+
+[Rice Sushi Pizza]
+Doubled Salmon Pizza (6 pcs) = maki.crispy x0.75
+Veggies Pizza (6 pcs) = maki.crispy x0.75
+Spicy Tuna Pizza (6 pcs) = maki.crispy x0.75
+Lobster Pizza (6 pcs) = maki.crispy x0.75
+
+[Futomaki]
+Osaka Roll (Large) (5 pcs) = maki.special x0.81
+Nagoya Roll (Large) (5 pcs) = maki.special x0.81
+Kyoto Roll (Large) (5 pcs) = maki.special x0.81
+Akasaka Roll (Large) (5 pcs) = maki.special x0.81
+Saitama Veggies Roll (Large) (5 pcs) = maki.special x0.81
+Ginza Roll (Large) (5 pcs) = maki.special x0.81
+Kobe Roll (Large) (5 pcs) = maki.special x0.81
+Yokohama Roll (Large) (5 pcs) = maki.special x0.81
+
+[Soya Paper Roll]
+Ume Roll (5 pcs) = maki.special x0.63
+Shikoku Roll (Large) (5 pcs) = maki.special x0.81
+Kyushu Roll (Large) (5 pcs) = maki.special x0.81
+Okinawa Roll (Large) (5 pcs) = maki.special x0.81
+Sakura Roll (5pcs) = maki.special x0.63
+Honshu Roll (Large) (5 pcs) = maki.special x0.81
+
+[Nigiri]
+Scallop (Hotategai) (2 pcs) = nigiri.pc x2
+Salmon (Sake) (2 pcs) = nigiri.pc x2
+Tuna (Maguro) (2 pcs) = nigiri.pc x2
+BBQ Eel (Unagi) (2 pcs) = nigiri.pc x2
+Butter Fish sushi (2pcs) = nigiri.pc x2
+Spicy Scallop (2 pcs) = nigiri.pc x2.6
+Spicy Salmon (2 pcs) = nigiri.pc x2.6
+Salmon Rose (Sake Bara) (2 pcs) = nigiri.pc x2
+Hamachi Sushi/yellow tail (2pcs) = nigiri.pc x2
+Sweet Tofu Pocket (Inari) (2 pcs) = nigiri.pc x2
+Salmon Roe (Ikura) (2 pcs) = nigiri.pc x2
+Egg Omelette (Tamago) (2 pcs) = nigiri.pc x2
+Squid (Ika) (2 pcs) = nigiri.pc x2
+Spicy Lobster (2 pcs) = nigiri.pc x2.6
+Spicy Tuna (2 pcs) = nigiri.pc x2.6
+AMA Ebi(Sweet Shrimp)(2 pcs) = nigiri.pc x2
+Crab Meat (Kanikama) (2 pcs) = nigiri.pc x2
+Octopus (Tako) (2 pcs) = nigiri.pc x2
+Spicy Snow Crab (2 pcs) = nigiri.pc x2.6
+Flying Fish Roe (Tobiko) (2 pcs) = nigiri.pc x2
+Hamachi Sashimi/yellow tail (2pcs) = sashimi.pc x2
+Shrimp (Ebi) (2 pcs) = nigiri.pc x2
+Butter Fish Sashimi (2pcs) = sashimi.pc x2
+Surf Clam (Hokkigai) (2 pcs) = nigiri.pc x2
+Hamachi (2 pcs) = nigiri.pc x2
+
+[Beverages]
+Soft Drinks (Canned) = drink.soft
+Extra Spicy Mayo (2oz) = pub.dip x0.8
+Ramune Strawberry (Bottled) = drink.soft x0.7
+Extra Yummy Sauce(2oz) = pub.dip x0.8
+Ramune Lychee (bottled) = drink.soft x0.7
+Steamed Rice or Sushi Rice = side.steamed-rice
+Extra Soy Sauce(3oz) = wing.sauce x0.3
+Iced Tea (Canned) = drink.soft
+Ramune Grape (Bottled) = drink.soft x0.7
+Spring Water (Bottled) = drink.water
+Extra Ginger(2oz) = wing.sauce x0.3
+Extra Wasabi(1oz) = wing.sauce x0.3

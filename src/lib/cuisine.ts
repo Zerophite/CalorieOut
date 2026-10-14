@@ -46,7 +46,8 @@ export const CUISINES: Cuisine[] = [
   {
     id: 'korean',
     label: 'Korean',
-    dish: /korean|bibim|bulgogi|kimchi|gochujang|japchae|tteok|galbi|kalbi|yangnyeom/i,
+    dish: /korean|bibim|bulgogi|kimchi|gochujang|japchae|tteok|galbi|kalbi|yangnyeom|gimbap|kimbap|dakgangjeong/i,
+    restaurant: /korean/i,
   },
   {
     id: 'thai',
@@ -80,6 +81,13 @@ export const CUISINES: Cuisine[] = [
     label: 'Middle Eastern',
     dish: /shawarma|falafel|hummus|donair|kebab|kabob|kofta|tabbouleh|fattoush|baba gh|baklava|halloumi|\bsaj\b|za'?atar|tahini|toum|kibbeh|grape leaves|dolma|labneh|manakeesh|awama|lokma|turnips|lebanese|zaatar/i,
     restaurant: /shawarma|middle eastern|lebanese|mediterranean/i,
+  },
+  {
+    id: 'turkish',
+    sweets: true,
+    label: 'Turkish',
+    dish: /turkish|kebab|kabab|pide|lahmacun|k[uü]nefe|kunafa|iskender|adana|k[oö]fte|doner|d[oö]ner|ayran|beyti|ali nazik|s[uü]tla[cç]|havu[cç]/i,
+    restaurant: /turkish/i,
   },
   {
     id: 'greek',

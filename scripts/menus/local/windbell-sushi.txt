@@ -3,48 +3,215 @@ name: Windbell Sushi
 cuisine: Japanese · Sushi
 accent: #5f7d64
 segment: Sit-Down
-source: No public menu found; a typical Ottawa sushi menu (Windbell's delivery listing shows maki sets)
+source: Windbell Sushi Uber Eats menu (Ottawa, 2026); no posted calories, so every item is estimated from typical sushi portions by piece count
 
-[Maki sets]
-Maki Set A (18 pc) = sushi.combo x1.4
-Maki Set B (24 pc) = sushi.combo x1.85
-Sushi & Maki Combo (12 pc) = sushi.combo
-Sashimi Combo (14 pc) = sashimi.pc x14
+[Specials]
+Dynamite Futomaki 5pcs = maki.special x0.81
+Sesame Ball 5pcs = dessert.sesame-balls
+Dragon Eye Roll 5pcs = maki.dragon x0.63
+Teriyaki salmon roll 5pcs = maki.small x0.83
 
-[Rolls]
-California Roll (8 pc) = maki.california
-Spicy Salmon Roll (8 pc) = maki.spicy-salmon
-Spicy Tuna Roll (8 pc) = maki.spicy-tuna
-Salmon Avocado Roll (8 pc) = maki.salmon-avocado
-Dynamite Roll (8 pc) = maki.dynamite
-Dragon Roll (8 pc) = maki.dragon
-Rainbow Roll (8 pc) = maki.rainbow
-Shrimp Tempura Roll (8 pc) = maki.tempura
-Crispy Salmon Roll (8 pc) = maki.crispy
-Avocado Roll (6 pc) = maki.veg
-Cucumber Roll (6 pc) = maki.veg x0.75
-Salmon Roll (6 pc) = maki.small
+[Poké bowl]
+Salmon Poké = jp.poke
+Deluxe Poké = jp.poke
+Tuna Poké = jp.poke
+Lobster & Crab Poké = jp.poke
+Veggie Poké = jp.poke
+Fried Katsu Chicken Poke = jp.poke
+Spicy Crab Poké = jp.poke
+Tempura Shrimp Poké 4pcs = jp.poke
 
-[Nigiri & sashimi]
-Salmon Nigiri = nigiri.pc ; 2 pc=2, 4 pc=4
-Tuna Nigiri = nigiri.pc x0.95 ; 2 pc=2, 4 pc=4
-Eel Nigiri = nigiri.pc x1.3 ; 2 pc=2, 4 pc=4
-Salmon Sashimi = sashimi.pc ; 5 pc=5, 9 pc=9
+[Combo]
+Spicy Combo 24 pcs = sushi.combo x1.85
+Nigiri and sashimi combo 17pcs = sushi.combo x1.31
+Salmon Combo 18pcs = sushi.combo x1.38
+Assorted Combo 20pcs = sushi.combo x1.54
+Maki Roll Combo 21 pcs = sushi.combo x1.62
+Tuna Combo 18pcs = sushi.combo x1.38
+Cali Nigiri Combo 18pcs = sushi.combo x1.38
+Sashimi combo = sashimi.pc x14
 
-[Kitchen]
-Chicken Teriyaki = jp.teriyaki
-Salmon Teriyaki = jp.teriyaki x1.1
-Chicken Teriyaki Bento = jp.bento
-Udon Noodle Soup = jp.udon
-Yaki Udon = jp.yaki-noodle
-Salmon Poke Bowl = jp.poke
+[Maki Roll 8pcs]
+Philadelphia 8pcs = maki.salmon-avocado
+Spicy Crispy Tuna 8pcs = maki.crispy
+Spicy California 8pcs = maki.california
+Spicy Crispy Salmon 8pcs = maki.crispy
+Salmon Avocado 8pcs = maki.salmon-avocado
+California 8pcs = maki.california
+Salmon 8pcs = maki.small x1.33
+Tuna Avocado = maki.salmon-avocado
+BBQ Eel and Cucumber 8pcs = maki.special x0.85
+Tuna 8pcs = maki.small x1.33
+BBQ salmon and cucumber roll 8pcs = maki.small x1.33
+Crab 8pcs = maki.small x1.33
+Crispy Spicy Crab 8pcs = maki.crispy
+Spicy Crab 8pcs = maki.small x1.33
+Egg 8pcs = maki.veg x1.33
 
-[Sides]
-Miso Soup = side.miso-soup
+[Special roll 8pcs]
+Green Dragon 8pcs = maki.dragon
+Crispy Crunchy Dynamite 8pcs = maki.dynamite
+Black Dragon 8pcs = maki.dragon
+Spicy Crab Volcano Roll 8pcs = maki.special
+Lobster & Shrimp Roll 8pcs = maki.special
+Rainbow Roll 8pcs = maki.rainbow
+Teriyaki Torched Salmon Roll 8pcs = maki.special
+Salmon Mango Roll 8pcs cali base = maki.special
+Tuna Volcano Roll 8pcs = maki.special
+Red Dragon 8pcs = maki.dragon
+Ebi Dragon 8pcs = maki.dragon
+White Dragon 8pcs = maki.dragon
+Fire Dragon 8pcs = maki.dragon
+Mackerel roll 6pcs = maki.special x0.75
+Fantasy roll = maki.special
+
+[Appetizer]
+Tempura Shrimp 4pcs = side.tempura x0.85
 Edamame = side.edamame
+Pork Gyoza 5PCS = side.gyoza
+Miso Soup = side.miso-soup
+Takoyaki (Octopus Ball) 6pcs = side.takoyaki
+Tempura Sweet Potato 6pcs = side.tempura x0.8
+Veggie Gyoza 5pcs = side.gyoza
 Seaweed Salad = side.seaweed-salad
-House Salad = side.house-salad
-Shrimp Tempura = side.tempura
-Gyoza = side.gyoza
-Agedashi Tofu = side.agedashi
-Mochi Ice Cream (2) = dessert.mochi
+Avocado Salad = side.seaweed-salad x1.3
+Crab Salad = side.seaweed-salad x1.3
+Fried Banana 5pcs = dessert.sesame-balls
+Crab Tempura 4pcs = side.tempura x0.85
+Ebi Kakiage (shrimp and veggie tempura 4pcs) = side.tempura x0.8
+Creamy crab croquettes 6pcs = side.fried-veg x0.8
+Garden Salad = side.house-salad
+
+[Sashimi 2pcs]
+Salmon Sashimi 2pcs = sashimi.pc x2
+Tuna Sashimi 2pcs = sashimi.pc x2
+White tuna sashimi 2 pcs = sashimi.pc x2
+Surf Clam 2pcs = sashimi.pc x2
+Egg 3pcs = sashimi.pc x3
+Crab Sashimi 2pcs = sashimi.pc x2
+Inari 2pcs = nigiri.pc x2.6
+Ebi 2pcs = sashimi.pc x2
+Unagi 2pcs = sashimi.pc x2
+Scallop sashimi 2PCS = sashimi.pc x2
+
+[Pizza sushi 6pcs/ Fried sushi 5pcs]
+Windbell Roll 5 pcs = maki.crispy x0.63
+Pizza Spicy Crab 6pcs = maki.crispy x0.75
+Pizza salmon 6pcs = maki.crispy x0.75
+Pizza Veggie 6pcs = maki.crispy x0.75
+Hawaiian Roll 6pcs = maki.crispy x0.75
+
+[Torched sushi/sushi Box]
+Torched crispy spicy salmon box 6pcs = nigiri.pc x7.2
+Torched Salmon Box 6pcs = nigiri.pc x7.2
+Torched Crispy Spicy Tuna Box 6pcs = nigiri.pc x7.2
+Torched BBQ eel box = nigiri.pc x7.2
+Torched Tuna Box 6pcs = nigiri.pc x7.2
+Crispy Spicy Crab Box 6pcs = nigiri.pc x7.2
+Torched Tuna 2pcs = nigiri.pc x2.3
+Torched Salmon 2pcs = nigiri.pc x2.3
+Torched white tuna sushi 2pcs = nigiri.pc x2.3
+Torched scallop sushi = nigiri.pc x2.3
+
+[Lunch Special]
+Daily Special Crab Lover roll = maki.special x1.13
+Daily special Chicken Teriyaki Donburi = don.rice-bowl x1.4
+Daily special Chasu Pork donburi = don.rice-bowl x1.4
+Daily special Dynamite Crunch roll = maki.dynamite x1.4
+Daily special California roll = maki.california x1.4
+
+[Party tray]
+Maki roll Tray 50 PCS = sushi.combo x3.85
+Maki Roll Tray 40pcs = sushi.combo x3.08
+Sashimi Sushi Maki Tray 48 pcs = sushi.combo x3.69
+Maki & Nigiri Tray 30 pcs = sushi.combo x2.31
+Eel Tray 28 PCS = sushi.combo x2.15
+Dragon Tray 32pcs = sushi.combo x2.46
+Maki & Sashimi Tray 33pcs = sushi.combo x2.54
+Maki & Nigiri Tray 46 pcs = sushi.combo x3.54
+Veggie Tray 38pcs = sushi.combo x2.92
+Veggie tray 58pcs = sushi.combo x4.46
+
+[Hot Food]
+Fried Katsu Chicken Donburi = don.rice-bowl
+Teriyaki Chicken Donburi = don.rice-bowl
+House Donburi = don.rice-bowl
+Chasu Pork Donburi = don.rice-bowl
+BBQ Eel Donburi = jp.donburi-fish
+
+[Noodle Soup]
+Ramen Soup = ramen.tonkotsu
+Udon soup = jp.udon
+
+[Sushi 2pc]
+Salmon Sushi 2pcs = nigiri.pc x2
+Salmon Rose 2pcs = nigiri.pc x2
+Unagi Sushi 2Pcs = nigiri.pc x2
+Spicy mango 2Pcs = nigiri.pc x2.6
+Inari Sushi 2Pcs = nigiri.pc x2.6
+Tuna Sushi 2pcs = nigiri.pc x2
+Masago Sushi 2Pcs = nigiri.pc x2
+Lobster/shrimp Sushi 2Pcs = nigiri.pc x2
+Egg Sushi 2PCs = nigiri.pc x2
+Crispy Spicy Tuna Sushi 2Pcs = nigiri.pc x2.6
+Crab Sushi 2Pcs = nigiri.pc x2
+Crispy Spicy Salmon Sushi 2Pcs = nigiri.pc x2.6
+White Tuna Sushi 2Pcs = nigiri.pc x2
+Ebi Sushi 2pcs = nigiri.pc x2
+Tobiko Sushi 2Pcs = nigiri.pc x2
+Surf Clam Sushi 2pcs = nigiri.pc x2
+Seaweed Salad Sushi 2Pcs = nigiri.pc x2
+Crispy Spicy Crab Sushi 2Pcs = nigiri.pc x2.6
+Scallop sushi = nigiri.pc x2
+Spicy crab inari pocket 2pcs = nigiri.pc x2.6
+Avocado Inari pocket = nigiri.pc x2.6
+
+[Futomaki 5pcs]
+Dual Salmon Roll 5pcs = maki.special x0.81
+Crab Lover Roll 5pcs = maki.special x0.81
+Tuna Kamikaze Roll 5pcs = maki.special x0.81
+Katsu Chicken Roll 5pcs = maki.special x0.81
+Salmon Cali Roll 5pcs = maki.special x0.81
+Teriyaki Chicken Roll 5pcs = maki.special x0.81
+
+[Vegetarian roll/combo]
+Tempura Yam 8pcs = maki.tempura
+Veggie Maki combo 17pcs = sushi.combo x1.31
+Avocado yam 8pcs = maki.tempura x0.8
+Crispy Mango 8pcs = maki.crispy
+Cucumber 8pcs = maki.veg x1.33
+Veggie Explosion 5pcs = maki.special x0.81
+Veggie Inari Combo 15 pcs = sushi.combo x1.15
+Veggie Green Dragon 8pcs = maki.veg x1.33
+Veggie California 8pcs = maki.veg x1.33
+Veggie Futomaki 5pcs = maki.special x0.81
+Avocado cucumber 8pcs = maki.veg x1.33
+AVOCADO ROLL 8pcs = maki.veg x1.33
+Avocado mango 8pcs = maki.veg x1.33
+Inari 8pcs = maki.veg x1.33
+Avocado Inari 8pcs = maki.veg x1.33
+Crispy avocado roll = maki.crispy
+
+[Rice paper roll]
+Spicy Crab Rice Paper Roll 3pcs = viet.fresh-roll x1.5
+Lobster& Shrimp Blossom 6pcs = maki.special x0.75
+Veggie Rice Paper Roll 3pcs = viet.fresh-roll x1.5
+Spicy Salmon Blossom 6pcs = maki.special x0.75
+Red Dragon rice paper roll 6pcs = jp.teriyaki
+Ebi shrimp rice paper roll 3pcs = viet.fresh-roll x1.5
+
+[Soft Drink & Side]
+Coca-cola 355ml = drink.soft
+Diet coke 355ml = drink.diet
+Canada dry 355ml = drink.soft
+Water 500ml = drink.water
+Sprite 355ml = drink.soft
+spicy mayo = pub.dip x0.8
+Iced tea 341ml = drink.soft
+Sushi Rice = side.steamed-rice
+Extra Ginger 2oz = wing.sauce x0.3
+White rice = side.steamed-rice
+Teriyaki Sauce 2oz = wing.sauce x1.5
+Wafu Sauce 2oz = wing.sauce x1.5
+Extra Wasabi 2oz = wing.sauce x0.3
+Eel Sauce 2oz = wing.sauce x1.5

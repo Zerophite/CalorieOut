@@ -8,6 +8,7 @@
     "Sausage & Egg Breakfast Ciabatta": "Sausage & Egg"
   },
   "swisschalet": { "Kids' 1/4 Chicken - White Meat": "Quarter Chicken Dinner - White Meat" },
+  "theworks": { "House made Chips": "Side Spicy House-Made Potato Chips" },
   "local/6ixty-wings": {
     "Chicken Burger": "Chicken Burger with Fries",
     "Fully Loaded Burger": "Fully Loaded Burger with Fries",
@@ -16,10 +17,6 @@
     "Dipping Sauce (Ranch, Blue Cheese or Dill)": "Blue Cheese Dip Sauce"
   },
   "local/chain-smoker-bbq": { "Coleslaw": "Creamy Coleslaw" },
-  "local/chicha-san-chen": {
-    "Dong Ding Oolong Tea Latte": "Dong-Ding Oolong Tea and Fresh Milk",
-    "Brown Sugar Bubble Milk": "Bubble Volcano"
-  },
   "local/coco": { "Matcha Tea Latte": "Matcha Latte", "Fresh Mango Smoothie": "Chunky Mango Smoothie" },
   "local/gabriel-pizza": {
     "Poppers": "Jalapeno Poppers",
@@ -30,23 +27,7 @@
     "Kids' Poutine": "Poutine",
     "Kids' Hamburger": "Hamburger"
   },
-  "local/green-leaf": { "Pearl Milk Tea": "Classic Milk Tea", "Brown Sugar Pearl Milk": "Brown Sugar Pearl Boba Latte" },
   "local/halibut-house": { "Mushrooms": "Battered Mushrooms" },
-  "local/koichi-ramen": {
-    "Koichi Signature Ramen": "Koichi Signature - Pork Broth",
-    "Black Garlic Tonkotsu": "Tonkotsu with Black Garlic - Pork Broth",
-    "Miso Tonkotsu": "Tonkotsu Miso - Pork Broth",
-    "Chicken Shoyu Ramen": "Shoyu - Chicken Broth",
-    "Chicken Shio Ramen": "Shio - Chicken Broth",
-    "Chicken Miso Ramen": "Miso- Chicken Broth",
-    "Chicken Curry Ramen": "Curry - Chicken Broth"
-  },
-  "local/kuma-takumi": {
-    "Tonkotsu Ramen": "Tonkotsu",
-    "Shoyu Ramen": "Shoyu",
-    "Miso Ramen": "Miso",
-    "Pork Gyoza (5 pc)": "Gyoza"
-  },
   "local/lokma": {
     "Crunchy Pistachio Lokma": "Crunchy Pistachio x8",
     "Explosion Lokma": "Explosion x8",
@@ -70,10 +51,6 @@
     "Chicken Wings": "Wings",
     "Kids' Churros": "Churros"
   },
-  "local/mr-shawarma": {
-    "Sandwich Combo (fries & drink)": "Combo 2 (Small sandwich + Side Order + Drink)",
-    "Large Sandwich Combo": "Combo (Large Sandwich + Side Order + Drink)"
-  },
   "local/rock-n-deli": { "The Bacon Burger": "The Bacon", "The Classic Burger": "The Classic" },
   "local/sansotei-ramen": { "Corn Croquette": "Croquette" },
   "local/shawarma-prince": { "CreamBoom Awamas": "CreamBoom", "Nutella Awamas": "Nutella" },
@@ -83,7 +60,6 @@
     "Crispy Butter Chicken Bowl": "Crisby Butter Chicken Bowl"
   },
   "local/st-louis": { "Primavera Alfredo": "Primavera Pasta", "Kids' Fish & Chips": "Hand Battered Fish & Chips" },
-  "local/streats-kitchen": { "Baja Fish Tacos": "Baja Fish Taco" },
   "local/suzy-q": { "Drip Coffee": "Brewed Coffee" },
   "local/tartelette": { "Americano": "Americano med" },
   "local/toppers-pizza": {
@@ -103,15 +79,6 @@
     "Fuze Iced Tea": "Bottle Fuze",
     "Monster Energy": "Bottle Monster Energy Can"
   },
-  "local/windbell-sushi": {
-    "California Roll (8 pc)": "California 8pcs",
-    "Salmon Avocado Roll (8 pc)": "Salmon Avocado 8pcs",
-    "Cucumber Roll (6 pc)": "Cucumber 8pcs",
-    "Salmon Roll (6 pc)": "Salmon 8pcs",
-    "Salmon Nigiri": "Salmon Sushi 2pcs",
-    "Tuna Nigiri": "Tuna Sushi 2pcs",
-    "Gyoza": "Pork Gyoza 5PCS"
-  },
-  "local/wing-up": { "Mozzarella Sticks": "Mozza Sticks" },
+  "local/wing-up": { "7 Up": "Up" },
   "local/zolas": { "French Toast": "Ciabatta French Toast", "Caesar Salad": "Caesar", "Margherita Pizza": "Margherita" }
 }

@@ -3,34 +3,105 @@ name: WingsUp!
 cuisine: Wings
 accent: #ea580c
 segment: Fast Food
-source: No public menu found; a typical wing-shop menu
+source: WingsUp! Kanata Uber Eats menu, 2026 (appetizer and drink calories as posted; wings, bites, sides and meals estimated — hand-breaded wings ~12 per lb)
 
-[Wings]
-Chicken Wings = wing.pc x10 ; 1 lb=1, 2 lb=2, 3 lb=3, 5 lb=5 :: chicken wings, sauce
-Boneless Wings = wing.boneless-pc x10 ; 1 lb=1, 2 lb=2, 3 lb=3 :: boneless chicken, sauce
-Cauliflower Wings = pub.mozza x0.7
+[Wings — hand-breaded, with veggies & dip]
+Wing Meal 0.5 lb = wing.combo x0.6 :: chicken wings, potato wedges, veggies, ranch dip
+Wing Meal 0.75 lb = wing.combo x0.8 :: chicken wings, potato wedges, veggies, ranch dip
+Wing Meal 1 lb = wing.combo :: chicken wings, potato wedges, veggies, ranch dip
+1.5 lbs - XL = wing.pc x22 :: chicken wings, wing sauce
+2 lbs - Double = wing.pc x30 :: chicken wings, wing sauce
+3 lbs - Triple = wing.pc x45 :: chicken wings, wing sauce
+4 lbs - Quad = wing.pc x60 :: chicken wings, wing sauce
+5 lbs - Fiver = wing.pc x75 :: chicken wings, wing sauce
+6 lbs - The Six = wing.pc x90 :: chicken wings, wing sauce
 
-[Combos]
-Wing Combo (1 lb, fries, pop) = wing.combo :: chicken wings, sauce, fries, pop
-Boneless Combo (1 lb, fries, pop) = wing.combo x1.05 :: boneless chicken, sauce, fries, pop
+[Bites — boneless chicken or cauliflower]
+Regular Bites Meal = wing.combo x0.6 :: chicken bites, potato wedges, veggies, ranch dip
+Medium Bites Meal = wing.combo x0.8 :: chicken bites, potato wedges, veggies, ranch dip
+Large Bites Meal = wing.combo :: chicken bites, potato wedges, veggies, ranch dip
+Boneless Bites - XL = wing.boneless-pc x21 :: chicken bites, wing sauce
+Boneless Bites - Double = wing.boneless-pc x28 :: chicken bites, wing sauce
+Boneless Bites - Triple = wing.boneless-pc x42 :: chicken bites, wing sauce
+Boneless Bites - Quad = wing.boneless-pc x56 :: chicken bites, wing sauce
+Boneless Bites - Fiver = wing.boneless-pc x70 :: chicken bites, wing sauce
+Boneless Bites - The Six = wing.boneless-pc x84 :: chicken bites, wing sauce
 
-[Burgers & wraps]
-Crispy Chicken Burger = pub.chicken-burger
-Classic Burger = pub.burger
-Buffalo Chicken Wrap = pub.wrap
-Chicken Caesar Wrap = pub.wrap x0.95
+[Combo meals with a drink]
+Wing Meal Combo - With A Drink = wing.combo :: chicken wings, potato wedges, veggies, ranch dip, pop
+Bites Meal Combo - With A Drink = wing.combo :: chicken bites, potato wedges, veggies, ranch dip, pop
+Sandwich Combo - With A Drink = pub.chicken-burger x1.6 :: kaiser bun, chicken breast, wing sauce, potato wedges, pop
+Chicken Fingers Combo - With A Drink = pub.tenders x1.5 :: chicken fingers, potato wedges, dipping sauce, pop
+
+[Chicken fingers & wedges]
+Regular Chicken Fingers & Wedges (3 pcs) = pub.tenders x0.9 :: chicken fingers, potato wedges, dipping sauce
+Medium Chicken Fingers & Wedges (5 pcs) = pub.tenders x1.3 :: chicken fingers, potato wedges, dipping sauce
+Large Chicken Fingers & Wedges (7 pcs) = pub.tenders x1.7 :: chicken fingers, potato wedges, dipping sauce
+
+[Sandwiches]
+WingsUp! Classic = pub.chicken-burger :: kaiser bun, chicken breast, wing sauce
+Memphis = pub.chicken-burger x1.1 :: kaiser bun, chicken breast, wing sauce, coleslaw
+Smiley Sandwich = pub.chicken-burger x1.2 :: cheesy garlic bread, chicken breast, wing sauce
+
+[Family meals]
+Family Meal - 1.5 lbs = wing.pc x22 :: chicken wings, wing sauce, potato wedges, pop
+Family Meal - 2 lbs = wing.pc x38 :: chicken wings, wing sauce, potato wedges, mozza sticks, pop
+Family Meal - 3 lbs = wing.pc x58 :: chicken wings, wing sauce, potato wedges, garlic bread, mozza sticks
+Family Meal - 4 lbs = wing.pc x75 :: chicken wings, wing sauce, potato wedges, garlic bread, mozza sticks
+Family Meal - 5 lbs = wing.pc x90 :: chicken wings, wing sauce, potato wedges, garlic bread, mozza sticks
+Family Meal - 6 lbs = wing.pc x105 :: chicken wings, wing sauce, potato wedges, garlic bread, mozza sticks
+
+[Appetizers — calories as posted]
+Mozza Sticks = pub.mozza @ 500-780 :: mozzarella sticks, marinara
+Jalapeno Poppers = pub.mozza @ 480-680 :: jalapeno poppers, cream cheese, marinara
+Mac & Cheese Wedges = pub.mozza @ 660-960 :: mac & cheese wedges, ketchup
+Breaded Pickles = pub.onion-rings @ 530-780 :: breaded pickles, ranch
+Cheesy Perogies = pub.mozza @ 520-800 :: perogies, sour cream
+Multi-Tizer = pub.mozza @ 2120 :: mozza sticks, jalapeno poppers, mac & cheese wedges, breaded pickles, perogies, dips
+Garlic Bread = pizza.garlic-bread x4
+
+[Wedges & rings]
+Potato Wedges = pub.fries
+Cajunized Potato Wedges = pub.fries
+Lemonized Potato Wedges = pub.fries
+Onion Rings = pub.onion-rings
+Cajunized Onion Rings = pub.onion-rings
+Lemonized Onion Rings = pub.onion-rings
+Wedges & Rings = pub.fries x1.8 :: potato wedges, onion rings
+Poutine = pub.poutine :: potato wedges, cheese curds, gravy
+Loaded Poutine = pub.loaded-poutine :: potato wedges, cheese curds, gravy, chicken bites
+Gravy = pub.dip x0.2
 
 [Sides]
-Fries = pub.fries
-Seasoned Fries = pub.fries x1.05
-Sweet Potato Fries = pub.sweet-fries
-Onion Rings = pub.onion-rings
-Poutine = pub.poutine
-Mozzarella Sticks = pub.mozza
+Veggies 'n' Dip = side.coleslaw x1.3 :: carrots, celery, ranch dip, blue cheese dip
 Coleslaw = side.coleslaw
-Celery & Carrots = side.house-salad x0.5
-
-[Dips & drinks]
+Extra Dips = pub.dip x0.3
 Extra Sauce = wing.sauce
-Ranch or Blue Cheese Dip = pizza.dip
-Pop = drink.soft
+
+[Desserts]
+Mini Donuts Regular (6 Donuts) = donut.mini x6
+Mini Donuts Large (12 Donuts) = donut.mini x12
+
+[Drinks — 591 mL]
+Pepsi = drink.soft @ 260
+Diet Pepsi = drink.diet
+Pepsi Zero = drink.diet
+Mountain Dew = drink.soft @ 290
+Pepsi Wild Cherry = drink.soft @ 250
+Dr Pepper = drink.soft @ 240
+Dr Pepper Zero = drink.diet
+Ginger Ale = drink.soft @ 200
+Crush Orange = drink.soft @ 270
+Crush Grape = drink.soft @ 280
+Crush Cream Soda = drink.soft @ 280
+Mug Root Beer = drink.soft @ 270
+7 Up = drink.soft @ 230
+Brisk Iced Tea = drink.soft @ 110
+Pure Leaf Lemon = drink.soft @ 160
+Rockstar Original = drink.energy @ 260
+Rockstar Fruit Punch = drink.energy @ 260
+[NEW] Celsius Peach Vibe = drink.diet @ 10
+[NEW] Celsius Arctic Vibe = drink.diet @ 10
+Gatorade Cool Blue = drink.soft @ 140
+bubly Lime = drink.water
+Water (Aquafina) = drink.water

@@ -3,43 +3,66 @@ name: Koichi Ramen
 cuisine: Japanese · Ramen
 accent: #c62633
 segment: Sit-Down
-source: https://www.koichiramen.com (menu)
-
-[Appetizers]
-Edamame = side.edamame
-Vegetable Gyoza = side.gyoza x0.95 :: vegetable dumplings, dipping sauce
-Chicken Gyoza = side.gyoza :: chicken dumplings, dipping sauce
-Agedashi Tofu = side.agedashi :: fried tofu, dashi dressing, green onion
-Chicken Karaage = side.karaage
+source: Koichi Ramen (Westboro) Uber Eats menu, 2026; no posted calories, so every dish is estimated
 
 [Pork broth ramen]
-Koichi Signature Ramen = ramen.tonkotsu x1.1 :: pork broth, noodles, chashu, egg, bamboo shoots, bean sprouts, green onion, kikurage
-Hakata Tonkotsu = ramen.tonkotsu :: pork broth, noodles, chashu, bamboo shoots, bean sprouts, egg, green onion, kikurage
-Black Garlic Tonkotsu = ramen.tonkotsu x1.08 :: pork broth, noodles, chashu, black garlic oil, bamboo shoots, bean sprouts, egg, green onion, kikurage
-Miso Tonkotsu = ramen.miso x1.08 :: miso pork broth, noodles, chashu, bean sprouts, corn, mushrooms, green onions
-Curry Tonkotsu = ramen.curry :: curry pork broth, noodles, chashu, bean sprouts, corn, mushrooms, green onions
+Koichi Signature - Pork Broth = ramen.tonkotsu x1.05 :: pork broth, noodles, chashu, egg, bamboo shoots, bean sprouts, green onion, kikurage
+Hakata Tonkotsu - Pork Broth = ramen.tonkotsu :: pork broth, noodles, chashu, bamboo shoots, bean sprouts, egg, green onion
+Tonkotsu with Black Garlic - Pork Broth = ramen.tonkotsu x1.05 :: pork broth, noodles, chashu, bamboo shoots, bean sprouts, egg, green onion, kikurage, black garlic oil
+Tonkotsu Miso - Pork Broth = ramen.miso x1.05 :: pork broth, miso, noodles, chashu, bean sprouts, corn, mushrooms, green onion
+Tonkatsu Curry - Pork Broth = ramen.curry :: pork broth, curry, noodles, chashu, bean sprouts, corn, mushrooms, green onion
 
 [Chicken broth ramen]
-Chicken Shoyu Ramen = ramen.shoyu :: soy chicken broth, noodles, chicken, bamboo shoots, bean sprouts, egg, green onion, mushrooms
-Chicken Shio Ramen = ramen.chicken x0.95 :: chicken & fish broth, noodles, chicken, bean sprouts, mushrooms, green onion
-Chicken Miso Ramen = ramen.miso :: miso chicken broth, noodles, chicken, bean sprouts, mushrooms, green onion
-Chicken Curry Ramen = ramen.curry x0.95 :: curry chicken broth, noodles, chicken, bean sprouts, corn, mushrooms, green onions
+Shoyu - Chicken Broth = ramen.shoyu :: chicken broth, noodles, chicken, bamboo shoots, bean sprouts, egg, green onion, mushrooms
+Shio - Chicken Broth = ramen.chicken :: chicken and fish broth, noodles, chicken, bean sprouts, mushrooms, green onion
+Miso- Chicken Broth = ramen.miso :: chicken broth, miso, noodles, chicken, bean sprouts, corn, mushrooms, green onion
+Curry - Chicken Broth = ramen.curry :: chicken broth, curry, noodles, chicken, bean sprouts, corn, mushrooms, green onion
 
-[Vegetable broth ramen]
-Vegetable Shoyu Ramen = ramen.veggie x0.95 :: vegetable broth, noodles, bamboo shoots, sprouts, green onion, mushrooms, bok choy
-Vegetable Miso Ramen = ramen.veggie :: miso vegetable broth, noodles, bean sprouts, corn, green onion, mushrooms, bok choy
-Vegetable Curry Ramen = ramen.curry x0.85 :: curry vegetable broth, noodles, bean sprouts, corn, green onion, mushrooms, bok choy
-Abura Soba = ramen.mazemen :: noodles, seasoning oil, sauces, chashu, egg, green onion
+[Gluten-free]
+Shoyu - GF Chicken Broth = ramen.shoyu :: chicken broth, gluten-free noodles, chicken, bamboo shoots, bean sprouts, egg, green onion, mushrooms
+Shio - GF Chicken Broth = ramen.chicken :: chicken and fish broth, gluten-free noodles, chicken, bean sprouts, mushrooms, green onion
+Shoyu - GF Vegetarian Broth = ramen.veggie :: vegetable broth, gluten-free noodles, tofu, bamboo shoots, bean sprouts, green onion, mushrooms, bok choy
+Abura Soba - GF = ramen.mazemen :: gluten-free noodles, chashu, egg, green onion, sauce
 
-[Extras]
-Extra Chashu = add.chashu
-Extra Egg = add.egg
-Extra Noodles = add.noodles
+[Vegetarian ramen]
+Miso - Vegetarian Broth = ramen.veggie x1.05 :: vegetable broth, miso, noodles, tofu, bean sprouts, corn, green onion, mushrooms
+Shoyu - Vegetarian Broth = ramen.veggie :: vegetable broth, noodles, tofu, bamboo shoots, bean sprouts, green onion, mushrooms, bok choy
+Curry - Vegetarian Broth = ramen.curry x0.9 :: vegetable broth, curry, noodles, tofu, bean sprouts, corn, green onion, mushrooms, bok choy
+Abura Soba = ramen.mazemen :: noodles, chashu, egg, green onion, sauce
 
-[Beverages]
-Sapporo Tall Can = drink.beer x1.1
-Asahi Tall Can = drink.beer x1.05
-Calpico = drink.soft x0.9
-Iced Green Tea = coffee.tea
-Ramune = drink.soft x0.6
-UCC Iced Coffee = bt.coffee x0.4
+[Appetizers]
+Chicken Karaage = side.karaage
+Chicken Gyoza = side.gyoza
+Vegetarian Gyoza = side.gyoza x0.9
+Agedashi Tofu = side.agedashi
+Vegetable Korokke = side.fried-veg x0.6 :: vegetable croquette, mayo, tonkatsu sauce
+Edamame (GF) = side.edamame
+Takoyaki = side.takoyaki :: takoyaki, mayo, takoyaki sauce, bonito flakes
+Shrimp Tempura = side.tempura
+Seaweed Salad = side.seaweed-salad
+
+[Extra toppings]
+Extra Tofu = add.chashu x0.6 :: tofu
+Noodles = add.noodles x0.5
+Marinated Egg = add.egg
+Extra Chicken = add.chashu x0.9 :: chicken
+Extra Chashu (pork belly) = add.chashu
+Black Garlic oil = add.egg :: garlic oil
+Corn = add.egg x0.5 :: corn
+
+[Dessert]
+Green Tea Cheesecake = dessert.cheesecake x0.8
+Mochi Ice Cream = dessert.mochi x0.5
+Taiyaki = pastry.waffle x0.7
+
+[Drinks]
+Ramune = drink.soft x0.7
+UCC Ice coffee = bt.coffee x0.5
+Ice Green Tea "Sugar Free" = bt.pure-tea
+Bubly = drink.water
+Coca Cola = drink.soft
+Sprite = drink.soft
+Ginger Ale = drink.soft
+Diet Coke = drink.diet
+Coke Zero = drink.diet
+Fuze Ice Tea = drink.soft x0.8

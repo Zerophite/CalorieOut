@@ -1,31 +1,65 @@
 id: tea-live
 name: Tealive
-cuisine: Bubble tea · Toasties
+cuisine: Bubble tea · Coffee
 accent: #16a34a
 segment: Coffee & Bakery
-source: https://tealive.ca/order-now/ (Ottawa menu highlights; regular sugar assumed)
+source: Tealive Somerset Uber Eats menu, 2026 (regular size, regular sugar assumed; no posted calories)
 
-[Signatures]
-Aren Palm Sugar Pearl Milk Tea = bt.brown-sugar ; Regular=0.85, Large=1 :: fresh milk, palm sugar, tapioca pearls
-Signature Pearl Milk Tea = bt.milk-tea ; Regular=0.85, Large=1 :: milk tea, tapioca pearls
-Big Bang Fresh Milk = bt.fresh-milk x1.25 ; Regular=0.85, Large=1 :: fresh milk, brown sugar, pearls, pudding
-Lotus Biscoff Frappe = drink.milkshake x0.85 ; Regular=0.85, Large=1 :: milk, ice, Biscoff spread, cookie crumbs, whipped cream
-Classic Milk Tea = bt.milk-tea x0.85 ; Regular=0.85, Large=1
-Taro Milk Tea = bt.taro ; Regular=0.85, Large=1
-Matcha Latte = bt.matcha ; Regular=0.85, Large=1
-Mango Fruit Tea = bt.fruit-tea ; Regular=0.85, Large=1
-Passion Fruit Green Tea = bt.fruit-tea ; Regular=0.85, Large=1
+[Big Bang — brown sugar pearls]
+Big Bang Pearl Milk Tea = bt.brown-sugar :: black tea, creamer, brown sugar pearls
+Big Bang Pearl Fresh Milk = bt.brown-sugar :: fresh milk, brown sugar pearls
+Big Bang Caffe Latte = bt.brown-sugar x0.95 :: espresso, milk, brown sugar pearls
+Big Bang Nishio Matcha = bt.brown-sugar :: matcha, fresh milk, brown sugar pearls
 
-[Toasties]
-Cheezy Egg Toastie = cafe.sandwich x0.8 :: toast, egg, cheese sauce
-Chicken Ham & Egg Toastie = cafe.sandwich x0.9 :: toast, chicken ham, egg, cheese
-Cheezy Chicken Katsu Toastie = cafe.sandwich x1.15 :: toast, chicken katsu, cheese sauce
-Spicy Chicken Katsu Toastie = cafe.sandwich x1.1 :: toast, chicken katsu, spicy mayo
-Double Down Chicken Ham & Egg = cafe.sandwich x1.15 :: toast, double chicken ham, egg, cheese
-Hashbrown & Egg Toastie = cafe.sandwich x0.95 :: toast, hashbrown, egg, cheese
-Hashbrown & Chicken Ham Toastie = cafe.sandwich :: toast, hashbrown, chicken ham, cheese
+[Milk tea]
+Milk Tea = bt.milk-tea x0.85 :: black tea, creamer, sugar
+Signature Pearl Milk Tea = bt.milk-tea :: black tea, creamer, tapioca pearls, sugar
+Jasmine Green Milk Tea = bt.milk-tea x0.85 :: jasmine green tea, creamer, sugar
+Grass Jelly Roasted Oolong Milk Tea = bt.milk-tea x0.95 :: roasted oolong tea, creamer, grass jelly, sugar
+Caramel Jelly Roasted Oolong Milk Tea = bt.milk-tea :: roasted oolong tea, milk, caramel jelly, sugar
+Taro Latte = bt.taro :: taro, creamer, sugar
+Strawberry Milk Tea = bt.milk-tea :: black tea, creamer, strawberry syrup
 
-[Toppings]
-Pearls = topping.pearls
-Pudding = topping.pearls x0.8
-Cheese Foam = topping.pearls x0.8
+[Nishio matcha]
+Nishio Matcha Latte = bt.matcha x0.85 :: matcha, fresh milk, sugar
+Nishio Matcha Milk Tea = bt.matcha x0.85 :: matcha, creamer, sugar
+Nishio Matcha Strawberry Latte = bt.matcha :: matcha, fresh milk, strawberry puree
+
+[QQ fruit tea — pearls & coconut jelly]
+QQ Lemonade Green Tea = bt.fruit-tea x1.2 :: jasmine green tea, lemon, tapioca pearls, coconut jelly, sugar
+QQ Mango Green Tea = bt.fruit-tea x1.25 :: jasmine green tea, mango puree, tapioca pearls, coconut jelly
+QQ Red Grape Green Tea = bt.fruit-tea x1.25 :: jasmine green tea, grape, tapioca pearls, coconut jelly
+QQ Lychee Green Tea = bt.fruit-tea x1.2 :: jasmine green tea, lychee, tapioca pearls, coconut jelly
+
+[Fruit juice & seasonals]
+Mango Fruit Juice = bt.fruit-tea :: mango, sugar
+Red Grape Juice = bt.fruit-tea :: grape, sugar
+Lychee Juice = bt.fruit-tea :: lychee, sugar
+Salty Lychee = bt.fruit-tea x0.7 :: sparkling water, lychee
+Yuzu lemonade = bt.fruit-tea x0.7 :: sparkling water, yuzu, lemon
+
+[Smoothies & frappe]
+Strawberry Cream Cloud Smoothie = bt.slush x1.1 :: strawberry puree, ice, cream foam
+Red Grape Cream Cloud Smoothie = bt.slush x1.1 :: grape slush, cheese foam
+Taro Cream Cloud Smoothie = bt.slush x1.2 :: taro, ice, cream foam
+Mango Smoothie = bt.slush :: mango puree, ice
+Tiramisu Cream Cloud Frappe = bt.slush x1.2 :: coffee, vanilla, ice, cream foam
+
+[Coffee]
+Americano = coffee.americano
+HOT Americano = coffee.americano
+Latte = coffee.latte
+HOT Latte = coffee.latte
+HOT Hazelnut Latte = coffee.flavoured-latte
+Cocoa Mocha = coffee.mocha
+HOT Cocoa Mocha = coffee.mocha
+Signature Coffee = bt.coffee
+HOT Signature Coffee = bt.coffee
+HOT Salted Caramel Macchiato = coffee.flavoured-latte
+
+[Tea]
+Jasmine Green Tea = bt.pure-tea
+HOT Jasmine Green Tea = bt.pure-tea
+
+[Tealive Eats]
+Curry Chicken Rice = asian.curry x0.9 :: rice, chicken, curry

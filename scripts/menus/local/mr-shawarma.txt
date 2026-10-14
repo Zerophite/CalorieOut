@@ -3,40 +3,65 @@ name: Mr Shawarma
 cuisine: Shawarma · Lebanese
 accent: #1d4ed8
 segment: Fast Food
-source: Zabihah and DoorDash listings for the Baseline Rd. and Hazeldean locations (no full public menu)
+source: Mr Shawarma (Greenbank & Baseline) Uber Eats menu, 2026 (the grilled chicken plate's calories as posted; everything else estimated)
 
-[Sandwiches on pita]
-Chicken Shawarma Sandwich = wrap.chicken ; Regular=1, Large=1.3
-Beef Shawarma Sandwich = wrap.beef ; Regular=1, Large=1.3
-Mixed Shawarma Sandwich = wrap.mixed ; Regular=1, Large=1.3
-Falafel Sandwich = wrap.falafel ; Regular=1, Large=1.3
-Shish Taouk Sandwich = wrap.chicken x0.95 ; Regular=1, Large=1.3
-Kafta Sandwich = wrap.kafta ; Regular=1, Large=1.3
+[Sandwiches — small / large]
+Chicken Shawarma Sandwich = wrap.chicken ; Small=0.8, Large=1.2 :: pita, chicken shawarma, garlic sauce, lettuce, tomato, onion, pickles, cabbage
+Beef Shawarma Sandwich = wrap.beef ; Small=0.8, Large=1.2 :: pita, beef shawarma, garlic sauce, hummus, lettuce, tomato, onion, pickles, cabbage, tahini
+Mix Shawarma Sandwich (Chicken and Beef) = wrap.mixed ; Small=0.8, Large=1.2 :: pita, mixed shawarma, garlic sauce, lettuce, tomato, onion, pickles, cabbage, tahini
+Falafel Sandwich = wrap.falafel ; Small=0.8, Large=1.2 :: pita, falafel, lettuce, tomato, pickles, turnips, tahini
+Vegetarian Sandwich = wrap.veggie ; Small=0.8, Large=1.2 :: pita, fried eggplant, fried cauliflower, garlic sauce, pickles, lettuce
+Crispy Saj Sandwich = wrap.saj :: saj bread, chicken shawarma, garlic sauce, pickles, fries, pomegranate molasses
+Saj Tenders wrap = wrap.saj x1.05 :: saj bread, chicken tenders, garlic sauce, mayo, coleslaw, tomato, cheese
 
-[Plates — white or lentil rice]
-Chicken Shawarma Plate = plate.chicken :: rice, garlic potatoes, salad, chicken shawarma, garlic sauce, hummus, pita bread
-Beef Shawarma Plate = plate.beef :: rice, garlic potatoes, salad, beef shawarma, garlic sauce, hummus, pita bread
-Mixed Shawarma Plate = plate.mixed :: rice, garlic potatoes, salad, chicken & beef shawarma, garlic sauce, hummus, pita bread
-Shish Taouk Plate = plate.chicken x0.95 :: rice, garlic potatoes, salad, grilled chicken, garlic sauce, hummus, pita bread
-Kafta Plate = plate.kafta :: rice, garlic potatoes, salad, kafta, garlic sauce, hummus, pita bread
-Falafel Plate = plate.falafel :: rice, salad, falafel, tahini sauce, hummus, pita bread
+[Combos — sandwich, side & drink]
+Small Combo (Small sandwich + Side Order + Drink) = wrap.combo x0.85 :: pita, chicken shawarma, garlic sauce, garlic potatoes, pop
+Small Combo 2 (Small sandwich + Side Order + Drink) = wrap.combo x0.85 :: pita, chicken shawarma, garlic sauce, garlic potatoes, pop
+Large Combo (Large Sandwich + Side Order + Drink) = wrap.combo :: pita, chicken shawarma, garlic sauce, garlic potatoes, pop
+Large Combo#1 (Large Sandwich + Drink) = wrap.combo x0.8 :: pita, chicken shawarma, garlic sauce, pop
+Falafel Combo = wrap.combo x0.85 :: pita, falafel, tahini, garlic potatoes, pop
 
-[Combos]
-Sandwich Combo (fries & drink) = wrap.combo
-Large Sandwich Combo = wrap.combo x1.2
-Family Set (per person) = plate.mixed
+[Platters]
+Chicken Shawarma Plate = plate.chicken :: chicken shawarma, rice, garlic potatoes, garden salad, garlic sauce
+Medium Chicken Plate = plate.chicken x0.8 :: chicken shawarma, rice, garlic potatoes, garlic sauce
+Beef Shawarma Plate = plate.beef :: beef shawarma, rice, garlic potatoes, garden salad, tahini
+Mix Shawarma Plate = plate.mixed :: chicken shawarma, beef shawarma, rice, garlic potatoes, garden salad, garlic sauce
+Beef Kabob Plate = plate.kafta :: kabob skewers, rice, garlic potatoes, salad, garlic sauce
+Grilled Chicken Plate = plate.chicken @ 600-800 :: grilled chicken, rice, salad, garlic sauce
+Falafel Plate = plate.falafel :: falafel, rice, garlic potatoes, salad, hummus, tahini
+Vegetarian Plate = plate.veggie :: fried eggplant, fried cauliflower, rice, salad, hummus, garlic sauce
+Crispy Saj Platter = plate.chicken x1.15 :: saj bites, garlic sauce, pickles, fries, pomegranate molasses, salad
+Crispy Chicken Tenders Plate = pub.tenders x1.3 :: chicken tenders, coleslaw, fries, garlic sauce
+Shawarma Salad = healthy.salad :: garden salad, chicken shawarma, dressing
+Shawarma Meat Side (Chicken/Beef) = plate.chicken x0.6 :: chicken shawarma
 
-[Sides]
+[Poutine]
+Poutine - St Albert Cheese = poutine.classic
+Chicken Shawarma Poutine = poutine.shawarma
+Beef Shawarma Poutine = poutine.shawarma x1.05 :: fries, cheese curds, gravy, beef shawarma
+
+[Family deals]
+Shawarma Family Set (Two Large Trays - Feeds 5 Adults) = plate.mixed x5 :: chicken shawarma, beef shawarma, rice, garlic potatoes, salad, garlic sauce, pita
+4 Sandwiches + 4 Drinks + One Side of Garlic Potatoes (Family Deal) = wrap.combo x3.6 :: pita, chicken shawarma, garlic sauce, garlic potatoes, pop
+BBQ Family Set (Two Trays) = plate.kafta x5 :: kabob skewers, rice, garlic potatoes, salad, garlic sauce, pita
+Saj Family Platter (For 3/4) = wrap.saj x3.5 :: saj bites, fries, coleslaw, spicy bread, garlic sauce
+
+[Sides & salads]
 Garlic Potatoes = side.garlic-potatoes
-Lentil Rice = side.rice x1.05
-Tabbouleh = side.tabbouleh
-Fattoush = side.fattoush
-Grape Leaves (6) = side.grape-leaves
-Fried Kibbeh = side.kibbeh ; 1 pc=1, 3 pc=3
-Falafel = side.falafel-pc ; 1 pc=1, 6 pc=6
-Meat Pie = side.meat-pie
-Hummus = side.hummus
 Garlic Sauce = side.garlic-sauce
-Shawarma Poutine = poutine.shawarma
-Fries = pub.fries
-Soft Drink = drink.soft
+Rice = side.rice
+Fried Eggplant = side.fried-veg
+Fried Cauliflower = side.fried-veg
+Hummus = side.hummus
+Falafel (4 balls) = side.falafel-pc x4
+Stuffed Grape Leaves = side.grape-leaves
+Greek Salad = side.greek-salad
+Taboule = side.tabbouleh
+Fatoush = side.fattoush
+Backlava = dessert.baklava x2
+Baklawa small Size box = dessert.baklava x10
+
+[Drinks]
+Pop = drink.soft
+Bottle of Juice/Soda = drink.juice
+Bottle of Water = drink.water
