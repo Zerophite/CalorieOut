@@ -1,0 +1,117 @@
+{
+  "dairyqueen": { "Ranch Dressing": "Ranch" },
+  "kfc": { "Sweet and Smokey BBQ Dipping Sauce": "Sweet n Smokey BBQ" },
+  "subway": {
+    "Bacon & Egg Breakfast Ciabatta": "Bacon & Egg",
+    "Cheese & Egg Breakfast Ciabatta": "Cheese & Egg",
+    "Ham & Egg Breakfast Ciabatta": "Ham & Egg",
+    "Sausage & Egg Breakfast Ciabatta": "Sausage & Egg"
+  },
+  "swisschalet": { "Kids' 1/4 Chicken - White Meat": "Quarter Chicken Dinner - White Meat" },
+  "local/6ixty-wings": {
+    "Chicken Burger": "Chicken Burger with Fries",
+    "Fully Loaded Burger": "Fully Loaded Burger with Fries",
+    "Hamburger": "Hamburger with Fries",
+    "Veggie Burger": "Veggie Burger with Fries",
+    "Dipping Sauce (Ranch, Blue Cheese or Dill)": "Blue Cheese Dip Sauce"
+  },
+  "local/chain-smoker-bbq": { "Coleslaw": "Creamy Coleslaw" },
+  "local/chicha-san-chen": {
+    "Dong Ding Oolong Tea Latte": "Dong-Ding Oolong Tea and Fresh Milk",
+    "Brown Sugar Bubble Milk": "Bubble Volcano"
+  },
+  "local/coco": { "Matcha Tea Latte": "Matcha Latte", "Fresh Mango Smoothie": "Chunky Mango Smoothie" },
+  "local/gabriel-pizza": {
+    "Poppers": "Jalapeno Poppers",
+    "Gabe's Poutine": "Poutine",
+    "Chicken Wings": "Wings",
+    "Donair": "Beef Donair",
+    "Kids' Spaghetti": "Spaghetti",
+    "Kids' Poutine": "Poutine",
+    "Kids' Hamburger": "Hamburger"
+  },
+  "local/green-leaf": { "Pearl Milk Tea": "Classic Milk Tea", "Brown Sugar Pearl Milk": "Brown Sugar Pearl Boba Latte" },
+  "local/halibut-house": { "Mushrooms": "Battered Mushrooms" },
+  "local/koichi-ramen": {
+    "Koichi Signature Ramen": "Koichi Signature - Pork Broth",
+    "Black Garlic Tonkotsu": "Tonkotsu with Black Garlic - Pork Broth",
+    "Miso Tonkotsu": "Tonkotsu Miso - Pork Broth",
+    "Chicken Shoyu Ramen": "Shoyu - Chicken Broth",
+    "Chicken Shio Ramen": "Shio - Chicken Broth",
+    "Chicken Miso Ramen": "Miso- Chicken Broth",
+    "Chicken Curry Ramen": "Curry - Chicken Broth"
+  },
+  "local/kuma-takumi": {
+    "Tonkotsu Ramen": "Tonkotsu",
+    "Shoyu Ramen": "Shoyu",
+    "Miso Ramen": "Miso",
+    "Pork Gyoza (5 pc)": "Gyoza"
+  },
+  "local/lokma": {
+    "Crunchy Pistachio Lokma": "Crunchy Pistachio x8",
+    "Explosion Lokma": "Explosion x8",
+    "Kebueno Lokma": "Kebueno x8",
+    "Istanbul Lokma": "Istanbul x8",
+    "Pure Speculoos Lokma": "Pur Biscoff",
+    "Kroffle": "Customize your Kroffle",
+    "Mini Donuts (12)": "Box of Mini Donuts",
+    "Milkshake": "Classic Shake"
+  },
+  "local/lone-star": {
+    "Dip Trio": "Chips & Dips Trio",
+    "Garlic Mashed Potatoes": "Mashed Potato",
+    "Grilled Steak Quesadilla": "Steak Quesadilla Platter",
+    "New York Striploin (11 oz)": "oz NY Striploin",
+    "Boneless Rib Steak (14 oz)": "oz Boneless Beef Rib",
+    "Pork Back Ribs": "2/3 Rack Back Ribs",
+    "Rib & Wing Combo": "Ribs & Wings",
+    "Chicken Chimichanga": "Chimichanga",
+    "Nashville Chicken Sammy": "Nashville Chicken Sandwich",
+    "Chicken Wings": "Wings",
+    "Kids' Churros": "Churros"
+  },
+  "local/mr-shawarma": {
+    "Sandwich Combo (fries & drink)": "Combo 2 (Small sandwich + Side Order + Drink)",
+    "Large Sandwich Combo": "Combo (Large Sandwich + Side Order + Drink)"
+  },
+  "local/rock-n-deli": { "The Bacon Burger": "The Bacon", "The Classic Burger": "The Classic" },
+  "local/sansotei-ramen": { "Corn Croquette": "Croquette" },
+  "local/shawarma-prince": { "CreamBoom Awamas": "CreamBoom", "Nutella Awamas": "Nutella" },
+  "local/shelbys-shawarma": {
+    "Bacon Halloumi Wrap": "Halloumi Bacon Wrab",
+    "Build Your Own Wrap": "Build your own Wrab",
+    "Crispy Butter Chicken Bowl": "Crisby Butter Chicken Bowl"
+  },
+  "local/st-louis": { "Primavera Alfredo": "Primavera Pasta", "Kids' Fish & Chips": "Hand Battered Fish & Chips" },
+  "local/streats-kitchen": { "Baja Fish Tacos": "Baja Fish Taco" },
+  "local/suzy-q": { "Drip Coffee": "Brewed Coffee" },
+  "local/tartelette": { "Americano": "Americano med" },
+  "local/toppers-pizza": {
+    "BBQ Bacon Potato Skin": "Bacon Potato Skins",
+    "Shredded Pep Cheezy Sticks": "Single Order Shredded Pepperoni Cheezy Sticks",
+    "TopperSticks": "Single Order TopperSticks",
+    "House Dip": "Dip Cup Toppers Famous House Dressing",
+    "Ranch Dip": "Dip Cup Ranch Dressing",
+    "Tomato Dip": "Dip Cup Tomato Sauce",
+    "Tropical Heatwave Loaded Bites": "Loaded Bites Tropical Heat Wave",
+    "Cinni-MiniSticks": "Cinni-MiniStick",
+    "Cinnamon Apple Crisp": "Size Apple Crisp",
+    "Coca-Cola": "Bottle Coke",
+    "Canada Dry Ginger Ale": "Bottle Ginger Ale",
+    "Sprite": "Bottle Sprite",
+    "Barq's Root Beer": "Bottle Root Beer",
+    "Fuze Iced Tea": "Bottle Fuze",
+    "Monster Energy": "Bottle Monster Energy Can"
+  },
+  "local/windbell-sushi": {
+    "California Roll (8 pc)": "California 8pcs",
+    "Salmon Avocado Roll (8 pc)": "Salmon Avocado 8pcs",
+    "Cucumber Roll (6 pc)": "Cucumber 8pcs",
+    "Salmon Roll (6 pc)": "Salmon 8pcs",
+    "Salmon Nigiri": "Salmon Sushi 2pcs",
+    "Tuna Nigiri": "Tuna Sushi 2pcs",
+    "Gyoza": "Pork Gyoza 5PCS"
+  },
+  "local/wing-up": { "Mozzarella Sticks": "Mozza Sticks" },
+  "local/zolas": { "French Toast": "Ciabatta French Toast", "Caesar Salad": "Caesar", "Margherita Pizza": "Margherita" }
+}

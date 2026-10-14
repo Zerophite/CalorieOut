@@ -36,5 +36,34 @@
  ],
  "local/sushi-sama": [
   "Tempura Shrimp Roll"
+ ],
+ "ubereats/bostonpizza": [
+  "Side Three-Cheese Toast"
+ ],
+ "ubereats/dairyqueen": [
+  "Hamburger",
+  "Chicken Strips"
+ ],
+ "ubereats/subway": [
+  "Double Chocolate Cookie"
+ ],
+ "ubereats/swisschalet": [
+  "Loaded Baked Potato Soup with Rotisserie Chicken - Family Size"
+ ],
+ "ubereats/local/halibut-house": [
+  "Onion Rings",
+  "Garden Salad"
+ ],
+ "ubereats/local/chicha-san-chen": [
+  "Grapefruit Green Tea",
+  "Mango Green Tea",
+  "Lemon Green Tea",
+  "Passion Fruit Green Tea"
+ ],
+ "ubereats/local/toppers-pizza": [
+  "Tandoori Paneer",
+  "Tropical Heatwave",
+  "Chicken Caesar",
+  "Grilled Chicken Bruschetta"
  ]
 }

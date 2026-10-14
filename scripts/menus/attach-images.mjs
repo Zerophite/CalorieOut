@@ -2,7 +2,9 @@
 // items whose name matches the photo's product name: exactly, without a
 // parenthetical, as the start of a longer name, or with the same words in any
 // order (one extra word allowed, or only size words for a one-word name). A single item never takes a combo / pack /
-// box photo. Used by writeMenu (lib.ts) and the McDonald's generator.
+// box photo. Items the official photos don't cover fall back to the restaurant's
+// own delivery-app listing (images/ubereats/<file>.json). Used by writeMenu
+// (lib.ts) and the McDonald's generator.
 import fs from 'fs'
 
 const normName = (s) =>
@@ -21,73 +23,95 @@ const STOP = new Set(['&', 'of', 'the', 'with', 'a', 'side', 'new', 'single', 'r
 const FORMS = new Set(['wrap', 'salad', 'bowl', 'sub', 'sandwich', 'pizza', 'burrito', 'taco', 'quesadilla', 'soup', 'poutine', 'pita', 'ciabatta', 'shake', 'smoothie', 'cookie', 'fries', 'nachos', 'pasta', 'sundae', 'blizzard', 'cone', 'float', 'latte', 'tea', 'coffee', 'muffin', 'bagel', 'donut', 'combo'])
 const MULTI =/\b(combo|pack|box|bucket|platter|family|meal)\b/
 
-function attachImages(file, items) {
+function loadMap(file) {
   const path = `scripts/menus/images/${file}.json`
-  if (!fs.existsSync(path)) return
+  if (!fs.existsSync(path)) return null
   const raw = JSON.parse(fs.readFileSync(path, 'utf8'))
   const map = {}
   for (const [k, v] of Object.entries(raw)) if (!map[normName(k)]) map[normName(k)] = v
-  const keys = Object.keys(map)
+  // Delivery apps name some dishes differently ("Shoyu - Chicken Broth" for
+  // "Chicken Shoyu Ramen"); images/ubereats/aliases.json pairs them by hand.
+  const aliasPath = 'scripts/menus/images/ubereats/aliases.json'
+  if (file.startsWith('ubereats/') && fs.existsSync(aliasPath)) {
+    const aliases = JSON.parse(fs.readFileSync(aliasPath, 'utf8'))[file.slice('ubereats/'.length)] || {}
+    for (const [ours, theirs] of Object.entries(aliases)) {
+      if (map[normName(theirs)]) map[normName(ours)] = map[normName(theirs)]
+      else console.warn(`  alias not found in ${file}: ${theirs}`)
+    }
+  }
   // Items whose closest photo shows a different dish (images/exclude.json).
   const exclude = fs.existsSync('scripts/menus/images/exclude.json')
     ? new Set((JSON.parse(fs.readFileSync('scripts/menus/images/exclude.json', 'utf8'))[file] || []).map(normName))
     : new Set()
+  return { map, keys: Object.keys(map), exclude }
+}
+
+function attachImages(file, items) {
+  const maps = [loadMap(file), loadMap(`ubereats/${file}`)].filter(Boolean)
+  if (!maps.length) return
   let found = 0
   for (const it of items) {
     delete it.image
-    const n = normName(it.name)
-    if (exclude.has(n)) continue
-    const bare = normName(it.name.replace(/\([^)]*\)/g, ''))
-    let url = map[n] || map[bare]
-    // A one-word name ("Banana") only takes a longer name's photo when the extra
-    // words are sizes ("Latte Medium"), never another dish ("Banana Split").
-    const single = !bare.includes(' ')
-    const sizeOnly = (rest) => rest.split(' ').every((t) => STOP.has(t))
-    if (!url && bare.length >= 3) {
-      const k = keys
-        .filter((x) => {
-          if (!x.startsWith(bare + ' ')) return false
-          const rest = x.slice(bare.length + 1)
-          // "Berry Smoothie" never takes "Berry Smoothie Bowl"'s photo.
-          return single ? sizeOnly(rest) : !rest.split(' ').some((t) => FORMS.has(t))
-        })
-        .sort((a, b) => a.length - b.length)[0]
-      if (k) url = map[k]
-    }
-    if (!url && bare.length >= 3) {
-      const words = bare.split(' ').filter((w) => !STOP.has(w))
-      const multi = MULTI.test(bare)
-      const k = keys
-        .filter((x) => multi || !MULTI.test(x))
-        .map((x) => ({ x, w: x.split(' ').filter((t) => !STOP.has(t)) }))
-        .filter(
-          ({ w }) =>
-            words.length > 0 &&
-            words.every((t) => w.includes(t)) &&
-            w.length <= words.length + (single ? 0 : 1) &&
-            !w.some((t) => FORMS.has(t) && !words.includes(t)),
-        )
-        .sort((a, b) => a.w.length - b.w.length || a.x.length - b.x.length)[0]
-      if (k) url = map[k.x]
-    }
-    if (!url && bare.length >= 3) {
-      // The photo's name is contained in the item's name ("Egg BLT Bagel" for "Egg BLT Bagel with Plain Bagel").
-      // Never across product types: a wrap doesn't take the sub's photo.
-      const words = new Set(bare.split(' '))
-      const forms = [...words].filter((t) => FORMS.has(t))
-      const k = keys
-        .filter((x) => !MULTI.test(x) || MULTI.test(bare))
-        .map((x) => ({ x, w: x.split(' ').filter((t) => !STOP.has(t)) }))
-        .filter(({ w }) => w.length >= 2 && w.every((t) => words.has(t)) && (!w.some((t) => FORMS.has(t)) || forms.every((f) => w.includes(f))))
-        .sort((a, b) => b.w.length - a.w.length)[0]
-      if (k) url = map[k.x]
-    }
+    const url = maps.reduce((u, m, i) => u || matchIn(m, it, i > 0), undefined)
     if (url) {
       it.image = url
       found++
     }
   }
   console.log(`  images: ${found}/${items.length}`)
+}
+
+// strict (delivery-app photos): a dish named as a wrap / salad / bowl… only takes
+// a photo whose name says so too, never the plain sub or sandwich.
+function matchIn({ map, keys, exclude }, it, strict) {
+  const n = normName(it.name)
+  if (exclude.has(n)) return
+  const bare = normName(it.name.replace(/\([^)]*\)/g, ''))
+  let url = map[n] || map[bare]
+  // A one-word name ("Banana") only takes a longer name's photo when the extra
+  // words are sizes ("Latte Medium"), never another dish ("Banana Split").
+  const single = !bare.includes(' ')
+  const sizeOnly = (rest) => rest.split(' ').every((t) => STOP.has(t))
+  if (!url && bare.length >= 3) {
+    const k = keys
+      .filter((x) => {
+        if (!x.startsWith(bare + ' ')) return false
+        const rest = x.slice(bare.length + 1)
+        // "Berry Smoothie" never takes "Berry Smoothie Bowl"'s photo.
+        return single ? sizeOnly(rest) : !rest.split(' ').some((t) => FORMS.has(t))
+      })
+      .sort((a, b) => a.length - b.length)[0]
+    if (k) url = map[k]
+  }
+  if (!url && bare.length >= 3) {
+    const words = bare.split(' ').filter((w) => !STOP.has(w))
+    const multi = MULTI.test(bare)
+    const k = keys
+      .filter((x) => multi || !MULTI.test(x))
+      .map((x) => ({ x, w: x.split(' ').filter((t) => !STOP.has(t)) }))
+      .filter(
+        ({ w }) =>
+          words.length > 0 &&
+          words.every((t) => w.includes(t)) &&
+          w.length <= words.length + (single ? 0 : 1) &&
+          !w.some((t) => FORMS.has(t) && !words.includes(t)),
+      )
+      .sort((a, b) => a.w.length - b.w.length || a.x.length - b.x.length)[0]
+    if (k) url = map[k.x]
+  }
+  if (!url && bare.length >= 3) {
+    // The photo's name is contained in the item's name ("Egg BLT Bagel" for "Egg BLT Bagel with Plain Bagel").
+    // Never across product types: a wrap doesn't take the sub's photo.
+    const words = new Set(bare.split(' '))
+    const forms = [...words].filter((t) => FORMS.has(t))
+    const k = keys
+      .filter((x) => !MULTI.test(x) || MULTI.test(bare))
+      .map((x) => ({ x, w: x.split(' ').filter((t) => !STOP.has(t)) }))
+      .filter(({ w }) => w.length >= 2 && w.every((t) => words.has(t)) && ((!strict && !w.some((t) => FORMS.has(t))) || forms.every((f) => w.includes(f))))
+      .sort((a, b) => b.w.length - a.w.length)[0]
+    if (k) url = map[k.x]
+  }
+  return url
 }
 
 export { attachImages, normName }
