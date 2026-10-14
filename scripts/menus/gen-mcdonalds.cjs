@@ -80,6 +80,7 @@ for (const r of rows) {
 }
 
 require('./attach-images.mjs').attachImages('mcdonalds', items)
+require('./reconcile.mjs').reconcileMenu(items)
 
 const body = items
   .map((it) => '    ' + JSON.stringify(it).replace(/"(\w+)":/g, '$1: '))

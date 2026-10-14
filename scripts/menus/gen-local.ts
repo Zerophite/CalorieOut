@@ -33,6 +33,7 @@ import { ARCHETYPES, atCalories, scaled } from './estimate'
 import { componentsFromNames } from './ingredients'
 import { idMaker, tagsFor } from './lib'
 import { attachImages } from './attach-images.mjs'
+import { reconcileMenu } from './reconcile.mjs'
 
 const DIR = 'scripts/menus/local'
 const OUT = 'src/data/menus/local'
@@ -130,7 +131,22 @@ function parseLine(line: string, spot: Spot, newId: (s: string) => string, file:
     it.defaultSize = def.label
     if (posted && hi !== undefined && !sizes.length) it.sizeTitle = 'Posted range'
     else if (!versions.every((v) => /small|medium|large|regular|personal|indy|\bpc\b|pcs|oz|ml|slice|half|full|rack|lb|dozen|each|kids|single|double|leg|thigh|una|dos|grande|tall|venti|piece|serving|pack|burger|sandwich|trio/i.test(v.label))) it.sizeTitle = 'Options'
+    const COMBO = /trio|combo|meal|platter|with (fries|a side|side)|\+ ?(fries|side|drink)/i
     it.sizes = versions.map((v) => {
+      // A combo is the dish plus its sides: keep the dish's own ingredients and
+      // add the sides as one part, instead of scaling every ingredient up.
+      if (v !== def && COMBO.test(v.label) && !COMBO.test(def.label) && v.n.calories > def.n.calories) {
+        const base = comps(def.n)
+        const extra = (f: keyof Nutrition) => Math.max(0, Math.round(((v.n[f] as number) ?? 0) - ((def.n[f] as number) ?? 0)))
+        const sides = (v.label.match(/\(([^)]+)\)/)?.[1] ?? 'sides').replace(/\s*·\s*/g, ', ')
+        const side: any = { id: 'combo-sides', name: sides.charAt(0).toUpperCase() + sides.slice(1), nutrition: { calories: extra('calories'), protein: extra('protein'), carbs: extra('carbs'), fat: extra('fat'), sodium: extra('sodium') } }
+        if (base) {
+          const on = [...base.filter((x) => x.default !== false), side]
+          const sum = (f: 'calories' | 'protein' | 'carbs' | 'fat' | 'sodium') => on.reduce((s, x) => s + x.nutrition[f], 0)
+          const n = { calories: sum('calories'), protein: sum('protein'), carbs: sum('carbs'), fat: sum('fat'), sodium: sum('sodium') }
+          return { label: v.label, nutrition: n, components: [...base, side] }
+        }
+      }
       const c = comps(v.n)
       return { label: v.label, nutrition: v.n, ...(c ? { components: c } : {}) }
     })
@@ -178,6 +194,7 @@ for (const s of spots) {
   s.items = items
   // Photos from the spot's own website, where it shows them (images/local/<id>.json).
   attachImages(`local/${s.id}`, items)
+  reconcileMenu(items)
   const body = items.map((it) => '  ' + JSON.stringify(it).replace(/"(\w+)":/g, '$1: ')).join(',\n')
   fs.writeFileSync(
     path.join(OUT, `${s.id}.items.ts`),

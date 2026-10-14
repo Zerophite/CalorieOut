@@ -41,7 +41,8 @@
     "menus:madradish": "node scripts/menus/run.cjs gen-madradish.ts",
     "menus:kettlemans": "node scripts/menus/fetch-kettlemans.cjs && node scripts/menus/run.cjs gen-kettlemans.ts",
     "menus:local": "node scripts/menus/run.cjs gen-local.ts",
-    "menus:images": "node scripts/menus/fetch-images.cjs"
+    "menus:images": "node scripts/menus/fetch-images.cjs",
+    "menus:audit": "node scripts/menus/run.cjs audit.ts"
   },
   "dependencies": {
     "react": "^18.3.1",

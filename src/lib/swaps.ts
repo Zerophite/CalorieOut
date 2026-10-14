@@ -27,7 +27,7 @@ export function suggestSwaps(
 
   for (const group of item.groups) {
     const chosenIds = selection[group.id] ?? []
-    for (const chosenId of chosenIds) {
+    for (const chosenId of new Set(chosenIds)) {
       const from = findOption(group, chosenId)
       if (!from) continue
 

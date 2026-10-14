@@ -9,11 +9,17 @@ import {
   ZERO_NUTRITION,
 } from '../types'
 
-/** A map of groupId -> set of selected optionIds for a builder in progress. */
+/**
+ * A map of groupId -> selected optionIds for a builder in progress. An id can
+ * appear more than once: each repeat is another portion (double chicken).
+ */
 export type BuilderSelection = Record<string, string[]>
 
-/** A map of componentId -> whether it is currently included. */
-export type ComponentSelection = Record<string, boolean>
+/** A map of componentId -> how many portions are included (0 = left out). */
+export type ComponentSelection = Record<string, number>
+
+/** Most portions of a single ingredient or option the customizers allow. */
+export const MAX_QUANTITY = 10
 
 /** Is a component included to start with? (default-on unless marked otherwise). */
 export function isComponentDefaultOn(c: IngredientComponent): boolean {
@@ -25,19 +31,39 @@ export function defaultComponentSelection(
   components: IngredientComponent[],
 ): ComponentSelection {
   const sel: ComponentSelection = {}
-  for (const c of components) sel[c.id] = isComponentDefaultOn(c)
+  for (const c of components) sel[c.id] = isComponentDefaultOn(c) ? 1 : 0
   return sel
 }
 
-/** Sum the nutrition of the currently-included ingredients. */
+/** Sum the nutrition of the included ingredients, times their quantities. */
 export function totalForComponents(
   components: IngredientComponent[],
   selection: ComponentSelection,
 ): Nutrition {
   return components.reduce(
-    (acc, c) => (selection[c.id] ? addNutrition(acc, c.nutrition) : acc),
+    (acc, c) => ((selection[c.id] ?? 0) > 0 ? addNutrition(acc, scaleNutrition(c.nutrition, selection[c.id])) : acc),
     ZERO_NUTRITION,
   )
+}
+
+/** Nutrition multiplied by a quantity (two creams = twice one cream). */
+export function scaleNutrition(n: Nutrition, k: number): Nutrition {
+  return {
+    calories: n.calories * k,
+    protein: n.protein * k,
+    carbs: n.carbs * k,
+    fat: n.fat * k,
+    sodium: n.sodium * k,
+    fiber: (n.fiber ?? 0) * k,
+    sugar: (n.sugar ?? 0) * k,
+  }
+}
+
+/** How many times each option id appears in a builder group's selection. */
+export function countSelected(ids: string[]): Record<string, number> {
+  const counts: Record<string, number> = {}
+  for (const id of ids) counts[id] = (counts[id] ?? 0) + 1
+  return counts
 }
 
 /**

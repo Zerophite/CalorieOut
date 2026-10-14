@@ -6,6 +6,7 @@
 //   node scripts/menus/fetch-images.cjs <brand>
 const fs = require('fs')
 const path = require('path')
+const { upgradeMap } = require('./upgrade-images.cjs')
 
 const norm = (s) =>
   String(s)
@@ -248,6 +249,8 @@ const BRANDS = {
   const map = await BRANDS[brand]()
   for (const [ours, url] of Object.entries(EXTRA[brand] || {})) map[norm(ours)] = url
   for (const [ours, theirs] of Object.entries(ALIASES[brand] || {})) if (map[norm(theirs)]) map[norm(ours)] = map[norm(theirs)]
+  // Prefer the host's full-size original over a resized copy.
+  await upgradeMap(map)
   // Drop photos that don't actually load (retired items still listed in a feed).
   const entries = Object.entries(map)
   for (let i = 0; i < entries.length; i += 8) {

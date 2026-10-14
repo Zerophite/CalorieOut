@@ -192,3 +192,36 @@ closest photo shows a different dish.
 ```bash
 npm run menus:images -- timhortons   # then regenerate that chain
 ```
+
+Stored photo URLs point at the largest original a host offers
+(`upgrade-images.cjs`, also run by `fetch-images.cjs`: WordPress resized copies
+→ the uploaded original, Wendy's medium → large shots). In the app,
+`photoUrl()` (src/components/ui.tsx) asks resizing CDNs (Sanity, Contentful,
+Scene7, Subway, Harvey's / Swiss Chalet, Dairy Queen, Framer) for ~300 px
+thumbnails and ~1000 px for the large item photo, so both stay sharp on
+high-density screens.
+
+## Restaurant logos
+
+`src/data/logos.ts` maps each restaurant to its official logo, loaded at
+runtime: the logo or app icon from the restaurant's own website, or the
+brand's logo file on Wikimedia for chains whose site only offers a tiny
+favicon. Every entry was checked visually; spots that publish no logo of their
+own show an initials badge instead.
+
+## Plausibility audit
+
+`npm run menus:audit` (`audit.ts`) flags numbers that can't be right even when
+they match a source: calories far from 4·protein + 4·carbs + 9·fat, sauce or
+vegetable portions with implausible calories, oversized single items, sizes
+that shrink, builder-option outliers, duplicates and extreme sodium.
+
+Every generator passes its menu through `reconcile.mjs`, which keeps the
+published calories and repairs missing or misprinted macros (Wendy's Canada's
+feed has no carbohydrates; Firehouse Subs gives some items calories only;
+Osmow's lists one tahini at "601225" g of fat), rebalancing ingredient
+breakdowns so they still add up. Known source misprints are left out entirely
+(Pita Pit's Chipotle Crunch Sauce, listed at 980 kcal for every size). The
+remaining audit flags were checked against the sources and are the chains'
+published values (e.g. Pita Pit XL sauce portions, Boston Pizza's honey dill
+dip, family packs).

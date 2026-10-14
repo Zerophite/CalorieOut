@@ -133,8 +133,31 @@ function groupLabel(g: string) {
 type Opt = { default?: boolean; modifierMultiplier?: { multiplier?: number }; nutrition: RawNut }
 type Group = { name?: { en?: string }; options?: Opt[] }
 
+/**
+ * The item as served (with its default toppings). Some feeds (Firehouse Subs)
+ * give only calories for the served version; then the base recipe's macros
+ * are scaled to the served calories.
+ */
+function servedNutrition(item: any): Nutrition {
+  const wm = item.nutritionWithModifiers
+  const base = item.nutrition
+  const hasMacros = (n: RawNut) => !!n && (n.proteins != null || n.fat != null || n.carbohydrates != null)
+  if (wm?.calories != null && !hasMacros(wm) && hasMacros(base) && base.calories > 0) {
+    const k = wm.calories / base.calories
+    const b = toNut(base)
+    return {
+      calories: Math.round(wm.calories),
+      protein: Math.round(b.protein * k),
+      carbs: Math.round(b.carbs * k),
+      fat: Math.round(b.fat * k),
+      sodium: Math.round(wm.sodium ?? b.sodium * k),
+    }
+  }
+  return toNut(wm ?? base)
+}
+
 function buildForVariant(item: any): { nutrition: Nutrition; components: IngredientComponent[] } {
-  const served = toNut(item.nutritionWithModifiers ?? item.nutrition)
+  const served = servedNutrition(item)
   const groups: Group[] = item.options ?? []
   const defaults: PartSpec[] = []
   const extras: IngredientComponent[] = []

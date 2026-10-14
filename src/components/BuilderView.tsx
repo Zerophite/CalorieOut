@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react'
 import { type BuilderItem, type Nutrition } from '../types'
 import {
   type BuilderSelection,
+  MAX_QUANTITY,
+  countSelected,
   defaultSelection,
   formatNumber,
   totalForSelection,
@@ -9,7 +11,7 @@ import {
 import { suggestSwaps } from '../lib/swaps'
 import { type Goal } from '../hooks/useGoal'
 import { NutritionFacts } from './NutritionFacts'
-import { GoalFitBadge, TagChip, evaluateGoal } from './ui'
+import { GoalFitBadge, QuantityStepper, TagChip, evaluateGoal } from './ui'
 import { IconCheck, IconLeaf, IconPlus } from './icons'
 
 interface Props {
@@ -35,22 +37,13 @@ export function BuilderView({ item, goal, onAddToCompare, onAddToDay }: Props) {
   )
   const fit = evaluateGoal(total, goal)
 
-  function toggle(groupId: string, optionId: string, max?: number) {
+  /** Set how many portions of an option are in a group (single-choice groups replace the pick). */
+  function setCount(groupId: string, optionId: string, n: number, single: boolean) {
     setSelection((prev) => {
       const current = prev[groupId] ?? []
-      const has = current.includes(optionId)
-      let next: string[]
-      if (has) {
-        next = current.filter((id) => id !== optionId)
-      } else if (max === 1) {
-        next = [optionId]
-      } else if (max !== undefined && current.length >= max) {
-        // At capacity for a multi-select: replace the oldest pick.
-        next = [...current.slice(1), optionId]
-      } else {
-        next = [...current, optionId]
-      }
-      return { ...prev, [groupId]: next }
+      const others = single ? [] : current.filter((id) => id !== optionId)
+      const k = Math.max(0, Math.min(MAX_QUANTITY, n))
+      return { ...prev, [groupId]: [...others, ...Array(k).fill(optionId)] }
     })
   }
 
@@ -65,7 +58,12 @@ export function BuilderView({ item, goal, onAddToCompare, onAddToDay }: Props) {
   }
 
   const detailLabel = item.groups
-    .flatMap((g) => (selection[g.id] ?? []).map((id) => g.options.find((o) => o.id === id)?.name))
+    .flatMap((g) =>
+      Object.entries(countSelected(selection[g.id] ?? [])).map(([id, n]) => {
+        const name = g.options.find((o) => o.id === id)?.name
+        return name && (n > 1 ? `${name} ×${n}` : name)
+      }),
+    )
     .filter(Boolean)
     .join(', ')
 
@@ -80,66 +78,71 @@ export function BuilderView({ item, goal, onAddToCompare, onAddToDay }: Props) {
       {/* Option groups */}
       <div className="space-y-6 pb-40 lg:pb-6">
         {item.groups.map((group) => {
-          const chosen = selection[group.id] ?? []
+          const counts = countSelected(selection[group.id] ?? [])
+          const single = group.max === 1
           return (
             <section key={group.id}>
-              <div className="mb-2 flex items-baseline justify-between">
+              <div className="mb-2 flex items-baseline justify-between gap-2">
                 <h3 className="font-bold text-body">{group.name}</h3>
-                <span className="text-xs text-muted">
+                <span className="text-right text-xs text-muted">
                   {group.min > 0 ? 'Pick · tap again to skip' : 'Optional'}
-                  {group.max ? ` · up to ${group.max}` : ''}
+                  {single ? ' · choose one' : ' · add as many as you like'}
                 </span>
               </div>
               <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                 {group.options.map((opt) => {
-                  const active = chosen.includes(opt.id)
+                  const n = counts[opt.id] ?? 0
+                  const active = n > 0
                   return (
-                    <button
+                    <div
                       key={opt.id}
-                      onClick={() => toggle(group.id, opt.id, group.max)}
                       className={
-                        'flex items-center justify-between rounded-xl border p-3 text-left transition-colors ' +
-                        (active
-                          ? 'border-[var(--brand)] bg-emerald-500/10'
-                          : 'border-app bg-surface hover:bg-surface-2')
+                        'flex items-center justify-between gap-2 rounded-xl border p-2 pl-3 transition-colors ' +
+                        (active ? 'border-[var(--brand)] bg-emerald-500/10' : 'border-app bg-surface hover:bg-surface-2')
                       }
                     >
-                      <div className="min-w-0">
-                        <div className="flex items-center gap-2">
+                      <button
+                        type="button"
+                        onClick={() => setCount(group.id, opt.id, active ? 0 : 1, single)}
+                        className="min-w-0 flex-1 py-1 text-left"
+                      >
+                        <span className="flex items-center gap-2">
                           <span
                             className={
                               'flex h-4 w-4 shrink-0 items-center justify-center rounded-full border text-[10px] ' +
-                              (active
-                                ? 'border-[var(--brand)] bg-[var(--brand)] text-white'
-                                : 'border-app')
+                              (active ? 'border-[var(--brand)] bg-[var(--brand)] text-white' : 'border-app')
                             }
                           >
                             {active ? '✓' : ''}
                           </span>
-                          <span className="truncate font-medium text-body">
-                            {opt.name}
-                          </span>
+                          <span className="truncate font-medium text-body">{opt.name}</span>
                           {opt.recommended && (
-                            <span className="rounded bg-emerald-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-emerald-600 dark:text-emerald-400">
+                            <span className="shrink-0 rounded bg-emerald-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-emerald-600 dark:text-emerald-400">
                               light pick
                             </span>
                           )}
-                        </div>
+                        </span>
+                        <span className="mt-0.5 block pl-6 text-xs text-muted">
+                          {opt.nutrition.calories > 0 ? `+${formatNumber(opt.nutrition.calories)}` : '0'} cal
+                          {n > 1 && <span className="font-semibold text-body"> · ×{n} = {formatNumber(opt.nutrition.calories * n)} cal</span>}
+                        </span>
                         {opt.tags && opt.tags.length > 0 && (
-                          <div className="mt-1 flex flex-wrap gap-1 pl-6">
+                          <span className="mt-1 flex flex-wrap gap-1 pl-6">
                             {opt.tags.map((t) => (
                               <TagChip key={t} tag={t} />
                             ))}
-                          </div>
+                          </span>
                         )}
-                      </div>
-                      <span className="shrink-0 pl-2 text-right text-sm text-muted">
-                        {opt.nutrition.calories > 0
-                          ? `+${formatNumber(opt.nutrition.calories)}`
-                          : '0'}
-                        <span className="block text-[10px]">cal</span>
-                      </span>
-                    </button>
+                      </button>
+                      {(active || !single) && (
+                        <QuantityStepper
+                          value={n}
+                          max={MAX_QUANTITY}
+                          label={opt.name}
+                          onChange={(v) => setCount(group.id, opt.id, v, single)}
+                        />
+                      )}
+                    </div>
                   )
                 })}
               </div>

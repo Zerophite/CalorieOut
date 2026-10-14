@@ -18,6 +18,9 @@ for (const l of fs.readFileSync('scripts/menus/raw/pitapit.tsv', 'utf8').split(/
   if (!l) continue
   const [section, name, size, cal, fat, sodium, carbs, protein] = l.split('\t')
   const n = { calories: +cal, protein: Math.round(+protein), carbs: Math.round(+carbs), fat: Math.round(+fat), sodium: +sodium }
+  // The guide gives Chipotle Crunch Sauce 980 kcal / 100 g fat for every
+  // portion size — a misprint (a per-100 g figure), so it is left out.
+  if (/chipotle crunch/i.test(name)) continue
   if (4 * n.carbs + 4 * n.protein + 9 * n.fat > n.calories * 1.5 + 20) {
     console.warn(`skipping inconsistent row: ${name} ${size} (${cal} kcal)`)
     continue

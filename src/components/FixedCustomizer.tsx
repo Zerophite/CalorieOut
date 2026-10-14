@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { type FixedItem, type IngredientComponent, type Nutrition } from '../types'
 import {
   type ComponentSelection,
+  MAX_QUANTITY,
   defaultComponentSelection,
   formatNumber,
   isComponentDefaultOn,
@@ -10,7 +11,7 @@ import {
 import { type Goal } from '../hooks/useGoal'
 import { componentsFor } from '../data/templates'
 import { NutritionFacts } from './NutritionFacts'
-import { GoalFitBadge, evaluateGoal } from './ui'
+import { GoalFitBadge, QuantityStepper, evaluateGoal } from './ui'
 import { IconCheck, IconPlus } from './icons'
 
 interface Props {
@@ -89,24 +90,66 @@ function SizedCustomizer({
   const included = components.filter((c) => isComponentDefaultOn(c))
   const extras = components.filter((c) => !isComponentDefaultOn(c))
 
-  function toggle(c: IngredientComponent) {
-    setSelection((s) => ({ ...s, [c.id]: !s[c.id] }))
+  function setCount(c: IngredientComponent, n: number) {
+    setSelection((s) => ({ ...s, [c.id]: Math.max(0, Math.min(MAX_QUANTITY, n)) }))
   }
 
   const detail = useMemo(() => {
-    const removed = included
-      .filter((c) => !selection[c.id])
-      .map((c) => `no ${c.name.toLowerCase()}`)
-    const addedExtras = extras
-      .filter((c) => selection[c.id])
-      .map((c) => `+${c.name.toLowerCase()}`)
-    return [...(sizeLabel ? [sizeLabel] : []), ...removed, ...addedExtras].join(', ')
-  }, [included, extras, selection, sizeLabel])
+    const changed = components.flatMap((c) => {
+      const n = selection[c.id] ?? 0
+      const base = isComponentDefaultOn(c) ? 1 : 0
+      const name = c.name.toLowerCase().replace(/^add /, '')
+      if (n === base) return []
+      if (n === 0) return [`no ${name}`]
+      if (base === 0) return [n > 1 ? `+${n}× ${name}` : `+${name}`]
+      return [`${n}× ${name}`]
+    })
+    return [...(sizeLabel ? [sizeLabel] : []), ...changed].join(', ')
+  }, [components, selection, sizeLabel])
 
   function handleAddToDay() {
     onAddToDay(total, detail)
     setAdded(true)
     setTimeout(() => setAdded(false), 1600)
+  }
+
+  const row = (c: IngredientComponent, extra: boolean) => {
+    const n = selection[c.id] ?? 0
+    const on = n > 0
+    return (
+      <div
+        key={c.id}
+        className={
+          'flex items-center justify-between gap-2 rounded-xl border p-2 pl-3 transition-colors ' +
+          (on ? 'border-[var(--brand)] bg-emerald-500/10' : 'border-app bg-surface')
+        }
+      >
+        <button
+          type="button"
+          onClick={() => setCount(c, on ? 0 : 1)}
+          className={'flex min-w-0 flex-1 items-center gap-2 text-left ' + (!on && !extra ? 'opacity-60' : '')}
+        >
+          <span
+            className={
+              'flex h-5 w-5 shrink-0 items-center justify-center rounded-md border ' +
+              (on ? 'border-[var(--brand)] bg-[var(--brand)] text-white' : 'border-app text-[var(--brand)]')
+            }
+          >
+            {on ? <IconCheck size={13} /> : extra ? <IconPlus size={13} /> : null}
+          </span>
+          <span className="min-w-0">
+            <span className={'block truncate font-medium ' + (on || extra ? 'text-body' : 'text-muted line-through')}>
+              {c.name}
+            </span>
+            <span className="block text-xs text-muted">
+              {formatNumber(c.nutrition.calories)} cal each
+              {n > 1 && <span className="font-semibold text-body"> · {formatNumber(c.nutrition.calories * n)} cal</span>}
+            </span>
+          </span>
+        </button>
+        <QuantityStepper value={n} max={MAX_QUANTITY} label={c.name} onChange={(v) => setCount(c, v)} />
+      </div>
+    )
   }
 
   return (
@@ -115,83 +158,16 @@ function SizedCustomizer({
         <section>
           <h3 className="mb-1 font-bold text-body">Customize ingredients</h3>
           <p className="mb-3 text-sm text-muted">
-            Everything is optional — tap anything to remove it, and the total updates instantly.
+            Everything is optional — remove anything, or use + to add more of it. The total updates instantly.
           </p>
-          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-            {included.map((c) => {
-              const on = selection[c.id]
-              return (
-                <button
-                  key={c.id}
-                  onClick={() => toggle(c)}
-                  className={
-                    'flex items-center justify-between rounded-xl border p-3 text-left transition-colors ' +
-                    (on
-                      ? 'border-[var(--brand)] bg-emerald-500/10'
-                      : 'border-app bg-surface opacity-60 hover:opacity-100')
-                  }
-                >
-                  <span className="flex items-center gap-2">
-                    <span
-                      className={
-                        'flex h-5 w-5 shrink-0 items-center justify-center rounded-md border ' +
-                        (on
-                          ? 'border-[var(--brand)] bg-[var(--brand)] text-white'
-                          : 'border-app text-transparent')
-                      }
-                    >
-                      <IconCheck size={13} />
-                    </span>
-                    <span
-                      className={
-                        'font-medium ' + (on ? 'text-body' : 'text-muted line-through')
-                      }
-                    >
-                      {c.name}
-                    </span>
-                  </span>
-                  <span className="shrink-0 pl-2 text-sm text-muted">
-                    {on ? '' : '−'}
-                    {formatNumber(c.nutrition.calories)}
-                    <span className="text-[10px]"> cal</span>
-                  </span>
-                </button>
-              )
-            })}
-          </div>
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">{included.map((c) => row(c, false))}</div>
         </section>
 
         {extras.length > 0 && (
           <section>
-            <h3 className="mb-2 font-bold text-body">Add extras</h3>
-            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-              {extras.map((c) => {
-                const on = selection[c.id]
-                return (
-                  <button
-                    key={c.id}
-                    onClick={() => toggle(c)}
-                    className={
-                      'flex items-center justify-between rounded-xl border p-3 text-left transition-colors ' +
-                      (on
-                        ? 'border-[var(--brand)] bg-emerald-500/10'
-                        : 'border-app bg-surface hover:bg-surface-2')
-                    }
-                  >
-                    <span className="flex items-center gap-2 font-medium text-body">
-                      <span className="text-[var(--brand)]">
-                        {on ? <IconCheck size={16} /> : <IconPlus size={16} />}
-                      </span>
-                      {c.name}
-                    </span>
-                    <span className="shrink-0 pl-2 text-sm text-muted">
-                      +{formatNumber(c.nutrition.calories)}
-                      <span className="text-[10px]"> cal</span>
-                    </span>
-                  </button>
-                )
-              })}
-            </div>
+            <h3 className="mb-1 font-bold text-body">Add extras</h3>
+            <p className="mb-3 text-sm text-muted">Add as many as you like.</p>
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">{extras.map((c) => row(c, true))}</div>
           </section>
         )}
 

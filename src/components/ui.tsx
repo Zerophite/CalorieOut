@@ -1,7 +1,7 @@
 import { useState, type ReactNode } from 'react'
 import { type DietTag, type Nutrition } from '../types'
 import { type Goal } from '../hooks/useGoal'
-import { LOGO_DOMAINS } from '../data/logos'
+import { DARK_LOGOS, LOGOS } from '../data/logos'
 import { IconDumbbell, IconFlame, IconLeaf } from './icons'
 
 const TAG_META: Record<DietTag, { label: string; icon?: ReactNode }> = {
@@ -150,27 +150,11 @@ const BOX = {
   md: 'h-12 w-12',
   lg: 'h-16 w-16',
 }
-/** Box edge length in CSS px for each size (matches the Tailwind classes). */
-const BOX_PX = { sm: 36, md: 48, lg: 64 }
 
 /**
- * Pick a display size for an icon of natural width `nat` inside a `box`.
- * Small icons are scaled by a whole-number factor with crisp (pixelated)
- * rendering, so a 16px favicon becomes a sharp 48px icon instead of a smeared
- * one. Icons at least as large as the box are only ever shrunk, which stays
- * sharp with normal smoothing.
- */
-function iconFit(nat: number, box: number): { px: number; crisp: boolean } {
-  const inner = box - 8 // keep a little breathing room inside the tile
-  if (nat >= inner) return { px: inner, crisp: false }
-  const k = Math.max(1, Math.min(3, Math.floor(inner / nat)))
-  return { px: nat * k, crisp: k > 1 }
-}
-
-/**
- * Restaurant logo. Loads the real brand logo from a logo service by domain,
- * stepping through fallbacks, and lands on the styled BrandTile if none load.
- * No logo files are bundled in the repo.
+ * Restaurant logo: the brand's own official mark (see data/logos.ts), shown
+ * contained in a rounded tile. Falls back to the styled BrandTile when a
+ * restaurant has no logo or it fails to load.
  */
 export function BrandLogo({
   id,
@@ -183,51 +167,67 @@ export function BrandLogo({
   accent: string
   size?: 'sm' | 'md' | 'lg'
 }) {
-  const domain = LOGO_DOMAINS[id]
-  // Google's favicon services, keyed on the brand's real domain, so the icon
-  // is always that brand's own mark. Higher-res endpoint first for crispness.
-  const sources = domain
-    ? [
-        `https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${encodeURIComponent(
-          `https://${domain}`,
-        )}&size=256`,
-        `https://www.google.com/s2/favicons?domain=${domain}&sz=256`,
-      ]
-    : []
-  const [idx, setIdx] = useState(0)
-  const [nat, setNat] = useState<number | null>(null)
-
-  if (idx >= sources.length) {
-    return <BrandTile name={name} accent={accent} size={size} />
-  }
-
-  const fit = nat ? iconFit(nat, BOX_PX[size]) : null
-
+  const src = LOGOS[id]
+  const [failed, setFailed] = useState(false)
+  if (!src || failed) return <BrandTile name={name} accent={accent} size={size} />
+  const dark = DARK_LOGOS.has(id)
   return (
     <div
-      className={`flex ${BOX[size]} shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-[var(--border)]`}
+      className={`flex ${BOX[size]} shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-sm ring-1 ring-[var(--border)] ${dark ? 'bg-neutral-900' : 'bg-white'}`}
     >
       <img
-        src={sources[idx]}
+        src={src}
         alt={`${name} logo`}
         loading="lazy"
+        decoding="async"
         referrerPolicy="no-referrer"
-        onLoad={(e) => setNat(e.currentTarget.naturalWidth || null)}
-        onError={() => {
-          setNat(null)
-          setIdx((i) => i + 1)
-        }}
-        style={{
-          width: fit ? fit.px : '75%',
-          height: fit ? fit.px : '75%',
-          objectFit: 'contain',
-          imageRendering: fit?.crisp ? 'pixelated' : 'auto',
-          // Hide until measured so a tiny icon never flashes stretched.
-          visibility: fit ? 'visible' : 'hidden',
-        }}
+        onError={() => setFailed(true)}
+        className="h-[84%] w-[84%] object-contain"
       />
     </div>
   )
+}
+
+/**
+ * Ask the restaurant's image CDN for a copy sized for how the photo is shown,
+ * so the large photo is sharp on high-density screens and thumbnails stay light.
+ * Hosts without resizing are returned unchanged.
+ */
+export function photoUrl(src: string, width: number): string {
+  let u: URL
+  try {
+    u = new URL(src)
+  } catch {
+    return src
+  }
+  const set = (k: string, v: string) => {
+    u.searchParams.set(k, v)
+    return u.toString()
+  }
+  const w = String(width)
+  switch (u.host) {
+    case 'cdn.sanity.io':
+    case 'images.ctfassets.net':
+      if (u.pathname.endsWith('.svg')) return src
+      u.searchParams.set('q', '80')
+      return set('w', w)
+    case 'cloudassets.starbucks.com':
+    case 's7d1.scene7.com':
+    case 's7d9.scene7.com':
+      return set('wid', w)
+    case 'media.subway.com':
+    case 'cdn.harveys.ca':
+    case 'cdn.swisschalet.com':
+      return set('imwidth', String(Math.min(width, 1024)))
+    case 'framerusercontent.com':
+      return set('scale-down-to', String(width <= 512 ? 512 : 1024))
+    case 'dairyqueen-prod.dotcdn.io':
+      return src.replace(/\/\d+w\/\d+q$/, `/${w}w/80q`)
+    case 'img.pagecloud.com':
+      return src.replace(/\/\d+x0\//, `/${w}x0/`)
+    default:
+      return src
+  }
 }
 
 /** A product photo from the restaurant's menu; hides itself if it can't load. */
@@ -241,14 +241,43 @@ export function ItemPhoto({ src, alt, variant }: { src?: string; alt: string; va
   return (
     <div className={cls + ' overflow-hidden bg-white ring-1 ring-[var(--border)]'}>
       <img
-        src={src}
+        src={photoUrl(src, variant === 'thumb' ? 300 : 1000)}
         alt={alt}
-        loading="lazy"
+        loading={variant === 'thumb' ? 'lazy' : 'eager'}
         decoding="async"
         referrerPolicy="no-referrer"
         onError={() => setFailed(true)}
         className="h-full w-full object-contain p-1"
       />
     </div>
+  )
+}
+
+/** − n + control for how many portions of an ingredient or option to include. */
+export function QuantityStepper({
+  value,
+  max,
+  label,
+  onChange,
+}: {
+  value: number
+  max: number
+  label: string
+  onChange: (next: number) => void
+}) {
+  const btn =
+    'flex h-8 w-8 items-center justify-center rounded-lg border border-app bg-surface text-lg font-semibold leading-none text-body transition-colors hover:bg-surface-2 disabled:opacity-30'
+  return (
+    <span className="flex shrink-0 items-center gap-1.5" onClick={(e) => e.stopPropagation()}>
+      <button type="button" className={btn} aria-label={`Less ${label}`} disabled={value <= 0} onClick={() => onChange(value - 1)}>
+        −
+      </button>
+      <span className="w-5 text-center text-sm font-bold tabular-nums text-body" aria-live="polite">
+        {value}
+      </span>
+      <button type="button" className={btn} aria-label={`More ${label}`} disabled={value >= max} onClick={() => onChange(value + 1)}>
+        +
+      </button>
+    </span>
   )
 }

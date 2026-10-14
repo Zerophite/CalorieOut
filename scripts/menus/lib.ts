@@ -3,6 +3,7 @@
 // (src/data/menus/<file>.items.ts).
 import * as fs from 'fs'
 import { attachImages } from './attach-images.mjs'
+import { reconcileMenu } from './reconcile.mjs'
 import type { MealCategory, Nutrition } from '../../src/types'
 
 export interface RestaurantMeta {
@@ -72,6 +73,8 @@ export function writeMenu(opts: {
 }) {
   const { file, exportName, meta: m, order } = opts
   attachImages(file, opts.items)
+  const repaired = reconcileMenu(opts.items)
+  if (repaired) console.log(`  macros repaired: ${repaired} panels`)
   const items = [...opts.items].sort(
     (a, b) =>
       (a.kind === 'builder' ? 0 : 1) - (b.kind === 'builder' ? 0 : 1) ||
