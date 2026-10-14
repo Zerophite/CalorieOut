@@ -29,7 +29,7 @@ const SEGMENT_ICON: Record<string, ReactNode> = {
   'Sit-Down': <IconUtensils size={15} />,
 }
 
-function RestaurantCard({
+export function RestaurantCard({
   restaurant,
   onOpen,
 }: {
@@ -137,7 +137,7 @@ export function Home({
         className="mb-6 flex w-full items-center gap-3 rounded-2xl border border-app bg-surface px-4 py-3 text-left text-muted hover:bg-surface-2"
       >
         <IconSearch size={18} />
-        <span>Search all items — “chicken under 500 cal”, “high protein”…</span>
+        <span>Search dishes, restaurants or cuisines — Italian, Japanese, Thai…</span>
       </button>
 
       {/* Segment filters */}

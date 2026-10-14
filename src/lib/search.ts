@@ -1,5 +1,6 @@
 import { type MenuItem, type Nutrition, type Restaurant } from '../types'
 import { baseNutrition, minimalNutrition } from './nutrition'
+import { cuisinesOf } from './cuisine'
 
 /** A menu item flattened together with its parent restaurant for global search. */
 export interface SearchEntry {
@@ -9,7 +10,15 @@ export interface SearchEntry {
    *  lowest-calorie build, so "under X calories" search stays meaningful. */
   nutrition: Nutrition
   isBuilder: boolean
+  /** Lower-case text searched by the query (name, restaurant, category…). */
+  text: string
+  /** Cuisine ids this dish belongs to (see lib/cuisine). */
+  cuisines: string[]
 }
+
+/** Lower-case, accent-free text for matching ("Thaï" finds "thai"). */
+export const fold = (s: string) =>
+  s.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
 
 export function buildIndex(restaurants: Restaurant[]): SearchEntry[] {
   const entries: SearchEntry[] = []
@@ -21,6 +30,8 @@ export function buildIndex(restaurants: Restaurant[]): SearchEntry[] {
         nutrition:
           item.kind === 'builder' ? minimalNutrition(item) : baseNutrition(item),
         isBuilder: item.kind === 'builder',
+        text: fold(`${item.name} ${restaurant.name} ${restaurant.cuisine} ${item.description ?? ''} ${item.category}`),
+        cuisines: cuisinesOf(restaurant, item),
       })
     }
   }
@@ -34,21 +45,19 @@ export interface SearchFilters {
   category?: string
   restaurantId?: string
   vegetarianOnly?: boolean
+  cuisine?: string
 }
 
 export function filterEntries(
   entries: SearchEntry[],
   filters: SearchFilters,
 ): SearchEntry[] {
-  const q = filters.query.trim().toLowerCase()
+  // Every word must appear somewhere ("chicken wrap" finds "Crispy Chicken Wrap").
+  const words = fold(filters.query).split(/\s+/).filter(Boolean)
 
-  return entries.filter(({ restaurant, item, nutrition }) => {
-    if (q) {
-      const haystack = `${item.name} ${restaurant.name} ${
-        item.description ?? ''
-      } ${item.category}`.toLowerCase()
-      if (!haystack.includes(q)) return false
-    }
+  return entries.filter(({ restaurant, item, nutrition, text, cuisines }) => {
+    if (words.length && !words.every((w) => text.includes(w))) return false
+    if (filters.cuisine && !cuisines.includes(filters.cuisine)) return false
     if (filters.restaurantId && restaurant.id !== filters.restaurantId)
       return false
     if (filters.category && item.category !== filters.category) return false

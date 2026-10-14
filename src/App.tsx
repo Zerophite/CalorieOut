@@ -227,6 +227,7 @@ export default function App() {
             onOpenItem={(restaurantId, itemId) =>
               navigate({ name: 'item', restaurantId, itemId })
             }
+            onOpenRestaurant={(restaurantId) => navigate({ name: 'restaurant', restaurantId })}
             isInCompare={isInCompare}
             toggleCompare={toggleCompare}
             addToDay={addToDay}
