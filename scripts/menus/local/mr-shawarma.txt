@@ -31,7 +31,7 @@ Grilled Chicken Plate = plate.chicken @ 600-800 :: grilled chicken, rice, salad,
 Falafel Plate = plate.falafel :: falafel, rice, garlic potatoes, salad, hummus, tahini
 Vegetarian Plate = plate.veggie :: fried eggplant, fried cauliflower, rice, salad, hummus, garlic sauce
 Crispy Saj Platter = plate.chicken x1.15 :: saj bites, garlic sauce, pickles, fries, pomegranate molasses, salad
-Crispy Chicken Tenders Plate = pub.tenders x1.3 :: chicken tenders, coleslaw, fries, garlic sauce
+Crispy Chicken Tenders Plate = pub.tenders :: chicken tenders, coleslaw, fries, garlic sauce
 Shawarma Salad = healthy.salad :: garden salad, chicken shawarma, dressing
 Shawarma Meat Side (Chicken/Beef) = plate.chicken x0.6 :: chicken shawarma
 

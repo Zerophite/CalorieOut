@@ -40,12 +40,12 @@ Jerk Chicken Burrito = tex.burrito x1.1 :: tortilla, rice, black beans, crispy c
 ~Cauliflower Burrito = tex.burrito :: tortilla, rice, black beans, crispy cauliflower, pico de gallo, cabbage, chipotle aioli
 
 [Smash burgers & features]
-Smash Burger = pub.burger :: brioche bun, beef patties, cheese, burger sauce
-The Deluxe Streats Smash Burger = pub.burger x1.1 :: brioche bun, beef patties, cheese, burger sauce, lettuce, tomato
-The Double Deluxe Streats Smash Burger = pub.burger x1.7 :: brioche bun, beef patties, cheese, burger sauce, lettuce, tomato
+Smash Burger = pub.burger x1.15 :: brioche bun, beef patties, cheese, burger sauce
+The Deluxe Streats Smash Burger = pub.burger x1.25 :: brioche bun, beef patties, cheese, burger sauce, lettuce, tomato
+The Double Deluxe Streats Smash Burger = pub.burger x2 :: brioche bun, beef patties, cheese, burger sauce, lettuce, tomato
 ~Steak Frites = pub.steak :: steak, fries, peppercorn sauce
-~2pc Fish & Chips = fish.and-chips
-~10pc Fish & Chips = fish.and-chips x5
+~2pc Fish & Chips = fish.and-chips x1.3
+~10pc Fish & Chips = fish.and-chips x5.5
 
 [Poutines & fries]
 Full Classic Poutine = pub.poutine

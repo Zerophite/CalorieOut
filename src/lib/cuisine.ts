@@ -27,8 +27,14 @@ export const CUISINES: Cuisine[] = [
     id: 'italian',
     sweets: true,
     label: 'Italian',
-    dish: /\bpizza|pizzas?\b|pasta|spaghetti|fettucc?in|linguine|penne|rigatoni|lasagn|ravioli|gnocchi|risotto|alfredo|carbonara|bolognes|marinara|arrabbiat|calzone|p'?zone|bruschetta|focaccia|panini|panuzzo|margherita|tiramisu|cannoli|parmesan chicken|chicken parm|garlic bread|italian\b|pizzaghetti/i,
+    dish: /pasta|spaghetti|fettucc?in|linguine|penne|rigatoni|lasagn|ravioli|gnocchi|risotto|alfredo|carbonara|bolognes|arrabbiat|bruschetta|focaccia|panini|tiramisu|cannoli|parmesan chicken|chicken parm|parmigiana|italian\b/i,
     restaurant: /italian/i,
+  },
+  {
+    // Pizza is its own thing: a pizza chain isn't an Italian restaurant.
+    id: 'pizza',
+    label: 'Pizza',
+    dish: /pizza|calzone|p'?zone|panzerott|stromboli|panuzzo/i,
   },
   {
     id: 'chinese',
@@ -120,4 +126,53 @@ export function cuisinesOf(restaurant: Restaurant, item: MenuItem): string[] {
     else if (c.restaurant && c.restaurant.test(restaurant.cuisine) && !SWEET_OR_DRINK.has(item.category)) out.push(c.id)
   }
   return out
+}
+
+/**
+ * What kind of restaurant a place is, for browsing restaurants: decided by the
+ * restaurant itself (its name and cuisine), never by one dish on its menu — a
+ * pizza chain isn't Italian and a sub shop with a teriyaki sub isn't Japanese.
+ */
+/** Sections the cuisine chips are shown in. */
+export type CuisineGroup = 'cuisine' | 'food' | 'drinks'
+export const CUISINE_GROUPS: { id: CuisineGroup; label: string }[] = [
+  { id: 'cuisine', label: 'Cuisine' },
+  { id: 'food', label: 'Food' },
+  { id: 'drinks', label: 'Drinks & treats' },
+]
+
+export interface RestaurantCuisine {
+  id: string
+  label: string
+  match: RegExp
+  group: CuisineGroup
+}
+
+export const RESTAURANT_CUISINES: RestaurantCuisine[] = [
+  { id: 'italian', label: 'Italian', match: /italian/i, group: 'cuisine' },
+  { id: 'chinese', label: 'Chinese', match: /chinese|asian noodles/i, group: 'cuisine' },
+  { id: 'japanese', label: 'Japanese', match: /japanese|sushi|ramen/i, group: 'cuisine' },
+  { id: 'korean', label: 'Korean', match: /korean/i, group: 'cuisine' },
+  { id: 'thai', label: 'Thai', match: /\bthai\b/i, group: 'cuisine' },
+  { id: 'vietnamese', label: 'Vietnamese', match: /vietnam|\bpho\b|b[aá]nh m[iì]/i, group: 'cuisine' },
+  { id: 'indian', label: 'Indian', match: /indian/i, group: 'cuisine' },
+  { id: 'mexican', label: 'Mexican', match: /mexican|tex-mex|burrito|taco/i, group: 'cuisine' },
+  { id: 'middle-eastern', label: 'Middle Eastern', match: /shawarma|middle eastern|lebanese|mediterranean/i, group: 'cuisine' },
+  { id: 'turkish', label: 'Turkish', match: /turkish/i, group: 'cuisine' },
+  { id: 'greek', label: 'Greek', match: /greek|souvlaki/i, group: 'cuisine' },
+  { id: 'pizza', label: 'Pizza', match: /pizza/i, group: 'food' },
+  { id: 'burgers', label: 'Burgers', match: /burger/i, group: 'food' },
+  { id: 'chicken', label: 'Chicken & wings', match: /fried chicken|wings|rotisserie/i, group: 'food' },
+  { id: 'sandwiches', label: 'Sandwiches & subs', match: /sandwich|\bsubs?\b|pitas|deli|bagel/i, group: 'food' },
+  { id: 'healthy', label: 'Bowls & salads', match: /bowls|salads|healthy/i, group: 'food' },
+  { id: 'seafood', label: 'Fish & seafood', match: /fish|seafood/i, group: 'food' },
+  { id: 'bbq', label: 'BBQ', match: /bbq|smokehouse/i, group: 'food' },
+  { id: 'bubble-tea', label: 'Bubble tea', match: /bubble tea/i, group: 'drinks' },
+  { id: 'dessert', label: 'Desserts', match: /dessert|treats|doughnut/i, group: 'drinks' },
+]
+
+/** Restaurant cuisine ids a restaurant belongs to. */
+export function restaurantCuisines(r: Restaurant): string[] {
+  const text = `${r.name} ${r.cuisine}`
+  return RESTAURANT_CUISINES.filter((c) => c.match.test(text)).map((c) => c.id)
 }

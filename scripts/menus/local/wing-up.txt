@@ -31,12 +31,12 @@ Boneless Bites - The Six = wing.boneless-pc x84 :: chicken bites, wing sauce
 Wing Meal Combo - With A Drink = wing.combo :: chicken wings, potato wedges, veggies, ranch dip, pop
 Bites Meal Combo - With A Drink = wing.combo :: chicken bites, potato wedges, veggies, ranch dip, pop
 Sandwich Combo - With A Drink = pub.chicken-burger x1.6 :: kaiser bun, chicken breast, wing sauce, potato wedges, pop
-Chicken Fingers Combo - With A Drink = pub.tenders x1.5 :: chicken fingers, potato wedges, dipping sauce, pop
+Chicken Fingers Combo - With A Drink = pub.tenders x1.15 :: chicken fingers, potato wedges, dipping sauce, pop
 
 [Chicken fingers & wedges]
-Regular Chicken Fingers & Wedges (3 pcs) = pub.tenders x0.9 :: chicken fingers, potato wedges, dipping sauce
-Medium Chicken Fingers & Wedges (5 pcs) = pub.tenders x1.3 :: chicken fingers, potato wedges, dipping sauce
-Large Chicken Fingers & Wedges (7 pcs) = pub.tenders x1.7 :: chicken fingers, potato wedges, dipping sauce
+Regular Chicken Fingers & Wedges (3 pcs) = pub.tenders x0.8 :: chicken fingers, potato wedges, dipping sauce
+Medium Chicken Fingers & Wedges (5 pcs) = pub.tenders x1.1 :: chicken fingers, potato wedges, dipping sauce
+Large Chicken Fingers & Wedges (7 pcs) = pub.tenders x1.4 :: chicken fingers, potato wedges, dipping sauce
 
 [Sandwiches]
 WingsUp! Classic = pub.chicken-burger :: kaiser bun, chicken breast, wing sauce

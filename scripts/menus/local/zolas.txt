@@ -26,7 +26,7 @@ Smoked Salmon Plate = bagel.lox :: focaccia, smoked salmon, capers, red onion, c
 [Salads]
 Artisan Mix Salad = side.house-salad x2.2 :: artisan greens, vegetables, mint, basil, balsamic vinaigrette
 Arugula + Brussels Sprout Salad = cafe.salad :: arugula, brussels sprouts, dijon horseradish dressing, parmesan crisp
-Caesar Salad = pub.side-salad x1.6 :: romaine, capers, Caesar dressing, parmigiano
+Caesar Salad = pub.side-salad x1.1 :: romaine, capers, Caesar dressing, parmigiano
 Kale + Chickpea Salad = cafe.salad x1.05 :: kale, chickpeas, red onion, carrots, sultanas, balsamic glaze
 Fattoush Salad = side.fattoush x1.4 :: romaine, red onion, cucumber, tomato, crispy pita, dressing, zaatar
 

@@ -23,6 +23,18 @@ export function TagChip({ tag }: { tag: DietTag }) {
   )
 }
 
+/** A labelled row of filter chips that scrolls sideways when it doesn't fit. */
+export function ChipRow({ label, children }: { label: string; children: ReactNode }) {
+  return (
+    <div>
+      <div className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted">{label}</div>
+      <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] [&>*]:shrink-0 [&_button]:whitespace-nowrap">
+        {children}
+      </div>
+    </div>
+  )
+}
+
 export function Chip({
   children,
   active,

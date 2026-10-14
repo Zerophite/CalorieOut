@@ -133,6 +133,13 @@ Chicken Shawarma Sandwich = wrap.chicken ; Small=0.8, Large=1.2
 Every local item is labelled as estimated in the app, and items that use posted
 calories say so.
 
+`npm run menus:accuracy` measures the reference recipes against the ~400 dishes
+whose calories a spot posts: for each, what the recipe alone would have
+estimated versus the posted figure. For main dishes the median gap is about
+25%, with roughly two in three within 35%. A recipe that runs high or low the
+same way at several restaurants is a sign it needs recalibrating (sit-down
+tenders, kids' meals, Caesar salads and fish & chips were raised this way).
+
 ### Starbucks
 
 `fetch-starbucks.cjs` reads the ordering menu behind starbucks.ca/menu

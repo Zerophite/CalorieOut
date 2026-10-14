@@ -36,11 +36,11 @@ Meaty Poutine = pub.loaded-poutine :: fries, cheese, breaded chicken, bacon, gra
 
 [Greens]
 6IXTY's Signature Salad = healthy.salad x1.2 :: lettuce, breaded chicken, popcorn shrimp, tomatoes, onions, cucumbers, cheese, balsamic dressing
-Caesar Salad = pub.side-salad x1.5 :: lettuce, Caesar dressing, parmesan, bacon bits, croutons
+Caesar Salad = pub.side-salad :: lettuce, Caesar dressing, parmesan, bacon bits, croutons
 
 [Bites]
 Cauliflower Bites = pub.mozza x0.7
-Chicken Fingers = pub.tenders x0.8
+Chicken Fingers = pub.tenders x0.65
 Coconut Shrimp = side.tempura
 Garlic Bread = pizza.garlic-bread x2
 Garlic Bread with Cheese = pizza.garlic-bread x2.6
@@ -60,5 +60,5 @@ Veggie Wrap = pub.wrap x0.85 :: tortilla, lettuce, cauliflower bites, onion, che
 Extra Sauce = wing.sauce
 Dipping Sauce (Ranch, Blue Cheese or Dill) = pizza.dip
 Extra Cheese = pizza.dip x0.75
-Extra Breaded Chicken = pub.tenders x0.35
+Extra Breaded Chicken = pub.tenders x0.27
 Pop = drink.soft

@@ -18,6 +18,9 @@ export interface Archetype {
 
 const A = (n: Archetype['n'], category: MealCategory, serving: string, hint?: string): Archetype => ({ n, category, serving, hint })
 
+// Sit-down portions (tenders, kids' meals, Caesar salads, fish & chips) were
+// recalibrated against the calories Ottawa restaurants post on their menus;
+// scripts/menus/check-estimates.ts measures how close the references are.
 export const ARCHETYPES: Record<string, Archetype> = {
   // --- Shawarma & Middle Eastern ------------------------------------------------------------------
   'wrap.chicken': A([660, 38, 55, 30, 1300], 'Wraps', '1 wrap', 'chicken shawarma wrap'),
@@ -235,14 +238,14 @@ export const ARCHETYPES: Record<string, Archetype> = {
   'wing.boneless-pc': A([75, 4.5, 5, 4, 190], 'Chicken', '1 piece', 'boneless wings'),
   'wing.combo': A([1310, 66, 101, 75, 2600], 'Chicken', '1 lb wings, fries & pop', 'chicken wings combo'),
   'wing.sauce': A([60, 0, 8, 3, 500], 'Sides', '1 order', 'wing sauce'),
-  'pub.tenders': A([700, 40, 50, 38, 1700], 'Chicken', '1 order', 'chicken tenders'),
+  'pub.tenders': A([900, 48, 72, 46, 2000], 'Chicken', 'with fries', 'chicken tenders'),
   'pub.burger': A([750, 38, 52, 42, 1300], 'Burgers', '1 burger', 'beef burger'),
   'pub.chicken-burger': A([720, 34, 64, 36, 1600], 'Burgers', '1 burger', 'crispy chicken burger'),
   'pub.veggie-burger': A([600, 22, 66, 26, 1200], 'Burgers', '1 burger', 'veggie burger'),
   'pub.wrap': A([700, 32, 66, 34, 1600], 'Wraps', '1 wrap', 'crispy chicken wrap'),
   'pub.quesadilla': A([820, 38, 60, 46, 1800], 'Mains', '1 order', 'chicken quesadilla'),
-  'pub.salad': A([550, 38, 24, 34, 1100], 'Salads', '1 salad', 'chicken caesar salad'),
-  'pub.side-salad': A([200, 4, 10, 16, 400], 'Salads', 'side', 'caesar salad'),
+  'pub.salad': A([800, 46, 30, 54, 1500], 'Salads', '1 salad', 'chicken caesar salad'),
+  'pub.side-salad': A([300, 6, 12, 25, 550], 'Salads', 'side', 'caesar salad'),
   'pub.nachos': A([1400, 44, 120, 80, 2600], 'Sides', 'shareable', 'loaded nachos'),
   'pub.mozza': A([600, 26, 50, 32, 1400], 'Sides', '1 order', 'mozzarella sticks'),
   'pub.onion-rings': A([480, 6, 54, 26, 800], 'Sides', 'regular', 'onion rings'),
@@ -263,7 +266,7 @@ export const ARCHETYPES: Record<string, Archetype> = {
   'pub.soup': A([250, 9, 24, 13, 1000], 'Mains', '1 bowl', 'soup'),
   'pub.chili': A([380, 26, 30, 17, 1200], 'Mains', '1 bowl', 'chili'),
   'pub.dessert': A([750, 9, 90, 38, 450], 'Desserts', '1 dessert', 'chocolate cake'),
-  'pub.kids': A([450, 20, 50, 18, 900], 'Mains', "kids' meal", 'kids chicken strips'),
+  'pub.kids': A([540, 22, 60, 22, 1000], 'Mains', "kids' meal", 'kids chicken strips'),
   'pub.poutine': A([750, 18, 70, 42, 1550], 'Sides', 'regular', 'poutine'),
   'pub.loaded-poutine': A([1000, 40, 72, 60, 2300], 'Sides', 'regular', 'loaded poutine'),
   'pub.brunch': A([850, 32, 75, 45, 1700], 'Breakfast', '1 plate', 'eggs benedict'),
@@ -283,7 +286,7 @@ export const ARCHETYPES: Record<string, Archetype> = {
   'tex.beans': A([220, 12, 32, 4, 700], 'Sides', 'side', 'refried beans'),
 
   // --- Fish & chips ------------------------------------------------------------------------------------
-  'fish.and-chips': A([900, 38, 90, 42, 1500], 'Mains', '1 piece with fries', 'fish and chips'),
+  'fish.and-chips': A([1000, 40, 100, 48, 1600], 'Mains', '1 piece with fries', 'fish and chips'),
   'fish.piece': A([380, 30, 22, 20, 600], 'Mains', '1 piece', 'battered fish'),
   'fish.shrimp': A([800, 28, 90, 36, 1700], 'Mains', 'with fries', 'fried shrimp and chips'),
   'fish.clams': A([750, 22, 90, 34, 1500], 'Mains', 'with fries', 'clam strips and chips'),

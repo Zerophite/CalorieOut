@@ -27,7 +27,7 @@ Cheese Fries = pub.loaded-fries x0.85 :: fries, cheese sauce, chili aioli, garli
 Fries Dun'up = pub.loaded-fries x0.75 :: fries, scallions, fried garlic, chili aioli, garlic aioli
 Rice Dun'up = side.rice x1.4 :: rice, chili aioli, garlic aioli, scallions, fried garlic
 Coleslaw = side.coleslaw
-Caesar Salad = pub.side-salad x1.2 :: romaine, Caesar dressing, fried garlic, crispy wontons
+Caesar Salad = pub.side-salad x0.85 :: romaine, Caesar dressing, fried garlic, crispy wontons
 Crispy Fries = pub.fries
 
 [Platters — per person]
