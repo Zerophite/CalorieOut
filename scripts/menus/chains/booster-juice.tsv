@@ -1,0 +1,110 @@
+id: booster-juice
+name: Booster Juice
+cuisine: Smoothies · Juice · Healthy
+accent: #f59e0b
+segment: Coffee & Bakery
+source: boosterjuice.com Nutrition Guide (September 2026)
+
+[Drinks]
+Strawberry Sunshine	Regular · 710 mL	410	1.0	97	4.0	50
+Strawberry Sunshine	Snack · 355 mL	210	0.5	48	2.0	25
+Pirates Nectar	Regular · 710 mL	410	1.0	100	4.0	50
+Pirates Nectar	Snack · 355 mL	210	0.5	50	2.0	25
+Very Berry	Regular · 710 mL	390	1.5	89	3.0	65
+Very Berry	Snack · 355 mL	200	0.5	44	2.0	30
+Mango Hurricane	Regular · 710 mL	360	1.0	84	3.0	50
+Mango Hurricane	Snack · 355 mL	180	0.4	42	2.0	25
+Tropical Tornado	Regular · 710 mL	440	1.0	104	4.0	35
+Tropical Tornado	Snack · 355 mL	220	0.5	52	2.0	15
+Bananas-A-Whey	Regular · 710 mL	470	3.5	88	28.0	260
+Ripped Berry	Regular · 710 mL	470	3.5	84	29.0	290
+Strawberry Storm	Regular · 710 mL	390	3.0	70	23.0	210
+Nuttin' Better	Regular · 710 mL	770	27.0	100	39.0	400
+Mangosicle	Regular · 710 mL	420	2.0	100	4.0	75
+Mangosicle	Snack · 355 mL	210	1.0	50	2.0	40
+Funky Monkey	Regular · 710 mL	520	6.0	116	6.0	250
+Funky Monkey	Snack · 355 mL	260	3.0	58	3.0	125
+Canadian Colada	Regular · 710 mL	510	8.0	109	8.0	110
+Canadian Colada	Snack · 355 mL	240	3.5	53	3.0	40
+Hawaiian Sunset	Regular · 710 mL	410	2.0	95	6.0	85
+Hawaiian Sunset	Snack · 355 mL	200	1.0	48	3.0	40
+Chocolate NOT-ty Butter	Regular · 710 mL	750	30.0	102	24.0	400
+Chocolate NOT-ty Butter	Snack · 355 mL	360	15.0	48	12.0	200
+Brazilian Thunder	Regular · 710 mL	500	5.0	111	4.0	45
+Brazilian Thunder	Snack · 355 mL	250	2.5	55	2.0	25
+Ocean Mist	Regular · 710 mL	410	0.0	93	9.0	70
+Ocean Mist	Snack · 355 mL	200	0.0	46	4.0	35
+Matcha Monsoon	Regular · 710 mL	400	7.0	67	16.0	310
+Matcha Monsoon	Snack · 355 mL	200	3.5	33	8.0	150
+Pomegranate Passion	Regular · 710 mL	380	1.5	89	5.0	85
+Pomegranate Passion	Snack · 355 mL	190	1.0	45	2.0	40
+High Impact Açaí	Regular · 710 mL	630	7.0	119	28.0	290
+Mind Over Matcha	Regular · 710 mL	440	8.0	63	31.0	360
+Açaí Avalanche	Regular · 710 mL	470	6.0	80	26.0	230
+Pomegranate Punch	Regular · 710 mL	450	2.5	87	23.0	180
+Spinach Is In It	Regular · 710 mL	310	3.5	72	3.0	30
+Spinach Is In It	Snack · 355 mL	170	2.0	39	1.0	15
+Tropi-Kale	Regular · 710 mL	310	1.5	75	3.0	20
+Tropi-Kale	Snack · 355 mL	150	0.5	36	1.0	10
+Orange Sunset	Regular · 710 mL	280	1.0	67	3.0	60
+Orange Sunset	Snack · 355 mL	150	0.5	35	2.0	30
+Bango Mango	475 mL	150	0.0	36	1.0	35
+Game, Set, Matcha	475 mL	190	6.0	30	5.0	140
+Berry Sunrise	475 mL	120	0.0	28	0.5	15
+Green Gains	475 mL	250	7.0	30	19.0	220
+Whey Too Good	475 mL	590	31.0	53	31.0	360
+Oranges 'N' Cream	475 mL	300	3.5	57	11.0	135
+Heavenly Horizon	Small · 475 mL	220	1.0	53	1	15
+Heavenly Horizon	Large · 710 mL	330	1.5	80	1	25
+Strawberry Lemon-Aid	Small · 475 mL	190	1.0	44	2	90
+Strawberry Lemon-Aid	Large · 710 mL	280	1.0	67	3	135
+Red Sunrise	Small · 475 mL	190	1.0	44	3	190
+Red Sunrise	Large · 710 mL	270	1.0	64	4	250
+Ginger Hammer	Small · 475 mL	200	1.0	48	3	200
+Ginger Hammer	Large · 710 mL	290	1.0	68	4	260
+Maui Juice	Small · 475 mL	250	1.0	61	3	0
+Maui Juice	Large · 710 mL	400	1.0	97	4	0
+Glow Better	Small · 475 mL	210	1.0	43	10	220
+Glow Better	Large · 710 mL	310	1.0	66	15	320
+Hail to the Kale	Small · 475 mL	200	1.5	44	2	45
+Hail to the Kale	Large · 710 mL	270	2.5	59	3	75
+Apple Juice	Small · 475 mL	230	1.0	54	0	25
+Apple Juice	Large · 710 mL	340	2.0	81	1	35
+Carrot Juice	Small · 475 mL	180	0.5	43	4	300
+Carrot Juice	Large · 710 mL	280	1.0	64	7	460
+Orange Juice	Small · 475 mL	210	1.0	50	3	0
+Orange Juice	Large · 710 mL	320	1.5	74	5	5
+Lemon & Ginger Shot	2 oz	20	0.0	5	0	0
+Carrot Orange Ginger Shot	2 oz	30	0.0	7	0	30
+Wheatgrass Shot	2 oz	10	0.0	0	0	0
+
+[Bowls & Burritos]
+The Busy Bee Açaí Bowl	1 serving	630	22.0	97	12	50
+The Hippie Açaí Bowl	1 serving	560	20.0	85	11	45
+Holy Hazelnut	1 serving	740	29.0	108	13	80
+The PB & A Açaí Bowl	1 serving	570	19.0	88	13	65
+
+[Sandwiches]
+Blueberry BBQ Steak Panini	1 serving	460	17.0	55	25	1130
+Chipotle Chicken Panini	1 serving	490	21.0	46	29	850
+Pesto Chicken Panini	1 serving	460	17.0	46	30	920
+Grilled Cheese Panini	1 serving	510	28.0	44	26	880
+
+[Wraps]
+Blueberry BBQ Chicken Wrap	1 serving	450	15.0	48	32	1060
+Chipotle Chicken Wrap	1 serving	440	20.0	35	29	770
+Chipotle Steak Wrap	1 serving	490	26.0	36	28	950
+Chicken Quesadilla Wrap	1 serving	390	12.0	38	32	820
+Chicken Kale Caesar Wrap	1 serving	340	8.0	38	28	660
+Maple Sweet Potato Wrap	1 serving	480	22.0	36	12	710
+
+[Breakfast]
+Egg & Cheese Wrap	1 serving	340	14.0	35	18	650
+Steak & Egg Wrap	1 serving	460	24.0	35	24	840
+
+[Desserts]
+Chocolate Chip Booster Ball	1 serving	140	9.0	14	4	3
+Oatmeal Coconut Booster Ball	1 serving	140	7.0	17	4	4
+Monster Booster Ball	1 serving	140	6.0	18	4	30
+Coconut Pecan Booster Bar	1 serving	230	13.0	27	2	240
+Harvest Booster Bar	1 serving	300	20.0	25	10	130

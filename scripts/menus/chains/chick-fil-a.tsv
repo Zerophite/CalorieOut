@@ -1,0 +1,149 @@
+id: chick-fil-a
+name: Chick-fil-A
+cuisine: Chicken sandwiches · Fast food
+accent: #e51636
+segment: Fast Food
+source: https://www.chick-fil-a.ca/nutrition-allergens (Chick-fil-A Canada nutrition table, October 2026)
+
+[Sandwiches]
+Grilled Chicken Club	With Cheddar	520	22	44	37.1	1065
+Grilled Chicken Club	With Monterey Jack w/ Jalapeños Cheese	510	21	45	36.1	1045
+Grilled Chicken Club	With no Cheese	440	15	44	32.1	895
+Spicy Deluxe	With Cheddar	550	25	48	34	1940
+Spicy Deluxe	With Monterey Jack w/ Jalapeños Cheese	540	24	49	34	1930
+Spicy Deluxe	With no Cheese	470	18	48	29	1780
+Chick-fil-A Deluxe	With Cheddar	530	24	45	35	1670
+Chick-fil-A Deluxe	With Monterey Jack w/ Jalapeños Cheese	510	22	45	35	1660
+Chick-fil-A Deluxe	With no Cheese	450	17	45	30	1510
+Grilled Chicken Sandwich	205g	380	11	44	28.1	755
+Spicy Chicken Sandwich	190g	460	18	47	28	1770
+Chick-fil-A Chicken Sandwich	185g	440	17	43	29	1500
+Pretzel Cheddar Club Grilled Bundle	262g	490	18	44	38	970
+
+[Chicken]
+Spicy Chick-fil-A Chick-n-Strips	4 ct	360	15	21	36	2070
+Spicy Chick-fil-A Chick-n-Strips	3 ct	270	12	16	27	1550
+Spicy Chick-fil-A Chick-n-Strips	2 ct	180	8	10	18	1030
+Spicy Chick-fil-A Chick-n-Strips	10 ct	900	38	52	89	5170
+Grilled Nuggets	30 ct	510	11	4	98	1710
+Grilled Nuggets	12 ct	200	4.5	2	38	660
+Grilled Nuggets	8 ct	130	3	1	25	440
+Chick-fil-A Nuggets	30 ct	950	43	41	100	4550
+Chick-fil-A Nuggets	12 ct	380	17	16	40	1820
+Chick-fil-A Nuggets	8 ct	250	11	11	27	1210
+
+[Salads]
+Spicy Southwest Salad	With no Chicken	540	45	26	13	780
+Spicy Southwest Salad	With Grilled Filet (Warm)	650	47	27	34	1150
+Spicy Southwest Salad	With Spicy Filet	820	58	42	36	2170
+Spicy Southwest Salad	With Chick-fil-A Filet	800	57	38	37	1900
+Spicy Southwest Salad	With Grilled Nuggets	680	48	27	38	1220
+Spicy Southwest Salad	With Nuggets	790	56	37	39	1990
+Spicy Southwest Salad	With Spicy Strips	820	57	42	39	2330
+Spicy Southwest Salad	With Spicy Grilled Filet (Cold)	650	47	28	32	1500
+Cobb Salad	With no Chicken	580	48	23	15	880
+Cobb Salad	With Grilled Filet (Warm)	690	50	24	36	1250
+Cobb Salad	With Spicy Filet	850	61	39	38	2270
+Cobb Salad	With Chick-fil-A Filet	830	60	35	39	2000
+Cobb Salad	With Grilled Nuggets	710	51	24	40	1320
+Cobb Salad	With Spicy Strips	850	60	38	42	2430
+Cobb Salad	With Nuggets	840	60	34	42	2100
+Cobb Salad	With Spicy Grilled Filet (Cold)	680	50	25	34	1610
+
+[Sides]
+Mac & Cheese	Small	230	11	22	11	790
+Mac & Cheese	Medium	310	15	30	16	1110
+Buddy Fruits Multifruit	100g	60	0	14	1	5
+Chick-fil-A Waffle Potato Fries	Small	320	19	35	4	190
+Chick-fil-A Waffle Potato Fries	Large	600	35	65	7	340
+Chick-fil-A Waffle Potato Fries	Medium	420	24	45	5	240
+Original Flavour Waffle Potato Chips	43g	220	14	25	3	250
+Side Salad	166g	470	42	14	6	640
+Chicken Noodle Soup	Bowl	315	10	41	17	2120
+Chicken Noodle Soup	Cup	185	5.5	26	10	1190
+Chicken Tortilla Soup	Bowl	500	12	56	43	1880
+Chicken Tortilla Soup	Cup	280	7	31	24	1060
+Honey Roasted BBQ Sauce	12g	60	5	3	0.1	75
+Zesty Buffalo Sauce	21g	25	2.5	1	0.2	580
+Sweet & Spicy Sriracha Sauce	28g	45	0.1	11	0.2	380
+Polynesian Sauce	28g	110	6	14	0.1	210
+Honey Mustard Sauce	28g	50	0.4	11	0.2	160
+Garden Herb Ranch Sauce	28g	140	15	1	0.5	220
+Chick-fil-A Sauce	28g	140	13	6	0.2	170
+Barbeque Sauce	28g	45	0	11	0.3	200
+Balsamic Vinaigrette Dressing	57g	80	4	10	0.3	360
+Creamy Salsa Dressing	57g	290	31	2	1	630
+Avocado Lime Ranch Dressing	57g	310	32	3	1	520
+
+[Desserts]
+Icedream Cup	Small	150	4	25	3	45
+Chick-fil-A Icedream Cone	135g	190	4.5	33	4	65
+Chocolate Chunk Cookie	74g	350	16	47	5	220
+Vanilla Milkshake	409g	600	23	87	12	320
+Strawberry Milkshake	409g	580	18	96	10	310
+Chocolate Milkshake	409g	620	21	97	12	290
+Cookies & Cream Milkshake	409g	650	25	95	12	350
+Frosted Coffee	374g	280	7	49	6	85
+Frosted Lemonade	With Diet Lemonade	300	8	52	6	90
+Frosted Lemonade	383g	360	7	69	6	85
+Pineapple Dragonfruit Frosted Lemonade	With Diet Lemonade	290	7	51	5	90
+Pineapple Dragonfruit Frosted Lemonade	390g	370	7	71	5	90
+
+[Drinks]
+Freshly-Brewed Sweetened Iced Tea	Large	170	0	43	0	15
+Freshly-Brewed Sweetened Iced Tea	Medium	120	0	30	0	10
+Freshly-Brewed Sweetened Iced Tea	Small	90	0	22	0	5
+smartwater	567g	0	0	0	0	0
+2% Milk	192g	100	3.5	9	7	90
+Strawberry Passion Fruitopia	Large	230	0	58	0	70
+Strawberry Passion Fruitopia	Medium	160	0	40	0	50
+Strawberry Passion Fruitopia	Small	120	0	30	0	40
+Canada Dry Ginger Ale	Large	250	0	62	0	95
+Canada Dry Ginger Ale	Medium	170	0	43	0	65
+Canada Dry Ginger Ale	Small	130	0	33	0	50
+Honest Kids Apple Juice	192g	40	0	10	0.2	15
+Simply Orange	326g	160	0.2	37	2	3
+Sprite	Large	250	0	63	0	120
+Sprite	Medium	180	0	44	0	75
+Sprite	Small	140	0	34	0	55
+Coke Zero Sugar	Large	0	0	0	0.1	85
+Coke Zero Sugar	Medium	0	0	0	0.1	60
+Coke Zero Sugar	Small	0	0	0	0	45
+Diet Coke	Large	0	0	0	0.1	85
+Diet Coke	Medium	0	0	0	0	60
+Diet Coke	Small	0	0	0	0	45
+Coca-Cola	Large	270	0	68	0	65
+Coca-Cola	Medium	180	0	46	0	45
+Coca-Cola	Small	140	0	35	0	35
+Vanilla Iced Coffee	437g	140	2.5	25	5	65
+Iced Coffee	437g	140	2.5	25	5	60
+Sunjoy (1/2 Sweet Tea, 1/2 Diet Lemonade)	Large	160	0.2	40	0.3	20
+Sunjoy (1/2 Sweet Tea, 1/2 Diet Lemonade)	Medium	120	0.1	29	0.2	15
+Sunjoy (1/2 Sweet Tea, 1/2 Diet Lemonade)	Small	80	0.1	20	0.2	10
+Sunjoy (1/2 Unsweet Tea, 1/2 Lemonade)	Large	270	0	66	0.4	0
+Sunjoy (1/2 Unsweet Tea, 1/2 Lemonade)	Medium	170	0	41	0.3	0
+Sunjoy (1/2 Unsweet Tea, 1/2 Lemonade)	Small	130	0	33	0.2	0
+Sunjoy (1/2 Unsweet Tea, 1/2 Diet Lemonade)	Large	60	0.2	15	0.3	10
+Sunjoy (1/2 Unsweet Tea, 1/2 Diet Lemonade)	Medium	40	0.1	10	0.2	5
+Sunjoy (1/2 Unsweet Tea, 1/2 Diet Lemonade)	Small	35	0.1	8	0.2	5
+Sunjoy (1/2 Sweet Tea, 1/2 Lemonade)	Large	360	0	90	0.4	5
+Sunjoy (1/2 Sweet Tea, 1/2 Lemonade)	Medium	240	0	60	0.3	5
+Sunjoy (1/2 Sweet Tea, 1/2 Lemonade)	Small	180	0	45	0.2	4
+Chick-fil-A Diet Lemonade	Large	100	0.3	23	0.5	15
+Chick-fil-A Diet Lemonade	Medium	60	0.2	15	0.3	10
+Chick-fil-A Diet Lemonade	Small	50	0.1	12	0.2	10
+Chick-fil-A Lemonade	Large	400	0.1	98	1	0
+Chick-fil-A Lemonade	Medium	270	0	66	0.4	0
+Chick-fil-A Lemonade	Small	200	0	49	0.3	0
+Freshly-Brewed Unsweetened Iced Tea	Large	0	0	0	0	0
+Freshly-Brewed Unsweetened Iced Tea	Medium	0	0	0	0	0
+Freshly-Brewed Unsweetened Iced Tea	Small	0	0	0	0	0
+Pineapple Dragonfruit Unsweet Tea	432g	20	0	5	0	10
+Pineapple Dragonfruit Sweet Tea	432g	130	0	32	0	20
+Pineapple Dragonfruit Sunjoy (Unsweet Tea, Diet Lemonade)	432g	35	0.1	9	0.1	15
+Pineapple Dragonfruit Sunjoy (Unsweet Tea, Lemonade)	432g	100	0.1	25	0.1	15
+Pineapple Dragonfruit Sunjoy (Sweet Tea, Diet Lemonade)	432g	90	0.1	23	0.1	20
+Pineapple Dragonfruit Sunjoy (Sweet Tea, Lemonade)	432g	150	0.1	38	0.1	20
+Pineapple Dragonfruit Diet Lemonade	432g	60	0.1	14	0.2	20
+Pineapple Dragonfruit Lemonade	432g	180	0.1	45	0.2	20
+Pineapple Dragonfruit & Sprite	432g	140	0	34	0	60

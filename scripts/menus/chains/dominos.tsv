@@ -1,0 +1,125 @@
+id: dominos
+name: Domino's
+cuisine: Pizza · Wings · Fast food
+accent: #0b6fb8
+segment: Fast Food
+source: dominos.ca Canadian Nutrition Guide (Aug 2025; pizzas per hand-tossed slice)
+
+[Pizza]
+Cheese Pizza	Small · per slice	195	7	23	10	315
+Pepperoni Pizza	Small · per slice	200	8	23	9	385
+Cheese Pizza	Medium · per slice	200	7	22	9	330
+Pepperoni Pizza	Medium · per slice	200	8	22	8	400
+Cheese Pizza	Large · per slice	290	9	35	14	465
+Pepperoni Pizza	Large · per slice	290	11	34	13	565
+Cheese Pizza	X-Large · per slice	295	10	36	15	510
+Pepperoni Pizza	X-Large · per slice	300	12	35	14	610
+BBQ Chicken Bacon Pizza	Small · per slice	230	8	28	11	440
+BBQ Chicken Bacon Pizza	Medium · per slice	240	9	28	12	480
+BBQ Chicken Bacon Pizza	Large · per slice	330	12	38	16	630
+BBQ Chicken Bacon Pizza	X-Large · per slice	350	13	40	17	680
+Buffalo Chicken Pizza	Small · per slice	230	9	26	12	615
+Buffalo Chicken Pizza	Medium · per slice	245	10	26	13	620
+Buffalo Chicken Pizza	Large · per slice	320	13	35	17	810
+Buffalo Chicken Pizza	X-Large · per slice	335	13	36	18	845
+Canadian Pizza	Small · per slice	230	9	26	12	440
+Canadian Pizza	Medium · per slice	240	10	26	13	470
+Canadian Pizza	Large · per slice	330	13	35	17	630
+Canadian Pizza	X-Large · per slice	350	14	37	18	690
+Chicken Bacon Alfredo Pizza	Small · per slice	240	10	25	12	380
+Chicken Bacon Alfredo Pizza	Medium · per slice	260	12	25	13	430
+Chicken Bacon Alfredo Pizza	Large · per slice	340	15	34	17	560
+Chicken Bacon Alfredo Pizza	X-Large · per slice	360	16	36	18	590
+Chicken Bacon Ranch Pizza	Small · per slice	240	11	25	10	370
+Chicken Bacon Ranch Pizza	Medium · per slice	260	13	25	11	420
+Chicken Bacon Ranch Pizza	Large · per slice	350	17	33	14	550
+Chicken Bacon Ranch Pizza	X-Large · per slice	360	18	35	15	580
+Deluxe Pizza	Small · per slice	220	8	26	10	350
+Deluxe Pizza	Medium · per slice	220	8	26	10	370
+Deluxe Pizza	Large · per slice	300	11	36	14	510
+Deluxe Pizza	X-Large · per slice	320	12	37	15	550
+Donair Pizza	Small · per slice	220	7	30	10	340
+Donair Pizza	Medium · per slice	230	7	29	11	350
+Donair Pizza	Large · per slice	310	10	40	15	480
+Donair Pizza	X-Large · per slice	320	10	42	15	490
+ExtravaganZZa Pizza	Small · per slice	260	11	27	13	510
+ExtravaganZZa Pizza	Medium · per slice	270	12	27	15	550
+ExtravaganZZa Pizza	Large · per slice	380	16	37	20	760
+ExtravaganZZa Pizza	X-Large · per slice	400	17	39	21	840
+Hawaiian Pizza	Small · per slice	220	7	27	12	430
+Hawaiian Pizza	Medium · per slice	230	7	27	12	460
+Hawaiian Pizza	Large · per slice	310	10	37	17	630
+Hawaiian Pizza	X-Large · per slice	320	10	39	18	680
+MeatZZa Pizza	Small · per slice	250	10	26	13	510
+MeatZZa Pizza	Medium · per slice	270	11	26	14	550
+MeatZZa Pizza	Large · per slice	360	16	36	20	760
+MeatZZa Pizza	X-Large · per slice	390	17	37	21	840
+Pepperoni Feast	Small · per slice	240	9	26	12	470
+Pepperoni Feast	Medium · per slice	250	10	26	12	490
+Pepperoni Feast	Large · per slice	340	14	35	17	670
+Pepperoni Feast	X-Large · per slice	360	15	37	18	720
+Philly Steak Pizza	Small · per slice	210	7	26	10	470
+Philly Steak Pizza	Medium · per slice	220	8	25	11	500
+Philly Steak Pizza	Large · per slice	290	10	34	14	640
+Philly Steak Pizza	X-Large · per slice	310	11	36	15	670
+6 Cheese Pizza	Small · per slice	220	8	26	11	395
+6 Cheese Pizza	Medium · per slice	245	10	26	13	445
+6 Cheese Pizza	Large · per slice	325	13	35	17	600
+6 Cheese Pizza	X-Large · per slice	345	14	37	18	630
+Spinach & Feta Pizza	Small · per slice	210	7	25	10	340
+Spinach & Feta Pizza	Medium · per slice	220	8	25	10	370
+Spinach & Feta Pizza	Large · per slice	300	11	34	14	500
+Spinach & Feta Pizza	X-Large · per slice	310	12	35	15	510
+Pacific Veggie Pizza	Small · per slice	200	6	27	10	360
+Pacific Veggie Pizza	Medium · per slice	210	7	27	10	380
+Pacific Veggie Pizza	Large · per slice	280	9	36	14	520
+Pacific Veggie Pizza	X-Large · per slice	300	10	38	14	540
+Veggie Pizza	Small · per slice	190	5	27	9	280
+Veggie Pizza	Medium · per slice	190	6	26	9	290
+Veggie Pizza	Large · per slice	270	8	36	12	400
+Veggie Pizza	X-Large · per slice	280	8	37	13	410
+
+[Chicken]
+Boneless Chicken	2 pieces	90	3	8	9	450
+BBQ Wings	2 pieces	90	5	4	7	390
+Hot Wings	2 pieces	90	5	4	7	770
+Honey Garlic Wings	2 pieces	120	5	11	7	410
+Specialty Chicken – Classic Hot Buffalo	4 pieces	170	9	9	13	1090
+Specialty Chicken – Crispy Bacon & Tomato	4 pieces	230	15	10	15	810
+Specialty Chicken – Spicy Jalapeño & Pineapple	4 pieces	170	7	16	12	650
+Specialty Chicken – Sweet BBQ Bacon	4 pieces	190	9	14	15	860
+Specialty Chicken – Chicken Parm	4 pieces	150	6	10	13	700
+
+[Mains]
+Chicken Alfredo Pasta	1 dish	570	24	58	25	950
+Chicken Carbonara Pasta	1 dish	640	28	61	30	1200
+Italian Sausage Marinara Pasta	1 dish	630	26	67	30	1780
+Pasta Primavera	1 dish	520	23	61	15	750
+Creamy 5-Cheese Penne	1 dish	820	47	60	35	1640
+Hot Buffalo 5-Cheese Penne	1 dish	820	47	60	35	2140
+
+[Sides]
+Breadsticks	2 pieces	170	8	20	4	180
+Cheesy Bread	2 pieces	220	12	21	7	280
+Cheesy Garlic Fingers	10" · 2 pieces	140	5	17	6	200
+Cheesy Garlic Fingers	12" · 2 pieces	190	8	21	8	290
+Cheesy Garlic Fingers	14" · 2 pieces	180	8	20	8	280
+Cheesy Garlic Fingers	16" · 2 pieces	240	10	27	10	370
+Bacon Garlic Fingers	10" · 2 pieces	160	7	17	8	300
+Bacon Garlic Fingers	12" · 2 pieces	220	10	21	11	420
+Bacon Garlic Fingers	14" · 2 pieces	210	10	21	10	410
+Bacon Garlic Fingers	16" · 2 pieces	290	13	27	14	560
+Stuffed Cheesy Bread	1 piece	160	7	15	7	230
+Bacon & Jalapeño Stuffed Cheesy Bread	1 piece	160	8	15	8	320
+Pepperoni Stuffed Cheesy Bread	1 piece	170	8	15	8	300
+Philly Steak Stuffed Cheesy Bread	1 piece	160	7	16	7	300
+Spinach & Feta Stuffed Cheesy Bread	1 piece	160	7	15	7	260
+French Fries	Large · 1/4 order	170	7	25	2	510
+French Fries	Family · 1/6 order	180	8	27	3	550
+Poutine	1 poutine	880	46	90	28	3520
+
+[Desserts]
+Cinna Stix	2 pieces	210	9	28	4	160
+Cinna Bites	4 pieces	240	10	33	5	160
+Chocolate Lava Crunch Cake	1 cake	350	17	47	4	180
+Marbled Cookie Brownie	1 brownie	200	10	25	2	120

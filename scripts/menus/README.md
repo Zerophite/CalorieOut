@@ -224,8 +224,12 @@ high-density screens.
 `src/data/logos.ts` maps each restaurant to its official logo, loaded at
 runtime: the logo or app icon from the restaurant's own website, or the
 brand's logo file on Wikimedia for chains whose site only offers a tiny
-favicon. Every entry was checked visually; spots that publish no logo of their
-own show an initials badge instead.
+favicon (for spots whose main site has none, the logo on their own ordering
+page). Every entry was checked visually. Green Leaf publishes no logo file, so
+`public/logos/green-leaf.png` is cropped from the mark printed on the cup in its
+own product photo; a spot with no logo at all shows an initials badge. `DARK_LOGOS` (white marks)
+get a dark tile, `FULL_LOGOS` (square marks with their own background) fill
+the tile, and `WIDE_LOGOS` (wordmarks 3:1 or wider) get a wider tile.
 
 ## Plausibility audit
 

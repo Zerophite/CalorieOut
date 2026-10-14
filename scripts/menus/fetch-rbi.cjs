@@ -1,7 +1,7 @@
 // Crawl a Restaurant Brands International chain's public menu (Sanity GraphQL)
 // and save every menu item with nutrition, sizes (pickers) and modifiers.
 //
-//   node scripts/menus/fetch-rbi.cjs <brand>      brand: timhortons | burgerking | firehouse
+//   node scripts/menus/fetch-rbi.cjs <brand>      brand: timhortons | burgerking | firehouse | popeyes
 const fs = require('fs')
 const path = require('path')
 
@@ -14,6 +14,10 @@ const BRANDS = {
     endpoint: 'https://kjfd81ul.apicdn.sanity.io/v1/graphql/prod_bk_ca/default',
     // Meal/deal/bundle sections only repackage items listed elsewhere.
     skip: /meals?$|deals?$|bundle|buy one|king jr|mix n|for \$/i,
+  },
+  popeyes: {
+    endpoint: 'https://czqk28jt.apicdn.sanity.io/v1/graphql/prod_plk_ca/default',
+    skip: /meals?$|combos?$|deals?$|bundle|family|feast|catering|for \$/i,
   },
   firehouse: {
     endpoint: 'https://czqk28jt.apicdn.sanity.io/v1/graphql/prod_fhs_ca/default',

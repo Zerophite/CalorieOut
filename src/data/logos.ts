@@ -19,12 +19,16 @@ export const LOGOS: Record<string, string> = {
   'firehouse-subs': "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Firehosue_Subs_Logo_2024.png/500px-Firehosue_Subs_Logo_2024.png",
   freshii: "https://freshii.com/wp-content/uploads/2024/01/freshii_favicon_180.png",
   'gabriel-pizza': "https://gabrielpizza.com/wp-content/themes/gabriel-theme/img/favicons/android-chrome-192x192.png",
+  // Cropped from the cup in Green Leaf's own product photo — its only published mark.
+  'green-leaf': 'logos/green-leaf.png',
   'halibut-house': "https://irp.cdn-website.com/2076d543/dms3rep/multi/opt/halibut_logo_new+%281%29+copy+%281%29-1920w.png",
   harveys: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Harvey%27s_logo.svg/500px-Harvey%27s_logo.svg.png",
   kettlemans: "https://www.kettlemansbagels.ca/wp-content/uploads/2024/12/cropped-Screenshot-2024-12-22-at-1.02.29%E2%80%AFPM-180x180.png",
   kfc: "https://images.ctfassets.net/a2mgcrjjefyo/1RHtlfQBulQEbCq2w2NJ7w/8fd9a53869d65bff664f39b8d0a457af/kfc_logo_icon.svg",
   'kinton-ramen': "https://kintonramen.com/wp-content/uploads/2024/10/kinton_favicon-300x300.jpg",
   kochu: "https://www.kochu.ca/uploads/b/c23702c0-5db7-11ec-b02b-cf5d84270820/icon_180x180_ios_Nzg5OD.png?width=180",
+  'koichi-ramen': "https://koichiramen.square.site/uploads/b/e286d399c2958d538ad81566bf0dee4cb39d948d45b3c1d402ace3c3b23f752e/KOICHI_logo_full_Color_TM_1588134953.png?width=400",
+  'kuma-takumi': "https://static.wixstatic.com/media/4c8473_b569d29b93894b929c31240fac5fd1a2~mv2.jpg/v1/fill/w_400,h_400,al_c,q_85/4c8473_b569d29b93894b929c31240fac5fd1a2~mv2.jpg",
   'little-caesars': "https://littlecaesars.ca/icon-512x512.png",
   lokma: "https://static.wixstatic.com/media/ef0612_2ccafa09da364f56bd6bd00e92473969%7Emv2.gif/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/ef0612_2ccafa09da364f56bd6bd00e92473969%7Emv2.gif",
   'lone-star': "https://lonestartexasgrill.com/build/images/page/favicon.e44de31a.png",
@@ -46,7 +50,7 @@ export const LOGOS: Record<string, string> = {
   'shelbys-shawarma': "https://cdn.prod.website-files.com/69233a0782977e6bf5f00df5/6940a333e17c6c58f8e3782d_Webclip.png",
   'st-louis': "https://www.stlouiswings.com/wp-content/uploads/2026/06/cropped-cropped-SLBG-Monogram-800px-180x180.png",
   starbucks: "https://www.starbucks.ca/apple-touch-icon.png",
-  'streats-kitchen': "https://streatskitchens.com/wp-content/uploads/2020/08/cropped-cropped-streats-logo-512x512-32x32-1-180x180.png",
+  'streats-kitchen': "https://streatskitchens.com/wp-content/uploads/2025/03/strEATS_white.png",
   subway: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Subway_2016_logo.svg/500px-Subway_2016_logo.svg.png",
   'sushi-eki': "https://sushieki.ca/wp-content/uploads/2022/05/logo.png",
   'sushi-sama': "https://www.sushisama.com/android-chrome-512x512.png",
@@ -63,13 +67,23 @@ export const LOGOS: Record<string, string> = {
   'toppers-pizza': "https://toppers.ca/images/favicon-196.png",
   'turkish-kebab-house': "https://static.wixstatic.com/media/0c146d_1a0eaf7a68cf4dcaa8e6597884c67198%7Emv2.png/v1/fill/w_300%2Ch_300%2Clg_1%2Cusm_0.66_1.00_0.01/0c146d_1a0eaf7a68cf4dcaa8e6597884c67198%7Emv2.png",
   wendys: "https://www.wendys.com/themes/custom/wendys_main/favicons/apple-touch-icon-180x180.png",
+  'windbell-sushi': "https://pos-en-node.oss-us-east-1.aliyuncs.com/%7B0BEC5FAF-C4E9-11ED-94C2-E43A6E4E771B%7D/logo.jpg",
   'wing-up': "https://wingsup.com/WingsUp/media/images/logo_Main-Logo.svg",
   zolas: "https://zolas.ca/wp-content/uploads/2024/02/cropped-ZOLAS.png",
 }
 
 /** Logos drawn in white, shown on a dark tile. */
-export const DARK_LOGOS = new Set(['the-works'])
+export const DARK_LOGOS = new Set(['the-works', 'streats-kitchen'])
 
-// No logo: these spots publish none of their own (their sites use a site
-// builder's default icon), so they show the initials badge instead:
-//   koichi-ramen, kuma-takumi, windbell-sushi, green-leaf.
+/** Square logos with their own background, shown edge to edge. */
+export const FULL_LOGOS = new Set(['kuma-takumi'])
+
+/** Wordmarks three or more times wider than tall: shown in a wider tile so they stay readable. */
+export const WIDE_LOGOS = new Set([
+  'subway', 'pita-pit', 'kfc', 'mary-browns', 'firehouse-subs', 'noodle-box', 'red-swan-pizza', 'bad-radish', 'tim-hortons',
+  'windbell-sushi', 'chicha-san-chen', 'rock-n-deli', 'zolas', 'streats-kitchen', 'koichi-ramen',
+])
+
+// Green Leaf publishes no logo file (its site uses a template's default icon);
+// its leaf mark appears only printed on its cups, so public/logos/green-leaf.png
+// is cropped from the cup in its own Uber Eats product photo.

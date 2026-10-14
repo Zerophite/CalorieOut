@@ -49,15 +49,13 @@ export function RestaurantCard({
       onClick={onOpen}
       className="group flex items-center gap-4 rounded-2xl border border-app bg-surface p-4 text-left transition-shadow hover:shadow-md"
     >
-      <BrandLogo
-        id={restaurant.id}
-        name={restaurant.name}
-        accent={restaurant.accent}
-        size="lg"
-      />
+      {/* A fixed slot, so names line up whether the logo is square or a wide wordmark. */}
+      <div className="flex w-24 shrink-0 justify-center">
+        <BrandLogo id={restaurant.id} name={restaurant.name} accent={restaurant.accent} size="lg" />
+      </div>
       <div className="min-w-0 flex-1">
-        <div className="flex items-center gap-2">
-          <h3 className="font-bold text-body">{restaurant.name}</h3>
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
+          <h3 className="font-bold leading-tight text-body">{restaurant.name}</h3>
           {restaurant.dataSource === 'estimated' && <EstimateBadge />}
         </div>
         <p className="truncate text-sm text-muted">{restaurant.cuisine}</p>
@@ -113,68 +111,55 @@ export function Home({
   const remaining = dayGoal !== null ? dayGoal - dayCalories : null
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-6">
-      {/* Hero */}
-      <header className="mb-5">
-        <h1 className="text-3xl font-black tracking-tight text-body sm:text-4xl">
-          Eat out smarter across Canada
-        </h1>
-        <p className="mt-1 max-w-2xl text-muted">
-          Calories and macros for Canadian restaurants — browse menus, build and
-          customize meals, and track your day as you go.
+    <div className="mx-auto max-w-5xl px-4 py-5 sm:py-6">
+      {/* Hero: what this is, and the two ways in — a restaurant or a dish */}
+      <header className="mb-4 overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-500 to-emerald-700 p-5 text-white shadow-sm sm:p-7">
+        <h1 className="text-2xl font-black tracking-tight sm:text-4xl">Eat out smarter</h1>
+        <p className="mt-1 text-sm text-white/85 sm:text-base">
+          Nutrition for Canada’s favourite restaurants. Customize your order and track your day.
         </p>
-      </header>
 
-      {/* Today summary */}
-      {dayCalories > 0 && (
-        <button
-          onClick={onOpenDay}
-          className="mb-4 flex w-full items-center gap-3 rounded-2xl border border-app bg-surface p-4 text-left hover:bg-surface-2"
-        >
-          <span
-            className="flex h-10 w-10 items-center justify-center rounded-xl text-white"
-            style={{ background: 'var(--brand)' }}
+        <div className="mt-4 flex items-center gap-3 rounded-2xl bg-white px-4 text-slate-900 shadow-sm focus-within:ring-2 focus-within:ring-white/60">
+          <IconSearch size={18} className="shrink-0 text-slate-400" />
+          <input
+            type="search"
+            inputMode="search"
+            autoComplete="off"
+            autoCorrect="off"
+            spellCheck={false}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search restaurants — “shawarma”, “sushi”…"
+            className="min-w-0 flex-1 bg-transparent py-3 text-base text-slate-900 outline-none placeholder:text-slate-400"
+          />
+        </div>
+
+        <div className="mt-3 flex flex-wrap items-center gap-2">
+          <button
+            onClick={onOpenSearch}
+            className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1.5 text-sm font-semibold text-white hover:bg-white/25"
           >
-            <IconFlame size={20} />
-          </span>
-          <div className="flex-1">
-            <div className="font-bold text-body">
-              {formatNumber(dayCalories)} cal logged today
-            </div>
-            <div className="text-sm text-muted">
-              {remaining !== null
-                ? remaining >= 0
-                  ? `${formatNumber(remaining)} cal left of your ${formatNumber(dayGoal!)} goal`
-                  : `${formatNumber(Math.abs(remaining))} cal over your goal`
-                : 'Tap to see your day'}
-            </div>
-          </div>
-          <IconChevron size={18} className="text-muted" />
-        </button>
-      )}
-
-      {/* Restaurant search */}
-      <div className="mb-3 flex items-center gap-3 rounded-2xl border border-app bg-surface px-4 focus-within:border-[var(--brand)]">
-        <IconSearch size={18} className="shrink-0 text-muted" />
-        <input
-          type="search"
-          inputMode="search"
-          autoComplete="off"
-          autoCorrect="off"
-          spellCheck={false}
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search restaurants — “shawarma”, “sushi”…"
-          className="min-w-0 flex-1 bg-transparent py-3 text-base text-body outline-none"
-        />
-      </div>
-      <button
-        onClick={onOpenSearch}
-        className="mb-5 flex items-center gap-1.5 text-sm font-semibold text-[var(--brand)] hover:underline"
-      >
-        <IconSearch size={14} />
-        Looking for a dish? Search every menu
-      </button>
+            <IconSearch size={14} />
+            Search dishes instead
+          </button>
+          {dayCalories > 0 && (
+            <button
+              onClick={onOpenDay}
+              className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1.5 text-sm font-semibold text-white hover:bg-white/25"
+            >
+              <IconFlame size={14} />
+              {formatNumber(dayCalories)} cal today
+              {remaining !== null && (
+                <span className="font-normal text-white/80">
+                  {' · '}
+                  {remaining >= 0 ? `${formatNumber(remaining)} left` : `${formatNumber(Math.abs(remaining))} over`}
+                </span>
+              )}
+              <IconChevron size={14} />
+            </button>
+          )}
+        </div>
+      </header>
 
       {/* Browse: cuisine, food, drinks and type of place, each in its own row */}
       <section ref={chipRow} className="mb-5 space-y-3 rounded-2xl border border-app bg-surface p-4">
@@ -222,21 +207,27 @@ export function Home({
         </ChipRow>
       </section>
 
-      <p className="mb-3 text-sm text-muted">
-        {shown.length} restaurant{shown.length === 1 ? '' : 's'}
-      </p>
-
-      {/* Restaurant grid */}
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-        {shown.map((r) => (
-          <RestaurantCard
-            key={r.id}
-            restaurant={r}
-            onOpen={() => onOpenRestaurant(r.id)}
-          />
-        ))}
-      </div>
       {shown.length === 0 && <div className="mt-6 text-center text-muted">No restaurants match. Try another search or cuisine.</div>}
+      {[
+        { title: 'Chains', note: 'Official nutrition from each chain', list: shown.filter((r) => r.dataSource !== 'estimated') },
+        { title: 'Local spots', note: 'Estimated from typical recipes, or the calories they post', list: shown.filter((r) => r.dataSource === 'estimated') },
+      ]
+        .filter((g) => g.list.length)
+        .map((g) => (
+          <section key={g.title} className="mb-6">
+            <div className="mb-3 flex items-baseline justify-between gap-3">
+              <h2 className="text-lg font-bold text-body">
+                {g.title} <span className="text-sm font-medium text-muted">{g.list.length}</span>
+              </h2>
+              <span className="truncate text-xs text-muted">{g.note}</span>
+            </div>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {g.list.map((r) => (
+                <RestaurantCard key={r.id} restaurant={r} onOpen={() => onOpenRestaurant(r.id)} />
+              ))}
+            </div>
+          </section>
+        ))}
 
       <p className="mt-8 text-center text-xs text-muted">
         Nutrition figures are approximate, compiled from published Canadian

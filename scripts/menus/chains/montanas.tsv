@@ -1,0 +1,94 @@
+id: montanas
+name: Montana's
+cuisine: BBQ · Ribs · Sit-down
+accent: #7c2d12
+segment: Sit-Down
+source: montanas.ca/en/nutrition.html (Montana's BBQ & Bar nutrition and allergen information)
+
+[Sandwiches]
+Brisket Burger	1 serving	1240	87	71	47	1970
+Chipotle Firecracker Burger	1 serving	1110	72	76	44	2080
+Canadian Burger EH!	1 serving	990	64	58	47	1980
+Veggie Burger	1 serving	840	50	70	34	1550
+Chicken Tacos	1 serving	570	23	48	35	2010
+BBQ Brisket "Burnt Ends" Taco	1 serving	770	51	54	26	2050
+Smokehouse Wrap	1 serving	1480	79	138	57	3610
+Southern Fried Chicken Sandwich	1 serving	870	48	76	34	2040
+Southern Fried Chicken Sandwich - Spicy	1 serving	930	49	89	34	2450
+Pulled Pork Sandwich	1 serving	780	42	66	36	1060
+BBQ Brisket Sandwich	1 serving	1090	70	77	42	2050
+
+[Mains]
+Pork Back Ribs	1 serving	720	48	17	51	1880
+Pork Back Ribs	Large	1310	88	32	94	3450
+Honkin' Beef Rib	1 serving	1000	64	12	100	880
+Rib & Wing Combo - Taster	1 serving	1130	76	41	71	1410
+Rib & Wing Combo - Regular	1 serving	1370	93	47	88	2030
+Rib & Wing Combo	Large	1960	133	61	131	3600
+7 oz Sirloin Steak	1 serving	420	22	1	55	390
+10 oz Sirloin Steak	1 serving	600	31	1	79	640
+12 oz Striploin Steak	1 serving	750	47	1	80	650
+Steak Topper - 2 Onion Rings	1 serving	150	10	15	2	310
+Steak Topper - Mushroom & Onion	1 serving	120	9	6	3	280
+Steak Topper - 2 Shrimp Skewers	1 serving	120	7	2	13	660
+Steak Topper - Sizzling Mushroom Skillet	1 serving	340	29	9	7	500
+Steak Topper - Garlic & Herb Butter	1 serving	100	12	0	0.2	105
+Veggie Fajitas	1 serving	850	38	102	34	2300
+Chicken Fajitas	1 serving	940	45	86	52	2350
+Buttermilk Fried Chicken	1 serving	900	44	95	36	2370
+Beer-Battered Fish & Chips 1 pc (excludes Seasoned Fries)	1 serving	520	38	29	16	1560
+Beer-Battered Fish & Chips 2 pcs (excludes Seasoned Fries)	1 serving	710	49	37	31	2020
+Tender Chicken Strips (excludes Seasoned Fries)	1 serving	520	26	42	31	1220
+Creamy Mac N' Cheese	1 serving	950	48	90	42	1840
+Creamy Mac N' Cheese - Add Crispy Bacon	1 serving	1010	53	90	45	2040
+Creamy Mac N' Cheese - Add Buffalo Chicken	1 serving	1190	60	107	55	2860
+Creamy Mac N' Cheese - Add Brisket Burnt Ends	1 serving	1300	78	93	55	2360
+Chicken Burrito Bowl	1 serving	1290	36	102	42	2710
+Apple Pecan Harvest Salad	1 serving	530	36	46	9	620
+Chicken Apple Pecan Harvest Salad	1 serving	710	46	46	31	1160
+Caesar Salad	1 serving	540	42	28	14	1070
+Chicken Caesar Salad	1 serving	720	52	29	36	1610
+Club Salad	1 serving	890	70	42	24	1560
+Chicken Club Salad	1 serving	1070	80	43	46	2100
+
+[Sides]
+Double Dusted Chicken Wings with Blue Cheese Dressing	8 pieces	1490	104	63	74	700
+Double Dusted Chicken Wings with Ranch Dressing	8 pieces	1480	103	62	74	650
+Oven-Baked Antojitos with Sour Cream & Pesto Sauce	1 serving	910	57	74	27	1760
+KAPOW! Shrimp	1 serving	630	32	65	20	1890
+Four Cheese Spinach Dip	1 serving	1220	64	127	31	1860
+Deep Fried Pickles	1 serving	540	35	51	6	2210
+Loaded Garlic & Cheese Pull Apart Bread	1 serving	950	58	75	31	1730
+Cheese Nachos with Sour Cream & Salsa	1 serving	1830	101	132	93	3870
+Pulled Pork Nachos with Sour Cream & Salsa	1 serving	2230	123	152	121	4310
+Beef Nachos with Sour Cream & Salsa	1 serving	2120	123	140	108	4430
+BBQ Brisket "Burnt Ends"	1 serving	880	66	42	30	1600
+Smoked Brisket Potato Skins	1 serving	920	64	39	48	1590
+Pot Roast Soup	1 serving	130	2.5	22	6	1060
+Broccoli & Cheddar Soup (Select Locations)	1 serving	170	8	20	6	1200
+Chicken Tortilla Soup (Select Locations Only)	1 serving	100	3.5	13	4	580
+Harvest Butternut Squash Soup (Select Locations Only)	1 serving	190	9	26	3	940
+Tomato Basil Bisque (Select Locations Only)	1 serving	140	7	17	2	800
+Starter Caesar Salad	1 serving	280	23	10	9	550
+Starter House Salad (No Dressing)	1 serving	50	1	10	2	90
+Seasoned Fries	1 serving	470	29	52	4	1070
+Poutine	1 serving	740	48	60	20	2010
+Baked Potato with Sour Cream and Butter	1 serving	430	13	68	10	310
+Loaded Baked Potato	1 serving	470	15	69	18	550
+Mashed Potato (no gravy)	1 serving	230	10	31	5	890
+Rice Pilaf	1 serving	170	2	35	3	570
+In-House Baked Beans	1 serving	90	0.4	20	4	270
+Coleslaw	1 serving	100	7	8	1	260
+House Salad (no dressing)	1 serving	45	0.5	9	2	70
+Caesar Salad	1 serving	230	20	7	6	430
+Cornbread	1 serving	170	6	25	3	230
+Sweet Potato Fries with Chipotle Dip	1 serving	590	41	54	3	650
+Fresh Veggies	1 serving	110	8	8	2	80
+Onion Rings	1 serving	300	19	30	4	610
+Creamy Potato Smashers	1 serving	370	20	39	11	430
+Beef Gravy	1 serving	30	1	4	1	320
+
+[Desserts]
+Shake n' Share Mini Donuts	1 serving	820	33	126	7	700
+Skillet Cookie	1 serving	860	25	151	9	570
+Triple Layer Chocolate Cake	1 serving	970	49	124	10	590

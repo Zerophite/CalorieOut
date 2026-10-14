@@ -1,7 +1,7 @@
 import { useState, type ReactNode } from 'react'
 import { type DietTag, type Nutrition } from '../types'
 import { type Goal } from '../hooks/useGoal'
-import { DARK_LOGOS, LOGOS } from '../data/logos'
+import { DARK_LOGOS, FULL_LOGOS, LOGOS, WIDE_LOGOS } from '../data/logos'
 import { IconDumbbell, IconFlame, IconLeaf } from './icons'
 
 const TAG_META: Record<DietTag, { label: string; icon?: ReactNode }> = {
@@ -28,7 +28,7 @@ export function ChipRow({ label, children }: { label: string; children: ReactNod
   return (
     <div>
       <div className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted">{label}</div>
-      <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] [&>*]:shrink-0 [&_button]:whitespace-nowrap">
+      <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] [&>*]:shrink-0 [&_button]:whitespace-nowrap [&_button]:py-1">
         {children}
       </div>
     </div>
@@ -107,7 +107,7 @@ export function MenuLoading() {
 /** Small inline marker for restaurants whose figures are estimates. */
 export function EstimateBadge() {
   return (
-    <span className="rounded-full bg-amber-500/15 px-2 py-0.5 text-xs font-semibold text-amber-600 dark:text-amber-400">
+    <span className="whitespace-nowrap rounded-full bg-amber-500/15 px-2 py-0.5 text-xs font-semibold text-amber-600 dark:text-amber-400">
       ~ Estimate
     </span>
   )
@@ -162,6 +162,12 @@ const BOX = {
   md: 'h-12 w-12',
   lg: 'h-16 w-16',
 }
+/** Wide wordmarks get a wider tile so they stay readable. */
+const WIDE_BOX = {
+  sm: 'h-9 w-14',
+  md: 'h-12 w-20',
+  lg: 'h-16 w-24',
+}
 
 /**
  * Restaurant logo: the brand's own official mark (see data/logos.ts), shown
@@ -185,7 +191,7 @@ export function BrandLogo({
   const dark = DARK_LOGOS.has(id)
   return (
     <div
-      className={`flex ${BOX[size]} shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-sm ring-1 ring-[var(--border)] ${dark ? 'bg-neutral-900' : 'bg-white'}`}
+      className={`flex ${WIDE_LOGOS.has(id) ? WIDE_BOX[size] : BOX[size]} shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-sm ring-1 ring-[var(--border)] ${dark ? 'bg-neutral-900' : 'bg-white'}`}
     >
       <img
         src={src}
@@ -194,7 +200,7 @@ export function BrandLogo({
         decoding="async"
         referrerPolicy="no-referrer"
         onError={() => setFailed(true)}
-        className="h-[84%] w-[84%] object-contain"
+        className={FULL_LOGOS.has(id) ? 'h-full w-full object-cover' : WIDE_LOGOS.has(id) ? 'h-[84%] w-[94%] object-contain' : 'h-[84%] w-[84%] object-contain'}
       />
     </div>
   )

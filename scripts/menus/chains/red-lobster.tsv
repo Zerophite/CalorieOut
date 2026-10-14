@@ -1,0 +1,167 @@
+id: red-lobster
+name: Red Lobster
+cuisine: Seafood · Sit-down
+accent: #b91c1c
+segment: Sit-Down
+source: redlobster.ca Canadian nutrition information (valid from Oct 12, 2026)
+
+[Mains]
+Admiral's Feast with fries	1 serving	2070	116	187	63	5320
+Atlantic Salmon, Grilled	1 serving	510	34	1	47	680
+Cajun Chicken Linguini Alfredo	Full	1020	47	92	60	2750
+Cajun Chicken Linguini Alfredo	Lighter portion	700	29	64	48	1780
+Cheeseburger with fries	1 serving	1450	84	130	39	3160
+Cheeseburger with bacon, fries	1 serving	1550	92	130	49	3480
+Classic Chicken Linguini Alfredo	Full	1000	46	87	59	2430
+Classic Chicken Linguini Alfredo	Lighter portion	680	29	60	47	1450
+Crab & Shrimp Linguini Alfredo	Full	1460	63	173	54	3520
+Crab & Shrimp Linguini Alfredo	Lighter portion	1020	41	127	40	2220
+Bairdi Crab, 1 lb. with crispy potatoes	1 serving	650	27	55	50	3800
+Snow Crab, 1 lb. with crispy potatoes	1 serving	610	26	55	42	3490
+Crispy Fish Sandwich with fries	1 serving	1430	82	135	35	2640
+Fish and Chips	Full	1560	97	115	49	2760
+Fish and Chips	Lighter portion	1180	70	103	28	2320
+Garlic Lover's 7 oz. Sirloin with garlic herb butter topping	1 serving	400	23	3	46	1090
+Grilled Chicken Sandwich with fries	1 serving	1160	50	132	44	2560
+Grilled Chicken Sandwich with bacon, fries	1 serving	1260	58	132	54	2880
+Grilled Lobster, Shrimp and Salmon with rice	1 serving	1230	79	51	74	2830
+Live Maritime Lobster	1 serving	440	34	1	33	290
+Lobster & Shrimp Linguini Alfredo	Full	1220	73	84	58	3200
+Lobster & Shrimp Linguini Alfredo	Lighter portion	990	63	66	41	2690
+Parmesan Crusted Chicken	1 serving	610	35	35	38	1290
+Salmon New Orleans	1 serving	1170	77	13	103	1460
+Mariner's Seafood Boil, Snow Crab	1 serving	600	4	80	60	2160
+Sailor's Seafood Boil	1 serving	1310	52	95	94	4640
+Shrimp Linguini Alfredo	Full	950	44	90	51	2480
+Shrimp Linguini Alfredo	Lighter portion	590	26	62	29	1270
+Garlic Shrimp (Shrimp Your Way)	1 serving	230	20	1	10	840
+Shrimp Linguini Alfredo (Shrimp Your Way)	1 serving	710	34	73	28	1470
+Grilled Shrimp Skewer (Shrimp Your Way)	1 serving	80	4	0	11	580
+Sweet Chili Shrimp (Shrimp Your Way)	1 serving	420	29	31	11	910
+Walt's Favourite Shrimp (Shrimp Your Way)	1 serving	260	11	31	10	1560
+Island Coconut Shrimp (Shrimp Your Way)	1 serving	470	28	40	14	610
+Popcorn Shrimp (Shrimp Your Way)	1 serving	430	26	33	17	940
+7 oz. Sirloin	1 serving	320	15	1	46	980
+Surf & Turf - Maritime Lobster Tail & Sirloin with baked potato	1 serving	1010	59	56	66	3480
+Tilapia & Scallops	1 serving	740	57	7	54	2100
+Twin Maritime Tails	1 serving	510	46	1	24	980
+Ultimate Feast with rice	1 serving	1190	75	76	52	4360
+Bay Scallops (fried) (Lunch)	1 serving	710	36	61	33	1920
+Garlic Shrimp (Lunch)	1 serving	450	40	3	20	1670
+Grilled Chicken and Shrimp (Lunch)	1 serving	220	10	3	30	1370
+Grilled Tilapia (Lunch)	1 serving	270	12	1	41	970
+Island Coconut Shrimp (Lunch)	1 serving	570	35	48	16	770
+Popcorn Shrimp with fries (Lunch)	1 serving	1000	46	122	24	2590
+Walt's Favourite Shrimp (Lunch)	1 serving	370	16	41	15	2090
+
+[Bowls & Burritos]
+Chicken Caesar Bowl	1 serving	730	39	50	44	1400
+Sesame-Soy Salmon Bowl	1 serving	1150	71	93	59	2260
+Southwest Shrimp Bowl	1 serving	780	40	80	26	2470
+
+[Sides]
+Bacon-Wrapped Sea Scallops	1 serving	450	37	9	23	1400
+Calamari	1 serving	1200	66	120	31	1210
+Crab Queso	1 serving	960	59	77	33	2170
+Escargot	1 serving	470	33	30	17	1530
+Garlic Shrimp Flatbread	1 serving	930	45	85	47	2720
+Island Coconut Shrimp (Starter)	1 serving	660	41	55	20	910
+Lobster Bisque	Cup	260	16	21	8	1050
+Lobster Bisque	Bowl	480	31	35	15	2020
+Mozzarella Cheesesticks	1 serving	960	55	78	44	3320
+New England Clam Chowder	Cup	290	18	23	8	810
+New England Clam Chowder	Bowl	510	34	37	15	1520
+Popcorn Shrimp (Starter)	1 serving	800	51	50	33	1300
+Seafood-Stuffed Mushrooms	1 serving	510	37	23	26	1180
+Shrimp Cocktail	1 serving	170	4	13	22	1120
+Sweet Chili Shrimp	1 serving	870	61	60	21	1740
+White Wine & Garlic Mussels	1 serving	780	54	44	28	2240
+Cajun Style Butter Sauce (for crab)	1 serving	690	72	8	1	850
+Lemon Pepper Butter Sauce (for crab)	1 serving	730	78	7	1	1370
+Hot Honey Butter Sauce (for crab)	1 serving	620	56	30	1	900
+OLD BAY & Butter Sauce (for crab)	1 serving	680	75	1	0	2600
+RL Signature Butter Sauce (for crab)	1 serving	770	82	8	1	1630
+Roasted Garlic & Herb Butter Sauce (for crab)	1 serving	620	58	10	2	850
+Add Bacon-Wrapped Sea Scallops (2 scallops)	1 serving	220	19	5	12	700
+Add Garlic Shrimp	1 serving	230	20	1	10	840
+Add Grilled Shrimp	1 serving	130	8	1	12	650
+Add Maritime Lobster Tail	1 serving	420	41	1	13	780
+Add Snow Crab Legs, 1/2 lb.	1 serving	380	34	1	18	1020
+Asparagus	1 serving	80	6	5	3	310
+Bacon Mac & Cheese	1 serving	650	38	48	27	1710
+Baked Potato	1 serving	270	3	55	7	1730
+Baked Potato, Lobster-Topped	1 serving	430	17	58	14	2310
+Caesar Salad - Side	1 serving	300	25	12	6	440
+Cheddar Bay Biscuit	1 serving	160	9	17	3	390
+Chesapeake Fries	1 serving	510	20	74	7	1170
+Coleslaw	1 serving	160	10	14	2	260
+Crispy Brussels Sprouts	1 serving	470	24	55	13	830
+Green Beans	1 serving	90	5	11	3	440
+Lobster Pasta au Gratin	1 serving	670	36	53	36	1550
+Mashed Potatoes	1 serving	170	8	22	3	540
+Mashed Potatoes, Lobster-Topped	1 serving	330	22	25	10	1120
+Rice	1 serving	230	4	45	4	580
+
+[Desserts]
+Brownie Overboard	1 serving	980	53	121	12	390
+Chocolate Wave	1 serving	920	58	134	10	750
+Key Lime Pie	1 serving	580	27	76	10	270
+Strawberry Cheesecake Bliss	1 serving	1170	69	102	14	780
+Warm Apple Crostada	1 serving	550	26	74	6	470
+
+[Drinks]
+Bacon Caesar	1 serving	210	6	8	6	1950
+Bahama Mama	1 serving	420	0	78	1	10
+Blackberry Smash	1 serving	160	0	18	0	0
+Coastal Caesar Flight	1 serving	280	7	18	10	2810
+Fire & Tide Margarita	1 serving	150	0	22	0	3
+Fire & Tide Margarita - Mega	1 serving	370	0	55	0	5
+Guava Margarita	1 serving	290	0	43	0	5
+Henny Margarita	1 serving	360	0	50	0	5
+High Tea with Henny	1 serving	110	0	3	0	10
+Indigo Current	1 serving	200	0	27	0	10
+Lobster Punch	1 serving	220	0	36	1	0
+Long Island Iced Tea	1 serving	150	0	12	0	10
+Main Deck Margarita Flight (Rocks)	1 serving	240	0	39	0	1560
+Nauti Peach Long Island	1 serving	200	0	23	0	20
+Passion Star Spritz	1 serving	240	0	30	0	80
+Piña Colada	1 serving	320	9	50	1	10
+Seaside Sangria Flight	1 serving	300	0	50	1	10
+Shrimp Caesar	1 serving	140	0	10	4	1520
+Smoked Caesar	1 serving	120	0	8	1	370
+Sunset Passion Colada	1 serving	340	7	65	1	10
+Triple Berry Sangria	1 serving	180	0	32	1	10
+Tropical White Sangria	1 serving	150	0	24	0	10
+Under the Purple Sea	1 serving	150	0	17	0	30
+Watermelon Mojito	1 serving	230	0	37	0	20
+Cava	200 mL	140	0	5	0	10
+Wine	6 oz	150	0	5	0	5
+Wine	9 oz	220	0	7	0	10
+Wine	Bottle	640	0	19	1	30
+Wine	Litre	850	0	26	1	40
+Hard Seltzer	12 oz	100	0	2	0	15
+Light Beer	12 oz	100	0	6	1	15
+Regular Beer	12 oz	150	0	13	2	15
+Nonalcoholic Beer	12 oz	70	0	15	0	10
+Light Draft Beer	12 oz	100	0	6	1	15
+Regular Draft Beer	12 oz	150	0	13	2	15
+Light Draft Beer	20 oz	170	0	10	1	25
+Regular Draft Beer	20 oz	260	0	21	3	25
+Cranberry Boston Iced Tea	1 serving	80	0	22	0	25
+Mango Boston Iced Tea	1 serving	110	0	35	1	25
+Raspberry Boston Iced Tea	1 serving	170	0	44	0	25
+Coffee	1 serving	0	0	0	0	0
+Coke	1 serving	190	0	52	0	60
+Diet Coke	1 serving	0	0	0	0	55
+Peach Fruit Smoothie	1 serving	470	6	96	7	240
+Raspberry Fruit Smoothie	1 serving	460	6	94	7	240
+Strawberry Fruit Smoothie	1 serving	460	6	95	7	240
+Handcrafted Lemonade	1 serving	140	0	37	0	10
+Peach Handcrafted Lemonade	1 serving	220	0	56	0	10
+Strawberry Handcrafted Lemonade	1 serving	210	0	55	0	10
+Hot Tea	1 serving	0	0	1	0	5
+IBC Root Beer	1 serving	160	0	43	0	60
+Sweet Iced Tea	1 serving	160	0	34	0	50
+Sprite	1 serving	190	0	51	0	85
+Zero-Proof Mocktail Coastal Colada	1 serving	310	2	73	1	25
+Zero-Proof Mocktail Strawberry Breeze	1 serving	200	0	50	1	20

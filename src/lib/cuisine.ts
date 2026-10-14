@@ -48,6 +48,8 @@ export const CUISINES: Cuisine[] = [
     label: 'Japanese',
     dish: /sushi|sashimi|nigiri|maki|hosomaki|futomaki|ramen|udon|soba|teriyaki|tempura|gyoza|katsu|donburi|karaage|takoyaki|miso|edamame|onigiri|tonkotsu|shoyu|wasabi|yakitori|japanese|bento|tamago|tartare maki/i,
     restaurant: /japanese|sushi|ramen/i,
+    // A Korean place that also rolls sushi (Kochu) is Korean, not Japanese.
+    notAt: /korean/i,
   },
   {
     id: 'korean',
@@ -145,13 +147,15 @@ export interface RestaurantCuisine {
   id: string
   label: string
   match: RegExp
+  /** Restaurants that match but belong elsewhere (a Korean sushi bar isn't Japanese). */
+  not?: RegExp
   group: CuisineGroup
 }
 
 export const RESTAURANT_CUISINES: RestaurantCuisine[] = [
   { id: 'italian', label: 'Italian', match: /italian/i, group: 'cuisine' },
   { id: 'chinese', label: 'Chinese', match: /chinese|asian noodles/i, group: 'cuisine' },
-  { id: 'japanese', label: 'Japanese', match: /japanese|sushi|ramen/i, group: 'cuisine' },
+  { id: 'japanese', label: 'Japanese', match: /japanese|sushi|ramen/i, not: /korean/i, group: 'cuisine' },
   { id: 'korean', label: 'Korean', match: /korean/i, group: 'cuisine' },
   { id: 'thai', label: 'Thai', match: /\bthai\b/i, group: 'cuisine' },
   { id: 'vietnamese', label: 'Vietnamese', match: /vietnam|\bpho\b|b[aá]nh m[iì]/i, group: 'cuisine' },
@@ -174,5 +178,5 @@ export const RESTAURANT_CUISINES: RestaurantCuisine[] = [
 /** Restaurant cuisine ids a restaurant belongs to. */
 export function restaurantCuisines(r: Restaurant): string[] {
   const text = `${r.name} ${r.cuisine}`
-  return RESTAURANT_CUISINES.filter((c) => c.match.test(text)).map((c) => c.id)
+  return RESTAURANT_CUISINES.filter((c) => c.match.test(text) && !c.not?.test(text)).map((c) => c.id)
 }

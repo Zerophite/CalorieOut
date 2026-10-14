@@ -5,6 +5,7 @@ import { subway } from './subway'
 import { freshii } from './freshii'
 import { muchoburrito } from './muchoburrito'
 import { pitapit } from './pitapit'
+import { chipotle } from './chipotle'
 // Fast food (official)
 import { mcdonalds } from './mcdonalds'
 import { aw } from './aw'
@@ -33,6 +34,10 @@ import { bostonpizza } from './bostonpizza'
 import { osmows } from './osmows'
 import { tahinis } from './tahinis'
 import { theworks } from './theworks'
+// Added chains (official)
+import { popeyes } from './popeyes'
+import { fiveguys } from './fiveguys'
+import { chainSpots } from './chains'
 // Local / independent (estimated)
 import { localSpots } from './local'
 
@@ -46,6 +51,7 @@ export const restaurants: Restaurant[] = [
   freshii,
   muchoburrito,
   pitapit,
+  chipotle,
   // Fast food
   mcdonalds,
   aw,
@@ -74,6 +80,10 @@ export const restaurants: Restaurant[] = [
   osmows,
   tahinis,
   theworks,
+  // Added chains (official nutrition)
+  popeyes,
+  fiveguys,
+  ...chainSpots,
   // Local / independent (estimated)
   ...localSpots,
 ]

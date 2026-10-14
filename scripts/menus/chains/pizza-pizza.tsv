@@ -1,0 +1,192 @@
+id: pizza-pizza
+name: Pizza Pizza
+cuisine: Pizza · Wings · Fast food
+accent: #ea580c
+segment: Fast Food
+source: pizzapizza.ca/about-us/nutrition (Pizza Pizza Canada nutrition tables; pizzas per slice)
+
+[Pizza]
+Pepperoni Pizza	Small · per slice	210	8	24	10	520
+Meat Supreme Pizza	Small · per slice	250	11	24	13	760
+Tropical Hawaiian Pizza	Small · per slice	220	9	25	11	570
+Canadian Eh! Pizza	Small · per slice	220	9	24	12	610
+Buffalo Chicken Pizza	Small · per slice	220	9	24	11	640
+Spicy BBQ Chicken Pizza	Small · per slice	210	6	28	11	600
+Classic Super Pizza	Small · per slice	200	7	24	10	520
+Bacon Double Cheeseburger Pizza	Small · per slice	230	9	24	11	580
+Chicken Bruschetta Pizza	Small · per slice	210	7	25	12	570
+Sausage Mushroom Melt Pizza	Small · per slice	250	13	23	11	550
+Classic Cheese Pizza	Small · per slice	180	5	24	9	410
+Garden Veggie Pizza	Small · per slice	170	5	23	10	310
+Mediterranean Vegetarian Pizza	Small · per slice	210	7	25	10	570
+Creamy Garlic Pizza	Small · per slice	240	13	24	9	320
+Pesto Amore Pizza	Small · per slice	210	8	24	11	340
+Plant-Based Pepperoni Pizza	Small · per slice	200	7	25	9	480
+Donair Pizza	Small · per slice	229	8	29	11	390
+Pepperoni Pizza	Medium · per slice	210	8	25	10	520
+Meat Supreme Pizza	Medium · per slice	260	11	26	14	800
+Tropical Hawaiian Pizza	Medium · per slice	230	9	26	11	580
+Canadian Eh! Pizza	Medium · per slice	230	9	26	12	630
+Buffalo Chicken Pizza	Medium · per slice	230	9	25	11	640
+Spicy BBQ Chicken Pizza	Medium · per slice	220	6	30	11	600
+Classic Super Pizza	Medium · per slice	210	8	26	11	540
+Bacon Double Cheeseburger Pizza	Medium · per slice	230	9	25	11	590
+Chicken Bruschetta Pizza	Medium · per slice	210	6	27	12	590
+Sausage Mushroom Melt Pizza	Medium · per slice	250	12	24	11	570
+Classic Cheese Pizza	Medium · per slice	180	5	25	9	420
+Garden Veggie Pizza	Medium · per slice	180	5	25	10	310
+Mediterranean Vegetarian Pizza	Medium · per slice	220	8	27	10	620
+Creamy Garlic Pizza	Medium · per slice	240	12	25	9	330
+Pesto Amore Pizza	Medium · per slice	210	8	25	11	340
+Plant-Based Pepperoni Pizza	Medium · per slice	200	7	26	9	480
+Classic Stuffed Crust Pizza	Medium · per slice	251	11	26	13	618
+Dill Pickle Cheese Stuffed Crust Pizza	Medium · per slice	235	10	28	24	588
+Spicy Habanero Cheese Stuffed Crust Pizza	Medium · per slice	185	6	25	8	445
+Bee Sting Ancient Grain Pizza	Medium · per slice	160	5	20	7	420
+Broc Party Ancient Grain Pizza	Medium · per slice	190	7	18	8	360
+Charred Cup Ancient Grain Pizza	Medium · per slice	170	7	18	7	360
+Rosé All Day Ancient Grain Pizza	Medium · per slice	200	10	18	7	320
+Honey I'm Home Ancient Grain Pizza	Medium · per slice	170	6	19	7	270
+Mr. Funguy Ancient Grain Pizza	Medium · per slice	170	6	18	7	270
+Donair Pizza	Medium · per slice	235	8	30	11	410
+Pepperoni Pizza	Large · per slice	250	9	29	12	590
+Meat Supreme Pizza	Large · per slice	290	12	29	16	890
+Tropical Hawaiian Pizza	Large · per slice	260	10	30	13	650
+Canadian Eh! Pizza	Large · per slice	270	10	29	14	690
+Buffalo Chicken Pizza	Large · per slice	260	10	29	13	730
+Spicy BBQ Chicken Pizza	Large · per slice	250	7	33	13	680
+Classic Super Pizza	Large · per slice	250	9	29	13	610
+Bacon Double Cheeseburger Pizza	Large · per slice	260	11	29	13	650
+Chicken Bruschetta Pizza	Large · per slice	250	8	30	14	680
+Sausage Mushroom Melt Pizza	Large · per slice	290	14	28	13	660
+Classic Cheese Pizza	Large · per slice	220	7	29	10	480
+Garden Veggie Pizza	Large · per slice	210	6	28	12	350
+Mediterranean Vegetarian Pizza	Large · per slice	260	10	31	13	730
+Creamy Garlic Pizza	Large · per slice	290	14	29	11	380
+Pesto Amore Pizza	Large · per slice	250	10	29	13	410
+Plant-Based Pepperoni Pizza	Large · per slice	230	8	30	11	550
+Classic Stuffed Crust Pizza	Large · per slice	320	14	33	17	788
+Dill Pickle Cheese Stuffed Crust Pizza	Large · per slice	303	13	36	31	758
+Spicy Habanero Cheese Stuffed Crust Pizza	Large · per slice	303	10	41	13	729
+Donair Pizza	Large · per slice	269	9	42	7	414
+Pepperoni Pizza	X-Large · per slice	260	9	32	12	620
+Ultimate Pepperoni Pizza	X-Large · per slice	280	11	33	14	780
+Meat Supreme Pizza	X-Large · per slice	310	13	33	16	950
+Tropical Hawaiian Pizza	X-Large · per slice	280	11	34	13	710
+Canadian Eh! Pizza	X-Large · per slice	280	11	33	14	750
+Buffalo Chicken Pizza	X-Large · per slice	280	10	32	13	750
+Spicy BBQ Chicken Pizza	X-Large · per slice	270	7	37	14	720
+Classic Super Pizza	X-Large · per slice	260	9	33	13	650
+Bacon Double Cheeseburger Pizza	X-Large · per slice	290	11	33	14	710
+Chicken Bruschetta Pizza	X-Large · per slice	280	9	34	16	750
+Sausage Mushroom Melt Pizza	X-Large · per slice	300	14	31	13	690
+Classic Cheese Pizza	X-Large · per slice	230	7	32	11	520
+Garden Veggie Pizza	X-Large · per slice	220	6	32	12	370
+Mediterranean Vegetarian Pizza	X-Large · per slice	280	10	35	13	810
+Creamy Garlic Pizza	X-Large · per slice	300	14	32	12	420
+Pesto Amore Pizza	X-Large · per slice	260	10	32	13	430
+Plant-Based Pepperoni Pizza	X-Large · per slice	250	8	33	12	580
+Classic Stuffed Crust Pizza	X-Large · per slice	300	13	32	14	730
+Dill Pickle Cheese Stuffed Crust Pizza	X-Large · per slice	280	11	35	25	686
+Spicy Habanero Cheese Stuffed Crust Pizza	X-Large · per slice	280	11	32	25	662
+Donair Pizza	X-Large · per slice	284	9	38	13	499
+Cheese Pizza	XXL · per slice	450	13	63	21	1010
+Pepperoni Pizza	XXL · per slice	520	19	63	24	1250
+Classic Stuffed Crust Pizza	XXL · per slice	498	28	48	16	1227
+Dill Pickle Cheese Stuffed Crust Pizza	XXL · per slice	430	17	53	41	1057
+Spicy Habanero Cheese Stuffed Crust Pizza	XXL · per slice	430	17	49	41	1017
+Bacon Double Cheeseburger Pizza	Walk-in slice	700	26	80	34	1710
+Classic Cheese Pizza	Walk-in slice	580	17	78	29	1380
+Canadian Eh! Pizza	Walk-in slice	710	27	81	36	1870
+Classic Super Pizza	Walk-in slice	660	23	81	33	1660
+Garden Veggie Pizza	Walk-in slice	560	16	77	30	950
+Pepperoni Pizza	Walk-in slice	670	25	78	33	1680
+Spicy BBQ Chicken Pizza	Walk-in slice	680	18	94	35	1890
+Tropical Hawaiian Pizza	Walk-in slice	690	26	82	33	1720
+Classic Cheese Pizza	Square slice	460	13	63	22	1070
+Garden Veggie Pizza	Square slice	440	12	62	24	720
+Pepperoni Pizza	Square slice	500	17	63	25	1220
+Classic Cheese Pizza	Gluten-free · per slice	149	5	23	5	343
+Pepperoni Pizza	Gluten-free · per slice	175	7	23	7	438
+Cauliflower Crust Pesto Pizza	Cauliflower · per slice	190	8	20	9	340
+Cheese Panzerotti	1 serving	1340	66	133	53	2370
+Pepperoni Panzerotti	1 serving	1440	76	133	58	2660
+Cheese Calzone	1 serving	1040	32	133	53	2370
+Pepperoni Calzone	1 serving	1130	40	133	58	2660
+
+[Chicken]
+Classic Wings	1 serving	510	38	1	40	1090
+Crispy Breaded Wings	1 serving	650	47	21	40	1260
+Boneless Chicken Bites	1 serving	380	19	25	27	1060
+Gluten Free Chicken Bites	1 serving	350	12	36	23	510
+Popcorn Chicken	1 serving	280	16	20	15	590
+Plant-Based Chicken Bites	1 serving	370	27	24	13	950
+
+[Sandwiches]
+Classic Chicken Sandwich	1 sandwich	760	52	52	24	1530
+Creamy Garlic Chicken Sandwich	1 sandwich	760	52	51	24	1430
+Spicy Sriracha Mayo Chicken Sandwich	1 sandwich	680	43	53	24	1650
+Plant-Based Chicken Sandwich	1 sandwich	760	55	54	17	1780
+Spicy Plant-Based Chicken Sandwich	1 sandwich	680	46	55	17	1900
+
+[Wraps]
+Single Donair Wrap	1 wrap	478	23	44	23	995
+Double Donair Wrap	1 wrap	804	45	56	41	1857
+
+[Sides]
+Tater Tots with Dip	1 serving	828	55	70	8	1497
+Poutine Loaded Tots	1 serving	756	46	67	21	2212
+Buffalo Popcorn Chicken and Cheese Tots	1 serving	1168	86	67	27	2220
+Creamy Garlic and Cheese Tots	1 serving	1016	77	57	20	1663
+Smokey BBQ Bacon and Cheese Tots	1 serving	1132	80	62	20	1760
+Fries	1 serving	330	13	48	3	680
+Jalapeño Poppers	1 serving	140	8	16	3	490
+Cauliflower Bites	1 serving	280	17	28	4	550
+Onion Rings	1 serving	500	29	56	5	1310
+Lay's Classic Chips	Bag	220	14	21	2	270
+Doritos Nachos Cheese Chips	Bag	230	12	28	3	330
+Ruffles Chips	Bag	210	13	21	3	470
+Classic Poutine	Regular	600	32	63	18	1890
+Popcorn Chicken Poutine	Regular	720	38	72	25	1805
+Bacon Poutine	Regular	720	42	63	23	2190
+Classic Poutine	Large	930	50	98	28	2930
+Popcorn Chicken Poutine	Large	1050	55	105	36	2632
+Bacon Poutine	Large	1050	61	92	34	3194
+Donair Poutine	Regular	889	33	82	33	2815
+Donair Poutine	Large	1026	42	88	40	3146
+Garlic Cheese Fingers	1 serving	320	15	35	11	700
+
+[Desserts]
+Two-Bite Brownies	1 serving	160	9	21	1	75
+Funnel Cake Stix	1 serving	250	12	36	2	220
+
+[Drinks]
+Barq's Root Beer	355 mL	160	0	45	0	65
+Barq's Root Beer	500 mL	220	0	61	0	75
+Brio	355 mL	160	1	40	0	30
+Canada Dry Ginger Ale	355 mL	130	0	32	0	50
+Coca-Cola	355 mL	140	0	39	0	25
+Coca-Cola	500 mL	200	0	55	0	40
+Diet Coke	355 mL	0	0	0	1	40
+Diet Coke	500 mL	0	0	0	2	55
+Coca-Cola Zero	355 mL	0	0	0	1	30
+Coca-Cola Zero	500 mL	0	0	0	1	40
+Fanta Cream Soda	355 mL	140	0	35	0	95
+Fanta Orange	500 mL	190	0	51	0	125
+Nestea	355 mL	110	0	29	0	35
+Nestea	500 mL	160	0	43	0	50
+Sprite	355 mL	140	0	38	0	65
+Sprite	500 mL	200	0	54	0	95
+Dasani	355 mL	0	0	0	0	0
+Dasani	591 mL	0	0	0	0	0
+Smart Water	591 mL	0	0	0	0	0
+Vitamin Water Essential	591 mL	130	0	32	0	0
+Vitamin Water Multi-V	591 mL	130	0	32	0	0
+Vitamin Water XXX	591 mL	120	0	32	0	0
+Minute Maid Apple	450 mL	210	0	52	1	40
+Minute Maid Cranberry	450 mL	230	0	62	3	35
+Minute Maid Orange Juice	450 mL	220	0	51	3	30
+Powerade Berry Blitz	591 mL	130	0	33	0	240
+Monster Energy Drink	473 mL	210	0	55	0	370
+Milk 2 Go 1% Partly Skimmed Chocolate Milk	310 mL	190	3	31	10	190
+Milk 2 Go 2% Partly Skimmed Milk	310 mL	160	6	15	11	150

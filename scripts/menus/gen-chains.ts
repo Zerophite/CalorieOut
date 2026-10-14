@@ -1,0 +1,108 @@
+// Generate the chains added from one table each: scripts/menus/chains/<id>.tsv.
+//
+// Each table is transcribed from the chain's own published Canadian nutrition
+// guide (the `source:` line says which). A file is a header, then sections:
+//
+//   id: popeyes
+//   name: Popeyes
+//   cuisine: Fried chicken · Fast food
+//   accent: #f97316
+//   segment: Fast Food
+//   source: https://… (what the numbers come from)
+//
+//   [Chicken]                          ← a MealCategory
+//   Signature Chicken Breast	1 piece	380	21	17	35	1230
+//   Cajun Fries	Regular	270	14	32	3	550
+//   Cajun Fries	Large	520	27	62	6	1060
+//
+// Columns: name, size / serving, calories, fat g, carbs g, protein g, sodium mg.
+// Rows sharing a name within a section become one item with sizes (the default
+// is Regular / Medium when listed, else the first). Ingredient breakdowns come
+// from the app's recipe templates at runtime, scaled to these totals.
+//
+//   run from the repo root: gen-chains.ts
+import * as fs from 'fs'
+import * as path from 'path'
+import type { MealCategory, Nutrition } from '../../src/types'
+import { idMaker, slug, tagsFor, writeMenu } from './lib'
+
+const DIR = 'scripts/menus/chains'
+const CATEGORIES: MealCategory[] = ['Burgers', 'Sandwiches', 'Chicken', 'Bowls & Burritos', 'Wraps', 'Pizza', 'Mains', 'Salads', 'Breakfast', 'Sides', 'Bakery', 'Desserts', 'Coffee', 'Drinks']
+const DEFAULT_SIZES = /^(regular|medium|1 piece|single|1 serving|individual)( · per slice)?$/i
+
+interface Chain { id: string; name: string; cuisine: string; accent: string; segment: string; source: string }
+
+const exportNames: { id: string; exportName: string; file: string }[] = []
+
+for (const f of fs.readdirSync(DIR).filter((f) => f.endsWith('.tsv')).sort()) {
+  const meta: Partial<Chain> = {}
+  const products = new Map<string, { name: string; category: MealCategory; versions: { label: string; n: Nutrition }[] }>()
+  let category: MealCategory | undefined
+  for (const raw of fs.readFileSync(path.join(DIR, f), 'utf8').replace(/\r/g, '').split('\n')) {
+    const line = raw.trimEnd()
+    if (!line || line.startsWith('#')) continue
+    const m = line.match(/^(id|name|cuisine|accent|segment|source):\s*(.+)$/)
+    if (m) {
+      meta[m[1] as keyof Chain] = m[2].trim()
+      continue
+    }
+    const sec = line.match(/^\[(.+)\]$/)
+    if (sec) {
+      if (!CATEGORIES.includes(sec[1] as MealCategory)) throw new Error(`${f}: unknown category [${sec[1]}]`)
+      category = sec[1] as MealCategory
+      continue
+    }
+    const cols = line.split('\t')
+    if (cols.length < 7 || !category) throw new Error(`${f}: cannot parse "${line}"`)
+    const [name, size, cal, fat, carbs, protein, sodium] = cols.map((c) => c.trim())
+    const n: Nutrition = { calories: Math.round(+cal), protein: Math.round(+protein), carbs: Math.round(+carbs), fat: Math.round(+fat), sodium: Math.round(+sodium) }
+    if (Object.values(n).some((v) => !Number.isFinite(v))) throw new Error(`${f}: bad numbers in "${line}"`)
+    const key = `${category}|${name}`
+    if (!products.has(key)) products.set(key, { name, category, versions: [] })
+    products.get(key)!.versions.push({ label: size || '1 serving', n })
+  }
+  for (const k of ['id', 'name', 'cuisine', 'accent', 'segment', 'source'] as const) if (!meta[k]) throw new Error(`${f}: missing ${k}`)
+  const chain = meta as Chain
+
+  const newId = idMaker(chain.id.replace(/-/g, '').slice(0, 4))
+  const items = [...products.values()].map((p) => {
+    // Default: the regular size; for counts (nuggets, strips) the usual single order.
+    const counts = p.versions.map((v) => +((v.label.match(/^(\d+)\s*(?:ct|pc|pcs|pieces?|count)\b/i) || [])[1] || NaN))
+    const single = counts.every(Number.isFinite) ? p.versions[counts.indexOf(Math.min(...counts.filter((c) => c >= 3)))] : undefined
+    const def = p.versions.find((v) => DEFAULT_SIZES.test(v.label)) ?? single ?? p.versions[0]
+    const tags = tagsFor(p.name, def.n)
+    if (/\b(veggie|vegetarian|vegan|plant-based|cheese pizza|margherita|falafel)\b/i.test(p.name) && !/chicken|beef|pork|bacon|pepperoni|ham|fish|shrimp/i.test(p.name) && !tags.includes('vegetarian')) tags.push('vegetarian')
+    const it: any = { id: newId(p.name), name: p.name, kind: 'fixed', category: p.category, ...(tags.length ? { tags } : {}), nutrition: def.n }
+    if (p.versions.length > 1) {
+      it.defaultSize = def.label
+      it.sizes = p.versions.map((v) => ({ label: v.label, nutrition: v.n }))
+    } else it.serving = def.label
+    return it
+  })
+
+  const exportName = slug(chain.id).replace(/-(\w)/g, (_, c) => c.toUpperCase()).replace(/^(\d)/, '_$1')
+  writeMenu({
+    file: chain.id,
+    exportName,
+    meta: { id: chain.id, name: chain.name, cuisine: chain.cuisine, accent: chain.accent, segment: chain.segment },
+    items,
+    order: CATEGORIES,
+    source: [
+      `${chain.name} — official nutrition: ${chain.source}.`,
+      `Transcribed in scripts/menus/chains/${f}; generated by scripts/menus/gen-chains.ts — regenerate, don't hand-edit.`,
+    ],
+  })
+  exportNames.push({ id: chain.id, exportName, file: chain.id })
+}
+
+// One module listing them all, so the app picks up a new table without other edits.
+fs.writeFileSync(
+  'src/data/chains.ts',
+  `import { type Restaurant } from '../types'
+// Chains generated from scripts/menus/chains/*.tsv by gen-chains.ts (official nutrition).
+${exportNames.map((e) => `import { ${e.exportName} } from './${e.file}'`).join('\n')}
+
+export const chainSpots: Restaurant[] = [${exportNames.map((e) => e.exportName).join(', ')}]
+`,
+)
+console.log(`chains: ${exportNames.length}`)

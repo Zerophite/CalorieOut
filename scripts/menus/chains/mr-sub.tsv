@@ -1,0 +1,103 @@
+id: mr-sub
+name: Mr. Sub
+cuisine: Subs · Sandwiches
+accent: #16a34a
+segment: Fast Food
+source: mrsub.ca Nutritional Facts (June 2025); classic subs are white bread plus the standard meat & cheese, before sauce and toppings
+
+[Sandwiches]
+Cubano Sub	Small	500	24	43	26	1370
+Fiery Pineapple Jerk Chicken Sub	Small	440	15	47	27	840
+Mr. Beef Sub	Small	390	13	48	23	1870
+Peppery Chicken Caesar Sub	Small	570	30	45	26	1320
+Chipotley Turkey & Bacon Sub	Small	450	16	50	23	1190
+Major Bacon Sub	Small	480	22	42	24	1210
+Italian Salami Sub	Small	410	18	42	17	960
+Assorted Sub	Small	380	15	44	21	1220
+Ham Sub	Small	300	9	42	19	930
+Pizza Sub	Small	340	13	42	17	890
+Veggie & Cheese Sub	Small	280	8	44	13	600
+Seafood Sub	Small	300	6	51	15	860
+Turkey Sub	Small	280	6	41	18	740
+Albacore Tuna Sub	Small	310	9	42	21	790
+Meatball Sub	Small	430	18	47	18	880
+Roast Beef & Cheddar Sub	Small	330	10	40	26	870
+Louisiana Pepper Chicken Sub	Small	340	11	43	22	990
+Grilled Chicken Sub	Small	300	7	43	22	760
+Great Canadian Club Sub	Small	380	14	42	25	1180
+Breaded Chicken Sub	Small	430	16	53	23	900
+Chicken Parmesan Sub	Small	480	19	53	27	1040
+Tex Mex Black Bean Sub	Small	720	28	102	24	1280
+Steak & Cheese Sub	Small	320	9	43	22	750
+Ultimate Club Sub	Small	410	15	40	31	1250
+Smoked Meat Sub	Small	310	10	42	19	850
+Double Stacked Smoked Meat Sub	Small	390	14	43	28	1280
+Cubano Sub	Large	1000	48	86	51	2730
+Fiery Pineapple Jerk Chicken Sub	Large	870	31	94	54	1680
+Mr. Beef Sub	Large	770	26	92	46	3150
+Peppery Chicken Caesar Sub	Large	1140	60	91	51	2650
+Chipotley Turkey & Bacon Sub	Large	870	31	100	45	2280
+Major Bacon Sub	Large	950	44	85	48	2430
+Italian Salami Sub	Large	810	36	84	34	1920
+Assorted Sub	Large	760	29	88	42	2440
+Ham Sub	Large	600	17	84	38	1860
+Pizza Sub	Large	680	25	84	34	1780
+Veggie & Cheese Sub	Large	560	15	88	26	1200
+Seafood Sub	Large	600	12	102	30	1720
+Turkey Sub	Large	560	12	82	36	1480
+Albacore Tuna Sub	Large	620	17	84	42	1580
+Meatball Sub	Large	860	35	94	36	1760
+Roast Beef & Cheddar Sub	Large	660	19	80	52	1740
+Louisiana Pepper Chicken Sub	Large	680	21	86	44	1980
+Grilled Chicken Sub	Large	600	13	86	44	1520
+Great Canadian Club Sub	Large	760	27	84	50	2360
+Breaded Chicken Sub	Large	860	31	106	46	1800
+Chicken Parmesan Sub	Large	960	37	106	54	2080
+Tex Mex Black Bean Sub	Large	1450	56	205	49	2560
+Steak & Cheese Sub	Large	640	17	86	44	1500
+Ultimate Club Sub	Large	820	29	80	62	2500
+Smoked Meat Sub	Large	620	19	84	38	1700
+Double Stacked Smoked Meat Sub	Large	780	27	86	56	2560
+
+[Breakfast]
+Egg & Cheese Breakfast Sub	Small	360	14	41	19	530
+Egg, Cheese & Ham Breakfast Sub	Small	390	15	41	23	780
+Egg, Cheese & Bacon Breakfast Sub	Small	430	19	41	24	790
+Egg, Cheese & Steak Breakfast Sub	Small	390	15	42	24	680
+Egg, Cheese & Sausage Breakfast Sub	Small	490	25	42	26	770
+
+[Salads]
+Garden Salad	No dressing	110	6	9	7	170
+Caesar Salad	No dressing	130	9	3	1	430
+Greek Salad	No dressing	140	8	12	7	470
+
+[Bakery]
+Double Chocolate Chip Cookie	1 serving	160	8	23	2	135
+Milk Chocolate Chunk Cookie	1 serving	170	8	23	2	140
+Triple Chocolate Chip Cookie	1 serving	170	8	23	2	115
+Carnival Cookie	1 serving	160	7	24	2	140
+Oatmeal & Raisin Cookie	1 serving	150	7	23	2	130
+Strawberry Shortcake Cookie	1 serving	160	7	24	1	130
+Cinnamon Roll	1 serving	630	27	84	7	670
+Croissant	1 serving	280	16	27	6	320
+Apple Turnover	1 serving	300	18	31	3	220
+Cheese Danish	1 serving	270	12	35	5	210
+Banana Muffin	1 muffin	380	15	55	5	400
+Blueberry Muffin	1 muffin	360	14	53	6	280
+Caramel Coffee Swirl Muffin	1 muffin	370	13	57	6	270
+Carrot Muffin	1 muffin	360	13	54	5	260
+Fruit Fibre Extreme Muffin	1 muffin	280	14	53	6	280
+Plain Bagel	1 bagel	270	2	56	9	620
+Everything Bagel	1 bagel	300	4	57	11	670
+
+[Desserts]
+Smack!	1 serving	390	16	58	5	250
+Homestyle Double Chocolate Brownie	1 serving	460	21	69	5	170
+
+[Sides]
+Coleslaw	1 side	210	19	5	1	160
+Caesar Dressing	1 serving	230	23	3	1	210
+Greek Feta Dressing	1 serving	260	28	0	1	210
+Ranch Dressing	1 serving	170	18	2	0	280
+Italian Spring Herb Dressing	1 serving	60	6	3	0	380
+Balsamic Vinaigrette Dressing	1 serving	160	13	5	0	220

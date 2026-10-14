@@ -92,6 +92,26 @@ BRANDS.firehouse = {
   },
 }
 
+BRANDS.popeyes = {
+  file: 'popeyes',
+  exportName: 'popeyes',
+  idPrefix: 'plk',
+  meta: { id: 'popeyes', name: 'Popeyes', cuisine: 'Fried chicken · Fast food', accent: '#f97316', segment: 'Fast Food' },
+  sourceNote: "Popeyes Canada — complete menu from Popeyes' official menu data",
+  order: ['Chicken', 'Sandwiches', 'Wraps', 'Sides', 'Desserts', 'Drinks'],
+  category(path, name) {
+    const top = (path[0] ?? '').toLowerCase()
+    const n = name.toLowerCase()
+    if (/beverage/.test(top)) return 'Drinks'
+    if (/dessert/.test(top) || /pie|cookie|beignet|brownie/.test(n)) return 'Desserts'
+    if (/sauce/.test(top) || /sauce|dip|gravy/.test(n)) return 'Sides'
+    if (/wrap/.test(top) || /wrap/.test(n)) return 'Wraps'
+    if (/sandwich/.test(top) || /sandwich|burger/.test(n)) return 'Sandwiches'
+    if (/sides/.test(top) || /fries|biscuit|coleslaw|rice|mac|mashed|corn|beans|cheese curds|poutine/.test(n)) return 'Sides'
+    return 'Chicken'
+  },
+}
+
 const brandKey = process.argv[2]
 const B = BRANDS[brandKey]
 if (!B) {
@@ -189,7 +209,8 @@ function buildForVariant(item: any): { nutrition: Nutrition; components: Ingredi
       if (first) extras.push({ id: `x${gi}`, name: `Add ${label.toLowerCase()}`, default: false, nutrition: toNut(first.nutrition) })
     }
   }
-  const core: PartSpec = { id: 'base', name: defaults.length ? 'Base' : 'Item', core: true }
+  // With no listed ingredients the whole item is one part, named after the item.
+  const core: PartSpec = { id: 'base', name: defaults.length ? 'Base' : clean(item?.name?.en ?? 'Item').replace(SIZE_RE, ''), core: true }
   const comps = buildComponents(served, [core, ...defaults]).filter(
     // Drop an empty base when the listed ingredients already make up the whole item.
     (c) => !(c.id === 'base' && defaults.length > 0 && Object.values(c.nutrition).every((v) => v === 0)),
