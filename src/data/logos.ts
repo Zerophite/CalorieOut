@@ -3,20 +3,25 @@
 // logo or app icon from the restaurant's website, or — for chains whose site
 // only offers a tiny favicon (Tim Hortons, Subway, A&W, Burger King, Firehouse
 // Subs, Dairy Queen, McDonald's, Pizza Hut, Taco Bell, Harvey's, Swiss Chalet,
-// Mary Brown's) — the brand's logo file on Wikimedia. Every entry was checked
-// visually.
+// Mary Brown's, Popeyes, Chick-fil-A, Five Guys, Domino's, Mr. Sub, Montana's)
+// — the brand's logo file on Wikimedia. Every entry was checked visually.
 export const LOGOS: Record<string, string> = {
   '6ixty-wings': "https://6ixtywings.com/wp-content/uploads/2022/11/profile-01-300x300.png",
   aw: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/A%26W_Canada_Logo.svg/500px-A%26W_Canada_Logo.svg.png",
   'bad-radish': "https://www.madradish.com/wp-content/uploads/2022/10/MR-Logo-2022.png",
   'bar-burrito': "https://barburrito.agencydominion.net/uploads/2020/01/cropped-barburrito-favicon-414x414.png",
+  'booster-juice': "https://boosterjuice.com/cdn/shop/files/logo-yellow.png?v=1701124734&width=600",
   'boston-pizza': "https://bostonpizza.com/etc.clientlibs/bostonpizza/clientlibs/clientlib-site/resources/images/favicon/web-app-manifest-512x512.png",
   'burger-king': "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/500px-Burger_King_2020.svg.png",
   'chain-smoker-bbq': "https://chainsmoker.ca/wp-content/uploads/fbrfg/apple-touch-icon.png?v=M4KAerv5Yp",
   'chicha-san-chen': "https://chichasanchen.ca/img/chichasanchen-logo-en.jpg",
+  'chick-fil-a': "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Chick-fil-A_Logo.svg/500px-Chick-fil-A_Logo.svg.png",
+  chipotle: "https://www.chipotle.ca/content/experience-fragments/chipotle/ca/en/xf-header/master/_jcr_content/root/container_712714414/image_411084835.coreimg.svg/1689182130630/cmg-medallion-logo.svg",
   coco: "https://static.wixstatic.com/media/101c9c_03fd4b09de66445d9f1d9ddc71bc442a%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/101c9c_03fd4b09de66445d9f1d9ddc71bc442a%7Emv2.png",
   'dairy-queen': "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Dairy_Queen_logo.svg/500px-Dairy_Queen_logo.svg.png",
+  dominos: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Domino%27s_pizza_logo.svg/500px-Domino%27s_pizza_logo.svg.png",
   'firehouse-subs': "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Firehosue_Subs_Logo_2024.png/500px-Firehosue_Subs_Logo_2024.png",
+  'five-guys': "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Five_Guys_logo.svg/500px-Five_Guys_logo.svg.png",
   freshii: "https://freshii.com/wp-content/uploads/2024/01/freshii_favicon_180.png",
   'gabriel-pizza': "https://gabrielpizza.com/wp-content/themes/gabriel-theme/img/favicons/android-chrome-192x192.png",
   // Cropped from the cup in Green Leaf's own product photo — its only published mark.
@@ -36,13 +41,19 @@ export const LOGOS: Record<string, string> = {
   'mary-browns': "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Marybrowns-2021-logo.svg/500px-Marybrowns-2021-logo.svg.png",
   mcdonalds: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/500px-McDonald%27s_Golden_Arches.svg.png",
   moes: "https://images.ctfassets.net/zqt8tllj2cy0/2gtyLmJDfeDReSOwpJ6euF/2f491e0e84a66b0e7dbc44e8f91d3557/Moes_LOGO.svg",
+  montanas: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Montana%27s_BBQ_%26_Bar_logo.svg/500px-Montana%27s_BBQ_%26_Bar_logo.svg.png",
   'mr-shawarma': "https://mrshawarma.ca/wp-content/uploads/2025/11/Logo-Mr-Shawarma-06.png",
+  'mr-sub': "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Mr._Sub_logo.svg/500px-Mr._Sub_logo.svg.png",
   'mucho-burrito': "https://muchoburrito.com/wp-content/uploads/2024/05/fav-icon-300x300.png",
   'noodle-box': "https://noodlebox.ca/wp-content/uploads/2026/06/NBX_LOGO_2020.png",
   osmows: "https://framerusercontent.com/images/hhHzUN89Q1R2Ut7HkUrGBRs6GA.png",
   'pita-bell': "https://betterresto.s3.us-west-1.wasabisys.com/production/13345/logo_9e8cc084b8.jpg",
   'pita-pit': "https://pitapit.ca/wp-content/uploads/2022/01/pita-pit-logo-retina-4.jpg",
   'pizza-hut': "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Pizza_Hut_2025.svg/500px-Pizza_Hut_2025.svg.png",
+  'pizza-pizza': "https://www.pizzapizza.ca/build/static-files/images/logo.svg",
+  popeyes: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Logo_of_Popeyes_Louisiana_Kitchen.svg/500px-Logo_of_Popeyes_Louisiana_Kitchen.svg.png",
+  // Red Lobster's lobster mark, saved from the inline SVG in redlobster.ca's header.
+  'red-lobster': 'logos/red-lobster.svg',
   'red-swan-pizza': "https://redswanpizza.ca/images/logo.png",
   'rock-n-deli': "https://static.tildacdn.one/tild6438-3731-4431-a433-343461333463/Logo_Affiche_RND_1.png",
   'sansotei-ramen': "https://static.wixstatic.com/media/a0c5d8_98c7fc6d9efa4655ba39012bedf5fa1b%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/a0c5d8_98c7fc6d9efa4655ba39012bedf5fa1b%7Emv2.png",
@@ -73,7 +84,7 @@ export const LOGOS: Record<string, string> = {
 }
 
 /** Logos drawn in white, shown on a dark tile. */
-export const DARK_LOGOS = new Set(['the-works', 'streats-kitchen'])
+export const DARK_LOGOS = new Set(['the-works', 'streats-kitchen', 'booster-juice'])
 
 /** Square logos with their own background, shown edge to edge. */
 export const FULL_LOGOS = new Set(['kuma-takumi'])
@@ -82,6 +93,7 @@ export const FULL_LOGOS = new Set(['kuma-takumi'])
 export const WIDE_LOGOS = new Set([
   'subway', 'pita-pit', 'kfc', 'mary-browns', 'firehouse-subs', 'noodle-box', 'red-swan-pizza', 'bad-radish', 'tim-hortons',
   'windbell-sushi', 'chicha-san-chen', 'rock-n-deli', 'zolas', 'streats-kitchen', 'koichi-ramen',
+  'popeyes', 'chick-fil-a', 'five-guys', 'pizza-pizza', 'montanas', 'booster-juice',
 ])
 
 // Green Leaf publishes no logo file (its site uses a template's default icon);

@@ -65,5 +65,34 @@
   "Tropical Heatwave",
   "Chicken Caesar",
   "Grilled Chicken Bruschetta"
+ ],
+ "dominos": [
+  "Donair Pizza",
+  "Buffalo Chicken Pizza"
+ ],
+ "delivery/dominos": [
+  "Donair Pizza",
+  "Buffalo Chicken Pizza"
+ ],
+ "mr-sub": [
+  "Garden Salad",
+  "Egg & Cheese Breakfast Sub",
+  "Egg, Cheese & Ham Breakfast Sub",
+  "Egg, Cheese & Bacon Breakfast Sub",
+  "Egg, Cheese & Steak Breakfast Sub",
+  "Egg, Cheese & Sausage Breakfast Sub"
+ ],
+ "delivery/mr-sub": [
+  "Egg & Cheese Breakfast Sub",
+  "Egg, Cheese & Ham Breakfast Sub",
+  "Egg, Cheese & Bacon Breakfast Sub",
+  "Egg, Cheese & Steak Breakfast Sub",
+  "Egg, Cheese & Sausage Breakfast Sub"
+ ],
+ "delivery/red-lobster": [
+  "Grilled Chicken and Shrimp (Lunch)"
+ ],
+ "delivery/montanas": [
+  "Baked Potato with Sour Cream and Butter"
  ]
 }

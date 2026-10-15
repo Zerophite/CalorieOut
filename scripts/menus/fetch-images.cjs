@@ -32,6 +32,7 @@ const SANITY = {
   timhortons: 'https://czqk28jt.apicdn.sanity.io/v1/graphql/prod_th_ca/default',
   burgerking: 'https://kjfd81ul.apicdn.sanity.io/v1/graphql/prod_bk_ca/default',
   firehousesubs: 'https://czqk28jt.apicdn.sanity.io/v1/graphql/prod_fhs_ca/default',
+  popeyes: 'https://czqk28jt.apicdn.sanity.io/v1/graphql/prod_plk_ca/default',
 }
 async function sanity(endpoint) {
   const map = {}
@@ -164,6 +165,33 @@ async function freshii() {
 
 // Our item name → the chain's own product name, where the two differ.
 const ALIASES = {
+  'booster-juice': { 'Holy Hazelnut': 'Holy Hazelnut Açai Bowl', 'Chicken Quesadilla Wrap': 'Chicken Quesadilla' },
+  'mr-sub': {
+    'Cubano Sub': 'Cubano',
+    'Breaded Chicken Sub': 'Original/Spicy Breaded Chicken',
+    'Chipotley Turkey & Bacon Sub': 'Chipotle Turkey & Bacon',
+    'Double Stacked Smoked Meat Sub': 'Double Stacked Montreal Smoked Meat',
+    'Great Canadian Club Sub': 'Canadian Club',
+    'Chicken Parmesan Sub': 'Chicken Parm',
+    'Tex Mex Black Bean Sub': 'Tex Mex Blackbean Sub',
+    'Veggie & Cheese Sub': 'Veggie and Cheese',
+  },
+  dominos: {
+    'Pepperoni Pizza': 'Pepperoni Feast',
+    'Specialty Chicken – Chicken Parm': 'Specialty Chicken – Chicken Parmesan',
+    'Specialty Chicken – Spicy Jalapeño & Pineapple': 'Specialty Chicken – Spicy Jalapeno - Pineapple',
+    'Chocolate Lava Crunch Cake': '2 Chocolate Lava Cakes',
+    'French Fries': 'Fries',
+    'Creamy 5-Cheese Penne': 'Oven-Baked Creamy 5-Cheese Penne',
+    'Hot Buffalo 5-Cheese Penne': 'Oven-Baked Hot Buffalo 5-Cheese Penne',
+  },
+  'chick-fil-a': {
+    'Chick-fil-A Deluxe': 'Chick-fil-A Deluxe Sandwich',
+    'Spicy Deluxe': 'Spicy Deluxe Sandwich',
+    'Grilled Chicken Club': 'Chick-fil-A Grilled Chicken Club Sandwich',
+    'Pineapple Dragonfruit Sweet Tea': 'Pineapple Dragonfruit Teas',
+    'Pineapple Dragonfruit Unsweet Tea': 'Pineapple Dragonfruit Teas',
+  },
   aw: { Latte: 'Latte Small 2 Milk', Tea: 'Teas', Poutine: 'Poutine English Canada' },
   freshii: {
     'Build Your Bowl': 'Create Your Own Bowl',
@@ -230,7 +258,67 @@ const EXTRA = {
   },
 }
 
+// Chick-fil-A Canada: each chick-fil-a.ca/menu/<category> page lists its items as cards.
+async function chickfila() {
+  const map = {}
+  for (const cat of ['entrees', 'salads', 'sides', 'kids-meals', 'treats', 'beverages', 'dipping-sauces-and-dressings']) {
+    const html = await (await fetch(`https://www.chick-fil-a.ca/menu/${cat}`, { headers: { 'User-Agent': 'Mozilla/5.0' } })).text()
+    for (const card of html.split('<article').slice(1)) {
+      const img = card.match(/<img[^>]+src="([^"?]+)/)
+      const name = card.match(/class="c-card__link"[^>]*aria-label="([^"]+)"/)
+      const label = name && name[1].replace(/&#0?38;/g, '&').replace(/&#(8217|039|39);/g, "'")
+      if (img && label && !map[norm(label)]) map[norm(label)] = `${img[1]}?resize=480,480`
+    }
+  }
+  return map
+}
+
+// Booster Juice: its Shopify store lists every menu item (merchandise has a product type; food doesn't).
+async function boosterjuice() {
+  const map = {}
+  const { products } = await getJson('https://boosterjuice.com/products.json?limit=250')
+  for (const p of products) {
+    const src = p.images[0] && p.images[0].src
+    if (!p.product_type && src && !map[norm(p.title)]) map[norm(p.title)] = `${src}&width=480`
+  }
+  return map
+}
+
+// Domino's Canada: the ordering API's menu for an Ottawa store; photos by product image code.
+async function dominos() {
+  const map = {}
+  const { Products } = await getJson('https://order.dominos.ca/power/store/10503/menu?lang=en&structured=true')
+  for (const p of Object.values(Products)) {
+    const url = `https://www.dominos.ca/assets/build/market/CA/_en/images/img/products/larges/${p.ImageCode}.jpg`
+    const name = p.Name.replace(/^Domino[’']s Pizza /, '').replace(/^Wings - (.+)$/, '$1 Wings')
+    for (const n of [name, p.ProductType === 'Pizza' ? `${name} Pizza` : null]) if (n && !map[norm(n)]) map[norm(n)] = url
+  }
+  return map
+}
+
+// Mr. Sub: each mrsub.ca category page shows a photo followed by the sub's name.
+async function mrsub() {
+  const map = {}
+  for (const page of ['chicken-subs', 'clubhouse-subs', 'steak-beef-subs', 'classic-deli', 'garden-seaside', 'fired-up-favourites', 'mighty-meatless', 'select-salads-sides']) {
+    const html = await (await fetch(`https://mrsub.ca/${page}/`, { headers: { 'User-Agent': 'Mozilla/5.0' } })).text()
+    let img
+    for (const m of html.matchAll(/data-src="([^"]+)"|<h[1-6][^>]*>([\s\S]*?)<\/h[1-6]>/g)) {
+      if (m[1]) img = m[1]
+      else if (img) {
+        const name = m[2].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim()
+        if (name && !map[norm(name)]) map[norm(name)] = img
+        img = undefined
+      }
+    }
+  }
+  return map
+}
+
 const BRANDS = {
+  dominos,
+  'mr-sub': mrsub,
+  'booster-juice': boosterjuice,
+  'chick-fil-a': chickfila,
   freshii,
   kfc,
   wendys,
@@ -241,6 +329,7 @@ const BRANDS = {
   timhortons: () => sanity(SANITY.timhortons),
   burgerking: () => sanity(SANITY.burgerking),
   firehousesubs: () => sanity(SANITY.firehousesubs),
+  popeyes: () => sanity(SANITY.popeyes),
 }
 
 ;(async () => {
