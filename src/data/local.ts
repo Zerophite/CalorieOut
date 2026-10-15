@@ -260,7 +260,7 @@ export const localSpots: Restaurant[] = [
   {
     id: 'lokma',
     name: 'Lokma',
-    cuisine: 'Dessert bar · Lokma & mini donuts',
+    cuisine: 'Turkish dessert bar · Lokma & mini donuts',
     accent: '#b45309',
     segment: 'Coffee & Bakery',
     dataSource: 'estimated',
@@ -380,7 +380,7 @@ export const localSpots: Restaurant[] = [
   {
     id: 'streats-kitchen',
     name: 'Streats Kitchen',
-    cuisine: 'Global street food',
+    cuisine: 'Street food · Tacos & burritos',
     accent: '#f59e0b',
     segment: 'Fast Food',
     dataSource: 'estimated',

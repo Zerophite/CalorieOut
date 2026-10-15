@@ -263,6 +263,17 @@ from the inline SVG in redlobster.ca's header (the site's only image file is a
 get a dark tile, `FULL_LOGOS` (square marks with their own background) fill
 the tile, and `WIDE_LOGOS` (wordmarks 3:1 or wider) get a wider tile.
 
+## Cuisine audit
+
+`npm run menus:cuisines` (`audit-cuisines.ts`, optionally with restaurant ids)
+prints every restaurant's cuisine chips on Home and, for each dish cuisine in
+search, how many of its dishes are filed there with examples, so the rules in
+`src/lib/cuisine.ts` can be checked by eye after adding a restaurant. A dish's
+form wins over a flavour in its name (a butter chicken pizza is pizza, a jerk
+chicken taco is Mexican, a teriyaki sub isn't Japanese), drinks count only when
+they name the cuisine (Thai tea, Turkish coffee), and a restaurant's own cuisine
+covers only its savoury dishes that aren't plainly something else.
+
 ## Plausibility audit
 
 `npm run menus:audit` (`audit.ts`) flags numbers that can't be right even when

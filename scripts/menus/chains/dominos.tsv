@@ -1,6 +1,6 @@
 id: dominos
 name: Domino's
-cuisine: Pizza · Wings · Fast food
+cuisine: Pizza · Fast food
 accent: #0b6fb8
 segment: Fast Food
 source: dominos.ca Canadian Nutrition Guide (Aug 2025; pizzas per hand-tossed slice)

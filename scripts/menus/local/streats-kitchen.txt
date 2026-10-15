@@ -1,6 +1,6 @@
 id: streats-kitchen
 name: Streats Kitchen
-cuisine: Global street food
+cuisine: Street food · Tacos & burritos
 accent: #f59e0b
 segment: Fast Food
 source: strEATS Kanata Kitchen Uber Eats menu, 2026; no posted calories, so every dish is estimated

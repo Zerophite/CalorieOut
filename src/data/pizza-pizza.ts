@@ -4,7 +4,7 @@ import { type Restaurant } from '../types'
 export const pizzaPizza: Restaurant = {
   id: 'pizza-pizza',
   name: 'Pizza Pizza',
-  cuisine: 'Pizza · Wings · Fast food',
+  cuisine: 'Pizza · Fast food',
   accent: '#ea580c',
   segment: 'Fast Food',
   dataSource: 'official',

@@ -4,7 +4,7 @@ import { type Restaurant } from '../types'
 export const dominos: Restaurant = {
   id: 'dominos',
   name: "Domino's",
-  cuisine: 'Pizza · Wings · Fast food',
+  cuisine: 'Pizza · Fast food',
   accent: '#0b6fb8',
   segment: 'Fast Food',
   dataSource: 'official',

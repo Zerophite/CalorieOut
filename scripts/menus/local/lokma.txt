@@ -1,6 +1,6 @@
 id: lokma
 name: Lokma
-cuisine: Dessert bar · Lokma & mini donuts
+cuisine: Turkish dessert bar · Lokma & mini donuts
 accent: #b45309
 segment: Coffee & Bakery
 source: https://www.lokma.ca (signature lokmas; other items are typical of the dessert bar)
